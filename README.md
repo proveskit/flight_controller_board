@@ -22,3 +22,5 @@ The FC board implements the following components:
 | V3 | Unflown | In Development |
 
 > NOTE: The currently supported V1 and V2 boards are not recommended for flight due to a high suspectibility to thermal and radiation effects. These boards are still perfectly fine for ground testing and educational use. Bronco Space is currently conducting testing to flush out these issues and will be mitigating these potential issues in V3. If you would like to receive eval hardware of the new version please contact Michael Pham: mlpham@cpp.edu
+
+# Plans
