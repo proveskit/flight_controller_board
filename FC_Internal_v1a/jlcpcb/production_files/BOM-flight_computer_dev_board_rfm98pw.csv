@@ -1,7 +1,6 @@
 Comment,Designator,Footprint,LCSC
 10k,R6,R_Array_Convex_4x0603,C111802
 1k,R2,R_0402_1005Metric,C11702
-LED,"D1,D3",LED_0603_1608Metric,C12065
 LSM303AGRTR,U8,LGA-12_2x2mm_P0.5mm,C126671
 100nf,"C10,C11,C32,C33,C34,C35,C4,C5,C7,C9",C_0402_1005Metric,C1525
 22pF,"C1,C2,C37,C38",C_0402_1005Metric,C1555
@@ -17,6 +16,7 @@ RP2040_QFN56,IC1,QFN-56-1EP_7x7mm_P0.4mm_EP3.2x3.2mm_ThermalVias,C2040
 1k,"R10,R3,R4",R_0603_1608Metric,C21190
 120,R26,R_0603_1608Metric,C22787
 LED,D2,LED_0603_1608Metric,C2286
+LED,"D1,D3",LED_0603_1608Metric,C2290
 22,"R7,R8",R_0603_1608Metric,C23345
 USB_B_Micro,J8,MOLEX_105164-0001,C234179
 12MHZ,Y1,Crystal_SMD_2520-4Pin_2.5x2.0mm,C252259
@@ -47,7 +47,7 @@ Jumper_3_Open,JP4,SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels,
 FC to EPS Connector,J2,Molex_Pico-Lock_504050-1291_1x12-1MP_P1.50mm_Horizontal,
 USBBOOT,TP1,TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded,
 Jumper_3_Open,JP3,SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels,
-Life Makes Lemonade,J3,PinHeader_1x06_P2.54mm_Vertical,
+DNI,J3,PinHeader_1x06_P2.54mm_Vertical,
 Conn_ARM_JTAG_SWD_10,J1,JTAG_2X05_1.27MM_BOX_NOCREAM,
 Jumper_3_Open,JP8,SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels,
 Standby,TP4,TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded,
