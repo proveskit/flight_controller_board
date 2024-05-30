@@ -20,7 +20,9 @@ The FC board implements the following components:
 | V1 | Pleiades - Yearling, Pleiades - Squared | Supported |
 | V2 | Unflown | Supported |
 | V3 | Unflown | In Development |
+| V1a Internal | Unflown | In Development |
 
 > NOTE: The currently supported V1 and V2 boards are not recommended for flight due to a high suspectibility to thermal and radiation effects. These boards are still perfectly fine for ground testing and educational use. Bronco Space is currently conducting testing to flush out these issues and will be mitigating these potential issues in V3. If you would like to receive eval hardware of the new version please contact Michael Pham: mlpham@cpp.edu
 
 # Plans
+Currently we are in production for V1.5 PROVES Kits, which are an interesting middle step between the V1 Kits (which flew on all the Yearling satellites) and V2 (which we are hoping to fly on all the Pleiades Five satellites). One of the main changes between V1 and V2 will be transitioning the flight controller from being mounted to the Z+ face of the satellite to an internal board. This move is intended to improve the thermal performance and radiation tolerance of the avionics stack. 
