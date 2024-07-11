@@ -13180,6 +13180,16 @@
 	)
 	(wire
 		(pts
+			(xy 22.86 142.24) (xy 22.86 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3411c095-0aef-4b52-b3cb-d31416657d55")
+	)
+	(wire
+		(pts
 			(xy 397.002 44.45) (xy 397.002 46.99)
 		)
 		(stroke
@@ -13870,6 +13880,26 @@
 	)
 	(wire
 		(pts
+			(xy 46.99 148.59) (xy 40.64 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65c76ff8-5f1f-430c-8833-c4f3e805ba0f")
+	)
+	(wire
+		(pts
+			(xy 40.64 148.59) (xy 40.64 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67514536-ab7d-42ac-aee6-069fac806a07")
+	)
+	(wire
+		(pts
 			(xy 181.61 268.986) (xy 185.674 268.986)
 		)
 		(stroke
@@ -13967,6 +13997,16 @@
 			(type default)
 		)
 		(uuid "6ecf15cd-cb19-48be-84eb-1c253a2a742f")
+	)
+	(wire
+		(pts
+			(xy 40.64 142.24) (xy 22.86 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6efad2cd-2e4d-48ed-87af-cde8ac30ad7a")
 	)
 	(wire
 		(pts
@@ -21043,7 +21083,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
+		(property "Datasheet" "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf"
 			(at 85.09 158.75 0)
 			(effects
 				(font
@@ -30360,6 +30400,72 @@
 			(project "FC_Internal_v1b"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "JP1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 22.86 144.78 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b57af2b7-6f9b-4b57-b339-cdbaccdd9571")
+		(property "Reference" "#PWR041"
+			(at 22.86 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 22.86 149.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 22.86 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 22.86 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 22.86 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "71ea6639-2a11-494c-aef5-9d657d3927f5")
+		)
+		(instances
+			(project "FC_Internal_v1b"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)
