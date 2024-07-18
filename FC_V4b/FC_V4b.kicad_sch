@@ -1518,149 +1518,6 @@
 				)
 			)
 		)
-		(symbol "Adafruit ItsyBitsy RP2040-eagle-import:RESISTOR_0402NO"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "R"
-				(at 0 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "RESISTOR_0402NO"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.016 1.016)
-						(bold yes)
-					)
-				)
-			)
-			(property "Footprint" "Adafruit ItsyBitsy RP2040:_0402NO"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "RESISTOR_0402NO_1_0"
-				(polyline
-					(pts
-						(xy -2.54 -1.27) (xy -2.54 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -2.54 1.27) (xy 2.54 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -1.27) (xy -2.54 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy 2.54 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 0 0)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Adafruit ItsyBitsy RP2040-eagle-import:RP2040_QFN56"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -12411,7 +12268,7 @@
 		(at 77.47 232.41)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "98f95b3a-1d5d-4583-8247-efec97d50dca")
+		(uuid "9d63fa33-0192-4a4f-8b5e-9830ce9ec35e")
 	)
 	(junction
 		(at 166.878 119.38)
@@ -12830,16 +12687,6 @@
 			(type default)
 		)
 		(uuid "068c6668-92d4-4124-a651-7787bdf1cdbf")
-	)
-	(wire
-		(pts
-			(xy 77.47 232.41) (xy 73.66 232.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "074d7627-e582-445d-b65c-3f6629ae55fa")
 	)
 	(wire
 		(pts
@@ -14623,6 +14470,16 @@
 	)
 	(wire
 		(pts
+			(xy 77.47 232.41) (xy 80.01 232.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d775d82-c60e-40ef-a7b0-af10d73b6579")
+	)
+	(wire
+		(pts
 			(xy 228.981 57.023) (xy 233.299 57.023)
 		)
 		(stroke
@@ -16183,7 +16040,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 232.41) (xy 77.47 232.41)
+			(xy 73.66 232.41) (xy 77.47 232.41)
 		)
 		(stroke
 			(width 0)
@@ -22910,6 +22767,75 @@
 			(project "FC_V4b"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "#PWR073")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "mainboard:RESISTOR0603")
+		(at 77.47 227.33 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2c7b0fb5-10df-4927-b1b4-8a38cc66fcfc")
+		(property "Reference" "R11"
+			(at 75.946 222.25 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify bottom)
+			)
+		)
+		(property "Value" "10k"
+			(at 71.12 222.504 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify top)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 77.47 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 77.47 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "100K 0603"
+			(at 73.406 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2973fa39-9f02-4bb2-83c5-ae599e5f453a")
+		)
+		(pin "2"
+			(uuid "43163f5e-fd74-4630-a821-43034f981ba2")
+		)
+		(instances
+			(project "FC_V4b"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -33079,74 +33005,6 @@
 			(project "FC_V4b"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "U5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:RESISTOR_0402NO")
-		(at 77.47 227.33 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d4151413-4480-4efb-9da6-53190acce8d8")
-		(property "Reference" "R11"
-			(at 74.422 225.806 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "10k"
-			(at 77.724 227.33 0)
-			(effects
-				(font
-					(size 1.016 1.016)
-					(bold yes)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 77.47 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 77.47 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 77.47 227.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "decab0ad-113c-4e16-812e-c768a3b1cefa")
-		)
-		(pin "2"
-			(uuid "3c2c3c61-9374-4b8c-b3ad-9affa6b7abb8")
-		)
-		(instances
-			(project "FC_V4b"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(reference "R11")
 					(unit 1)
 				)
 			)
