@@ -1,5 +1,6 @@
 #include "shared-bindings/board/__init__.h"
 #include "supervisor/board.h"
+#include "clock.c"
 
 STATIC const mp_rom_map_elem_t board_module_globals_table[] = {
     CIRCUITPYTHON_BOARD_DICT_STANDARD_ITEMS
