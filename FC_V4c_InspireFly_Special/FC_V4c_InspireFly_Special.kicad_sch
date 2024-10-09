@@ -15349,6 +15349,12 @@
 		(uuid "3ac63d20-72dc-4f6b-89b0-ec2d2383406c")
 	)
 	(junction
+		(at -54.61 10.16)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "423f8ae4-fdbb-4af0-b23c-e8fb9ff12ac7")
+	)
+	(junction
 		(at -107.95 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -16065,6 +16071,16 @@
 			(type default)
 		)
 		(uuid "0545e458-53b2-43a3-aa9d-d957ce05810a")
+	)
+	(wire
+		(pts
+			(xy -54.61 10.16) (xy -54.61 19.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05c52202-1285-420f-a8cf-44c5701e0096")
 	)
 	(wire
 		(pts
@@ -17788,6 +17804,16 @@
 	)
 	(wire
 		(pts
+			(xy -35.56 10.16) (xy -54.61 10.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59354aa1-8d6d-4843-95f6-a3b3b5fd77ed")
+	)
+	(wire
+		(pts
 			(xy 397.129 49.53) (xy 397.129 59.69)
 		)
 		(stroke
@@ -18165,6 +18191,16 @@
 			(type default)
 		)
 		(uuid "71fcb6f1-2183-4703-859b-68ec0b604956")
+	)
+	(wire
+		(pts
+			(xy -35.56 3.81) (xy -35.56 10.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "72485eab-725a-4cb3-83cb-d0d861fe41b6")
 	)
 	(wire
 		(pts
@@ -19228,7 +19264,7 @@
 	)
 	(wire
 		(pts
-			(xy -54.61 -6.35) (xy -54.61 19.05)
+			(xy -54.61 -6.35) (xy -54.61 10.16)
 		)
 		(stroke
 			(width 0)
@@ -20668,6 +20704,16 @@
 	)
 	(wire
 		(pts
+			(xy -35.56 -8.89) (xy -35.56 -3.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f422d1c2-17a8-4b2c-9b52-c3d7a2205cf2")
+	)
+	(wire
+		(pts
 			(xy 232.3846 100.7618) (xy 233.4514 100.7618)
 		)
 		(stroke
@@ -21195,6 +21241,16 @@
 			(justify left bottom)
 		)
 		(uuid "b26b9161-d3f0-48b8-9b27-638d1831a0e2")
+	)
+	(text "Backup 5V Bias"
+		(exclude_from_sim no)
+		(at -25.654 0.508 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "cb1188a0-aab6-4d74-b8c4-b1aceddb6cc9")
 	)
 	(text "~ 24 s period (36 s on power up)"
 		(exclude_from_sim no)
@@ -22616,6 +22672,28 @@
 		(uuid "67165d17-f98f-4183-b1dd-02ace0b3f231")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 294.5447 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VCC_RF1"
+		(shape output)
+		(at -35.56 -8.89 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "67910ffa-6424-4bfe-b668-8e38e62d8e3f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -35.56 -20.0395 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -35214,6 +35292,74 @@
 		)
 	)
 	(symbol
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at -35.56 0 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "848322c6-1c46-443e-aa86-454a1a5bbfa4")
+		(property "Reference" "JP12"
+			(at -38.354 0.254 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SolderJumper_2_Open"
+			(at -21.59 0 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at -35.56 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at -35.56 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at -35.56 0 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c57dd043-0c33-46d6-b295-0ba00ac7537a")
+		)
+		(pin "2"
+			(uuid "bd5d5d87-1285-472d-ba11-1c77ea97dc72")
+		)
+		(instances
+			(project "FC_V4c_InspireFly_Special"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "JP12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 309.88 113.5634 0)
 		(unit 1)
@@ -44991,7 +45137,7 @@
 			)
 		)
 		(instances
-			(project "FC_V4c_Express"
+			(project "FC_V4c_InspireFly_Special"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(page "2")
 				)
