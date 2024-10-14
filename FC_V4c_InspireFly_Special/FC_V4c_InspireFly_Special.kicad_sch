@@ -6295,163 +6295,6 @@
 				)
 			)
 		)
-		(symbol "Device:L"
-			(pin_numbers hide)
-			(pin_names
-				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "L"
-				(at -1.27 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "L"
-				(at 1.905 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Inductor"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "inductor choke coil reactor magnetic"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "L_0_1"
-				(arc
-					(start 0 -2.54)
-					(mid 0.6323 -1.905)
-					(end 0 -1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 -1.27)
-					(mid 0.6323 -0.635)
-					(end 0 0)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 0)
-					(mid 0.6323 0.635)
-					(end 0 1.27)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 0 1.27)
-					(mid 0.6323 1.905)
-					(end 0 2.54)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "L_1_1"
-				(pin passive line
-					(at 0 3.81 270)
-					(length 1.27)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -3.81 90)
-					(length 1.27)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:LED"
 			(pin_numbers hide)
 			(pin_names
@@ -15367,12 +15210,6 @@
 		(uuid "44dd01c1-5ec3-41e4-ad33-c5b641685cf4")
 	)
 	(junction
-		(at 375.92 195.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "45199502-a96f-4d23-80b5-418e0c13dcd8")
-	)
-	(junction
 		(at 397.002 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -15791,12 +15628,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f388f97e-75c3-4190-aa2d-ac7a29ad5e17")
-	)
-	(junction
-		(at 363.22 195.58)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fb89d836-bd5a-4f54-98f3-d4ebd81cb264")
 	)
 	(junction
 		(at 260.223 62.23)
@@ -16324,16 +16155,6 @@
 	)
 	(wire
 		(pts
-			(xy 373.38 186.182) (xy 375.92 186.182)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "118ea93c-1899-4316-a5b1-eaae14755c08")
-	)
-	(wire
-		(pts
 			(xy -204.47 7.62) (xy -204.47 6.35)
 		)
 		(stroke
@@ -16714,16 +16535,6 @@
 	)
 	(wire
 		(pts
-			(xy 365.76 186.182) (xy 363.22 186.182)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "24c6f19f-3124-4322-83d3-97ca4c38b7ab")
-	)
-	(wire
-		(pts
 			(xy 381.1016 118.8466) (xy 381.1016 125.222)
 		)
 		(stroke
@@ -16771,16 +16582,6 @@
 			(type default)
 		)
 		(uuid "27dc3d51-ffe0-4c6d-87d8-a8b1dad2450c")
-	)
-	(wire
-		(pts
-			(xy 375.92 195.58) (xy 382.016 195.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2807e519-7ee5-4d98-8153-42ad1b2ffb93")
 	)
 	(polyline
 		(pts
@@ -17121,16 +16922,6 @@
 			(type default)
 		)
 		(uuid "3591c4a8-5787-453c-af7c-673686d51eed")
-	)
-	(wire
-		(pts
-			(xy 375.92 186.182) (xy 375.92 195.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "35f1867b-b932-4e17-944f-e066bd160d77")
 	)
 	(wire
 		(pts
@@ -18111,16 +17902,6 @@
 			(type default)
 		)
 		(uuid "6b4d96d7-8f0f-487f-aedf-da30b790aec8")
-	)
-	(wire
-		(pts
-			(xy 363.22 186.182) (xy 363.22 195.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6c0e908a-f4b1-4bcd-91f7-b143384e240a")
 	)
 	(wire
 		(pts
@@ -19134,7 +18915,7 @@
 	)
 	(wire
 		(pts
-			(xy 354.33 195.58) (xy 363.22 195.58)
+			(xy 354.33 195.58) (xy 382.016 195.58)
 		)
 		(stroke
 			(width 0)
@@ -19771,16 +19552,6 @@
 			(type default)
 		)
 		(uuid "c4b0d58b-b1be-4802-a34d-ff6b3d51543e")
-	)
-	(wire
-		(pts
-			(xy 373.38 195.58) (xy 375.92 195.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c4fc4a4c-c2b5-45ad-b2b2-4a7500c77e5a")
 	)
 	(wire
 		(pts
@@ -20991,16 +20762,6 @@
 			(type default)
 		)
 		(uuid "fdc2981a-35a6-4381-927c-ddcdb482168a")
-	)
-	(wire
-		(pts
-			(xy 363.22 195.58) (xy 365.76 195.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe37d74b-f80a-4293-a130-f2aac93f4d05")
 	)
 	(wire
 		(pts
@@ -25916,76 +25677,6 @@
 	)
 	(symbol
 		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:CAP_CERAMIC_0402NO")
-		(at 363.22 200.66 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "16b0f99e-fcf7-479f-af27-052db054f0f5")
-		(property "Reference" "C15"
-			(at 365.76 198.1199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "DNI"
-			(at 365.76 200.6599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 363.22 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 363.22 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 363.22 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "56c47156-335a-4ae2-b6bd-b9b593042c0b")
-		)
-		(pin "2"
-			(uuid "bfb1a086-a237-49ca-b5fc-6c63792bc266")
-		)
-		(instances
-			(project "FC_V4c_Express"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(reference "C15")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:CAP_CERAMIC_0402NO")
 		(at 120.65 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -27414,72 +27105,6 @@
 			(project "FC_V4c_Express"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "D8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 375.92 203.2 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2702146a-bd1e-4b14-9028-461d0022573b")
-		(property "Reference" "#PWR046"
-			(at 375.92 209.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 375.92 207.6434 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 375.92 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 375.92 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 375.92 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "91d87bc3-c4b3-4633-bfa7-198e8adb62f4")
-		)
-		(instances
-			(project "FC_V4c_Express"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(reference "#PWR046")
 					(unit 1)
 				)
 			)
@@ -31037,72 +30662,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 363.22 203.2 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "50338179-08cc-473e-89ab-2c988bf957d2")
-		(property "Reference" "#PWR045"
-			(at 363.22 209.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 363.22 207.6434 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 363.22 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 363.22 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 363.22 203.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "82f5c115-12b6-4691-aca9-1be6cda2ed74")
-		)
-		(instances
-			(project "FC_V4c_Express"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(reference "#PWR045")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 167.64 198.882 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -32669,73 +32228,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:L")
-		(at 369.57 195.58 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "67d60271-8d95-4106-9467-273108b92177")
-		(property "Reference" "L1"
-			(at 369.57 190.5 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "DNI"
-			(at 369.57 193.04 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 369.57 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 369.57 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 369.57 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "af3f5682-b0da-4f8f-8c8a-92b5f60289f0")
-		)
-		(pin "2"
-			(uuid "4a0f3827-29a4-4bc9-85e8-4bdc31fc95c6")
-		)
-		(instances
-			(project "FC_V4c_Express"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(reference "L1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:CAP_CERAMIC_0402NO")
 		(at 71.882 90.17 180)
 		(unit 1)
@@ -33220,73 +32712,6 @@
 			(project "FC_V4c_Express"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "C21")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 369.57 186.182 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "69b501b7-2507-4ed3-8f98-8bbec23cdfb4")
-		(property "Reference" "JP6"
-			(at 369.3668 188.722 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SolderJumper_2_Open"
-			(at 369.7732 182.7784 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 369.57 186.182 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 369.57 186.182 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 369.57 186.182 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "cdd493b2-29b5-4e02-a969-26c616473d31")
-		)
-		(pin "2"
-			(uuid "775dab86-dbe0-4616-ae2a-3ec82ceb16b2")
-		)
-		(instances
-			(project "FC_V4c_Express"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(reference "JP6")
 					(unit 1)
 				)
 			)
@@ -40333,76 +39758,6 @@
 			(project "FC_V4c_Express"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "#PWR082")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:CAP_CERAMIC_0402NO")
-		(at 375.92 200.66 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c4e171d5-2dce-496f-967e-7024ab725ae9")
-		(property "Reference" "C16"
-			(at 378.46 198.1199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "DNI"
-			(at 378.46 200.6599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 375.92 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 375.92 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 375.92 200.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fa29cad5-7003-45ab-98b7-770bf8b2e86b")
-		)
-		(pin "2"
-			(uuid "5887655c-3a43-4ea2-a7a6-922110234fe6")
-		)
-		(instances
-			(project "FC_V4c_Express"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(reference "C16")
 					(unit 1)
 				)
 			)
