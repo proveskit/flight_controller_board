@@ -5487,6 +5487,18 @@
 		)
 		(uuid "ff948347-4cda-4ec1-88b7-ffdfa8bc151b")
 	)
+	(rectangle
+		(start 15.24 45.72)
+		(end 67.31 80.01)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 1703e441-cfaf-42ca-a331-8c7b5b147718)
+	)
 	(text "Pull-up on battery pack to Vbus"
 		(exclude_from_sim no)
 		(at 228.6 130.81 0)
@@ -5497,6 +5509,16 @@
 			(justify left bottom)
 		)
 		(uuid "07518043-8cf0-4b7f-9cad-1c040b592a6f")
+	)
+	(text "Do Not Consolidate the BOM on this Circuit"
+		(exclude_from_sim no)
+		(at 55.118 42.672 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "10bb73e7-3771-4675-8d16-cb5d376d8653")
 	)
 	(text "Pulse integrator"
 		(exclude_from_sim no)
@@ -5531,6 +5553,16 @@
 		)
 		(uuid "2e410e6f-5ea9-4b33-8bca-d310b7c4c924")
 	)
+	(text "D5 and D7 MUST be 1N4151WS"
+		(exclude_from_sim no)
+		(at 222.504 141.986 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3abaf5af-4b7e-43f3-b946-9a9d8f9be10f")
+	)
 	(text "C112+C114 and R62+R63 \nset the WDT frequency"
 		(exclude_from_sim no)
 		(at 184.15 157.48 0)
@@ -5551,6 +5583,16 @@
 			)
 		)
 		(uuid "3f5cee17-1d28-4bfa-9e5a-688685351a7b")
+	)
+	(text "Select 15V-25V on C21, C22, C23"
+		(exclude_from_sim no)
+		(at 149.606 139.954 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "47d2fd6a-908e-4e7b-a1cc-7bc68f674a2c")
 	)
 	(text "DC block and pulse detector"
 		(exclude_from_sim no)
@@ -5587,7 +5629,7 @@
 	)
 	(text "DO WE NEED ALL 660 uF?"
 		(exclude_from_sim no)
-		(at 35.56 49.53 0)
+		(at 33.782 49.53 0)
 		(effects
 			(font
 				(size 2 2)
@@ -5620,6 +5662,16 @@
 			(justify left bottom)
 		)
 		(uuid "7c7c2109-4034-4779-a488-109373f8e1a9")
+	)
+	(text "Not Required if Power is Not Crowbarred "
+		(exclude_from_sim no)
+		(at 41.91 77.978 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ae108af3-decc-4671-8daa-4472424b23bb")
 	)
 	(text "Backup 5V Bias"
 		(exclude_from_sim no)
