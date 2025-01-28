@@ -29,12 +29,17 @@
 #include "common-hal/microcontroller/Pin.h"
 #include "shared-bindings/pwmio/PWMOut.h"
 
-void board_init(void) {
+
+// This is for automatic petting of the watchdog (not recommended)
+/*void board_init(void) {
 	pwmio_pwmout_obj_t pwm;
 	common_hal_pwmio_pwmout_construct(&pwm, &pin_GPIO21, 4096, 2, false);
 	common_hal_pwmio_pwmout_never_reset(&pwm);
 }
+*/
+
 /*bool board_requests_safe_mode(void) {
     return false;
 }*/
 // Use the MP_WEAK supervisor/shared/board.c versions of routines not defined here.
+
