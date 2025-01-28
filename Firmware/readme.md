@@ -1,0 +1,2 @@
+# Flight Controller Board Firmware
+In this folder is the firmware required to run CircuitPython 9 on the Flight Controller Board! The `FC_FIRM_V2.uf2` that is in the root of this folder is the currently recommended firmware to run alongside our circuitpy_flight_software. In this folder you will also find an archive folder and build files in case you want to build circuitpython from source.
