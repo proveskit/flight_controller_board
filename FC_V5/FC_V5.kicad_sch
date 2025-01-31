@@ -10072,12 +10072,6 @@
 		(uuid "1fad00d7-c127-4216-84f6-c97150c62512")
 	)
 	(junction
-		(at 123.19 153.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "20082652-4519-44f5-b0ef-a4a21c966462")
-	)
-	(junction
 		(at 358.013 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11593,16 +11587,6 @@
 	)
 	(wire
 		(pts
-			(xy 121.92 153.67) (xy 123.19 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5d7bb9b4-4af7-43f9-9303-c485b0a893fa")
-	)
-	(wire
-		(pts
 			(xy 161.29 233.68) (xy 161.29 231.14)
 		)
 		(stroke
@@ -11913,6 +11897,16 @@
 	)
 	(wire
 		(pts
+			(xy 123.19 153.67) (xy 135.89 153.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d741e72-7578-4adb-942c-5c9fb43e07b5")
+	)
+	(wire
+		(pts
 			(xy 77.47 232.41) (xy 80.01 232.41)
 		)
 		(stroke
@@ -12210,16 +12204,6 @@
 			(type default)
 		)
 		(uuid "9585d37f-ee62-4cb6-83aa-7ee4197a87f6")
-	)
-	(wire
-		(pts
-			(xy 123.19 153.67) (xy 135.89 153.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "95968bbd-bcfa-4f99-85e4-c2ab0945dcfd")
 	)
 	(wire
 		(pts
@@ -13623,17 +13607,6 @@
 		)
 		(uuid "2caea3ef-669d-49aa-8d4b-54325293447f")
 	)
-	(text "Can Bus"
-		(exclude_from_sim no)
-		(at 308.61 81.28 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "30e5b40c-228c-43db-bf57-1ca66ebc3c79")
-	)
 	(text "Radio #1"
 		(exclude_from_sim no)
 		(at 336.55 181.61 0)
@@ -13919,17 +13892,6 @@
 			(justify left bottom)
 		)
 		(uuid "9cb99bbb-5bcf-4660-a818-95a61b8d02ff")
-	)
-	(label "USBBOOT"
-		(at 121.92 153.67 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "9d06f025-4efb-40e2-8fbd-3f83da56381c")
 	)
 	(label "QSPI_SCK"
 		(at 29.21 181.61 0)
