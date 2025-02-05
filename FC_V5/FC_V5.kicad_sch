@@ -8978,6 +8978,193 @@
 				)
 			)
 		)
+		(symbol "Switch:SW_Push_SPDT"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_Push_SPDT"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Momentary Switch, single pole double throw"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch single-pole double-throw spdt ON-ON"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_Push_SPDT_0_0"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.016) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 -2.54)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_Push_SPDT_0_1"
+				(polyline
+					(pts
+						(xy -1.524 0.2032) (xy 2.3368 1.9812)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 2.54)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_Push_SPDT_1_1"
+				(rectangle
+					(start -3.175 3.81)
+					(end 3.175 -3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin passive line
+					(at 5.08 2.54 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "mainboard:10KOHM-1_10W-1%(0603)0603"
 			(pin_names
 				(offset 1.016)
@@ -10881,6 +11068,12 @@
 		(uuid "ce78b687-b86f-42e2-b40a-8166180c34f1")
 	)
 	(junction
+		(at 186.69 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d4e4dada-844a-4010-8a59-4ea74f4e0645")
+	)
+	(junction
 		(at 397.002 29.591)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -10903,12 +11096,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "dae1e519-9900-4104-a137-65d9aa5bb97c")
-	)
-	(junction
-		(at 186.69 104.14)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dd53f9cd-13c2-43ba-a49b-8fa5707c774d")
 	)
 	(junction
 		(at 107.95 233.68)
@@ -10967,8 +11154,16 @@
 		(uuid "14d248ad-679c-4d84-9025-8a3266ec3d80")
 	)
 	(no_connect
+		(at 189.23 92.71)
+		(uuid "1d1f0463-7f8f-40d6-af2b-4a779b990b33")
+	)
+	(no_connect
 		(at 111.76 231.14)
 		(uuid "241aba87-adaf-4199-8561-67d5242ed7fa")
+	)
+	(no_connect
+		(at 30.48 237.49)
+		(uuid "2c0ce883-fb7d-4012-a973-9708164eebf5")
 	)
 	(no_connect
 		(at 323.85 213.36)
@@ -11732,6 +11927,16 @@
 	)
 	(wire
 		(pts
+			(xy 186.69 104.14) (xy 207.01 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d27f3d0-3d40-48e0-a165-5e83f415dae0")
+	)
+	(wire
+		(pts
 			(xy 93.98 219.71) (xy 93.98 220.98)
 		)
 		(stroke
@@ -12222,6 +12427,16 @@
 	)
 	(wire
 		(pts
+			(xy 186.69 102.87) (xy 186.69 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57486ffe-fc96-4a44-b563-52dd9af1671a")
+	)
+	(wire
+		(pts
 			(xy 46.99 128.27) (xy 29.21 128.27)
 		)
 		(stroke
@@ -12702,16 +12917,6 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 104.14) (xy 207.01 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "862be492-0969-46fc-92ec-20fd577308c2")
-	)
-	(wire
-		(pts
 			(xy 218.7448 263.3218) (xy 224.9932 263.3218)
 		)
 		(stroke
@@ -13122,7 +13327,7 @@
 	)
 	(wire
 		(pts
-			(xy 186.69 93.98) (xy 186.69 96.52)
+			(xy 184.15 90.17) (xy 184.15 92.71)
 		)
 		(stroke
 			(width 0)
@@ -14453,7 +14658,7 @@
 	)
 	(text "3v3 Linear Regulator"
 		(exclude_from_sim no)
-		(at 177.8 83.82 0)
+		(at 177.8 80.01 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -14486,7 +14691,7 @@
 	)
 	(text "For USB Power\n"
 		(exclude_from_sim no)
-		(at 181.61 86.36 0)
+		(at 181.61 82.55 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -21189,6 +21394,79 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_Push_SPDT")
+		(at 186.69 97.79 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "49b46998-1f5d-414e-af0c-70ee00d80156")
+		(property "Reference" "SW3"
+			(at 191.77 96.5199 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SW_Push_SPDT"
+			(at 191.77 99.0599 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 186.69 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2108201830_SHOU-HAN-SS12D10G4-071_C2887259.pdf"
+			(at 186.69 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Momentary Switch, single pole double throw"
+			(at 186.69 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "6bfa0579-d299-43ac-bd6d-e90d2ec25374")
+		)
+		(pin "1"
+			(uuid "bd08be7e-c937-46ce-9395-634b54cf65c4")
+		)
+		(pin "2"
+			(uuid "871c6df9-ad43-4ca0-9b95-ffb1d4e65134")
+		)
+		(instances
+			(project ""
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "SW3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "mainboard:RESISTOR0603")
 		(at 29.21 115.57 270)
 		(unit 1)
@@ -22009,7 +22287,7 @@
 	)
 	(symbol
 		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:+3V3")
-		(at 186.69 91.44 0)
+		(at 184.15 87.63 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -22018,7 +22296,7 @@
 		(fields_autoplaced yes)
 		(uuid "59d0aa1b-930a-44d5-946c-ce51b923cabb")
 		(property "Reference" "#+3V012"
-			(at 186.69 91.44 0)
+			(at 184.15 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22027,7 +22305,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 186.69 88.9 0)
+			(at 184.15 85.09 0)
 			(effects
 				(font
 					(size 1.778 1.5113)
@@ -22035,7 +22313,7 @@
 			)
 		)
 		(property "Footprint" "Adafruit ItsyBitsy RP2040:"
-			(at 186.69 91.44 0)
+			(at 184.15 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22044,7 +22322,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 186.69 91.44 0)
+			(at 184.15 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22053,7 +22331,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 186.69 91.44 0)
+			(at 184.15 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -25520,73 +25798,6 @@
 			(project "FC_V5"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "#PWR05")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Jumper:SolderJumper_2_Open")
-		(at 186.69 100.33 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b4500608-a7f9-4166-9777-a4dcec1026d6")
-		(property "Reference" "JP1"
-			(at 189.23 100.5332 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "SolderJumper_2_Open"
-			(at 200.66 100.33 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
-			(at 186.69 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 186.69 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 186.69 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b908ee89-172e-4494-a7b2-e09c89b15b95")
-		)
-		(pin "2"
-			(uuid "2afc9753-1903-4d78-86ee-d41785cd60be")
-		)
-		(instances
-			(project "FC_V5"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(reference "JP1")
 					(unit 1)
 				)
 			)
