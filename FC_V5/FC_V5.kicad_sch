@@ -11704,6 +11704,12 @@
 		(uuid "bc8caad2-41ee-498b-b79f-42281289a26b")
 	)
 	(junction
+		(at 29.21 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bc9de54e-8c5f-479f-a1a9-38a37b81c292")
+	)
+	(junction
 		(at 233.172 45.212)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -12433,7 +12439,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 140.97) (xy 46.99 140.97)
+			(xy 43.18 140.97) (xy 46.99 140.97)
 		)
 		(stroke
 			(width 0)
@@ -12853,7 +12859,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 142.24) (xy 22.86 144.78)
+			(xy 17.78 142.24) (xy 17.78 154.94)
 		)
 		(stroke
 			(width 0)
@@ -13220,6 +13226,16 @@
 			(type default)
 		)
 		(uuid "4da81695-5dea-4820-b735-a741e46fe37c")
+	)
+	(wire
+		(pts
+			(xy 25.4 120.65) (xy 29.21 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "503eb956-4753-4a01-b74f-04c8ec6df1f5")
 	)
 	(wire
 		(pts
@@ -13623,7 +13639,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 142.24) (xy 22.86 142.24)
+			(xy 40.64 142.24) (xy 17.78 142.24)
 		)
 		(stroke
 			(width 0)
@@ -15773,7 +15789,7 @@
 	)
 	(wire
 		(pts
-			(xy 39.37 140.97) (xy 39.37 139.7)
+			(xy 43.18 140.97) (xy 43.18 139.7)
 		)
 		(stroke
 			(width 0)
@@ -18509,7 +18525,7 @@
 	)
 	(global_label "FC_RESET"
 		(shape bidirectional)
-		(at 29.21 120.65 180)
+		(at 25.4 120.65 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -18519,7 +18535,7 @@
 		)
 		(uuid "dd93f1da-bfbf-4adf-af5b-d65791b4e9cb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 16.1216 120.65 0)
+			(at 12.3116 120.65 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22712,7 +22728,7 @@
 	)
 	(symbol
 		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:1.2V")
-		(at 39.37 137.16 0)
+		(at 43.18 137.16 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -22720,7 +22736,7 @@
 		(dnp no)
 		(uuid "4e060944-560f-4c1a-a308-ffe6ec8d9a10")
 		(property "Reference" "#U$01"
-			(at 39.37 137.16 0)
+			(at 43.18 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22729,7 +22745,7 @@
 			)
 		)
 		(property "Value" "1.2V"
-			(at 37.846 136.144 0)
+			(at 41.656 136.144 0)
 			(effects
 				(font
 					(size 1.27 1.0795)
@@ -22738,7 +22754,7 @@
 			)
 		)
 		(property "Footprint" "Adafruit ItsyBitsy RP2040:"
-			(at 39.37 137.16 0)
+			(at 43.18 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22747,7 +22763,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 39.37 137.16 0)
+			(at 43.18 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22756,7 +22772,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 39.37 137.16 0)
+			(at 43.18 137.16 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27258,7 +27274,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 22.86 144.78 0)
+		(at 17.78 154.94 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -27267,7 +27283,7 @@
 		(fields_autoplaced yes)
 		(uuid "b57af2b7-6f9b-4b57-b339-cdbaccdd9571")
 		(property "Reference" "#PWR041"
-			(at 22.86 151.13 0)
+			(at 17.78 161.29 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27276,7 +27292,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 22.86 149.86 0)
+			(at 17.78 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27284,7 +27300,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 22.86 144.78 0)
+			(at 17.78 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27293,7 +27309,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 22.86 144.78 0)
+			(at 17.78 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27302,7 +27318,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 22.86 144.78 0)
+			(at 17.78 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
