@@ -8444,6 +8444,12 @@
 		(uuid "cd54200a-7ad8-40ef-8f6b-efb9cff51e9c")
 	)
 	(junction
+		(at 241.3 252.73)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cd9e413d-0704-4ae5-9a8e-ab241884ff56")
+	)
+	(junction
 		(at 281.94 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8722,6 +8728,16 @@
 			(type default)
 		)
 		(uuid "0e1e1275-4ce9-460d-b95e-c07a8655d0a3")
+	)
+	(wire
+		(pts
+			(xy 241.3 267.97) (xy 241.3 252.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e78edd2-4d43-467f-900d-ed86c93253d9")
 	)
 	(wire
 		(pts
@@ -9142,6 +9158,16 @@
 			(type default)
 		)
 		(uuid "2c3dd1e2-1ae0-471f-b108-9dc8aa7680b5")
+	)
+	(wire
+		(pts
+			(xy 231.14 267.97) (xy 231.14 252.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2c9c45dc-5d9c-4b12-84a1-dd8acdb62305")
 	)
 	(wire
 		(pts
@@ -10395,6 +10421,16 @@
 	)
 	(wire
 		(pts
+			(xy 247.65 252.73) (xy 247.65 256.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8091425a-5147-4d5b-8a73-d9c9aaace375")
+	)
+	(wire
+		(pts
 			(xy 54.61 210.82) (xy 90.17 226.06)
 		)
 		(stroke
@@ -10665,6 +10701,16 @@
 	)
 	(wire
 		(pts
+			(xy 231.14 252.73) (xy 241.3 252.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95b9b4c6-0602-4488-8ef8-dbf0b00f92a7")
+	)
+	(wire
+		(pts
 			(xy 152.4 96.52) (xy 152.4 99.06)
 		)
 		(stroke
@@ -10922,6 +10968,16 @@
 			(type default)
 		)
 		(uuid "a7d1a11b-6ef0-4d14-8878-b211523d84de")
+	)
+	(wire
+		(pts
+			(xy 241.3 252.73) (xy 247.65 252.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a840f458-e45d-4b02-9a53-a48d938a41b1")
 	)
 	(wire
 		(pts
@@ -12655,6 +12711,28 @@
 			)
 		)
 	)
+	(global_label "F5_SDA"
+		(shape output)
+		(at 233.68 267.97 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "50640834-859a-4880-87e8-88c60b9e2320")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 233.68 258.151 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "F3_SDA"
 		(shape output)
 		(at 191.77 267.97 90)
@@ -13041,6 +13119,50 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "F5_SCL"
+		(shape output)
+		(at 236.22 267.97 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "795f123d-bc26-4ace-b1ab-731bdf844fb3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 236.22 258.2115 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "F5_PWR"
+		(shape output)
+		(at 238.76 267.97 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7bd0873d-72de-4dbd-9dea-299a2dd3d906")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 238.76 257.7277 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -13714,6 +13836,27 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "VSOLAR"
+		(shape bidirectional)
+		(at 243.84 267.97 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.778 1.778)
+			)
+			(justify left)
+		)
+		(uuid "d4691a04-95a0-4913-9290-d7128bf906c9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 290.83 240.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
@@ -17008,7 +17151,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MOLEX PICO LOCK 5 POS:MOLEX_5040500591"
+		(property "Footprint" "Molex 6 pos:MOLEX_5040500691"
 			(at 176.53 273.05 0)
 			(effects
 				(font
@@ -18536,7 +18679,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MOLEX PICO LOCK 5 POS:MOLEX_5040500591"
+		(property "Footprint" "Molex 6 pos:MOLEX_5040500691"
 			(at 217.17 273.05 0)
 			(effects
 				(font
@@ -19431,7 +19574,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MOLEX PICO LOCK 5 POS:MOLEX_5040500591"
+		(property "Footprint" "Molex 6 pos:MOLEX_5040500691"
 			(at 196.85 273.05 0)
 			(effects
 				(font
@@ -21124,6 +21267,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 247.65 256.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a3ddd37c-64a1-4fd5-8f3a-44d67eb2a4da")
+		(property "Reference" "#PWR093"
+			(at 247.65 262.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 247.65 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 247.65 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 247.65 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 247.65 256.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "36f62ae3-99fb-49b6-aa9b-1160d00cd4da")
+		)
+		(instances
+			(project "FC_V5"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471"
+					(reference "#PWR093")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:L")
 		(at 265.43 68.58 270)
 		(unit 1)
@@ -21802,6 +22011,86 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector_Generic:Conn_01x06")
+		(at 238.76 273.05 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b8531a7f-d8f1-4369-b89e-4adfb4577607")
+		(property "Reference" "J2"
+			(at 237.49 276.86 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Face5"
+			(at 237.49 279.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Molex 6 pos:MOLEX_5040500691"
+			(at 238.76 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 238.76 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 238.76 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "250ac7a6-2659-4fa5-bb24-eeea1727bca6")
+		)
+		(pin "2"
+			(uuid "40c599cd-0f9c-4503-8540-8423557a1cce")
+		)
+		(pin "3"
+			(uuid "430d6392-5548-48a4-84d3-2c3592b5a911")
+		)
+		(pin "4"
+			(uuid "3c49aed9-34e6-430c-a4c7-6add1d1fc913")
+		)
+		(pin "5"
+			(uuid "5d8b7122-afaf-4713-8991-cf6be3b46cc3")
+		)
+		(pin "6"
+			(uuid "5a48eeef-55b9-4eca-a7cf-700ec71bce74")
+		)
+		(instances
+			(project "FC_V5"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 368.3 93.98 0)
 		(unit 1)
@@ -21893,7 +22182,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MOLEX PICO LOCK 5 POS:MOLEX_5040500591"
+		(property "Footprint" "Molex 6 pos:MOLEX_5040500691"
 			(at 156.21 273.05 0)
 			(effects
 				(font
@@ -22978,7 +23267,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MOLEX PICO LOCK 5 POS:MOLEX_5040500591"
+		(property "Footprint" "Molex 6 pos:MOLEX_5040500691"
 			(at 134.62 273.05 0)
 			(effects
 				(font
