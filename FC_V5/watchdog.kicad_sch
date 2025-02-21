@@ -4710,6 +4710,16 @@
 	)
 	(wire
 		(pts
+			(xy 29.21 44.45) (xy 29.21 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b450094-1641-4633-9a75-a4f223759161")
+	)
+	(wire
+		(pts
 			(xy 88.9 68.58) (xy 185.42 68.58)
 		)
 		(stroke
@@ -4890,16 +4900,6 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 57.15) (xy 29.21 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c3b8203c-9b87-4031-ae25-504975ca6da3")
-	)
-	(wire
-		(pts
 			(xy 77.47 60.96) (xy 88.9 60.96)
 		)
 		(stroke
@@ -5050,16 +5050,6 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 44.45) (xy 29.21 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e5f4d573-44a5-4de3-92b0-300875ca8123")
-	)
-	(wire
-		(pts
 			(xy 201.93 142.24) (xy 204.47 142.24)
 		)
 		(stroke
@@ -5117,16 +5107,6 @@
 			(type default)
 		)
 		(uuid "fb430f9e-082b-456e-8af5-b78576472994")
-	)
-	(wire
-		(pts
-			(xy 29.21 50.8) (xy 29.21 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fd9ca635-4b57-495c-8810-4cea317f7cd3")
 	)
 	(wire
 		(pts
@@ -9073,112 +9053,6 @@
 		)
 	)
 	(symbol
-		(lib_id "oresat-diodes:1N4151WS-HE3")
-		(at 29.21 48.26 90)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c98cfb1a-0efd-4e27-b93e-33e4d9edb504")
-		(property "Reference" "D5"
-			(at 26.67 47.625 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1N4151WS"
-			(at 26.67 50.165 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SOD-323"
-			(at 34.29 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.vishay.com/docs/85847/1n4151ws.pdf"
-			(at 36.83 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Diode Standard 50V 150mA Surface Mount SOD-323"
-			(at 29.21 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "DPN" "112-1N4151WS-E3-08CT-ND"
-			(at 29.21 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "DST" "Digi-Key"
-			(at 29.21 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MFR" "Vishay"
-			(at 29.21 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "1N4151WS-E3-08"
-			(at 29.21 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1cf500b0-28d0-4bd0-b4eb-7c8488f5e06c")
-		)
-		(pin "2"
-			(uuid "2d41b7a4-ad2d-4a57-ba28-397aa92878f9")
-		)
-		(instances
-			(project "FC_V5"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/d3e26510-981a-4dd5-9b7d-a587e6324dc6"
-					(reference "D5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 170.18 128.27 0)
 		(mirror x)
@@ -9410,112 +9284,6 @@
 			(project "FC_V5"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/d3e26510-981a-4dd5-9b7d-a587e6324dc6"
 					(reference "#PWR081")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small_US")
-		(at 29.21 54.61 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d0f7d362-e8e0-4ba5-ae4d-bf5af5e5cb05")
-		(property "Reference" "R15"
-			(at 26.67 53.975 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10 (1206)"
-			(at 26.67 56.515 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 29.21 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 29.21 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "10 Ohms ±1% 0.5W, 1/2W Chip Resistor 1206 (3216 Metric) Automotive AEC-Q200, Pulse Withstanding Thick Film"
-			(at 29.21 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "DPN" "RHM10.0AFCT-ND"
-			(at 29.21 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "DST" "Digi-Key"
-			(at 29.21 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MFR" "Rohm Semiconductor"
-			(at 29.21 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "MPN" "ESR18EZPF10R0"
-			(at 29.21 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "24e834fa-d53c-4635-8d65-b09ed3dc5ea3")
-		)
-		(pin "2"
-			(uuid "665c9849-91e1-4624-bca4-3aaaea693fee")
-		)
-		(instances
-			(project "FC_V5"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/d3e26510-981a-4dd5-9b7d-a587e6324dc6"
-					(reference "R15")
 					(unit 1)
 				)
 			)
