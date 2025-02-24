@@ -12854,7 +12854,7 @@
 	)
 	(text "Radio\nVDD Select"
 		(exclude_from_sim no)
-		(at 325.12 121.92 0)
+		(at 313.69 129.54 0)
 		(effects
 			(font
 				(size 2.159 2.159)
@@ -13488,7 +13488,7 @@
 			)
 		)
 	)
-	(global_label "VCC_RF1"
+	(global_label "RF_VCC"
 		(shape bidirectional)
 		(at 334.01 134.62 180)
 		(fields_autoplaced yes)
@@ -13500,11 +13500,12 @@
 		)
 		(uuid "53ac3ac1-3e81-4bde-82a3-32e8b787093a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 307.34 35.56 0)
+			(at 322.9587 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -24002,7 +24003,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "MaxLib:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm"
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Open_RoundedPad1.0x1.5mm_NumberLabels"
 			(at 337.82 134.62 0)
 			(effects
 				(font
