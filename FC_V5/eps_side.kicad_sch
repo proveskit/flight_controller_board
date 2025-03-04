@@ -5,290 +5,6 @@
 	(uuid "e2490ac7-6180-4608-97f9-f553e7ea56c7")
 	(paper "A3")
 	(lib_symbols
-		(symbol "1049:1049"
-			(pin_names
-				(offset 0.762)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at 16.51 7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "1049"
-				(at 16.51 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "1049"
-				(at 16.51 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.keyelco.com/product.cfm/product_id/921"
-				(at 16.51 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Description" "KEYSTONE - 1049 - BATTERY HOLDER, 18650, THROUGH HOLE"
-				(at 16.51 -2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Height" "14"
-				(at 16.51 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Mouser Part Number" "534-1049"
-				(at 16.51 -7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/1049?qs=%2F7TOpeL5Mz78b0pqEFIl5w%3D%3D"
-				(at 16.51 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Name" "Keystone Electronics"
-				(at 16.51 -12.7 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Part_Number" "1049"
-				(at 16.51 -15.24 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(symbol "1049_0_0"
-				(pin passive line
-					(at 0 0 0)
-					(length 5.08)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 0)
-					(length 5.08)
-					(name "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -7.62 0)
-					(length 5.08)
-					(name "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -10.16 0)
-					(length 5.08)
-					(name "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 20.32 0 180)
-					(length 5.08)
-					(name "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 20.32 -2.54 180)
-					(length 5.08)
-					(name "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 20.32 -5.08 180)
-					(length 5.08)
-					(name "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 20.32 -7.62 180)
-					(length 5.08)
-					(name "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "1049_0_1"
-				(polyline
-					(pts
-						(xy 5.08 2.54) (xy 15.24 2.54) (xy 15.24 -12.7) (xy 5.08 -12.7) (xy 5.08 2.54)
-					)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-		)
 		(symbol "74xGxx:74LVC1G04"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -8872,32 +8588,16 @@
 		(uuid "fbfafdb1-78bb-4ead-a161-a1a68471a077")
 	)
 	(no_connect
-		(at -141.224 251.46)
-		(uuid "03ee1104-bc30-47e0-9a43-479345728843")
-	)
-	(no_connect
 		(at 88.9 218.44)
 		(uuid "0e2529e2-8cd6-45fc-91cc-e40114c40074")
-	)
-	(no_connect
-		(at -141.224 254)
-		(uuid "1afce145-c34d-43a6-a2a8-527789f2f37b")
 	)
 	(no_connect
 		(at 242.57 212.09)
 		(uuid "246e90df-2afa-4f0d-8d83-71221d002033")
 	)
 	(no_connect
-		(at -166.751 256.413)
-		(uuid "2d37dfdd-0952-40a3-882c-1ad50dd9d062")
-	)
-	(no_connect
 		(at 133.35 74.93)
 		(uuid "33c298db-28d5-4929-a387-2916f239435b")
-	)
-	(no_connect
-		(at -141.224 259.08)
-		(uuid "3a087409-cdbb-4f4d-801c-18c34949f009")
 	)
 	(no_connect
 		(at 88.9 215.9)
@@ -8912,14 +8612,6 @@
 		(uuid "76958336-24db-48ea-9e34-6cce6c92afe5")
 	)
 	(no_connect
-		(at -166.751 248.793)
-		(uuid "8fb897e9-5452-47c4-9de2-a32156d160f4")
-	)
-	(no_connect
-		(at -141.224 248.92)
-		(uuid "9a91fe7c-7d8f-451a-ad4d-d77e172ec942")
-	)
-	(no_connect
 		(at 55.88 215.9)
 		(uuid "a56ac927-4a87-46c6-b346-d3a04c509567")
 	)
@@ -8928,24 +8620,8 @@
 		(uuid "baa03b84-9029-4c79-8226-6aacdd9db3b5")
 	)
 	(no_connect
-		(at -166.751 258.953)
-		(uuid "d97ca613-169d-428f-8754-aaa50f619448")
-	)
-	(no_connect
-		(at -166.751 253.873)
-		(uuid "e9452518-3721-4439-aa8f-1a510dfa0b2d")
-	)
-	(no_connect
-		(at -166.751 251.333)
-		(uuid "f397f990-9ff8-4636-86c5-e8d9acc5018b")
-	)
-	(no_connect
 		(at 55.88 218.44)
 		(uuid "f4e6fa75-04e4-4230-bd30-bd3ce32ca937")
-	)
-	(no_connect
-		(at -141.224 256.54)
-		(uuid "feefc8b4-64de-4e9f-a2ae-c700412a6ceb")
 	)
 	(wire
 		(pts
@@ -9206,16 +8882,6 @@
 			(type default)
 		)
 		(uuid "12a12bdc-14b6-46f8-9c37-5312723bae02")
-	)
-	(wire
-		(pts
-			(xy -120.904 248.92) (xy -120.904 251.46)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "13e050a4-f12c-4f88-8b7a-1c3c05e08e11")
 	)
 	(wire
 		(pts
@@ -9676,16 +9342,6 @@
 			(type default)
 		)
 		(uuid "32de15de-4c68-44ca-8b3a-88b4ff4769c8")
-	)
-	(wire
-		(pts
-			(xy -146.431 248.793) (xy -146.431 251.333)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "33f16fb9-430a-4556-95c3-adc7fc21c5c9")
 	)
 	(wire
 		(pts
@@ -10646,16 +10302,6 @@
 			(type default)
 		)
 		(uuid "6d6bc7a3-ffc8-4076-be30-385bf5c5e28f")
-	)
-	(wire
-		(pts
-			(xy -120.904 254) (xy -120.904 256.54)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6e55dcc3-da2b-4874-8d7e-e85efa58b177")
 	)
 	(wire
 		(pts
@@ -12219,16 +11865,6 @@
 	)
 	(wire
 		(pts
-			(xy -146.431 253.873) (xy -146.431 256.413)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dbc6822c-e5f1-4b74-a0f8-f7d94039a538")
-	)
-	(wire
-		(pts
 			(xy 88.9 48.26) (xy 88.9 64.77)
 		)
 		(stroke
@@ -12830,17 +12466,6 @@
 		)
 		(uuid "4ceb354d-fdb5-4bd5-adc8-d227b04fc93e")
 	)
-	(text "Must install low-side before high-side"
-		(exclude_from_sim no)
-		(at -163.195 232.283 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "51ff25e1-9116-4246-99e1-ade84af71cf6")
-	)
 	(text "Solar Power Monitor"
 		(exclude_from_sim no)
 		(at 10.922 8.382 0)
@@ -13046,27 +12671,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "B-"
-		(shape bidirectional)
-		(at -146.431 248.793 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "0a811885-21e4-4903-91d4-905594281438")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -65.151 164.973 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 				(hide yes)
 			)
 		)
@@ -13642,27 +13246,6 @@
 			)
 		)
 	)
-	(global_label "BM"
-		(shape bidirectional)
-		(at -120.904 248.92 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "71ee3b95-e6c7-442e-bdd1-5055c7ffb2e3")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -2.794 346.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SDA1"
 		(shape bidirectional)
 		(at 214.63 41.91 90)
@@ -13981,27 +13564,6 @@
 		(uuid "9bf83bfa-eb26-4a9c-b513-ff3af09d4ccb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 279.4 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "PACK+"
-		(shape bidirectional)
-		(at -120.904 256.54 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a0ae6070-1f45-4369-bd25-63e1a787a2e3")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -273.304 175.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14553,27 +14115,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "BM"
-		(shape bidirectional)
-		(at -146.431 256.413 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f068ed66-8e3b-4f57-8145-af95e8559d3c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -264.541 158.623 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 				(hide yes)
 			)
 		)
@@ -17822,148 +17363,6 @@
 			(project "FC_V5"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471"
 					(reference "D11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "1049:1049")
-		(at -166.751 248.793 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4c91bd00-b15d-438d-bfdc-4cfabb98728a")
-		(property "Reference" "U9"
-			(at -156.591 241.681 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1049"
-			(at -156.591 244.221 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "1049:1049"
-			(at -150.241 246.253 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.keyelco.com/product.cfm/product_id/921"
-			(at -150.241 248.793 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "KEYSTONE - 1049 - BATTERY HOLDER, 18650, THROUGH HOLE"
-			(at -150.241 251.333 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Height" "14"
-			(at -150.241 253.873 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "534-1049"
-			(at -150.241 256.413 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/1049?qs=%2F7TOpeL5Mz78b0pqEFIl5w%3D%3D"
-			(at -150.241 258.953 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Keystone Electronics"
-			(at -150.241 261.493 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "1049"
-			(at -150.241 264.033 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "988e7aa9-c883-41cb-9850-bc06f565d848")
-		)
-		(pin "2"
-			(uuid "8115d349-d33c-4939-9f6f-b35a271bf910")
-		)
-		(pin "3"
-			(uuid "df7acd57-35e2-429a-a29e-d9a5bea5ec2f")
-		)
-		(pin "4"
-			(uuid "a9cadc03-3f24-48f4-82dc-c1922a456b33")
-		)
-		(pin "5"
-			(uuid "9e2b4ba3-4f45-4fb4-b7b1-6efbe307b4b9")
-		)
-		(pin "6"
-			(uuid "08ab9e08-04f7-498c-8f26-a0de7a60ba49")
-		)
-		(pin "7"
-			(uuid "24ae2141-7af4-47b3-8630-87bf0d01dd58")
-		)
-		(pin "8"
-			(uuid "635d1826-4ad5-4c61-98a9-04d9ab6870ab")
-		)
-		(pin "9"
-			(uuid "eec04251-7f68-4110-9142-32bffc3785e2")
-		)
-		(instances
-			(project "FC_V5"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471"
-					(reference "U9")
 					(unit 1)
 				)
 			)
@@ -23827,148 +23226,6 @@
 			(project "FC_V5"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471"
 					(reference "#PWR030")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "1049:1049")
-		(at -141.224 248.92 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f9ead860-fa93-4e65-943f-69d84d784aa7")
-		(property "Reference" "U11"
-			(at -131.064 241.808 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1049"
-			(at -131.064 244.348 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "1049:1049"
-			(at -124.714 246.38 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.keyelco.com/product.cfm/product_id/921"
-			(at -124.714 248.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "KEYSTONE - 1049 - BATTERY HOLDER, 18650, THROUGH HOLE"
-			(at -124.714 251.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Height" "14"
-			(at -124.714 254 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "534-1049"
-			(at -124.714 256.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/1049?qs=%2F7TOpeL5Mz78b0pqEFIl5w%3D%3D"
-			(at -124.714 259.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "Keystone Electronics"
-			(at -124.714 261.62 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "1049"
-			(at -124.714 264.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a559e760-2523-474f-97c9-9db5189ef69d")
-		)
-		(pin "2"
-			(uuid "0de9324c-7873-4208-8ccd-52c5ce3ef770")
-		)
-		(pin "3"
-			(uuid "52d49aeb-adb9-463d-ac0c-b1a18afc687a")
-		)
-		(pin "4"
-			(uuid "61df08a8-f7ec-4a50-bb13-9a96d1cd3ab1")
-		)
-		(pin "5"
-			(uuid "0ad65f5f-21f9-4a7c-ae34-03f1052e3803")
-		)
-		(pin "6"
-			(uuid "8b751d9a-c7a6-4cf4-b30d-b03d5f21d109")
-		)
-		(pin "7"
-			(uuid "25d2e60d-93bf-4680-8393-f9df1ba21a75")
-		)
-		(pin "8"
-			(uuid "2f3e2402-0db3-4458-ab98-fccb507887c7")
-		)
-		(pin "9"
-			(uuid "78b19372-215e-4db6-b19e-2e875ba44ffe")
-		)
-		(instances
-			(project "FC_V5"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471"
-					(reference "U11")
 					(unit 1)
 				)
 			)
