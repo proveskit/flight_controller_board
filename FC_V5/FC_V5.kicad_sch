@@ -18115,6 +18115,28 @@
 			)
 		)
 	)
+	(global_label "F4_SCL"
+		(shape output)
+		(at 283.21 125.73 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9740acd0-78eb-4d54-ad01-8e77109757ca")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 283.21 135.4885 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "USB_D+"
 		(shape input)
 		(at 175.26 265.43 0)
@@ -19334,6 +19356,28 @@
 		(uuid "fc64cc02-2d4a-47af-a48e-61257c7e8596")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 369.8029 236.855 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "F4_SDA"
+		(shape output)
+		(at 285.75 125.73 270)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fd02e6e1-0eb3-4066-bf0d-854a40a21d57")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 285.75 135.549 90)
 			(effects
 				(font
 					(size 1.27 1.27)
