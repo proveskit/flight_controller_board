@@ -1,12 +1,14 @@
 (kicad_sch
-	(version 20231120)
+	(version 20250114)
 	(generator "eeschema")
-	(generator_version "8.0")
+	(generator_version "9.0")
 	(uuid "a8221e60-76fa-4d87-a6f2-9794293534b6")
 	(paper "A4")
 	(lib_symbols
 		(symbol "CPH3225A:CPH3225A"
-			(pin_names hide)
+			(pin_names
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -144,16 +146,15 @@
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 7.62 0) (xy 10.16 0)
-					)
+				(rectangle
+					(start 5.08 2.54)
+					(end 5.842 -2.54)
 					(stroke
 						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type none)
+						(type background)
 					)
 				)
 				(polyline
@@ -168,15 +169,16 @@
 						(type outline)
 					)
 				)
-				(rectangle
-					(start 5.08 2.54)
-					(end 5.842 -2.54)
+				(polyline
+					(pts
+						(xy 7.62 0) (xy 10.16 0)
+					)
 					(stroke
 						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
 					)
 				)
 				(pin passive line
@@ -216,12 +218,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:GND"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -312,12 +319,17 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
 		(symbol "power:VCC"
 			(power)
-			(pin_numbers hide)
+			(pin_numbers
+				(hide yes)
+			)
 			(pin_names
-				(offset 0) hide)
+				(offset 0)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -389,7 +401,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 0) (xy 0 2.54)
+						(xy 0 2.54) (xy 0.762 1.27)
 					)
 					(stroke
 						(width 0)
@@ -401,7 +413,7 @@
 				)
 				(polyline
 					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
+						(xy 0 0) (xy 0 2.54)
 					)
 					(stroke
 						(width 0)
@@ -432,7 +444,18 @@
 					)
 				)
 			)
+			(embedded_fonts no)
 		)
+	)
+	(text "132mF"
+		(exclude_from_sim no)
+		(at 48.768 22.098 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "786e36c4-693b-49dc-b563-50500c65044f")
 	)
 	(junction
 		(at 60.96 175.26)
@@ -1045,16 +1068,6 @@
 			(type default)
 		)
 		(uuid "f4509bd5-2f39-46f5-8314-c61af0a10ae4")
-	)
-	(text "132mF"
-		(exclude_from_sim no)
-		(at 48.768 22.098 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "786e36c4-693b-49dc-b563-50500c65044f")
 	)
 	(symbol
 		(lib_id "CPH3225A:CPH3225A")
