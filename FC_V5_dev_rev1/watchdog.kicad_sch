@@ -884,37 +884,28 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Power_Management:AP22652"
+		(symbol "PROVES:AP22652W6-7"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at -7.874 9.906 0)
+				(at -6.35 8.636 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" ""
-				(at 3.81 -3.81 0)
+			(property "Value" "AP22652W6-7"
+				(at 8.636 9.144 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" "SOT26:SOT26"
-				(at 7.112 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 3.81 -3.81 0)
+			(property "Footprint" "AP22652W6-7:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -922,8 +913,8 @@
 					(hide yes)
 				)
 			)
-			(property "Description" ""
-				(at 3.81 -3.81 0)
+			(property "Datasheet" "https://www.diodes.com/datasheet/download/AP22652_AP22653_AP22652A_AP22653A.pdf"
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -931,10 +922,19 @@
 					(hide yes)
 				)
 			)
-			(symbol "AP22652_0_1"
+			(property "Description" "2A ENABLE Low Load Switch"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "AP22652W6-7_0_1"
 				(rectangle
-					(start -8.89 8.89)
-					(end 8.89 -5.08)
+					(start -11.43 7.62)
+					(end 11.43 -7.62)
 					(stroke
 						(width 0)
 						(type default)
@@ -944,37 +944,11 @@
 					)
 				)
 			)
-			(symbol "AP22652_1_1"
-				(text "AP22652"
-					(at 4.572 10.16 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(pin input line
-					(at -11.43 7.62 0)
+			(symbol "AP22652W6-7_1_1"
+				(pin output line
+					(at -13.97 0 0)
 					(length 2.54)
-					(name "ILIM"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -11.43 3.81 0)
-					(length 2.54)
-					(name "EN"
+					(name "~{ENABLE}"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -990,9 +964,9 @@
 					)
 				)
 				(pin input line
-					(at -11.43 -2.54 0)
+					(at 0 10.16 270)
 					(length 2.54)
-					(name "Input"
+					(name "INPUT"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1007,8 +981,8 @@
 						)
 					)
 				)
-				(pin input line
-					(at 0 -7.62 90)
+				(pin output line
+					(at 0 -10.16 90)
 					(length 2.54)
 					(name "GND"
 						(effects
@@ -1026,9 +1000,27 @@
 					)
 				)
 				(pin output line
-					(at 11.43 5.08 180)
+					(at 13.97 5.08 180)
 					(length 2.54)
-					(name "Output"
+					(name "FAULT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 13.97 0 180)
+					(length 2.54)
+					(name "OUTPUT"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1044,16 +1036,16 @@
 					)
 				)
 				(pin output line
-					(at 11.43 1.27 180)
+					(at 13.97 -5.08 180)
 					(length 2.54)
-					(name "~{Fault}"
+					(name "ILIM"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "4"
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -8414,7 +8406,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Power_Management:AP22652")
+		(lib_id "PROVES:AP22652W6-7")
 		(at 140.97 33.02 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8430,25 +8422,16 @@
 				)
 			)
 		)
-		(property "Value" "AP22652"
-			(at 140.97 20.32 0)
+		(property "Value" "AP22652W6-7"
+			(at 140.97 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "SOT26:SOT26"
-			(at 148.082 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 144.78 36.83 0)
+		(property "Footprint" "AP22652W6-7:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL"
+			(at 140.97 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8456,8 +8439,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
-			(at 144.78 36.83 0)
+		(property "Datasheet" "https://www.diodes.com/datasheet/download/AP22652_AP22653_AP22652A_AP22653A.pdf"
+			(at 140.97 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "2A ENABLE Low Load Switch"
+			(at 140.97 33.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
