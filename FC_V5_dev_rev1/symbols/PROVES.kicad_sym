@@ -187,7 +187,7 @@
 			)
 		)
 		(property "Value" "RP2350B"
-			(at -24.384 -30.226 0)
+			(at -24.384 -21.082 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -231,7 +231,7 @@
 		)
 		(symbol "RP2350B_1_1"
 			(rectangle
-				(start -29.21 6.35)
+				(start -21.59 6.35)
 				(end 29.21 -15.24)
 				(stroke
 					(width 0)
@@ -242,7 +242,7 @@
 				)
 			)
 			(text "RP2350B Power & Support Circuitry"
-				(at -22.606 -17.018 0)
+				(at -18.796 -17.018 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -250,7 +250,7 @@
 				)
 			)
 			(text "1.1V"
-				(at -11.684 -2.54 0)
+				(at -11.43 -1.524 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -258,15 +258,51 @@
 				)
 			)
 			(text "3.3V"
-				(at 15.24 -3.048 0)
+				(at 15.24 -2.032 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
+			(pin input line
+				(at -24.13 1.27 0)
+				(length 2.54)
+				(name "XIN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "21"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin output line
+				(at -24.13 -1.27 0)
+				(length 2.54)
+				(name "XOUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "22"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
 			(pin power_in line
-				(at -31.75 -3.81 0)
+				(at -24.13 -11.43 0)
 				(length 2.54)
 				(name "RUN"
 					(effects
@@ -276,42 +312,6 @@
 					)
 				)
 				(number "35"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at -22.86 8.89 270)
-				(length 2.54)
-				(name "VREG_VIN"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "64"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin power_in line
-				(at -20.32 8.89 270)
-				(length 2.54)
-				(name "VREG_FB"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "65"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -391,24 +391,6 @@
 					)
 				)
 			)
-			(pin input line
-				(at -2.54 -17.78 90)
-				(length 2.54)
-				(name "VREG_PGND"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "62"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
 			(pin power_in line
 				(at 0 8.89 270)
 				(length 2.54)
@@ -446,7 +428,7 @@
 				)
 			)
 			(pin input line
-				(at 2.54 -17.78 90)
+				(at 5.08 -17.78 90)
 				(length 2.54)
 				(name "GND"
 					(effects
@@ -608,7 +590,61 @@
 				)
 			)
 			(pin power_out line
-				(at 31.75 -3.81 180)
+				(at 31.75 -2.54 180)
+				(length 2.54)
+				(name "VREG_AVDD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "61"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 31.75 -5.08 180)
+				(length 2.54)
+				(name "VREG_VIN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "64"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_in line
+				(at 31.75 -7.62 180)
+				(length 2.54)
+				(name "VREG_FB"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "65"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin power_out line
+				(at 31.75 -10.16 180)
 				(length 2.54)
 				(name "VREG_LX"
 					(effects
@@ -625,17 +661,17 @@
 					)
 				)
 			)
-			(pin power_out line
-				(at 31.75 -6.35 180)
+			(pin input line
+				(at 31.75 -12.7 180)
 				(length 2.54)
-				(name "VREG_AVDD"
+				(name "VREG_PGND"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "61"
+				(number "62"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1708,6 +1744,42 @@
 					)
 				)
 				(number "66"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -19.05 -15.24 0)
+				(length 2.54)
+				(name "SWCLK"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "24"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin input line
+				(at -19.05 -17.78 0)
+				(length 2.54)
+				(name "SWDIO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "25"
 					(effects
 						(font
 							(size 1.27 1.27)
