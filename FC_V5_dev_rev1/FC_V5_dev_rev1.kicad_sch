@@ -7377,7 +7377,7 @@
 				)
 			)
 			(property "Value" "RP2350B"
-				(at -24.384 -30.226 0)
+				(at -35.814 -10.922 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -7385,7 +7385,7 @@
 				)
 			)
 			(property "Footprint" "RP2350:QFN-80_L10.0-W10.0-P0.40-TL-EP3.4"
-				(at -0.254 -69.342 0)
+				(at -0.762 -79.502 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -7403,7 +7403,7 @@
 				)
 			)
 			(property "Description" "The RP2350B Microcontroller from the Raspberry Pi Foundation"
-				(at -0.254 -71.12 0)
+				(at -0.762 -81.28 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -7421,7 +7421,7 @@
 			)
 			(symbol "RP2350B_1_1"
 				(rectangle
-					(start -29.21 6.35)
+					(start -21.59 6.35)
 					(end 29.21 -15.24)
 					(stroke
 						(width 0)
@@ -7431,16 +7431,16 @@
 						(type none)
 					)
 				)
-				(text "1.1V"
-					(at -11.684 -2.54 0)
+				(text "RP2350B Power & Support Circuitry"
+					(at -18.796 -17.018 0)
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(text "RP2350B Power & Support Circuitry"
-					(at 0 29.718 0)
+				(text "1.1V"
+					(at -11.43 -1.524 0)
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -7448,15 +7448,51 @@
 					)
 				)
 				(text "3.3V"
-					(at 15.24 -3.048 0)
+					(at 15.24 -2.032 0)
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
+				(pin input line
+					(at -24.13 1.27 0)
+					(length 2.54)
+					(name "XIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at -24.13 -1.27 0)
+					(length 2.54)
+					(name "XOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin power_in line
-					(at -31.75 -3.81 0)
+					(at -24.13 -11.43 0)
 					(length 2.54)
 					(name "RUN"
 						(effects
@@ -7466,42 +7502,6 @@
 						)
 					)
 					(number "35"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -22.86 8.89 270)
-					(length 2.54)
-					(name "VREG_VIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "64"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -20.32 8.89 270)
-					(length 2.54)
-					(name "VREG_FB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "65"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7581,24 +7581,6 @@
 						)
 					)
 				)
-				(pin input line
-					(at -2.54 -17.78 90)
-					(length 2.54)
-					(name "VREG_PGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "62"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin power_in line
 					(at 0 8.89 270)
 					(length 2.54)
@@ -7636,7 +7618,7 @@
 					)
 				)
 				(pin input line
-					(at 2.54 -17.78 90)
+					(at 5.08 -17.78 90)
 					(length 2.54)
 					(name "GND"
 						(effects
@@ -7798,7 +7780,61 @@
 					)
 				)
 				(pin power_out line
-					(at 31.75 -3.81 180)
+					(at 31.75 -2.54 180)
+					(length 2.54)
+					(name "VREG_AVDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "61"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 31.75 -5.08 180)
+					(length 2.54)
+					(name "VREG_VIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "64"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 31.75 -7.62 180)
+					(length 2.54)
+					(name "VREG_FB"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "65"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 31.75 -10.16 180)
 					(length 2.54)
 					(name "VREG_LX"
 						(effects
@@ -7815,17 +7851,17 @@
 						)
 					)
 				)
-				(pin power_out line
-					(at 31.75 -6.35 180)
+				(pin input line
+					(at 31.75 -12.7 180)
 					(length 2.54)
-					(name "VREG_AVDD"
+					(name "VREG_PGND"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "61"
+					(number "62"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7966,7 +8002,7 @@
 			(symbol "RP2350B_3_1"
 				(rectangle
 					(start -15.24 7.62)
-					(end 15.24 -66.04)
+					(end 15.24 -41.91)
 					(stroke
 						(width 0)
 						(type default)
@@ -7984,224 +8020,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -17.78 5.08 0)
-					(length 2.54)
-					(name "GPIO0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "77"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 2.54 0)
-					(length 2.54)
-					(name "GPIO1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "78"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
 					(at -17.78 0 0)
-					(length 2.54)
-					(name "GPIO2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "79"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -2.54 0)
-					(length 2.54)
-					(name "GPIO3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "80"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -5.08 0)
-					(length 2.54)
-					(name "GPIO4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(alternate "SPI0_MISO" input line)
-				)
-				(pin bidirectional line
-					(at -17.78 -7.62 0)
-					(length 2.54)
-					(name "GPIO5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -10.16 0)
-					(length 2.54)
-					(name "GPIO6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -12.7 0)
-					(length 2.54)
-					(name "GPIO7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -17.78 0)
-					(length 2.54)
-					(name "GPIO8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -20.32 0)
-					(length 2.54)
-					(name "GPIO9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -22.86 0)
-					(length 2.54)
-					(name "GPIO10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -25.4 0)
-					(length 2.54)
-					(name "GPIO11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -30.48 0)
 					(length 2.54)
 					(name "GPIO12"
 						(effects
@@ -8219,7 +8038,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -17.78 -33.02 0)
+					(at -17.78 -2.54 0)
 					(length 2.54)
 					(name "GPIO13"
 						(effects
@@ -8237,7 +8056,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -17.78 -35.56 0)
+					(at -17.78 -5.08 0)
 					(length 2.54)
 					(name "GPIO14"
 						(effects
@@ -8255,7 +8074,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -17.78 -38.1 0)
+					(at -17.78 -7.62 0)
 					(length 2.54)
 					(name "GPIO15"
 						(effects
@@ -8273,7 +8092,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -17.78 -43.18 0)
+					(at -17.78 -12.7 0)
 					(length 2.54)
 					(name "GPIO16"
 						(effects
@@ -8291,7 +8110,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -17.78 -45.72 0)
+					(at -17.78 -15.24 0)
 					(length 2.54)
 					(name "GPIO17"
 						(effects
@@ -8309,7 +8128,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -17.78 -48.26 0)
+					(at -17.78 -17.78 0)
 					(length 2.54)
 					(name "GPIO18"
 						(effects
@@ -8327,7 +8146,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -17.78 -50.8 0)
+					(at -17.78 -20.32 0)
 					(length 2.54)
 					(name "GPIO19"
 						(effects
@@ -8345,7 +8164,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -17.78 -55.88 0)
+					(at -17.78 -25.4 0)
 					(length 2.54)
 					(name "GPIO20"
 						(effects
@@ -8363,7 +8182,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -17.78 -58.42 0)
+					(at -17.78 -27.94 0)
 					(length 2.54)
 					(name "GPIO21"
 						(effects
@@ -8381,7 +8200,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -17.78 -60.96 0)
+					(at -17.78 -30.48 0)
 					(length 2.54)
 					(name "GPIO22"
 						(effects
@@ -8399,7 +8218,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -17.78 -63.5 0)
+					(at -17.78 -33.02 0)
 					(length 2.54)
 					(name "GPIO23"
 						(effects
@@ -8491,150 +8310,6 @@
 				(pin bidirectional line
 					(at 17.78 -7.62 180)
 					(length 2.54)
-					(name "GPIO28"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "36"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -10.16 180)
-					(length 2.54)
-					(name "GPIO29"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "37"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -12.7 180)
-					(length 2.54)
-					(name "GPIO30"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "38"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -15.24 180)
-					(length 2.54)
-					(name "GPIO31"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "39"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -17.78 180)
-					(length 2.54)
-					(name "GPIO32"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "40"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -22.86 180)
-					(length 2.54)
-					(name "GPIO33"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "42"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -25.4 180)
-					(length 2.54)
-					(name "GPIO34"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "43"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -27.94 180)
-					(length 2.54)
-					(name "GPIO35"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "44"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -30.48 180)
-					(length 2.54)
 					(name "GPIO36"
 						(effects
 							(font
@@ -8651,7 +8326,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 17.78 -33.02 180)
+					(at 17.78 -10.16 180)
 					(length 2.54)
 					(name "GPIO37"
 						(effects
@@ -8669,7 +8344,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 17.78 -35.56 180)
+					(at 17.78 -12.7 180)
 					(length 2.54)
 					(name "GPIO38"
 						(effects
@@ -8687,7 +8362,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 17.78 -38.1 180)
+					(at 17.78 -15.24 180)
 					(length 2.54)
 					(name "GPIO39"
 						(effects
@@ -8705,7 +8380,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 17.78 -40.64 180)
+					(at 17.78 -17.78 180)
 					(length 2.54)
 					(name "GPIO40_ADC0"
 						(effects
@@ -8723,7 +8398,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 17.78 -45.72 180)
+					(at 17.78 -22.86 180)
 					(length 2.54)
 					(name "GPIO41_ADC1"
 						(effects
@@ -8741,7 +8416,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 17.78 -48.26 180)
+					(at 17.78 -25.4 180)
 					(length 2.54)
 					(name "GPIO42_ADC2"
 						(effects
@@ -8759,7 +8434,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 17.78 -50.8 180)
+					(at 17.78 -27.94 180)
 					(length 2.54)
 					(name "GPIO43_ADC3"
 						(effects
@@ -8777,7 +8452,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 17.78 -53.34 180)
+					(at 17.78 -30.48 180)
 					(length 2.54)
 					(name "GPIO44_ADC4"
 						(effects
@@ -8795,7 +8470,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 17.78 -55.88 180)
+					(at 17.78 -33.02 180)
 					(length 2.54)
 					(name "GPIO5_ADC5"
 						(effects
@@ -8813,7 +8488,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 17.78 -58.42 180)
+					(at 17.78 -35.56 180)
 					(length 2.54)
 					(name "GPIO6_ADC6"
 						(effects
@@ -8831,7 +8506,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at 17.78 -60.96 180)
+					(at 17.78 -38.1 180)
 					(length 2.54)
 					(name "GPIO7_ADC7"
 						(effects
@@ -8851,14 +8526,88 @@
 			)
 			(symbol "RP2350B_4_1"
 				(rectangle
-					(start -16.51 2.54)
-					(end 15.24 -21.59)
+					(start -16.51 8.89)
+					(end 16.51 -67.31)
 					(stroke
 						(width 0)
 						(type default)
 					)
 					(fill
 						(type none)
+					)
+				)
+				(rectangle
+					(start -16.51 -11.43)
+					(end 16.51 -21.59)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -16.51 -21.59)
+					(end 16.51 -31.75)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -16.51 -31.75)
+					(end 16.51 -41.91)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -16.51 -41.91)
+					(end 16.51 -52.07)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -16.51 -52.07)
+					(end 16.51 -59.69)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -16.51 -59.69)
+					(end 16.51 -67.31)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "UART0\n"
+					(at -0.254 -37.084 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
 					)
 				)
 				(text "RP2350B Serial Buses"
@@ -8869,8 +8618,48 @@
 						)
 					)
 				)
+				(text "SPI0"
+					(at 0 -16.51 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(text "SPI1"
+					(at 0 -26.67 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(text "UART1"
+					(at 0 -46.99 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(text "I2C0\n"
+					(at 0 -55.372 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(text "I2C1\n"
+					(at 0 -63.5 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
 				(pin bidirectional line
-					(at -19.05 -5.08 0)
+					(at -19.05 5.08 0)
 					(length 2.54)
 					(name "USB_D+"
 						(effects
@@ -8888,7 +8677,7 @@
 					)
 				)
 				(pin bidirectional line
-					(at -19.05 -7.62 0)
+					(at -19.05 2.54 0)
 					(length 2.54)
 					(name "USB_D-"
 						(effects
@@ -8904,6 +8693,422 @@
 							)
 						)
 					)
+				)
+				(pin input line
+					(at -19.05 -5.08 0)
+					(length 2.54)
+					(name "SWCLK"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -19.05 -7.62 0)
+					(length 2.54)
+					(name "SWDIO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -19.05 -16.51 0)
+					(length 2.54)
+					(name "GPIO0"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "77"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "SPI0 MISO" input line)
+				)
+				(pin input line
+					(at -19.05 -26.67 0)
+					(length 2.54)
+					(name "GPIO28"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "36"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "SPI1 MISO" input line)
+				)
+				(pin input line
+					(at -19.05 -35.56 0)
+					(length 2.54)
+					(name "GPIO33"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "42"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "UART0 RX" bidirectional line)
+				)
+				(pin input line
+					(at -19.05 -38.1 0)
+					(length 2.54)
+					(name "GPIO34"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "43"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "UART0 CTS" bidirectional line)
+				)
+				(pin input line
+					(at -19.05 -45.72 0)
+					(length 2.54)
+					(name "GPIO5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "UART1 RX" input line)
+				)
+				(pin input line
+					(at -19.05 -48.26 0)
+					(length 2.54)
+					(name "GPIO6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "UART1 CTS" bidirectional line)
+				)
+				(pin bidirectional line
+					(at -19.05 -55.88 0)
+					(length 2.54)
+					(name "GPIO8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C0 SDA" bidirectional line)
+				)
+				(pin bidirectional line
+					(at -19.05 -63.5 0)
+					(length 2.54)
+					(name "GPIO10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C1 SDA" bidirectional line)
+				)
+				(pin output line
+					(at 19.05 -13.97 180)
+					(length 2.54)
+					(name "GPIO1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "78"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "SPI1 CS0" output line)
+				)
+				(pin output clock
+					(at 19.05 -16.51 180)
+					(length 2.54)
+					(name "GPIO2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "79"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "SPI0 SCK" output clock)
+				)
+				(pin output line
+					(at 19.05 -19.05 180)
+					(length 2.54)
+					(name "GPIO3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "80"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "SPI0 MOSI" output line)
+				)
+				(pin output line
+					(at 19.05 -24.13 180)
+					(length 2.54)
+					(name "GPIO29"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "37"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "SPI1 CS0" output line)
+				)
+				(pin output clock
+					(at 19.05 -26.67 180)
+					(length 2.54)
+					(name "GPIO30"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "38"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "SPI1 SCK" output clock)
+				)
+				(pin output line
+					(at 19.05 -29.21 180)
+					(length 2.54)
+					(name "GPIO31"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "39"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "SPI1 MOSI" output line)
+				)
+				(pin output line
+					(at 19.05 -35.56 180)
+					(length 2.54)
+					(name "GPIO32"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "40"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "UART0 TX" output line)
+				)
+				(pin output line
+					(at 19.05 -38.1 180)
+					(length 2.54)
+					(name "GPIO35"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "44"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "UART0 RTS" bidirectional line)
+				)
+				(pin output line
+					(at 19.05 -45.72 180)
+					(length 2.54)
+					(name "GPIO4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "UART1 TX" output line)
+				)
+				(pin output line
+					(at 19.05 -48.26 180)
+					(length 2.54)
+					(name "GPIO7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "UART1 RTS" output line)
+				)
+				(pin output line
+					(at 19.05 -55.88 180)
+					(length 2.54)
+					(name "GPIO9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C0 SCL" bidirectional line)
+				)
+				(pin output line
+					(at 19.05 -63.5 180)
+					(length 2.54)
+					(name "GPIO11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(alternate "I2C1 SCL" output line)
 				)
 			)
 			(embedded_fonts no)
@@ -9375,3238 +9580,6 @@
 						)
 					)
 					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "RP2350B_1"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -24.638 30.226 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "RP2350B"
-				(at -24.384 -21.082 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "RP2350:QFN-80_L10.0-W10.0-P0.40-TL-EP3.4"
-				(at -0.254 -69.342 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf"
-				(at -0.762 10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "The RP2350B Microcontroller from the Raspberry Pi Foundation"
-				(at -0.254 -71.12 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "RP2350B_1_1_1"
-				(rectangle
-					(start -21.59 6.35)
-					(end 29.21 -15.24)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "RP2350B Power & Support Circuitry"
-					(at -18.796 -17.018 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(text "1.1V"
-					(at -11.43 -1.524 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(text "3.3V"
-					(at 15.24 -2.032 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(pin input line
-					(at -24.13 1.27 0)
-					(length 2.54)
-					(name "XIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -24.13 -1.27 0)
-					(length 2.54)
-					(name "XOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -24.13 -11.43 0)
-					(length 2.54)
-					(name "RUN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "35"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -13.97 8.89 270)
-					(length 2.54)
-					(name "DVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "51"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 8.89 270)
-					(length 2.54)
-					(name "DVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "32"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -8.89 8.89 270)
-					(length 2.54)
-					(name "DVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 8.89 270)
-					(length 2.54)
-					(name "ADC_AVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "59"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 8.89 270)
-					(length 2.54)
-					(name "USB_OTP_VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "68"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 2.54 8.89 270)
-					(length 2.54)
-					(name "QSPI_IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "69"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 5.08 -17.78 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "81"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 6.35 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "76"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 8.89 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "60"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "50"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 13.97 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "41"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 16.51 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "29"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 19.05 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 21.59 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 24.13 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 31.75 -2.54 180)
-					(length 2.54)
-					(name "VREG_AVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "61"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 31.75 -5.08 180)
-					(length 2.54)
-					(name "VREG_VIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "64"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 31.75 -7.62 180)
-					(length 2.54)
-					(name "VREG_FB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "65"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 31.75 -10.16 180)
-					(length 2.54)
-					(name "VREG_LX"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "63"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 31.75 -12.7 180)
-					(length 2.54)
-					(name "VREG_PGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "62"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "RP2350B_1_2_1"
-				(rectangle
-					(start -15.24 10.16)
-					(end 11.43 -10.16)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "RP2350B Memory"
-					(at -2.54 11.684 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 6.35 0)
-					(length 2.54)
-					(name "QSPI_SS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "75"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 3.81 0)
-					(length 2.54)
-					(name "QSPI_SD1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "74"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 1.27 0)
-					(length 2.54)
-					(name "QSPI_SD2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "73"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -1.27 0)
-					(length 2.54)
-					(name "QSPI_SD0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "72"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output clock
-					(at -17.78 -3.81 0)
-					(length 2.54)
-					(name "QSPI_SCLK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "71"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -6.35 0)
-					(length 2.54)
-					(name "QSPI_SD3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "70"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "RP2350B_1_3_1"
-				(rectangle
-					(start -15.24 7.62)
-					(end 15.24 -66.04)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "RP2350B GPIO"
-					(at 0 12.446 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 5.08 0)
-					(length 2.54)
-					(name "GPIO0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "77"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 2.54 0)
-					(length 2.54)
-					(name "GPIO1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "78"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 0 0)
-					(length 2.54)
-					(name "GPIO2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "79"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -2.54 0)
-					(length 2.54)
-					(name "GPIO3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "80"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -5.08 0)
-					(length 2.54)
-					(name "GPIO4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(alternate "SPI0_MISO" input line)
-				)
-				(pin bidirectional line
-					(at -17.78 -7.62 0)
-					(length 2.54)
-					(name "GPIO5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -10.16 0)
-					(length 2.54)
-					(name "GPIO6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -12.7 0)
-					(length 2.54)
-					(name "GPIO7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -17.78 0)
-					(length 2.54)
-					(name "GPIO8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -20.32 0)
-					(length 2.54)
-					(name "GPIO9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -22.86 0)
-					(length 2.54)
-					(name "GPIO10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -25.4 0)
-					(length 2.54)
-					(name "GPIO11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -30.48 0)
-					(length 2.54)
-					(name "GPIO12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -33.02 0)
-					(length 2.54)
-					(name "GPIO13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -35.56 0)
-					(length 2.54)
-					(name "GPIO14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -38.1 0)
-					(length 2.54)
-					(name "GPIO15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -43.18 0)
-					(length 2.54)
-					(name "GPIO16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -45.72 0)
-					(length 2.54)
-					(name "GPIO17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -48.26 0)
-					(length 2.54)
-					(name "GPIO18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -50.8 0)
-					(length 2.54)
-					(name "GPIO19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -55.88 0)
-					(length 2.54)
-					(name "GPIO20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -58.42 0)
-					(length 2.54)
-					(name "GPIO21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -60.96 0)
-					(length 2.54)
-					(name "GPIO22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -63.5 0)
-					(length 2.54)
-					(name "GPIO23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 5.08 180)
-					(length 2.54)
-					(name "GPIO24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "25"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 2.54 180)
-					(length 2.54)
-					(name "GPIO25"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "26"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 0 180)
-					(length 2.54)
-					(name "GPIO26"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "27"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -2.54 180)
-					(length 2.54)
-					(name "GPIO27"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "28"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -7.62 180)
-					(length 2.54)
-					(name "GPIO28"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "36"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -10.16 180)
-					(length 2.54)
-					(name "GPIO29"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "37"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -12.7 180)
-					(length 2.54)
-					(name "GPIO30"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "38"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -15.24 180)
-					(length 2.54)
-					(name "GPIO31"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "39"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -17.78 180)
-					(length 2.54)
-					(name "GPIO32"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "40"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -22.86 180)
-					(length 2.54)
-					(name "GPIO33"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "42"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -25.4 180)
-					(length 2.54)
-					(name "GPIO34"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "43"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -27.94 180)
-					(length 2.54)
-					(name "GPIO35"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "44"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -30.48 180)
-					(length 2.54)
-					(name "GPIO36"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "45"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -33.02 180)
-					(length 2.54)
-					(name "GPIO37"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "46"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -35.56 180)
-					(length 2.54)
-					(name "GPIO38"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "47"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -38.1 180)
-					(length 2.54)
-					(name "GPIO39"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "48"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -40.64 180)
-					(length 2.54)
-					(name "GPIO40_ADC0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "49"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -45.72 180)
-					(length 2.54)
-					(name "GPIO41_ADC1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "52"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -48.26 180)
-					(length 2.54)
-					(name "GPIO42_ADC2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "53"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -50.8 180)
-					(length 2.54)
-					(name "GPIO43_ADC3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "54"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -53.34 180)
-					(length 2.54)
-					(name "GPIO44_ADC4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "55"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -55.88 180)
-					(length 2.54)
-					(name "GPIO5_ADC5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "56"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -58.42 180)
-					(length 2.54)
-					(name "GPIO6_ADC6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "57"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -60.96 180)
-					(length 2.54)
-					(name "GPIO7_ADC7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "58"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "RP2350B_1_4_1"
-				(rectangle
-					(start -16.51 2.54)
-					(end 15.24 -21.59)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "RP2350B Serial Buses"
-					(at 0 10.922 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -19.05 -5.08 0)
-					(length 2.54)
-					(name "USB_D+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "67"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -19.05 -7.62 0)
-					(length 2.54)
-					(name "USB_D-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "66"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -19.05 -15.24 0)
-					(length 2.54)
-					(name "SWCLK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -19.05 -17.78 0)
-					(length 2.54)
-					(name "SWDIO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "25"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "RP2350B_2"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -24.638 30.226 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "RP2350B"
-				(at -24.384 -21.082 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "RP2350:QFN-80_L10.0-W10.0-P0.40-TL-EP3.4"
-				(at -0.254 -69.342 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf"
-				(at -0.762 10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "The RP2350B Microcontroller from the Raspberry Pi Foundation"
-				(at -0.254 -71.12 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "RP2350B_2_1_1"
-				(rectangle
-					(start -21.59 6.35)
-					(end 29.21 -15.24)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "RP2350B Power & Support Circuitry"
-					(at -18.796 -17.018 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(text "1.1V"
-					(at -11.43 -1.524 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(text "3.3V"
-					(at 15.24 -2.032 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(pin input line
-					(at -24.13 1.27 0)
-					(length 2.54)
-					(name "XIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at -24.13 -1.27 0)
-					(length 2.54)
-					(name "XOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -24.13 -11.43 0)
-					(length 2.54)
-					(name "RUN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "35"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -13.97 8.89 270)
-					(length 2.54)
-					(name "DVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "51"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -11.43 8.89 270)
-					(length 2.54)
-					(name "DVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "32"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -8.89 8.89 270)
-					(length 2.54)
-					(name "DVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 8.89 270)
-					(length 2.54)
-					(name "ADC_AVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "59"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 8.89 270)
-					(length 2.54)
-					(name "USB_OTP_VDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "68"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 2.54 8.89 270)
-					(length 2.54)
-					(name "QSPI_IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "69"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 5.08 -17.78 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "81"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 6.35 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "76"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 8.89 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "60"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 11.43 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "50"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 13.97 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "41"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 16.51 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "29"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 19.05 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 21.59 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 24.13 8.89 270)
-					(length 2.54)
-					(name "IOVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 31.75 -2.54 180)
-					(length 2.54)
-					(name "VREG_AVDD"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "61"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 31.75 -5.08 180)
-					(length 2.54)
-					(name "VREG_VIN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "64"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 31.75 -7.62 180)
-					(length 2.54)
-					(name "VREG_FB"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "65"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 31.75 -10.16 180)
-					(length 2.54)
-					(name "VREG_LX"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "63"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 31.75 -12.7 180)
-					(length 2.54)
-					(name "VREG_PGND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "62"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "RP2350B_2_2_1"
-				(rectangle
-					(start -15.24 10.16)
-					(end 11.43 -10.16)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "RP2350B Memory"
-					(at -2.54 11.684 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 6.35 0)
-					(length 2.54)
-					(name "QSPI_SS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "75"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 3.81 0)
-					(length 2.54)
-					(name "QSPI_SD1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "74"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 1.27 0)
-					(length 2.54)
-					(name "QSPI_SD2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "73"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -1.27 0)
-					(length 2.54)
-					(name "QSPI_SD0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "72"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output clock
-					(at -17.78 -3.81 0)
-					(length 2.54)
-					(name "QSPI_SCLK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "71"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -6.35 0)
-					(length 2.54)
-					(name "QSPI_SD3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "70"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "RP2350B_2_3_1"
-				(rectangle
-					(start -15.24 7.62)
-					(end 15.24 -66.04)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "RP2350B GPIO"
-					(at 0 12.446 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 5.08 0)
-					(length 2.54)
-					(name "GPIO0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "77"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 2.54 0)
-					(length 2.54)
-					(name "GPIO1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "78"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 0 0)
-					(length 2.54)
-					(name "GPIO2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "79"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -2.54 0)
-					(length 2.54)
-					(name "GPIO3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "80"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -5.08 0)
-					(length 2.54)
-					(name "GPIO4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(alternate "SPI0_MISO" input line)
-				)
-				(pin bidirectional line
-					(at -17.78 -7.62 0)
-					(length 2.54)
-					(name "GPIO5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -10.16 0)
-					(length 2.54)
-					(name "GPIO6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -12.7 0)
-					(length 2.54)
-					(name "GPIO7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -17.78 0)
-					(length 2.54)
-					(name "GPIO8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -20.32 0)
-					(length 2.54)
-					(name "GPIO9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -22.86 0)
-					(length 2.54)
-					(name "GPIO10"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -25.4 0)
-					(length 2.54)
-					(name "GPIO11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "9"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -30.48 0)
-					(length 2.54)
-					(name "GPIO12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "11"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -33.02 0)
-					(length 2.54)
-					(name "GPIO13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "12"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -35.56 0)
-					(length 2.54)
-					(name "GPIO14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "13"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -38.1 0)
-					(length 2.54)
-					(name "GPIO15"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "14"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -43.18 0)
-					(length 2.54)
-					(name "GPIO16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "16"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -45.72 0)
-					(length 2.54)
-					(name "GPIO17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "17"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -48.26 0)
-					(length 2.54)
-					(name "GPIO18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "18"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -50.8 0)
-					(length 2.54)
-					(name "GPIO19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "19"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -55.88 0)
-					(length 2.54)
-					(name "GPIO20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -58.42 0)
-					(length 2.54)
-					(name "GPIO21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "21"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -60.96 0)
-					(length 2.54)
-					(name "GPIO22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "22"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -17.78 -63.5 0)
-					(length 2.54)
-					(name "GPIO23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "23"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 5.08 180)
-					(length 2.54)
-					(name "GPIO24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "25"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 2.54 180)
-					(length 2.54)
-					(name "GPIO25"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "26"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 0 180)
-					(length 2.54)
-					(name "GPIO26"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "27"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -2.54 180)
-					(length 2.54)
-					(name "GPIO27"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "28"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -7.62 180)
-					(length 2.54)
-					(name "GPIO28"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "36"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -10.16 180)
-					(length 2.54)
-					(name "GPIO29"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "37"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -12.7 180)
-					(length 2.54)
-					(name "GPIO30"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "38"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -15.24 180)
-					(length 2.54)
-					(name "GPIO31"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "39"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -17.78 180)
-					(length 2.54)
-					(name "GPIO32"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "40"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -22.86 180)
-					(length 2.54)
-					(name "GPIO33"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "42"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -25.4 180)
-					(length 2.54)
-					(name "GPIO34"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "43"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -27.94 180)
-					(length 2.54)
-					(name "GPIO35"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "44"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -30.48 180)
-					(length 2.54)
-					(name "GPIO36"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "45"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -33.02 180)
-					(length 2.54)
-					(name "GPIO37"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "46"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -35.56 180)
-					(length 2.54)
-					(name "GPIO38"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "47"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -38.1 180)
-					(length 2.54)
-					(name "GPIO39"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "48"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -40.64 180)
-					(length 2.54)
-					(name "GPIO40_ADC0"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "49"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -45.72 180)
-					(length 2.54)
-					(name "GPIO41_ADC1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "52"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -48.26 180)
-					(length 2.54)
-					(name "GPIO42_ADC2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "53"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -50.8 180)
-					(length 2.54)
-					(name "GPIO43_ADC3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "54"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -53.34 180)
-					(length 2.54)
-					(name "GPIO44_ADC4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "55"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -55.88 180)
-					(length 2.54)
-					(name "GPIO5_ADC5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "56"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -58.42 180)
-					(length 2.54)
-					(name "GPIO6_ADC6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "57"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 17.78 -60.96 180)
-					(length 2.54)
-					(name "GPIO7_ADC7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "58"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "RP2350B_2_4_1"
-				(rectangle
-					(start -16.51 2.54)
-					(end 15.24 -21.59)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(text "RP2350B Serial Buses"
-					(at 0 10.922 0)
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -19.05 -5.08 0)
-					(length 2.54)
-					(name "USB_D+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "67"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at -19.05 -7.62 0)
-					(length 2.54)
-					(name "USB_D-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "66"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -19.05 -15.24 0)
-					(length 2.54)
-					(name "SWCLK"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "24"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -19.05 -17.78 0)
-					(length 2.54)
-					(name "SWDIO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "25"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -16851,6 +13824,16 @@
 	)
 	(wire
 		(pts
+			(xy -68.58 101.6) (xy -64.77 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05a36987-a34f-48e7-b926-ca339c171575")
+	)
+	(wire
+		(pts
 			(xy 323.85 205.74) (xy 321.31 205.74)
 		)
 		(stroke
@@ -17071,7 +14054,7 @@
 	)
 	(wire
 		(pts
-			(xy -53.34 138.43) (xy -45.72 138.43)
+			(xy -26.67 69.85) (xy -22.86 69.85)
 		)
 		(stroke
 			(width 0)
@@ -17168,16 +14151,6 @@
 			(type default)
 		)
 		(uuid "141afff1-c73b-459c-b31f-bbb64943f47b")
-	)
-	(wire
-		(pts
-			(xy -53.34 120.65) (xy -45.72 120.65)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "148cb074-e6ca-4401-868d-577bba1794ff")
 	)
 	(wire
 		(pts
@@ -17291,7 +14264,7 @@
 	)
 	(wire
 		(pts
-			(xy -53.34 118.11) (xy -45.72 118.11)
+			(xy -26.67 116.84) (xy -24.13 116.84)
 		)
 		(stroke
 			(width 0)
@@ -17621,16 +14594,6 @@
 	)
 	(wire
 		(pts
-			(xy -116.84 170.18) (xy -99.06 170.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "303ebef9-afe7-403a-9fd0-af769f3229d0")
-	)
-	(wire
-		(pts
 			(xy 86.36 105.41) (xy 90.17 105.41)
 		)
 		(stroke
@@ -17778,16 +14741,6 @@
 			(type default)
 		)
 		(uuid "3897da7d-4a0d-4b28-9a76-5f106aaee556")
-	)
-	(wire
-		(pts
-			(xy -101.6 152.4) (xy -99.06 152.4)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "39bdae0e-7dc7-45aa-9c56-3d88c6b9f5c8")
 	)
 	(wire
 		(pts
@@ -18111,6 +15064,16 @@
 	)
 	(wire
 		(pts
+			(xy -26.67 109.22) (xy -24.13 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "496bc19b-ffd1-4a0b-8ec0-895813119bc3")
+	)
+	(wire
+		(pts
 			(xy 72.39 107.95) (xy 72.39 105.41)
 		)
 		(stroke
@@ -18171,16 +15134,6 @@
 	)
 	(wire
 		(pts
-			(xy -53.34 133.35) (xy -45.72 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4f6314e4-81cc-4fee-bda8-2044cd7c0241")
-	)
-	(wire
-		(pts
 			(xy 107.95 232.41) (xy 107.95 233.68)
 		)
 		(stroke
@@ -18188,6 +15141,16 @@
 			(type default)
 		)
 		(uuid "5061d7a4-12f7-4008-a0cd-047469734445")
+	)
+	(wire
+		(pts
+			(xy -26.67 101.6) (xy -24.13 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50dc9f98-6839-4243-ba90-f9f311fde42b")
 	)
 	(wire
 		(pts
@@ -18431,13 +15394,13 @@
 	)
 	(wire
 		(pts
-			(xy -116.84 172.72) (xy -99.06 172.72)
+			(xy -68.58 60.96) (xy -64.77 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "64317290-6c64-4b9d-a09e-6f40c3561bd9")
+		(uuid "644eb29e-aaeb-44b8-af94-8b8b1b1ac282")
 	)
 	(wire
 		(pts
@@ -18448,16 +15411,6 @@
 			(type default)
 		)
 		(uuid "648fbe99-ec77-428f-bfca-83f5c2388ef7")
-	)
-	(wire
-		(pts
-			(xy -53.34 123.19) (xy -45.72 123.19)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "664b5295-c84c-421e-96d1-7ca01d6e64da")
 	)
 	(wire
 		(pts
@@ -18488,16 +15441,6 @@
 			(type default)
 		)
 		(uuid "6897df95-856d-4f68-b46d-a17d0f432a88")
-	)
-	(wire
-		(pts
-			(xy -99.06 165.1) (xy -116.84 165.1)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "68fe0c36-b4f3-419d-9c6a-7582e65fa3a6")
 	)
 	(polyline
 		(pts
@@ -18561,16 +15504,6 @@
 	)
 	(wire
 		(pts
-			(xy -116.84 175.26) (xy -99.06 175.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6c2e9a98-8916-46c9-a05c-5194ccdf224c")
-	)
-	(wire
-		(pts
 			(xy 318.77 85.09) (xy 316.23 85.09)
 		)
 		(stroke
@@ -18611,7 +15544,7 @@
 	)
 	(wire
 		(pts
-			(xy -53.34 140.97) (xy -45.72 140.97)
+			(xy -26.67 72.39) (xy -22.86 72.39)
 		)
 		(stroke
 			(width 0)
@@ -18641,16 +15574,6 @@
 	)
 	(wire
 		(pts
-			(xy -116.84 177.8) (xy -99.06 177.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "727de946-e622-4a6b-9ffc-53ab6de62dad")
-	)
-	(wire
-		(pts
 			(xy 341.63 114.3) (xy 345.44 114.3)
 		)
 		(stroke
@@ -18658,6 +15581,16 @@
 			(type default)
 		)
 		(uuid "738e060c-cb47-4065-b780-a5b524fc1440")
+	)
+	(wire
+		(pts
+			(xy -26.67 88.9) (xy -24.13 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73c7b1f4-47bb-42bc-af82-4e339cf38c8d")
 	)
 	(wire
 		(pts
@@ -18831,16 +15764,6 @@
 	)
 	(wire
 		(pts
-			(xy -55.88 72.39) (xy -71.12 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7ceb71bf-9929-49d0-aad0-706cb6c58585")
-	)
-	(wire
-		(pts
 			(xy 152.4 86.36) (xy 161.29 86.36)
 		)
 		(stroke
@@ -18891,6 +15814,16 @@
 	)
 	(wire
 		(pts
+			(xy -68.58 58.42) (xy -64.77 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7de5954d-f883-4545-a861-44c76678d390")
+	)
+	(wire
+		(pts
 			(xy 228.981 57.023) (xy 233.299 57.023)
 		)
 		(stroke
@@ -18908,16 +15841,6 @@
 			(type default)
 		)
 		(uuid "7e2c5096-8d98-4d27-b3a0-e192fd563592")
-	)
-	(wire
-		(pts
-			(xy -55.88 74.93) (xy -71.12 74.93)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7e7a0b7e-034b-4896-a5f3-a1678e3a736d")
 	)
 	(wire
 		(pts
@@ -19061,7 +15984,17 @@
 	)
 	(wire
 		(pts
-			(xy -99.06 167.64) (xy -116.84 167.64)
+			(xy -71.12 48.26) (xy -64.77 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "858deb1f-1ac0-4015-9121-f7fb70e70295")
+	)
+	(wire
+		(pts
+			(xy 77.47 156.21) (xy 88.9 156.21)
 		)
 		(stroke
 			(width 0)
@@ -19091,7 +16024,7 @@
 	)
 	(wire
 		(pts
-			(xy -53.34 135.89) (xy -45.72 135.89)
+			(xy -26.67 67.31) (xy -22.86 67.31)
 		)
 		(stroke
 			(width 0)
@@ -19108,6 +16041,16 @@
 			(type default)
 		)
 		(uuid "87878316-beb9-4c42-84e0-4f9d3cf46b12")
+	)
+	(wire
+		(pts
+			(xy -71.12 50.8) (xy -64.77 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87c9df76-d969-49c6-aa4b-5a08fe50a818")
 	)
 	(wire
 		(pts
@@ -19141,6 +16084,16 @@
 	)
 	(wire
 		(pts
+			(xy -68.58 88.9) (xy -64.77 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8c25ac34-de5a-432a-94ab-a6f0f5c99289")
+	)
+	(wire
+		(pts
 			(xy 176.53 38.1) (xy 176.53 35.56)
 		)
 		(stroke
@@ -19171,16 +16124,6 @@
 	)
 	(wire
 		(pts
-			(xy -101.6 154.94) (xy -99.06 154.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8f6e4d48-a9b2-443e-bc53-8e4c997bfe9c")
-	)
-	(wire
-		(pts
 			(xy 88.9 134.62) (xy 88.9 135.89)
 		)
 		(stroke
@@ -19188,6 +16131,16 @@
 			(type default)
 		)
 		(uuid "8f80a8b6-444e-48be-8970-b2bd7ffe7305")
+	)
+	(wire
+		(pts
+			(xy -26.67 82.55) (xy -22.86 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90cecb1d-aea1-452a-bb09-fa9b113832eb")
 	)
 	(wire
 		(pts
@@ -19228,16 +16181,6 @@
 			(type dash)
 		)
 		(uuid "9265adb9-bd22-4420-ba43-3c1ede37139c")
-	)
-	(wire
-		(pts
-			(xy -53.34 115.57) (xy -45.72 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "92b436da-5692-45ad-9927-81879bcf15be")
 	)
 	(wire
 		(pts
@@ -19461,6 +16404,16 @@
 	)
 	(wire
 		(pts
+			(xy -68.58 99.06) (xy -64.77 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a24dd203-02cc-457e-ad6c-2b77d671995a")
+	)
+	(wire
+		(pts
 			(xy 246.38 199.39) (xy 246.38 200.66)
 		)
 		(stroke
@@ -19631,6 +16584,16 @@
 	)
 	(wire
 		(pts
+			(xy -26.67 80.01) (xy -22.86 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abaffec0-3d07-40d2-b5b8-de4ed4498e83")
+	)
+	(wire
+		(pts
 			(xy 46.99 267.97) (xy 50.8 267.97)
 		)
 		(stroke
@@ -19648,6 +16611,16 @@
 			(type default)
 		)
 		(uuid "aca5777c-85a8-4c53-89be-ab6f735d2194")
+	)
+	(wire
+		(pts
+			(xy -26.67 91.44) (xy -24.13 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "acab251f-5700-4ef1-ae30-cb40f4d97225")
 	)
 	(wire
 		(pts
@@ -19718,6 +16691,16 @@
 			(type default)
 		)
 		(uuid "b2035c47-d711-4852-98e1-ef47871b332b")
+	)
+	(wire
+		(pts
+			(xy -26.67 77.47) (xy -22.86 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2e03afe-45b2-4953-81d7-21f966292706")
 	)
 	(wire
 		(pts
@@ -20061,6 +17044,16 @@
 	)
 	(wire
 		(pts
+			(xy -64.77 116.84) (xy -68.58 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf53c47f-1e1b-44ab-bb60-5a0f0e239384")
+	)
+	(wire
+		(pts
 			(xy 115.57 124.46) (xy 124.46 124.46)
 		)
 		(stroke
@@ -20168,16 +17161,6 @@
 			(type default)
 		)
 		(uuid "c8f7f041-86f5-41d3-8d32-65654c643527")
-	)
-	(wire
-		(pts
-			(xy -45.72 113.03) (xy -53.34 113.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c9908f40-6572-432f-9412-8c93f2817fd7")
 	)
 	(wire
 		(pts
@@ -20321,16 +17304,6 @@
 	)
 	(wire
 		(pts
-			(xy -53.34 110.49) (xy -45.72 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d049322c-45ff-432d-8f07-c051eb2bb9fb")
-	)
-	(wire
-		(pts
 			(xy 161.29 233.68) (xy 161.29 237.49)
 		)
 		(stroke
@@ -20391,16 +17364,6 @@
 	)
 	(wire
 		(pts
-			(xy -101.6 149.86) (xy -99.06 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d1d1ad79-b183-4ff3-b55e-8b4b6e9f81cd")
-	)
-	(wire
-		(pts
 			(xy 134.62 165.1) (xy 132.08 165.1)
 		)
 		(stroke
@@ -20441,6 +17404,16 @@
 	)
 	(wire
 		(pts
+			(xy -68.58 91.44) (xy -64.77 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d32eb3bb-91aa-4e4d-a6ba-3afc281da874")
+	)
+	(wire
+		(pts
 			(xy 100.33 105.41) (xy 102.87 105.41)
 		)
 		(stroke
@@ -20458,6 +17431,16 @@
 			(type default)
 		)
 		(uuid "d458acfe-a9b4-40d0-8d13-2ab4bad933d2")
+	)
+	(wire
+		(pts
+			(xy -68.58 109.22) (xy -64.77 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d492b18a-511e-4ea7-a6f7-530f75dd6c2d")
 	)
 	(wire
 		(pts
@@ -20591,6 +17574,16 @@
 	)
 	(wire
 		(pts
+			(xy -67.31 80.01) (xy -64.77 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ddbbb803-efb1-4670-928a-71343b85d683")
+	)
+	(wire
+		(pts
 			(xy 73.66 232.41) (xy 77.47 232.41)
 		)
 		(stroke
@@ -20598,6 +17591,16 @@
 			(type default)
 		)
 		(uuid "de223628-9428-4acc-935a-a3000c367957")
+	)
+	(wire
+		(pts
+			(xy -26.67 99.06) (xy -24.13 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ded4013e-c3d3-415b-b540-d9b6e2bd43b2")
 	)
 	(wire
 		(pts
@@ -21001,6 +18004,16 @@
 	)
 	(wire
 		(pts
+			(xy -64.77 69.85) (xy -67.31 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc19577c-6a6c-44fa-b5d4-709772d31c04")
+	)
+	(wire
+		(pts
 			(xy 152.4 95.25) (xy 152.4 96.52)
 		)
 		(stroke
@@ -21129,16 +18142,6 @@
 		)
 		(uuid "49e4690e-f329-4d83-81e4-ebded458411a")
 	)
-	(label "D-"
-		(at -60.96 74.93 180)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify right bottom)
-		)
-		(uuid "4a5d2064-8d3a-47cb-9e79-84e4088c076a")
-	)
 	(label "QSPI_CS"
 		(at 134.62 165.1 0)
 		(effects
@@ -21148,26 +18151,6 @@
 			(justify left bottom)
 		)
 		(uuid "4b2330e8-1768-49fc-8e55-0cd94f5481bd")
-	)
-	(label "QSPI_DATA[1]"
-		(at -116.84 172.72 0)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "4e2892d1-b2a0-4ad9-9ba5-b9344a5b1ac8")
-	)
-	(label "QSPI_DATA[3]"
-		(at -116.84 177.8 0)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "4fe7b9b8-1728-4dca-9bc6-8a2652f8e686")
 	)
 	(label "QSPI_SCK"
 		(at 80.01 166.37 0)
@@ -21180,14 +18163,24 @@
 		(uuid "57360000-d5d2-42fb-8e97-85f19a98a136")
 	)
 	(label "QSPI_CS"
-		(at -116.84 167.64 0)
+		(at 88.9 156.21 180)
 		(effects
 			(font
 				(size 1.2446 1.2446)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "658fa0ab-75e6-4b79-aa81-ae7cee191f14")
+	)
+	(label "D+"
+		(at -71.12 48.26 180)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify right bottom)
+		)
+		(uuid "6d769f11-1c2e-4e81-ac7f-60e658505a62")
 	)
 	(label "NEOPIX"
 		(at 260.35 156.21 0)
@@ -21198,26 +18191,6 @@
 			(justify left bottom)
 		)
 		(uuid "6e5bfb22-7a8e-4672-96c1-fdfaf7f3bd70")
-	)
-	(label "QSPI_SCK"
-		(at -116.84 165.1 0)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "6ff80204-6188-48de-a319-5fd97fd90ead")
-	)
-	(label "D+"
-		(at -60.96 72.39 180)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify right bottom)
-		)
-		(uuid "742383ed-8189-455d-b377-f09f70b7edc4")
 	)
 	(label "3v3 Spec"
 		(at 242.57 96.52 0)
@@ -21249,16 +18222,6 @@
 		)
 		(uuid "89169930-49ac-4e6d-b84f-4e435834f975")
 	)
-	(label "QSPI_DATA[2]"
-		(at -116.84 175.26 0)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "8d733991-be08-4570-85b8-0db948c45049")
-	)
 	(label "~{RESET}"
 		(at 49.53 128.27 0)
 		(effects
@@ -21268,6 +18231,16 @@
 			(justify left bottom)
 		)
 		(uuid "9277855f-b68a-4db4-ae34-d03b425fa891")
+	)
+	(label "D-"
+		(at -71.12 50.8 180)
+		(effects
+			(font
+				(size 1.2446 1.2446)
+			)
+			(justify right bottom)
+		)
+		(uuid "941c3f9a-f138-4fbd-8c19-67c4ddd6206c")
 	)
 	(label "QSPI_DATA[0]"
 		(at 80.01 163.83 0)
@@ -21308,16 +18281,6 @@
 			(justify left bottom)
 		)
 		(uuid "caed4148-315f-4aed-b9db-d7b168cc883a")
-	)
-	(label "QSPI_DATA[0]"
-		(at -116.84 170.18 0)
-		(effects
-			(font
-				(size 1.2446 1.2446)
-			)
-			(justify left bottom)
-		)
-		(uuid "cd4d13ac-f346-42ac-bb2a-f00bd11770d2")
 	)
 	(label "USBBOOT"
 		(at 21.59 50.8 180)
@@ -21373,28 +18336,6 @@
 			)
 		)
 	)
-	(global_label "RX"
-		(shape bidirectional)
-		(at -45.72 113.03 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "031376fc-ad34-4437-a1a6-93e149ef4729")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -39.2234 113.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "TX"
 		(shape input)
 		(at 113.03 274.32 180)
@@ -21408,28 +18349,6 @@
 		(uuid "04a60264-c974-4d16-9bc5-1662aa5d803e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 108.4398 274.2406 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SPI1_MISO"
-		(shape input)
-		(at -101.6 154.94 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "05e19414-4202-4dbf-b240-d90ca6ff2a17")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -114.4428 154.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21572,22 +18491,22 @@
 	)
 	(global_label "SPI1_MOSI"
 		(shape output)
-		(at -101.6 152.4 180)
+		(at -22.86 82.55 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right)
+			(justify left)
 		)
-		(uuid "127971f4-abc4-453c-922a-c1c8b0fc811f")
+		(uuid "12c7dd06-1cd6-4f97-b766-fbc17a8c21dc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -114.4428 152.4 0)
+			(at -10.0172 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -21767,24 +18686,46 @@
 			)
 		)
 	)
-	(global_label "SDA1"
-		(shape bidirectional)
-		(at -45.72 115.57 0)
+	(global_label "SPI0_MISO"
+		(shape input)
+		(at -67.31 69.85 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "25e3fcbd-79a8-4a74-95b8-c99e2cc7af0a")
+		(uuid "2896ca90-98e2-4cc2-a909-9b1bc64b0c7c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -38.5293 115.4906 0)
+			(at -80.1528 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SDA0"
+		(shape bidirectional)
+		(at -68.58 109.22 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "29d79721-1d00-499b-a7e1-aec7e105b417")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -77.4541 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -21812,7 +18753,7 @@
 	)
 	(global_label "RF1_RST"
 		(shape bidirectional)
-		(at -53.34 125.73 0)
+		(at -53.34 140.97 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -21822,7 +18763,29 @@
 		)
 		(uuid "2ef40982-d81d-4326-a1c0-0b5f015b8818")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -42.944 125.8094 0)
+			(at -42.944 141.0494 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "UART0_TX"
+		(shape output)
+		(at -24.13 88.9 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "341cf121-87c9-4348-b177-adb39e5d8f2f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -12.1339 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21855,8 +18818,8 @@
 		)
 	)
 	(global_label "SCL0"
-		(shape bidirectional)
-		(at -45.72 123.19 0)
+		(shape output)
+		(at -24.13 109.22 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -21866,7 +18829,7 @@
 		)
 		(uuid "36da41a6-308f-4921-b823-55966f45a518")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -38.5898 123.1106 0)
+			(at -16.4277 109.22 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21986,6 +18949,28 @@
 			)
 		)
 	)
+	(global_label "UART0_CTS"
+		(shape input)
+		(at -68.58 91.44 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "3eaec00c-fb3e-4339-9dac-48e7763752cd")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -81.8461 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "RF_VCC"
 		(shape bidirectional)
 		(at 339.09 220.98 0)
@@ -22004,6 +18989,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "UART0_RX"
+		(shape input)
+		(at -68.58 88.9 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4691dc96-fbef-435f-9c6f-eed01055ceca")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -80.8785 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -22048,50 +19055,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SPI1_SCK"
-		(shape output)
-		(at -101.6 149.86 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "4c91a8cf-b2c0-456e-bb5c-39bbb44ec379")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -113.5961 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "TX"
-		(shape bidirectional)
-		(at -45.72 110.49 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "4e1161f5-ca9b-4fdc-a3d2-af225ae58336")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -39.5258 110.49 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -22294,6 +19257,28 @@
 			)
 		)
 	)
+	(global_label "UART1_RTS"
+		(shape output)
+		(at -24.13 101.6 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "67785d67-4acd-4adf-ada9-cc14151ba545")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -10.8639 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SPI1_SCK"
 		(shape input)
 		(at 73.66 240.03 0)
@@ -22449,8 +19434,8 @@
 		)
 	)
 	(global_label "SCL1"
-		(shape bidirectional)
-		(at -45.72 118.11 0)
+		(shape output)
+		(at -24.13 116.84 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -22460,7 +19445,7 @@
 		)
 		(uuid "786baea6-eae0-4b8c-a0af-13afbc744db1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -38.5898 118.0306 0)
+			(at -16.4277 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22554,6 +19539,50 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "UART1_CTS"
+		(shape input)
+		(at -68.58 101.6 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7faf3166-952f-4e19-9119-6485f3101e44")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -81.8461 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SDA1"
+		(shape bidirectional)
+		(at -68.58 116.84 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "801ceaa4-c4dc-4c6c-ae35-6537d02921e3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -77.4541 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -22736,7 +19765,7 @@
 	)
 	(global_label "SPI0_MOSI"
 		(shape output)
-		(at -45.72 140.97 0)
+		(at -22.86 72.39 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -22746,7 +19775,7 @@
 		)
 		(uuid "9890a188-06ba-4cf3-9dc1-4a20590a84a4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -32.9566 140.97 0)
+			(at -10.0966 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22813,28 +19842,6 @@
 		(uuid "9bba4253-32d0-477b-96cd-3b9458a4f3a6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 187.3165 262.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SPI0_MISO"
-		(shape input)
-		(at -45.72 133.35 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9cf57d21-28b9-405b-afe7-7c2a70551819")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -32.9566 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23218,7 +20225,7 @@
 	)
 	(global_label "SPI0_SCK"
 		(shape output)
-		(at -45.72 138.43 0)
+		(at -22.86 69.85 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -23228,7 +20235,7 @@
 		)
 		(uuid "b21e86f2-d57a-450b-9de0-dc9a80f47b36")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -33.8033 138.43 0)
+			(at -10.9433 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23278,28 +20285,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SDA0"
-		(shape bidirectional)
-		(at -45.72 120.65 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "b335f074-b831-4d0f-8827-976a88f8ee0d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -38.5293 120.5706 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -23437,7 +20422,7 @@
 	)
 	(global_label "SWCLK"
 		(shape input)
-		(at -55.88 82.55 180)
+		(at -68.58 58.42 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -23447,7 +20432,7 @@
 		)
 		(uuid "be528ae4-f65d-4494-89a1-7bb089e5bc2f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -65.0942 82.55 0)
+			(at -77.7942 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23481,7 +20466,7 @@
 	)
 	(global_label "SWDIO"
 		(shape input)
-		(at -55.88 85.09 180)
+		(at -68.58 60.96 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -23491,7 +20476,7 @@
 		)
 		(uuid "c3584024-229c-49b4-bc83-8a3c609fd8a2")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -64.7314 85.09 0)
+			(at -77.4314 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23541,6 +20526,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "UART1_TX"
+		(shape output)
+		(at -24.13 99.06 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cab53394-09c4-481e-96b1-815921dc540b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -12.1339 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -23697,6 +20704,28 @@
 			)
 		)
 	)
+	(global_label "SPI1_MISO"
+		(shape input)
+		(at -67.31 80.01 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e02ce5db-5f00-4bfa-a162-fdcefa47faa3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -80.1528 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SPI0_CS1"
 		(shape output)
 		(at -53.34 173.99 0)
@@ -23743,7 +20772,7 @@
 	)
 	(global_label "SPI0_CS0"
 		(shape output)
-		(at -45.72 135.89 0)
+		(at -22.86 67.31 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -23753,7 +20782,7 @@
 		)
 		(uuid "e8741b5c-b883-4279-9830-6eb3372fb6d7")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -33.8638 135.89 0)
+			(at -11.0038 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23960,6 +20989,28 @@
 			)
 		)
 	)
+	(global_label "SPI1_SCK"
+		(shape output)
+		(at -22.86 80.01 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f816d057-ae20-412e-a43c-677e9921d714")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -10.8639 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "RF2_TX_EN"
 		(shape input)
 		(at 220.98 245.11 180)
@@ -23978,6 +21029,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "UART0_RTS"
+		(shape output)
+		(at -24.13 91.44 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f9211ade-37dc-40f2-b492-668614199f41")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -10.8639 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -24092,9 +21165,31 @@
 			)
 		)
 	)
+	(global_label "UART1_RX"
+		(shape input)
+		(at -68.58 99.06 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "fd60d48b-57fc-40e8-85c1-70a17d5667ee")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -80.8785 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SPI1_CS0"
 		(shape output)
-		(at -53.34 128.27 0)
+		(at -22.86 77.47 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -24104,7 +21199,7 @@
 		)
 		(uuid "fd8f29ce-8cfe-48d6-94f6-4059855095ab")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at -41.4044 128.27 0)
+			(at -10.9244 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27491,9 +24586,8 @@
 		)
 	)
 	(symbol
-		(lib_name "RP2350B_2")
 		(lib_id "PROVES:RP2350B")
-		(at -36.83 67.31 0)
+		(at -45.72 53.34 0)
 		(unit 4)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -27502,7 +24596,7 @@
 		(fields_autoplaced yes)
 		(uuid "4857f40f-c2f5-4fd1-96f8-92cb0826433f")
 		(property "Reference" "U3"
-			(at -20.32 70.8631 0)
+			(at -29.21 56.8931 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27511,7 +24605,7 @@
 			)
 		)
 		(property "Value" "RP2350B"
-			(at -20.32 73.4031 0)
+			(at -29.21 59.4331 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27520,7 +24614,7 @@
 			)
 		)
 		(property "Footprint" "RP2350:QFN-80_L10.0-W10.0-P0.40-TL-EP3.4"
-			(at -37.084 136.652 0)
+			(at -45.974 122.682 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27529,7 +24623,7 @@
 			)
 		)
 		(property "Datasheet" "https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf"
-			(at -37.592 57.15 0)
+			(at -46.482 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -27538,7 +24632,16 @@
 			)
 		)
 		(property "Description" "The RP2350B Microcontroller from the Raspberry Pi Foundation"
-			(at -37.084 138.43 0)
+			(at -45.974 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Application Notes" "https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf"
+			(at -45.72 53.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -30577,6 +27680,15 @@
 				(hide yes)
 			)
 		)
+		(property "Application Notes" "https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf"
+			(at 59.69 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "74"
 			(uuid "fee005c2-ff11-4a2d-bc67-e8bd83076d6d")
 		)
@@ -30807,6 +27919,18 @@
 		)
 		(pin "65"
 			(uuid "b3897cb0-27c9-45ec-a6a8-00bc3935babb")
+		)
+		(pin "21"
+			(uuid "6610878c-079a-4c3e-97f0-f7bd9cb22b99")
+		)
+		(pin "24"
+			(uuid "1876b202-9e52-47b4-8479-8f09ec3e2ab7")
+		)
+		(pin "25"
+			(uuid "12dff4d4-4c83-4d82-b18a-90bd4b5f3a6a")
+		)
+		(pin "22"
+			(uuid "ea11f92b-219d-4a0d-97b0-e3a69398442b")
 		)
 		(instances
 			(project ""
@@ -31396,7 +28520,6 @@
 		)
 	)
 	(symbol
-		(lib_name "RP2350B_1")
 		(lib_id "PROVES:RP2350B")
 		(at 83.82 116.84 0)
 		(unit 1)
@@ -31441,6 +28564,15 @@
 		)
 		(property "Description" "The RP2350B Microcontroller from the Raspberry Pi Foundation"
 			(at 83.566 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Application Notes" "https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf"
+			(at 83.82 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31898,72 +29030,6 @@
 			(project "FC_V5"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at -99.06 182.88 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a7371215-1fac-40d3-b54a-f0fef8af8e30")
-		(property "Reference" "#PWR01"
-			(at -99.06 189.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at -99.06 187.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at -99.06 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at -99.06 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at -99.06 182.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "74f8d5cd-25d9-454b-ab17-9d258d0c3082")
-		)
-		(instances
-			(project "FC_V5_dev_rev1"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -33673,6 +30739,15 @@
 				(hide yes)
 			)
 		)
+		(property "Application Notes" "https://datasheets.raspberrypi.com/rp2350/hardware-design-with-rp2350.pdf"
+			(at -49.53 227.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "74"
 			(uuid "fee005c2-ff11-4a2d-bc67-e8bd83076d6f")
 		)
@@ -33903,6 +30978,18 @@
 		)
 		(pin "65"
 			(uuid "b3897cb0-27c9-45ec-a6a8-00bc3935babd")
+		)
+		(pin "21"
+			(uuid "dcaa46fe-5ff8-4625-98ef-8145ae5da1f4")
+		)
+		(pin "22"
+			(uuid "2dd01d11-3ed0-4589-b1c8-c33742a89930")
+		)
+		(pin "24"
+			(uuid "1023e968-020e-4b7c-a365-63621df25eda")
+		)
+		(pin "25"
+			(uuid "1eeb91b6-fa74-4ddd-9e31-9597beda7a59")
 		)
 		(instances
 			(project ""

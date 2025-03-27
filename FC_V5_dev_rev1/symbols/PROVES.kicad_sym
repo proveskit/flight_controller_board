@@ -187,7 +187,7 @@
 			)
 		)
 		(property "Value" "RP2350B"
-			(at -24.384 -21.082 0)
+			(at -35.814 -10.922 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -195,7 +195,7 @@
 			)
 		)
 		(property "Footprint" "RP2350:QFN-80_L10.0-W10.0-P0.40-TL-EP3.4"
-			(at -0.254 -69.342 0)
+			(at -0.762 -79.502 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -213,7 +213,7 @@
 			)
 		)
 		(property "Description" "The RP2350B Microcontroller from the Raspberry Pi Foundation"
-			(at -0.254 -71.12 0)
+			(at -0.762 -81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -812,7 +812,7 @@
 		(symbol "RP2350B_3_1"
 			(rectangle
 				(start -15.24 7.62)
-				(end 15.24 -66.04)
+				(end 15.24 -41.91)
 				(stroke
 					(width 0)
 					(type default)
@@ -830,224 +830,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 5.08 0)
-				(length 2.54)
-				(name "GPIO0"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "77"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -17.78 2.54 0)
-				(length 2.54)
-				(name "GPIO1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "78"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
 				(at -17.78 0 0)
-				(length 2.54)
-				(name "GPIO2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "79"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -17.78 -2.54 0)
-				(length 2.54)
-				(name "GPIO3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "80"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -17.78 -5.08 0)
-				(length 2.54)
-				(name "GPIO4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "1"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(alternate "SPI0_MISO" input line)
-			)
-			(pin bidirectional line
-				(at -17.78 -7.62 0)
-				(length 2.54)
-				(name "GPIO5"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "2"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -17.78 -10.16 0)
-				(length 2.54)
-				(name "GPIO6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "3"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -17.78 -12.7 0)
-				(length 2.54)
-				(name "GPIO7"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "4"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -17.78 -17.78 0)
-				(length 2.54)
-				(name "GPIO8"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "6"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -17.78 -20.32 0)
-				(length 2.54)
-				(name "GPIO9"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "7"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -17.78 -22.86 0)
-				(length 2.54)
-				(name "GPIO10"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "8"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -17.78 -25.4 0)
-				(length 2.54)
-				(name "GPIO11"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "9"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at -17.78 -30.48 0)
 				(length 2.54)
 				(name "GPIO12"
 					(effects
@@ -1065,7 +848,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 -33.02 0)
+				(at -17.78 -2.54 0)
 				(length 2.54)
 				(name "GPIO13"
 					(effects
@@ -1083,7 +866,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 -35.56 0)
+				(at -17.78 -5.08 0)
 				(length 2.54)
 				(name "GPIO14"
 					(effects
@@ -1101,7 +884,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 -38.1 0)
+				(at -17.78 -7.62 0)
 				(length 2.54)
 				(name "GPIO15"
 					(effects
@@ -1119,7 +902,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 -43.18 0)
+				(at -17.78 -12.7 0)
 				(length 2.54)
 				(name "GPIO16"
 					(effects
@@ -1137,7 +920,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 -45.72 0)
+				(at -17.78 -15.24 0)
 				(length 2.54)
 				(name "GPIO17"
 					(effects
@@ -1155,7 +938,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 -48.26 0)
+				(at -17.78 -17.78 0)
 				(length 2.54)
 				(name "GPIO18"
 					(effects
@@ -1173,7 +956,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 -50.8 0)
+				(at -17.78 -20.32 0)
 				(length 2.54)
 				(name "GPIO19"
 					(effects
@@ -1191,7 +974,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 -55.88 0)
+				(at -17.78 -25.4 0)
 				(length 2.54)
 				(name "GPIO20"
 					(effects
@@ -1209,7 +992,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 -58.42 0)
+				(at -17.78 -27.94 0)
 				(length 2.54)
 				(name "GPIO21"
 					(effects
@@ -1227,7 +1010,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 -60.96 0)
+				(at -17.78 -30.48 0)
 				(length 2.54)
 				(name "GPIO22"
 					(effects
@@ -1245,7 +1028,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -17.78 -63.5 0)
+				(at -17.78 -33.02 0)
 				(length 2.54)
 				(name "GPIO23"
 					(effects
@@ -1337,150 +1120,6 @@
 			(pin bidirectional line
 				(at 17.78 -7.62 180)
 				(length 2.54)
-				(name "GPIO28"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "36"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 17.78 -10.16 180)
-				(length 2.54)
-				(name "GPIO29"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "37"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 17.78 -12.7 180)
-				(length 2.54)
-				(name "GPIO30"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "38"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 17.78 -15.24 180)
-				(length 2.54)
-				(name "GPIO31"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "39"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 17.78 -17.78 180)
-				(length 2.54)
-				(name "GPIO32"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "40"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 17.78 -22.86 180)
-				(length 2.54)
-				(name "GPIO33"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "42"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 17.78 -25.4 180)
-				(length 2.54)
-				(name "GPIO34"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "43"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 17.78 -27.94 180)
-				(length 2.54)
-				(name "GPIO35"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-				(number "44"
-					(effects
-						(font
-							(size 1.27 1.27)
-						)
-					)
-				)
-			)
-			(pin bidirectional line
-				(at 17.78 -30.48 180)
-				(length 2.54)
 				(name "GPIO36"
 					(effects
 						(font
@@ -1497,7 +1136,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 -33.02 180)
+				(at 17.78 -10.16 180)
 				(length 2.54)
 				(name "GPIO37"
 					(effects
@@ -1515,7 +1154,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 -35.56 180)
+				(at 17.78 -12.7 180)
 				(length 2.54)
 				(name "GPIO38"
 					(effects
@@ -1533,7 +1172,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 -38.1 180)
+				(at 17.78 -15.24 180)
 				(length 2.54)
 				(name "GPIO39"
 					(effects
@@ -1551,7 +1190,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 -40.64 180)
+				(at 17.78 -17.78 180)
 				(length 2.54)
 				(name "GPIO40_ADC0"
 					(effects
@@ -1569,7 +1208,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 -45.72 180)
+				(at 17.78 -22.86 180)
 				(length 2.54)
 				(name "GPIO41_ADC1"
 					(effects
@@ -1587,7 +1226,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 -48.26 180)
+				(at 17.78 -25.4 180)
 				(length 2.54)
 				(name "GPIO42_ADC2"
 					(effects
@@ -1605,7 +1244,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 -50.8 180)
+				(at 17.78 -27.94 180)
 				(length 2.54)
 				(name "GPIO43_ADC3"
 					(effects
@@ -1623,7 +1262,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 -53.34 180)
+				(at 17.78 -30.48 180)
 				(length 2.54)
 				(name "GPIO44_ADC4"
 					(effects
@@ -1641,7 +1280,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 -55.88 180)
+				(at 17.78 -33.02 180)
 				(length 2.54)
 				(name "GPIO5_ADC5"
 					(effects
@@ -1659,7 +1298,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 -58.42 180)
+				(at 17.78 -35.56 180)
 				(length 2.54)
 				(name "GPIO6_ADC6"
 					(effects
@@ -1677,7 +1316,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at 17.78 -60.96 180)
+				(at 17.78 -38.1 180)
 				(length 2.54)
 				(name "GPIO7_ADC7"
 					(effects
@@ -1697,14 +1336,88 @@
 		)
 		(symbol "RP2350B_4_1"
 			(rectangle
-				(start -16.51 2.54)
-				(end 15.24 -21.59)
+				(start -16.51 8.89)
+				(end 16.51 -67.31)
 				(stroke
 					(width 0)
 					(type default)
 				)
 				(fill
 					(type none)
+				)
+			)
+			(rectangle
+				(start -16.51 -11.43)
+				(end 16.51 -21.59)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -16.51 -21.59)
+				(end 16.51 -31.75)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -16.51 -31.75)
+				(end 16.51 -41.91)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -16.51 -41.91)
+				(end 16.51 -52.07)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -16.51 -52.07)
+				(end 16.51 -59.69)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(rectangle
+				(start -16.51 -59.69)
+				(end 16.51 -67.31)
+				(stroke
+					(width 0)
+					(type solid)
+				)
+				(fill
+					(type none)
+				)
+			)
+			(text "UART0\n"
+				(at -0.254 -37.084 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
 				)
 			)
 			(text "RP2350B Serial Buses"
@@ -1715,8 +1428,48 @@
 					)
 				)
 			)
+			(text "SPI0"
+				(at 0 -16.51 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "SPI1"
+				(at 0 -26.67 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "UART1"
+				(at 0 -46.99 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "I2C0\n"
+				(at 0 -55.372 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(text "I2C1\n"
+				(at 0 -63.5 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
 			(pin bidirectional line
-				(at -19.05 -5.08 0)
+				(at -19.05 5.08 0)
 				(length 2.54)
 				(name "USB_D+"
 					(effects
@@ -1734,7 +1487,7 @@
 				)
 			)
 			(pin bidirectional line
-				(at -19.05 -7.62 0)
+				(at -19.05 2.54 0)
 				(length 2.54)
 				(name "USB_D-"
 					(effects
@@ -1752,7 +1505,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 -15.24 0)
+				(at -19.05 -5.08 0)
 				(length 2.54)
 				(name "SWCLK"
 					(effects
@@ -1770,7 +1523,7 @@
 				)
 			)
 			(pin input line
-				(at -19.05 -17.78 0)
+				(at -19.05 -7.62 0)
 				(length 2.54)
 				(name "SWDIO"
 					(effects
@@ -1786,6 +1539,386 @@
 						)
 					)
 				)
+			)
+			(pin input line
+				(at -19.05 -16.51 0)
+				(length 2.54)
+				(name "GPIO0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "77"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "SPI0 MISO" input line)
+			)
+			(pin input line
+				(at -19.05 -26.67 0)
+				(length 2.54)
+				(name "GPIO28"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "36"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "SPI1 MISO" input line)
+			)
+			(pin input line
+				(at -19.05 -35.56 0)
+				(length 2.54)
+				(name "GPIO33"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "42"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "UART0 RX" bidirectional line)
+			)
+			(pin input line
+				(at -19.05 -38.1 0)
+				(length 2.54)
+				(name "GPIO34"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "43"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "UART0 CTS" bidirectional line)
+			)
+			(pin input line
+				(at -19.05 -45.72 0)
+				(length 2.54)
+				(name "GPIO5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "UART1 RX" input line)
+			)
+			(pin input line
+				(at -19.05 -48.26 0)
+				(length 2.54)
+				(name "GPIO6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "UART1 CTS" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -19.05 -55.88 0)
+				(length 2.54)
+				(name "GPIO8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "I2C0 SDA" bidirectional line)
+			)
+			(pin bidirectional line
+				(at -19.05 -63.5 0)
+				(length 2.54)
+				(name "GPIO10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "I2C1 SDA" bidirectional line)
+			)
+			(pin output line
+				(at 19.05 -13.97 180)
+				(length 2.54)
+				(name "GPIO1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "78"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "SPI1 CS0" output line)
+			)
+			(pin output clock
+				(at 19.05 -16.51 180)
+				(length 2.54)
+				(name "GPIO2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "79"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "SPI0 SCK" output clock)
+			)
+			(pin output line
+				(at 19.05 -19.05 180)
+				(length 2.54)
+				(name "GPIO3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "80"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "SPI0 MOSI" output line)
+			)
+			(pin output line
+				(at 19.05 -24.13 180)
+				(length 2.54)
+				(name "GPIO29"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "37"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "SPI1 CS0" output line)
+			)
+			(pin output clock
+				(at 19.05 -26.67 180)
+				(length 2.54)
+				(name "GPIO30"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "38"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "SPI1 SCK" output clock)
+			)
+			(pin output line
+				(at 19.05 -29.21 180)
+				(length 2.54)
+				(name "GPIO31"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "39"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "SPI1 MOSI" output line)
+			)
+			(pin output line
+				(at 19.05 -35.56 180)
+				(length 2.54)
+				(name "GPIO32"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "40"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "UART0 TX" output line)
+			)
+			(pin output line
+				(at 19.05 -38.1 180)
+				(length 2.54)
+				(name "GPIO35"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "44"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "UART0 RTS" bidirectional line)
+			)
+			(pin output line
+				(at 19.05 -45.72 180)
+				(length 2.54)
+				(name "GPIO4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "UART1 TX" output line)
+			)
+			(pin output line
+				(at 19.05 -48.26 180)
+				(length 2.54)
+				(name "GPIO7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "UART1 RTS" output line)
+			)
+			(pin output line
+				(at 19.05 -55.88 180)
+				(length 2.54)
+				(name "GPIO9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "I2C0 SCL" bidirectional line)
+			)
+			(pin output line
+				(at 19.05 -63.5 180)
+				(length 2.54)
+				(name "GPIO11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(alternate "I2C1 SCL" output line)
 			)
 		)
 		(embedded_fonts no)
