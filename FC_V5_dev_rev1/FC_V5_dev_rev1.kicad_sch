@@ -4613,6 +4613,48 @@
 		)
 	)
 	(sheet
+		(at 182.88 73.66)
+		(size 30.48 15.24)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "67a299ea-49fb-4ea3-b290-edcff8c76fe3")
+		(property "Sheetname" "Face Interface"
+			(at 182.88 72.9484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "face_interface.kicad_sch"
+			(at 182.88 89.4846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "FC_V5_dev_rev1"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 62.23 81.28)
 		(size 25.4 12.7)
 		(exclude_from_sim no)
@@ -4739,7 +4781,7 @@
 		)
 	)
 	(sheet
-		(at 100.33 66.04)
+		(at 96.52 69.85)
 		(size 34.29 16.51)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4755,7 +4797,7 @@
 		)
 		(uuid "dce4dd70-ecbd-4132-81cb-e30656f620f9")
 		(property "Sheetname" "RP2350"
-			(at 100.33 65.3284 0)
+			(at 96.52 69.1384 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4764,7 +4806,7 @@
 			)
 		)
 		(property "Sheetfile" "RP2350B_Core.kicad_sch"
-			(at 100.33 83.1346 0)
+			(at 96.52 86.9446 0)
 			(effects
 				(font
 					(size 1.27 1.27)
