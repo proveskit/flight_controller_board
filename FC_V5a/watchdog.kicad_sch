@@ -4655,7 +4655,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 25.4) (xy 118.11 22.86)
+			(xy 111.76 25.4) (xy 111.76 26.67)
 		)
 		(stroke
 			(width 0)
@@ -4755,6 +4755,16 @@
 	)
 	(wire
 		(pts
+			(xy 111.76 31.75) (xy 111.76 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f758bb3-1f16-4bf2-aa08-fcf33a1093e0")
+	)
+	(wire
+		(pts
 			(xy 110.49 91.44) (xy 110.49 119.38)
 		)
 		(stroke
@@ -4825,7 +4835,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 25.4) (xy 118.11 25.4)
+			(xy 129.54 25.4) (xy 111.76 25.4)
 		)
 		(stroke
 			(width 0)
@@ -7690,71 +7700,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 118.11 17.78 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "778a596d-09f0-4585-9338-ef6e15488278")
-		(property "Reference" "#PWR013"
-			(at 118.11 21.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 114.046 16.51 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 118.11 17.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 118.11 17.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 118.11 17.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "07d54ea3-46fb-4a50-a58e-12eea2e619ab")
-		)
-		(instances
-			(project "FC_V5"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/d3e26510-981a-4dd5-9b7d-a587e6324dc6"
-					(reference "#PWR013")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small_US")
 		(at 190.5 142.24 270)
 		(unit 1)
@@ -9032,8 +8977,8 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
-		(at 118.11 20.32 0)
-		(mirror y)
+		(at 111.76 29.21 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9041,7 +8986,7 @@
 		(dnp no)
 		(uuid "c324be61-f2ee-4a65-9360-bf6f4591c242")
 		(property "Reference" "R23"
-			(at 112.776 19.05 0)
+			(at 108.966 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9050,7 +8995,7 @@
 			)
 		)
 		(property "Value" "47k"
-			(at 112.776 21.844 0)
+			(at 108.966 27.686 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9059,7 +9004,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 118.11 20.32 0)
+			(at 111.76 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9068,7 +9013,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 118.11 20.32 0)
+			(at 111.76 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9077,7 +9022,7 @@
 			)
 		)
 		(property "Description" "47 kOhms ±1% 0.1W, 1/10W Chip Resistor 0603 (1608 Metric) Automotive AEC-Q200 Thick Film"
-			(at 118.11 20.32 0)
+			(at 111.76 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9086,7 +9031,7 @@
 			)
 		)
 		(property "DPN" "RMCF0603FT47K0CT-ND"
-			(at 118.11 20.32 0)
+			(at 111.76 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9095,7 +9040,7 @@
 			)
 		)
 		(property "DST" "Digi-Key"
-			(at 118.11 20.32 0)
+			(at 111.76 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9104,7 +9049,7 @@
 			)
 		)
 		(property "MFR" "Stackpole Electronics Inc"
-			(at 118.11 20.32 0)
+			(at 111.76 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9113,7 +9058,7 @@
 			)
 		)
 		(property "MPN" "RMCF0603FT47K0"
-			(at 118.11 20.32 0)
+			(at 111.76 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10022,6 +9967,72 @@
 			(project "FC_V5"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/d3e26510-981a-4dd5-9b7d-a587e6324dc6"
 					(reference "TP11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "GND_1")
+		(lib_id "power:GND")
+		(at 111.76 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f243a946-3d8b-419f-91f1-8c901a6c4d05")
+		(property "Reference" "#PWR0142"
+			(at 111.76 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 107.188 35.814 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 111.76 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 111.76 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 111.76 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f76b7f3c-63ff-46c8-ac05-e7d464493b39")
+		)
+		(instances
+			(project "FC_V5a"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/d3e26510-981a-4dd5-9b7d-a587e6324dc6"
+					(reference "#PWR0142")
 					(unit 1)
 				)
 			)
