@@ -16935,28 +16935,6 @@
 			)
 		)
 	)
-	(global_label "FIRE_DEPLOY1_A"
-		(shape output)
-		(at 46.99 161.29 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "11951e25-50fe-4c46-89e8-484e1fc55698")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 28.5229 161.29 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SPI0_MOSI"
 		(shape input)
 		(at 321.31 205.74 180)
@@ -17238,6 +17216,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "~{FIRE_DEPLOY1_A}"
+		(shape input)
+		(at -5.08 179.07 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2b242098-ec7a-4f00-addc-00f31de1b6f5")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -23.5471 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -19207,6 +19207,28 @@
 		(uuid "ea8273c5-e089-484d-9fef-bc514fe94af5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 332.4436 109.1406 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "~{FIRE_DEPLOY1_B}"
+		(shape input)
+		(at -5.08 173.99 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "eb94d4f0-6040-4aa0-b24f-0a3f3044c24a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -23.7285 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
