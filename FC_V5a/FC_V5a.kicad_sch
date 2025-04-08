@@ -9784,6 +9784,214 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "mainboard:R-US_R0603"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at -3.81 1.4986 0)
+				(effects
+					(font
+						(size 1.4986 1.4986)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "R-US_R0603"
+				(at -3.81 -3.302 0)
+				(effects
+					(font
+						(size 1.4986 1.4986)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R-US_R0603_1_0"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -2.159 1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.159 1.016) (xy -1.524 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -1.016) (xy -0.889 1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.889 1.016) (xy -0.254 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.254 -1.016) (xy 0.381 1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.381 1.016) (xy 1.016 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.016 -1.016) (xy 1.651 1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.651 1.016) (xy 2.286 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.286 -1.016) (xy 2.54 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "mainboard:RESISTOR0603"
 			(pin_names
 				(offset 1.016)
@@ -12860,6 +13068,16 @@
 	)
 	(wire
 		(pts
+			(xy 166.37 185.42) (xy 166.37 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d613866-5262-47ac-9510-371972c41b0b")
+	)
+	(wire
+		(pts
 			(xy 46.99 151.13) (xy 46.99 153.67)
 		)
 		(stroke
@@ -13140,16 +13358,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 186.182) (xy 167.64 188.722)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "524d1ec2-2f20-4bda-b352-753bf1ae5de2")
-	)
-	(wire
-		(pts
 			(xy 29.21 133.35) (xy 29.21 130.81)
 		)
 		(stroke
@@ -13320,7 +13528,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 196.342) (xy 167.64 198.882)
+			(xy 166.37 194.31) (xy 166.37 196.85)
 		)
 		(stroke
 			(width 0)
@@ -13407,6 +13615,16 @@
 			(type default)
 		)
 		(uuid "65c76ff8-5f1f-430c-8833-c4f3e805ba0f")
+	)
+	(wire
+		(pts
+			(xy 166.37 172.72) (xy 166.37 175.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67460a95-2551-4a64-b881-ba4a62313266")
 	)
 	(wire
 		(pts
@@ -15380,16 +15598,6 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 176.022) (xy 167.64 170.942)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f2edc881-9ecc-4b31-a047-b45dabb31dd8")
-	)
-	(wire
-		(pts
 			(xy 162.56 275.59) (xy 158.75 275.59)
 		)
 		(stroke
@@ -16295,7 +16503,7 @@
 		)
 	)
 	(global_label "~{FIRE_DEPLOY1_A}"
-		(shape input)
+		(shape output)
 		(at -5.08 179.07 180)
 		(fields_autoplaced yes)
 		(effects
@@ -18027,6 +18235,28 @@
 			)
 		)
 	)
+	(global_label "~{MUX_RESET}"
+		(shape output)
+		(at -5.08 185.42 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d1991f62-d4f6-4664-a722-59304c94b893")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at -18.7693 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SDA1"
 		(shape bidirectional)
 		(at 248.92 184.15 180)
@@ -18269,7 +18499,7 @@
 		)
 	)
 	(global_label "~{FIRE_DEPLOY1_B}"
-		(shape input)
+		(shape output)
 		(at -5.08 173.99 180)
 		(fields_autoplaced yes)
 		(effects
@@ -19870,72 +20100,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:VBUS")
-		(at 167.64 168.402 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "10045fb3-6b26-49f5-9ce2-67fa55aef235")
-		(property "Reference" "#U$07"
-			(at 167.64 168.402 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VBUS"
-			(at 166.116 167.386 0)
-			(effects
-				(font
-					(size 1.27 1.0795)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Footprint" "Adafruit ItsyBitsy RP2040:"
-			(at 167.64 168.402 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 167.64 168.402 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 167.64 168.402 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "384149f6-0451-4aaa-9df1-6386a7fe7d44")
-		)
-		(instances
-			(project "FC_V5"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(reference "#U$07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 154.94 182.88 90)
 		(unit 1)
@@ -20643,6 +20807,72 @@
 		)
 	)
 	(symbol
+		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:+3V3")
+		(at 166.37 170.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "222fcd3b-1cef-4fe1-9ff3-e5cd4d6fcce0")
+		(property "Reference" "#+3V024"
+			(at 166.37 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 166.37 167.64 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+			)
+		)
+		(property "Footprint" "Adafruit ItsyBitsy RP2040:"
+			(at 166.37 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 166.37 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 166.37 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "96518570-f8f2-4ebc-9552-95d8b6fd364a")
+		)
+		(instances
+			(project "FC_V5a"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "#+3V024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 157.48 158.75 0)
 		(mirror y)
@@ -21299,7 +21529,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 167.64 192.532 90)
+		(at 166.37 190.5 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -21308,7 +21538,7 @@
 		(fields_autoplaced yes)
 		(uuid "34c649e2-82a0-4fd5-bd8c-14bd495d3a25")
 		(property "Reference" "D3"
-			(at 170.688 193.4845 90)
+			(at 169.418 191.4525 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21317,7 +21547,7 @@
 			)
 		)
 		(property "Value" "LED"
-			(at 170.688 196.0245 90)
+			(at 169.418 193.9925 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21326,7 +21556,7 @@
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0603_1608Metric"
-			(at 167.64 192.532 0)
+			(at 166.37 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21335,7 +21565,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 167.64 192.532 0)
+			(at 166.37 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21344,7 +21574,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 192.532 0)
+			(at 166.37 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22575,7 +22805,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 167.64 198.882 0)
+		(at 166.37 196.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -22584,7 +22814,7 @@
 		(fields_autoplaced yes)
 		(uuid "50c19483-80e3-46c4-ad6a-45c532b7d4c4")
 		(property "Reference" "#PWR019"
-			(at 167.64 205.232 0)
+			(at 166.37 203.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22593,7 +22823,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 167.64 203.962 0)
+			(at 166.37 201.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22601,7 +22831,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 167.64 198.882 0)
+			(at 166.37 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22610,7 +22840,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 198.882 0)
+			(at 166.37 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -22619,7 +22849,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 167.64 198.882 0)
+			(at 166.37 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23246,6 +23476,75 @@
 			(project "FC_V5"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "mainboard:R-US_R0603")
+		(at 166.37 180.34 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "61b44108-f5c0-4064-aad5-19763b9f3ea2")
+		(property "Reference" "R80"
+			(at 169.926 182.88 0)
+			(effects
+				(font
+					(size 1.4986 1.4986)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100k"
+			(at 163.068 183.134 0)
+			(effects
+				(font
+					(size 1.4986 1.4986)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 166.37 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 166.37 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "787K 0603"
+			(at 167.64 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "00103516-c1ee-40b0-9bb9-74abdad543be")
+		)
+		(pin "2"
+			(uuid "923649dc-fe4a-44e3-91d3-2562c5ee9446")
+		)
+		(instances
+			(project "FC_V5a"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "R80")
 					(unit 1)
 				)
 			)
@@ -24052,75 +24351,6 @@
 			(project "FC_V5"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "R7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "mainboard:RESISTOR0603")
-		(at 167.64 181.102 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7d82cf51-ff1e-45fd-83ca-f1c0563ddbc9")
-		(property "Reference" "R9"
-			(at 169.164 181.102 0)
-			(effects
-				(font
-					(size 1.778 1.778)
-				)
-				(justify bottom)
-			)
-		)
-		(property "Value" "10k"
-			(at 173.99 177.8 0)
-			(effects
-				(font
-					(size 1.778 1.778)
-				)
-				(justify top)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 167.64 181.102 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 167.64 181.102 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "100K 0603"
-			(at 171.704 181.102 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8297487c-ae93-4ed5-af76-6868897644b4")
-		)
-		(pin "2"
-			(uuid "93f631f1-aa49-495e-887d-1dabf3d1172e")
-		)
-		(instances
-			(project "FC_V5"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(reference "R9")
 					(unit 1)
 				)
 			)
