@@ -9987,6 +9987,16 @@
 	)
 	(wire
 		(pts
+			(xy 208.28 217.17) (xy 208.28 220.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02bab80a-c079-4f72-88f4-6f345c9039f9")
+	)
+	(wire
+		(pts
 			(xy 176.53 43.18) (xy 172.72 43.18)
 		)
 		(stroke
@@ -10714,6 +10724,16 @@
 			(type default)
 		)
 		(uuid "308a01ff-0a4f-40e6-b824-83c57209624a")
+	)
+	(wire
+		(pts
+			(xy 205.74 231.14) (xy 208.28 231.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30b18f18-6649-434e-8075-712567b1d995")
 	)
 	(wire
 		(pts
@@ -13544,6 +13564,28 @@
 		(uuid "062cc48c-831e-4ec5-ac1d-0d033db2ceec")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 310.0358 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RF2_RST"
+		(shape input)
+		(at 205.74 231.14 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "082a738d-aee6-4e6f-96d1-a4528a45a806")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 194.772 231.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19588,6 +19630,73 @@
 		)
 	)
 	(symbol
+		(lib_name "+3V3_1")
+		(lib_id "power:+3V3")
+		(at 208.28 217.17 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "718314f4-dd48-43f9-a5cc-faa8a255c63a")
+		(property "Reference" "#PWR0102"
+			(at 208.28 220.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 208.026 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 208.28 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 208.28 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c43c83b1-2f47-41a7-85b9-306557e8565a")
+		)
+		(instances
+			(project "FC_V5a"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "#PWR0102")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "mainboard:RESISTOR0603")
 		(at 107.95 227.33 90)
 		(unit 1)
@@ -24898,6 +25007,75 @@
 			(project "FC_V5"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "mainboard:R-US_R0603")
+		(at 208.28 226.06 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f2fd726b-eba8-4c56-8f4f-4e9f5e6a16e3")
+		(property "Reference" "R92"
+			(at 205.994 223.774 0)
+			(effects
+				(font
+					(size 1.4986 1.4986)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100k"
+			(at 205.994 229.87 0)
+			(effects
+				(font
+					(size 1.4986 1.4986)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 208.28 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 208.28 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "787K 0603"
+			(at 209.55 226.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5dd13c3b-6b5f-4fc8-97d7-8f4517df5bba")
+		)
+		(pin "2"
+			(uuid "7da65be8-c327-4f74-a55e-a57dca299fc9")
+		)
+		(instances
+			(project "FC_V5a"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "R92")
 					(unit 1)
 				)
 			)
