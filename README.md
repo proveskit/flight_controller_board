@@ -38,7 +38,9 @@ The FC board implements the following components:
 | V3 | Unflown | Legacy Support |
 | V4a (aka V1a Internal) | Unflown | Supported |
 | V4b | Unflown | Supported |
-| V4c | Pleiades - Orpheus | Supported |
+| V4c | Pleiades - Orpheus, InspireFly Content Cube (Launcing Soon!) | Supported |
+| V5dev | Unflown | Partial Support |
+| V5a | Unflown | Support Incoming |
 
 > NOTE: The currently supported V1 and V2 boards are not recommended for flight due to a high suspectibility to thermal and radiation effects. These boards are still perfectly fine for ground testing and educational use. Bronco Space is currently conducting testing to flush out these issues and will be mitigating these potential issues in V3. If you would like to receive eval hardware of the new version please contact Michael Pham: mlpham@cpp.edu
 
