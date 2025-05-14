@@ -6488,6 +6488,16 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "I2C Address: 0x41"
+		(exclude_from_sim no)
+		(at 40.132 25.908 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "08ad6ed9-b79b-4dab-8848-8afd0ed914a1")
+	)
 	(text "Regulator - 3.3V OUT"
 		(exclude_from_sim no)
 		(at 294.64 59.182 0)
@@ -6498,6 +6508,16 @@
 			(justify left bottom)
 		)
 		(uuid "1243e3ce-5d99-447a-a1d6-278ee491cc69")
+	)
+	(text "I2C Address: 0x40"
+		(exclude_from_sim no)
+		(at 228.092 29.718 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "21da93a4-aae3-4858-b0ab-9a609bb65263")
 	)
 	(text "555 Timer creats a pulse for \nOne Shot Regulator Reset"
 		(exclude_from_sim no)
@@ -20274,7 +20294,7 @@
 			)
 		)
 		(instances
-			(project "FC_V5a_Rev1"
+			(project "FC_V5b"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471"
 					(page "5")
 				)
