@@ -30,21 +30,21 @@ The Latest (V5b) FC board implements the following components:
 ## Flight Heritage and Version History
 | Version | Flights | Status |
 | ----------- | ----------- | ----------- |
-| V0 | Unflown | Not Supported |
-| V1 | Pleiades - Yearling, Pleiades - Squared | Not Supported |
-| V2 | Unflown | Not Supported |
+| V0 | Unflown | Unsupported|
+| V1 | Pleiades - Yearling, Pleiades - Squared | Unsupported |
+| V2 | Unflown | Unsupported |
 | V3 | Unflown | Legacy Support |
-| V4a (aka V1a Internal) | Unflown | Supported |
+| V4a (aka V1a Internal) | Unflown | Unsupported |
 | V4b | Unflown | Supported |
 | V4c | Pleiades - Orpheus, InspireFly Content Cube (Launcing Soon!) | Supported |
-| V5dev | Unflown | Limited Support |
-| V5a | Unflown | Supported |
+| V5dev | Unflown | Dev Only Support |
+| V5a | Unflown | Dev Only Support |
 | V5b | Unflown | In Development |
 
 V0 through V3 Flight Controller Boards were the cornerstone of the 2023 Release V1 PROVES Kit. With the 2024 V2 PROVES Kit we introduced the V4 Flight Controller board and changed the version scheme to have `a`, `b`, `c`, etc varients of a single version rather than ascending the version ladder in record time (we'd be on V9 now if we did that!). This change was primarily based on the idea that a revisions on a major version number would be similar enough to each other to not require completely different firmware to be compiled for operation.
 
 ## Current Status and Upcoming Plans
-The latest V5 generation of Flight Controller boards takes in lessons learned from Orpheus and InspireFly to create a 2025 Release V3 of the PROVES Kit. Both V5dev and V5a will not be distributed beyond the PROVES developer community due to significant design errata that makes they tricky to work with. The incoming V5b is intended to be the stable release for this version of the kit.
+The latest V5 generation of Flight Controller boards takes in lessons learned from Orpheus and InspireFly to create a 2025 Release V3 of the PROVES Kit. Both V5dev and V5a will not be distributed beyond the PROVES developer community due to significant design errata that make them tricky to work with. The incoming V5b is intended to be the stable release for this version of the kit.
 
 Lessons learned from V3 PROVES Kit will be directly applied to the creation of a V6 Flight Controller Board generation for V4 PROVES Kit. We plan to continually support the latest and previous PROVES Kit Versions starting with the V3 Release. This means that V2 Kits will continue to receive updates until V4 is officially released.
 
