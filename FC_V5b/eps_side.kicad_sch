@@ -9017,6 +9017,16 @@
 	)
 	(wire
 		(pts
+			(xy 92.71 189.23) (xy 97.79 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99949566-74ce-441c-99f3-49b1af1d192a")
+	)
+	(wire
+		(pts
 			(xy 368.3 78.74) (xy 368.3 86.36)
 		)
 		(stroke
@@ -10194,6 +10204,16 @@
 			(type default)
 		)
 		(uuid "ec0afa53-8763-4705-ba74-a7d01e70e7b6")
+	)
+	(wire
+		(pts
+			(xy 92.71 186.69) (xy 97.79 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec30ede8-b02a-4ef6-9cc1-0eeea00a6c30")
 	)
 	(wire
 		(pts
@@ -11705,7 +11725,7 @@
 			)
 		)
 	)
-	(global_label "~{ENABLE_Heater}"
+	(global_label "ENABLE_Heater"
 		(shape output)
 		(at 97.79 181.61 0)
 		(fields_autoplaced yes)
@@ -11771,6 +11791,28 @@
 			)
 		)
 	)
+	(global_label "FIRE_DEPLOY2_B"
+		(shape output)
+		(at 97.79 189.23 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c061c2c9-cbad-4665-b73c-6b091ee308f4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 116.4385 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "RF2_IO2"
 		(shape bidirectional)
 		(at 97.79 191.77 0)
@@ -11806,6 +11848,28 @@
 		(uuid "c642ce91-277f-423a-a4ba-ef3a5d2429f4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 114.5637 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "PAYLOAD_BATT_ENABLE"
+		(shape output)
+		(at 97.79 186.69 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c76b552f-552a-4f3c-9d68-182473a21128")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 122.1838 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
