@@ -2415,6 +2415,12 @@
 		(uuid "804acb16-5408-41d3-a6e8-cc2354cb0be0")
 	)
 	(junction
+		(at 278.13 107.95)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "80dd8ba2-77fd-4d39-bc18-d4ff64baaafb")
+	)
+	(junction
 		(at 140.97 25.4)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2439,6 +2445,12 @@
 		(uuid "9cf74b96-d1a9-4f6c-92a0-721252d7d89d")
 	)
 	(junction
+		(at 273.05 100.33)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a2327056-6db4-4e57-884a-38834ebb51c6")
+	)
+	(junction
 		(at 228.6 125.73)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2455,6 +2467,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aad61559-1d6f-47b2-9544-845ffed1b761")
+	)
+	(junction
+		(at 262.89 85.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ace4dd96-044f-4040-aa5e-0a04f0656a41")
+	)
+	(junction
+		(at 267.97 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b35369a6-de66-4b59-a33b-ff61589cdbe5")
 	)
 	(junction
 		(at 46.99 123.19)
@@ -2998,6 +3022,16 @@
 	)
 	(wire
 		(pts
+			(xy 262.89 85.09) (xy 262.89 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "408fd807-5205-4643-a860-69fef658236d")
+	)
+	(wire
+		(pts
 			(xy 184.15 140.97) (xy 184.15 142.24)
 		)
 		(stroke
@@ -3118,6 +3152,16 @@
 	)
 	(wire
 		(pts
+			(xy 273.05 100.33) (xy 279.4 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5944faaf-0a33-4e03-ba3d-46c20d52faf3")
+	)
+	(wire
+		(pts
 			(xy 138.43 176.53) (xy 138.43 163.83)
 		)
 		(stroke
@@ -3165,6 +3209,16 @@
 			(type default)
 		)
 		(uuid "5e8b3ae4-4551-4a42-aa27-24c80d8cd923")
+	)
+	(wire
+		(pts
+			(xy 278.13 107.95) (xy 283.21 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6350e925-92d0-43e2-b93a-5d31adcea4f8")
 	)
 	(wire
 		(pts
@@ -3218,7 +3272,7 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 107.95) (xy 267.97 107.95)
+			(xy 261.62 107.95) (xy 278.13 107.95)
 		)
 		(stroke
 			(width 0)
@@ -3308,6 +3362,16 @@
 	)
 	(wire
 		(pts
+			(xy 267.97 92.71) (xy 274.32 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73d90bf1-0a08-4833-8746-09eb56462f83")
+	)
+	(wire
+		(pts
 			(xy 205.74 151.13) (xy 208.28 151.13)
 		)
 		(stroke
@@ -3365,6 +3429,26 @@
 			(type default)
 		)
 		(uuid "781a9d17-741f-4181-8703-ffc419802581")
+	)
+	(wire
+		(pts
+			(xy 262.89 85.09) (xy 261.62 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7958a2e3-196c-4baa-ac9e-811c69005966")
+	)
+	(wire
+		(pts
+			(xy 267.97 92.71) (xy 267.97 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b709928-5df1-4e89-88ac-05d785d45f6d")
 	)
 	(wire
 		(pts
@@ -3438,7 +3522,7 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 100.33) (xy 269.24 100.33)
+			(xy 261.62 100.33) (xy 273.05 100.33)
 		)
 		(stroke
 			(width 0)
@@ -3548,7 +3632,7 @@
 	)
 	(wire
 		(pts
-			(xy 269.24 85.09) (xy 261.62 85.09)
+			(xy 269.24 85.09) (xy 262.89 85.09)
 		)
 		(stroke
 			(width 0)
@@ -3738,7 +3822,7 @@
 	)
 	(wire
 		(pts
-			(xy 261.62 92.71) (xy 269.24 92.71)
+			(xy 261.62 92.71) (xy 267.97 92.71)
 		)
 		(stroke
 			(width 0)
@@ -3755,6 +3839,16 @@
 			(type default)
 		)
 		(uuid "b2ed147a-02b8-4ca0-b069-ee34277e2abc")
+	)
+	(wire
+		(pts
+			(xy 273.05 100.33) (xy 273.05 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b327f26a-c306-4c03-a15b-005e460a8a80")
 	)
 	(wire
 		(pts
@@ -3955,6 +4049,16 @@
 			(type default)
 		)
 		(uuid "c95789a3-2bd7-496c-9038-693e45521765")
+	)
+	(wire
+		(pts
+			(xy 161.29 31.75) (xy 161.29 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c96762ff-57b2-4b71-adea-8a7a56da9a4d")
 	)
 	(wire
 		(pts
@@ -4228,6 +4332,16 @@
 	)
 	(wire
 		(pts
+			(xy 278.13 107.95) (xy 278.13 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb7163bf-98c8-4048-8a47-ea0c9084db51")
+	)
+	(wire
+		(pts
 			(xy 46.99 177.8) (xy 50.8 177.8)
 		)
 		(stroke
@@ -4265,6 +4379,36 @@
 			(justify left bottom)
 		)
 		(uuid "811f17b9-ab0c-4ad9-91b8-ff2220932e63")
+	)
+	(label "VBUSP"
+		(at 161.29 33.02 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "aca29982-7d92-4159-8ccf-2f15e5b59bf0")
+	)
+	(label "ILIM1"
+		(at 142.24 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "adff2be9-911d-4ea0-80d6-33faed9d36bc")
+	)
+	(label "ILIM2"
+		(at 142.24 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f0bc4277-c26b-467d-8552-f9262cfab2fc")
 	)
 	(global_label "~{FACE0_ENABLE}"
 		(shape input)
@@ -4444,7 +4588,7 @@
 	)
 	(global_label "Heater Output"
 		(shape output)
-		(at 267.97 107.95 0)
+		(at 283.21 107.95 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4454,7 +4598,7 @@
 		)
 		(uuid "417d5d47-e958-4fb9-a0db-4e4b0af07bb1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 284.3203 107.95 0)
+			(at 299.5603 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4576,7 +4720,7 @@
 	)
 	(global_label "DEPLOY1_AUX"
 		(shape output)
-		(at 269.24 92.71 0)
+		(at 274.32 92.71 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4586,7 +4730,7 @@
 		)
 		(uuid "78009191-b9d0-4073-b103-c7fe27d21a95")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 285.1671 92.71 0)
+			(at 290.2471 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4818,7 +4962,7 @@
 	)
 	(global_label "DEPLOY2"
 		(shape output)
-		(at 269.24 100.33 0)
+		(at 279.4 100.33 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4828,7 +4972,7 @@
 		)
 		(uuid "c99e355f-2816-4774-9bd6-427d8fb71692")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 280.5709 100.33 0)
+			(at 290.7309 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5828,6 +5972,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:CAP_CERAMIC_0402NO")
+		(at 278.13 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "39f8402d-44e8-49ba-9b2c-9a6a5f09ed04")
+		(property "Reference" "C58"
+			(at 275.84 122.448 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "220nf"
+			(at 275.59 116.586 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 278.13 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 278.13 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 278.13 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "75a23ad6-e892-43c7-8a47-4f788289cba6")
+		)
+		(pin "2"
+			(uuid "def8d8f5-eb43-4192-adc5-0a7b081c711d")
+		)
+		(instances
+			(project "FC_V5b"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471/1ac8f3d4-e8b4-451e-be76-8bf59103b6c5"
+					(reference "C58")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "GND_1")
 		(lib_id "power:GND")
 		(at 62.23 104.14 0)
@@ -5967,6 +6178,140 @@
 			(project "FC_V5"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471/1ac8f3d4-e8b4-451e-be76-8bf59103b6c5"
 					(reference "U22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:CAP_CERAMIC_0402NO")
+		(at 262.89 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3c14792a-084c-43e9-bcfd-52c984120df0")
+		(property "Reference" "C54"
+			(at 260.6 122.448 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "220nf"
+			(at 260.35 116.586 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 262.89 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 262.89 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 262.89 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "06040156-e091-410c-9595-27022da404c8")
+		)
+		(pin "2"
+			(uuid "418b3633-b4e2-4090-806c-f060ed4cf8ea")
+		)
+		(instances
+			(project "FC_V5b"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471/1ac8f3d4-e8b4-451e-be76-8bf59103b6c5"
+					(reference "C54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:CAP_CERAMIC_0402NO")
+		(at 267.97 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "4001ec03-bed2-4c3d-bdca-5006986ca86b")
+		(property "Reference" "C56"
+			(at 265.68 122.448 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "220nf"
+			(at 265.43 116.586 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 267.97 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 267.97 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 267.97 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "270c3b59-47ae-4bb8-90e2-c634014e49ab")
+		)
+		(pin "2"
+			(uuid "4c7606ad-534f-4b94-944a-4a50fe917c1a")
+		)
+		(instances
+			(project "FC_V5b"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471/1ac8f3d4-e8b4-451e-be76-8bf59103b6c5"
+					(reference "C56")
 					(unit 1)
 				)
 			)
@@ -6378,7 +6723,7 @@
 		(dnp no)
 		(uuid "48da343c-2606-427c-8190-97e975d4f03f")
 		(property "Reference" "R83"
-			(at 133.604 30.48 0)
+			(at 133.858 28.448 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -6387,7 +6732,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 135.636 37.084 0)
+			(at 135.89 35.052 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -7153,6 +7498,73 @@
 			(project "FC_V5a"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471/1ac8f3d4-e8b4-451e-be76-8bf59103b6c5"
 					(reference "#PWR0162")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:CAP_CERAMIC_0402NO")
+		(at 273.05 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5eefae01-9af5-4234-b1a7-774de15cb2bf")
+		(property "Reference" "C57"
+			(at 270.76 122.448 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "220nf"
+			(at 270.51 116.586 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 273.05 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 273.05 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 273.05 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9667985c-be17-4a71-8b7b-f0226a3edc0c")
+		)
+		(pin "2"
+			(uuid "f341a28d-0910-42ef-9fc8-8fd8826e493e")
+		)
+		(instances
+			(project "FC_V5b"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471/1ac8f3d4-e8b4-451e-be76-8bf59103b6c5"
+					(reference "C57")
 					(unit 1)
 				)
 			)
@@ -9643,7 +10055,7 @@
 		(dnp no)
 		(uuid "b93a28b7-8c53-4a0e-9100-a8bbdd61dbe6")
 		(property "Reference" "R84"
-			(at 142.494 30.734 0)
+			(at 142.748 28.956 0)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -9652,7 +10064,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 144.526 37.084 0)
+			(at 144.526 35.814 0)
 			(effects
 				(font
 					(size 1.778 1.778)
