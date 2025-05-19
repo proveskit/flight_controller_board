@@ -10532,7 +10532,7 @@
 	)
 	(wire
 		(pts
-			(xy 120.65 266.7) (xy 130.81 266.7)
+			(xy 120.65 266.7) (xy 138.43 266.7)
 		)
 		(stroke
 			(width 0)
@@ -10672,7 +10672,7 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 276.86) (xy 106.68 276.86)
+			(xy 90.17 276.86) (xy 106.68 276.86)
 		)
 		(stroke
 			(width 0)
@@ -10702,7 +10702,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 276.86) (xy 121.92 276.86)
+			(xy 138.43 276.86) (xy 121.92 276.86)
 		)
 		(stroke
 			(width 0)
@@ -11002,7 +11002,7 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 266.7) (xy 97.79 276.86)
+			(xy 90.17 266.7) (xy 90.17 276.86)
 		)
 		(stroke
 			(width 0)
@@ -11402,7 +11402,7 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 266.7) (xy 97.79 266.7)
+			(xy 107.95 266.7) (xy 90.17 266.7)
 		)
 		(stroke
 			(width 0)
@@ -11572,7 +11572,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 266.7) (xy 130.81 276.86)
+			(xy 138.43 266.7) (xy 138.43 276.86)
 		)
 		(stroke
 			(width 0)
@@ -13339,6 +13339,28 @@
 			)
 		)
 	)
+	(global_label "PAYLOAD_BATT"
+		(shape input)
+		(at 120.65 271.78 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "15aea013-ed70-47de-8f7e-9c1ed56d6a01")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 137.061 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "RF1_IO4"
 		(shape bidirectional)
 		(at 359.41 210.82 0)
@@ -13416,6 +13438,28 @@
 		(uuid "34e432db-97c7-44c9-8a27-33b2b58b99ff")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 157.48 167.7164 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "RX"
+		(shape output)
+		(at 120.65 269.24 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "39c48e34-3086-4ad9-9014-de87dae8fb13")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 126.1147 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13575,28 +13619,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "TX"
-		(shape input)
-		(at 120.65 269.24 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "4c9df2a8-5a22-48a0-a7a6-13c2a2c7f08b")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.8123 269.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 				(hide yes)
 			)
 		)
@@ -14076,28 +14098,6 @@
 		(uuid "7e361400-39f5-4324-a9ff-832f67c68db8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 297.1512 40.64 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "RX"
-		(shape output)
-		(at 120.65 271.78 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "83f78dd1-9615-4e9c-826b-186f58f6e381")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 126.1147 271.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15093,6 +15093,28 @@
 			)
 		)
 	)
+	(global_label "PAYLOAD_BATT"
+		(shape input)
+		(at 107.95 271.78 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "ed567f3e-44c1-43dd-a6eb-4375b19ac4fe")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 91.539 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SPI1_MISO"
 		(shape output)
 		(at 60.96 241.3 0)
@@ -15128,28 +15150,6 @@
 		(uuid "ee9e0206-ebc8-4e7b-b458-ff86475e8d55")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 232.1136 115.4906 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "RX"
-		(shape output)
-		(at 107.95 271.78 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "f1ac888c-fff5-4077-8709-0bd3a6d172a8")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 103.0574 271.7006 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18142,7 +18142,7 @@
 				)
 			)
 		)
-		(property "Value" "DEBUG"
+		(property "Value" "Payload"
 			(at 114.3 260.35 0)
 			(effects
 				(font
