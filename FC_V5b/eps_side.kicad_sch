@@ -10772,6 +10772,28 @@
 			)
 		)
 	)
+	(global_label "PAYLOAD_BATT_ENABLE"
+		(shape output)
+		(at 97.79 189.23 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "46ff14c0-c2f2-4793-8cb7-a935822a50ca")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 122.1838 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "F4_SDA"
 		(shape output)
 		(at 252.73 262.89 0)
@@ -11607,7 +11629,7 @@
 	)
 	(global_label "FIRE_DEPLOY2_B"
 		(shape output)
-		(at 97.79 189.23 0)
+		(at 97.79 186.69 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11615,9 +11637,9 @@
 			)
 			(justify left)
 		)
-		(uuid "c061c2c9-cbad-4665-b73c-6b091ee308f4")
+		(uuid "b7d011b6-3645-4d2c-99e1-03b49ce00075")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 116.4385 189.23 0)
+			(at 116.4385 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11662,28 +11684,6 @@
 		(uuid "c642ce91-277f-423a-a4ba-ef3a5d2429f4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 114.5637 158.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "PAYLOAD_BATT_ENABLE"
-		(shape output)
-		(at 97.79 186.69 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "c76b552f-552a-4f3c-9d68-182473a21128")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 122.1838 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
