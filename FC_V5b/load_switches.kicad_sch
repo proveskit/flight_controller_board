@@ -2497,6 +2497,12 @@
 		(uuid "b35369a6-de66-4b59-a33b-ff61589cdbe5")
 	)
 	(junction
+		(at 161.29 25.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c91b456d-aaa8-480e-8ec7-33905111ebbf")
+	)
+	(junction
 		(at 46.99 123.19)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3996,16 +4002,6 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 31.75) (xy 161.29 34.29)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c96762ff-57b2-4b71-adea-8a7a56da9a4d")
-	)
-	(wire
-		(pts
 			(xy 234.95 143.51) (xy 240.03 143.51)
 		)
 		(stroke
@@ -4176,6 +4172,16 @@
 	)
 	(wire
 		(pts
+			(xy 161.29 25.4) (xy 161.29 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edd25d40-83b5-468c-9628-cf4b98726e29")
+	)
+	(wire
+		(pts
 			(xy 161.29 97.79) (xy 161.29 95.25)
 		)
 		(stroke
@@ -4294,7 +4300,7 @@
 		)
 		(uuid "fdc3702a-e7ec-4f3c-ad5e-b3807ed5622b")
 	)
-	(label "Deploy1"
+	(label "Deploy1_EN"
 		(at 223.52 81.28 0)
 		(effects
 			(font
