@@ -6,7 +6,23 @@ For detailed documentation on the Flight Controller Board, check out the docs [h
 # Quick Start
 If you have just received a flight controller board, getting started with developing on one is quick and easy! V4 Flight Controller Boards require the soldering of the JP1 solder jumper to enable powering via USB (it is in the bottom right). V5 Flight Controller Boards have a nifty switch! Once the board is powered up you can refer to [our developer's guide](https://github.com/proveskit/pysquared/blob/main/docs/dev-guide.md) for notes on how to get code loaded and the board running.
 
-## Features
+## Flight Heritage and Version History
+| Version | Flights | Status |
+| ----------- | ----------- | ----------- |
+| V0 | Unflown | Unsupported|
+| V1 | Pleiades - Yearling, Pleiades - Squared | Unsupported |
+| V2 | Unflown | Unsupported |
+| V3 | Unflown | Legacy Support |
+| V4a (aka V1a Internal) | Unflown | Unsupported |
+| V4b | Unflown | Supported |
+| V4c | Pleiades - Orpheus, InspireFly Content Cube (Launcing Soon!) | Supported |
+| V5dev | Unflown | Dev Only Support |
+| V5a | Unflown | Dev Only Support |
+| V5b | Unflown | In Development |
+
+V0 through V3 Flight Controller Boards were the cornerstone of the 2023 Release V1 PROVES Kit. With the 2024 V2 PROVES Kit we introduced the V4 Flight Controller board and changed the version scheme to have `a`, `b`, `c`, etc varients of a single version rather than ascending the version ladder in record time (we'd be on V9 now if we did that!). This change was primarily based on the idea that a revisions on a major version number would be similar enough to each other to not require completely different firmware to be compiled for operation.
+
+## Current Features
 The Latest (V5b) FC board implements the following components: 
 - RP2350A Microcontroller
 - 128M-Bit W25Q128JVSIQ Flash Memory
@@ -25,23 +41,6 @@ The Latest (V5b) FC board implements the following components:
 - INA219AIDR I2C Power Monitor
 - TPS54225PWPR 3.3V Switching Voltage Regulator
 - TPS7A4501DCQR 5V Linear Regulator
-
-
-## Flight Heritage and Version History
-| Version | Flights | Status |
-| ----------- | ----------- | ----------- |
-| V0 | Unflown | Unsupported|
-| V1 | Pleiades - Yearling, Pleiades - Squared | Unsupported |
-| V2 | Unflown | Unsupported |
-| V3 | Unflown | Legacy Support |
-| V4a (aka V1a Internal) | Unflown | Unsupported |
-| V4b | Unflown | Supported |
-| V4c | Pleiades - Orpheus, InspireFly Content Cube (Launcing Soon!) | Supported |
-| V5dev | Unflown | Dev Only Support |
-| V5a | Unflown | Dev Only Support |
-| V5b | Unflown | In Development |
-
-V0 through V3 Flight Controller Boards were the cornerstone of the 2023 Release V1 PROVES Kit. With the 2024 V2 PROVES Kit we introduced the V4 Flight Controller board and changed the version scheme to have `a`, `b`, `c`, etc varients of a single version rather than ascending the version ladder in record time (we'd be on V9 now if we did that!). This change was primarily based on the idea that a revisions on a major version number would be similar enough to each other to not require completely different firmware to be compiled for operation.
 
 ## Current Status and Upcoming Plans
 The latest V5 generation of Flight Controller boards takes in lessons learned from Orpheus and InspireFly to create a 2025 Release V3 of the PROVES Kit. Both V5dev and V5a will not be distributed beyond the PROVES developer community due to significant design errata that make them tricky to work with. The incoming V5b is intended to be the stable release for this version of the kit.
