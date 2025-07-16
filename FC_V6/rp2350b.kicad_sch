@@ -19983,72 +19983,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:+3V3")
-		(at 261.62 64.77 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6bc6c90f-52d2-4023-b58f-61fae955106a")
-		(property "Reference" "#+3V04"
-			(at 261.62 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 261.62 62.23 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-			)
-		)
-		(property "Footprint" "Adafruit ItsyBitsy RP2040:"
-			(at 261.62 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 261.62 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 261.62 64.77 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bdc252d1-5af6-424a-b56e-908be78b4a2e")
-		)
-		(instances
-			(project "FC_V6"
-				(path "/f080da98-69f4-43da-b75c-192226370aa3/62153ef6-d39c-4c3d-8add-145da0e06ff3"
-					(reference "#+3V04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_name "GND_14")
 		(lib_id "power:GND")
 		(at 22.86 187.96 0)
@@ -20978,6 +20912,72 @@
 		)
 	)
 	(symbol
+		(lib_name "+3V3_2")
+		(lib_id "power:+3V3")
+		(at 261.62 67.31 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b2584d9e-05a2-459c-a7f1-cf0730f76d2a")
+		(property "Reference" "#PWR029"
+			(at 261.62 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 265.938 65.532 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 261.62 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 261.62 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 261.62 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e21b1480-c3ce-4f3b-9a10-9b440d45295e")
+		)
+		(instances
+			(project "FC_V6"
+				(path "/f080da98-69f4-43da-b75c-192226370aa3/62153ef6-d39c-4c3d-8add-145da0e06ff3"
+					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_name "GND_8")
 		(lib_id "power:GND")
 		(at 58.42 132.08 0)
@@ -21052,7 +21052,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b6f0cb80-67f0-4e9a-9ba1-e234602f7e0c")
 		(property "Reference" "#PWR019"
 			(at 260.2484 104.14 0)
@@ -21064,7 +21063,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 260.2484 102.87 0)
+			(at 264.922 99.568 0)
 			(effects
 				(font
 					(size 1.27 1.27)
