@@ -9221,12 +9221,6 @@
 		(uuid "5fd43562-6ec4-47d1-bdf8-24b20d698722")
 	)
 	(junction
-		(at 154.94 236.22)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "69893b1b-ad91-453c-bfcc-063b5a6672a9")
-	)
-	(junction
 		(at 49.53 222.25)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -9561,6 +9555,10 @@
 	(no_connect
 		(at 234.95 45.72)
 		(uuid "9c52da9e-7727-41a3-87e5-ccc1429364de")
+	)
+	(no_connect
+		(at 147.32 236.22)
+		(uuid "9cbd2974-c7c1-4438-8f6a-0f0e8268db6d")
 	)
 	(no_connect
 		(at 393.7 39.37)
@@ -9942,16 +9940,6 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 236.22) (xy 168.91 228.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1382c7a7-daee-4592-9c94-6892037a348d")
-	)
-	(wire
-		(pts
 			(xy 223.52 250.19) (xy 238.76 250.19)
 		)
 		(stroke
@@ -10049,16 +10037,6 @@
 			(type default)
 		)
 		(uuid "18e67611-d5b1-4923-88ec-3dae0403f963")
-	)
-	(wire
-		(pts
-			(xy 154.94 236.22) (xy 154.94 237.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "18f58bd1-03b3-41d8-bbd5-817d2cc34a0e")
 	)
 	(wire
 		(pts
@@ -10949,16 +10927,6 @@
 			(type default)
 		)
 		(uuid "617af960-a246-4765-adaf-884ce49e0bb4")
-	)
-	(wire
-		(pts
-			(xy 147.32 236.22) (xy 154.94 236.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "61bd9c40-2c20-44a1-a1df-ff9b925d1612")
 	)
 	(wire
 		(pts
@@ -11862,16 +11830,6 @@
 	)
 	(wire
 		(pts
-			(xy 154.94 236.22) (xy 168.91 236.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a6bf498b-c77b-4988-9352-a5f37a4f23ac")
-	)
-	(wire
-		(pts
 			(xy 349.25 100.33) (xy 355.6 100.33)
 		)
 		(stroke
@@ -12249,16 +12207,6 @@
 			(type default)
 		)
 		(uuid "c33990c1-95c4-4bf2-9455-ef3ad78f7335")
-	)
-	(wire
-		(pts
-			(xy 154.94 245.11) (xy 154.94 246.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c346315b-9a1e-4b73-bfbf-a02d11d9c2cf")
 	)
 	(wire
 		(pts
@@ -15910,73 +15858,6 @@
 			(project ""
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "U12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:CAP_CERAMIC_0402NO")
-		(at 154.94 242.57 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "04847c23-68a3-442d-83e3-6bba428960bf")
-		(property "Reference" "C17"
-			(at 152.65 241.32 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100nf"
-			(at 157.24 241.32 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 154.94 242.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 154.94 242.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 154.94 242.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "20594d43-e9a1-4476-9813-610286aedfcf")
-		)
-		(pin "2"
-			(uuid "e385f00f-5c00-41a0-b8a0-b5c6981edb85")
-		)
-		(instances
-			(project "FC_V5"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(reference "C17")
 					(unit 1)
 				)
 			)
@@ -22184,71 +22065,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VCC")
-		(at 168.91 228.6 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "aa8da67d-1014-4c99-8891-edc8218e5eeb")
-		(property "Reference" "#PWR061"
-			(at 168.91 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "V_BACKUP"
-			(at 170.18 223.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 168.91 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 168.91 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 168.91 228.6 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c170bb8e-708a-473a-bf29-225bb9826140")
-		)
-		(instances
-			(project "FC_V5"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(reference "#PWR061")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Generic:Conn_02x06_Odd_Even")
 		(at 158.75 267.97 0)
 		(unit 1)
@@ -25227,7 +25043,7 @@
 			)
 		)
 		(instances
-			(project "FC_V5b"
+			(project "FC_V5c"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(page "6")
 				)
@@ -25269,7 +25085,7 @@
 			)
 		)
 		(instances
-			(project "FC_V5b"
+			(project "FC_V5c"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(page "4")
 				)
@@ -25311,51 +25127,9 @@
 			)
 		)
 		(instances
-			(project "FC_V5b"
+			(project "FC_V5c"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(page "3")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 163.83 214.63)
-		(size 12.7 3.81)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "e2bdbb14-7b75-46ea-bd3c-65dc9f8ab628")
-		(property "Sheetname" "RTC Backup"
-			(at 163.83 213.9184 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "rtc_backup.kicad_sch"
-			(at 163.83 219.0246 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "FC_V5b"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(page "2")
 				)
 			)
 		)
