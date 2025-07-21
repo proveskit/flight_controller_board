@@ -3406,6 +3406,16 @@
 	)
 	(wire
 		(pts
+			(xy 242.57 135.89) (xy 209.55 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3366bc01-e8d9-4790-bdb3-96268aada67a")
+	)
+	(wire
+		(pts
 			(xy 77.47 111.76) (xy 93.98 111.76)
 		)
 		(stroke
@@ -5525,28 +5535,6 @@
 		(uuid "9b2107f4-6ef7-447b-8981-7cc027abb76a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 221.5461 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "WDT_ENABLE"
-		(shape output)
-		(at 209.55 135.89 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "a86a383e-5d4b-4246-a67b-8c68393db9fd")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 224.207 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)

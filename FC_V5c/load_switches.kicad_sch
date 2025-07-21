@@ -2539,12 +2539,6 @@
 		(uuid "ef12bf6a-b04f-4a90-900a-08fb8a05e7c8")
 	)
 	(junction
-		(at 153.67 185.42)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f1fffaa0-d579-46f7-90cb-d1aded2752c7")
-	)
-	(junction
 		(at 78.74 170.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3492,26 +3486,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 185.42) (xy 153.67 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8fb66bc3-bacc-4ed1-aa9d-3cbb8bafce89")
-	)
-	(wire
-		(pts
-			(xy 120.65 138.43) (xy 158.75 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "92f9d5fe-f292-463c-a860-b8da7e2c4bd3")
-	)
-	(wire
-		(pts
 			(xy 153.67 171.45) (xy 153.67 143.51)
 		)
 		(stroke
@@ -4022,16 +3996,6 @@
 	)
 	(wire
 		(pts
-			(xy 158.75 138.43) (xy 158.75 171.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cc6bd8ca-2d6f-45f3-8021-55fbe2d6bac6")
-	)
-	(wire
-		(pts
 			(xy 78.74 177.8) (xy 78.74 179.07)
 		)
 		(stroke
@@ -4199,16 +4163,6 @@
 			(type default)
 		)
 		(uuid "f4e80ddd-9c10-40f7-a809-773464dea0db")
-	)
-	(wire
-		(pts
-			(xy 158.75 181.61) (xy 158.75 185.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f504be5f-deaa-402c-93b5-9da4fb5edc16")
 	)
 	(wire
 		(pts
@@ -4872,28 +4826,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "WDT_ENABLE"
-		(shape input)
-		(at 120.65 138.43 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "c3480a6d-856c-42ae-9f66-9268f88298a5")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 105.993 138.43 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
 				(hide yes)
 			)
 		)
@@ -8221,76 +8153,6 @@
 			(project "FC_V5b"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471/1ac8f3d4-e8b4-451e-be76-8bf59103b6c5"
 					(reference "R102")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "mainboard:R-US_R0603")
-		(at 158.75 176.53 270)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7c7e52d4-afd0-4d56-9e7f-10e22853a153")
-		(property "Reference" "R86"
-			(at 156.464 178.816 0)
-			(effects
-				(font
-					(size 1.4986 1.4986)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "100k"
-			(at 156.464 172.72 0)
-			(effects
-				(font
-					(size 1.4986 1.4986)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 158.75 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 158.75 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "787K 0603"
-			(at 160.02 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9739abe9-ead4-4ab2-b142-08a1d0131e1a")
-		)
-		(pin "2"
-			(uuid "5668a88a-123f-4954-9cce-4aac4da6b38e")
-		)
-		(instances
-			(project "FC_V5b"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471/1ac8f3d4-e8b4-451e-be76-8bf59103b6c5"
-					(reference "R86")
 					(unit 1)
 				)
 			)
