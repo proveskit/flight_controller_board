@@ -7375,7 +7375,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 242.57) (xy 91.44 242.57)
+			(xy 86.36 242.57) (xy 119.38 242.57)
 		)
 		(stroke
 			(width 0)
@@ -10335,7 +10335,7 @@
 	)
 	(wire
 		(pts
-			(xy 118.11 240.03) (xy 86.36 240.03)
+			(xy 91.44 240.03) (xy 86.36 240.03)
 		)
 		(stroke
 			(width 0)
@@ -10740,28 +10740,6 @@
 		(uuid "100327a0-6dec-45e1-8419-2af0f580154d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 108.2137 232.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "~{CHARGE}"
-		(shape output)
-		(at 91.44 265.43 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "133cacbd-7d76-4bf6-8af2-9db92c1c19de")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 101.8033 265.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11256,7 +11234,7 @@
 	)
 	(global_label "SPI0_CS1"
 		(shape output)
-		(at 91.44 242.57 0)
+		(at 119.38 242.57 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11266,7 +11244,7 @@
 		)
 		(uuid "6b96f74c-bea2-4e2e-a742-ef15292f2d2c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 103.3756 242.57 0)
+			(at 131.3156 242.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11600,6 +11578,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "~{CHARGE}"
+		(shape output)
+		(at 91.44 240.03 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ad44a73d-82e2-4fbc-b295-5b51ed66b928")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 101.8033 240.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
