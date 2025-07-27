@@ -7445,7 +7445,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 265.43) (xy 91.44 265.43)
+			(xy 86.36 265.43) (xy 118.11 265.43)
 		)
 		(stroke
 			(width 0)
@@ -11469,27 +11469,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "B-"
-		(shape bidirectional)
-		(at 318.77 240.03 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "9bf83bfa-eb26-4a9c-b513-ff3af09d4ccb")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 279.4 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 				(hide yes)
 			)
 		)
@@ -18929,73 +18908,6 @@
 			(project "FC_V5"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471"
 					(reference "#+3V011")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 318.77 240.03 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d31871ac-c07c-46f3-89c2-b62eda83747a")
-		(property "Reference" "TP4"
-			(at 320.2432 238.2012 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 320.2432 239.3442 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded"
-			(at 323.85 240.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 323.85 240.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 318.77 240.03 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7a3b0e24-a6d9-457c-b75e-bcd6f479ff01")
-		)
-		(instances
-			(project "FC_V5"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471"
-					(reference "TP4")
 					(unit 1)
 				)
 			)
