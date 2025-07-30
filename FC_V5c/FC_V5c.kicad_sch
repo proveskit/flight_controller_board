@@ -6000,6 +6000,232 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "easyeda2kicad:TCA4307DGKR"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U14"
+				(at -9.398 11.938 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TCA4307DGKR"
+				(at -9.652 9.144 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "easyeda2kicad:VSSOP-8_L3.0-W3.0-P0.65-LS4.9-BL"
+				(at 0 -11.43 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC Part" "C880333"
+				(at 0 -13.97 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "TCA4307DGKR_0_1"
+				(rectangle
+					(start -11.43 6.35)
+					(end 11.43 -6.35)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(circle
+					(center -10.16 5.08)
+					(radius 0.38)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at -13.97 3.81 0)
+					(length 2.54)
+					(name "EN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at -13.97 0 0)
+					(length 2.54)
+					(name "SCLIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at -13.97 -2.54 0)
+					(length 2.54)
+					(name "SDAIN"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 8.89 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -8.89 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 13.97 3.81 180)
+					(length 2.54)
+					(name "SCLOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 13.97 -1.27 180)
+					(length 2.54)
+					(name "SDAOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 13.97 -5.08 180)
+					(length 2.54)
+					(name "READY"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "easyeda2kicad:ZDSD04GLGEAG"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -8098,6 +8324,10 @@
 		(uuid "2c8f378c-6fd5-4c57-85ed-23c16b71f0d8")
 	)
 	(no_connect
+		(at 278.13 153.67)
+		(uuid "3469ef7a-1e93-42cc-993f-c73d6ceb61d5")
+	)
+	(no_connect
 		(at 330.2 133.35)
 		(uuid "4f5f1545-e9fa-466e-81d4-98751c646f01")
 	)
@@ -8186,6 +8416,16 @@
 			(type dash)
 		)
 		(uuid "00ff34a3-9f65-497a-8082-a1d5b87d5426")
+	)
+	(wire
+		(pts
+			(xy 264.16 135.89) (xy 264.16 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "012a9176-cf5d-41f0-800c-27b5346a79f9")
 	)
 	(wire
 		(pts
@@ -8289,6 +8529,26 @@
 	)
 	(wire
 		(pts
+			(xy 278.13 130.81) (xy 294.64 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0735ddfb-8403-45c8-a8c2-2e07e51bfcb1")
+	)
+	(wire
+		(pts
+			(xy 279.4 135.89) (xy 294.64 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "077c4829-7746-43ef-8628-7ab7dd30dc81")
+	)
+	(wire
+		(pts
 			(xy 316.865 49.53) (xy 322.58 49.53)
 		)
 		(stroke
@@ -8376,6 +8636,16 @@
 			(type default)
 		)
 		(uuid "0e3907a6-8f9e-4730-94b6-c87c656afcd7")
+	)
+	(wire
+		(pts
+			(xy 278.13 149.86) (xy 279.4 149.86)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ff064da-444d-4cd4-bca0-452727124bfc")
 	)
 	(wire
 		(pts
@@ -9759,6 +10029,16 @@
 	)
 	(wire
 		(pts
+			(xy 245.11 144.78) (xy 250.19 144.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8212dd43-346d-4d9b-bb83-7a33cd0dff69")
+	)
+	(wire
+		(pts
 			(xy 232.41 38.1) (xy 232.41 26.035)
 		)
 		(stroke
@@ -10209,6 +10489,16 @@
 	)
 	(wire
 		(pts
+			(xy 278.13 144.78) (xy 278.13 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a74ecf27-454b-4245-b160-9fb777029fe5")
+	)
+	(wire
+		(pts
 			(xy 323.85 208.28) (xy 321.31 208.28)
 		)
 		(stroke
@@ -10516,6 +10806,16 @@
 			(type default)
 		)
 		(uuid "bf2998d0-8c67-4dab-99cb-be165de6e210")
+	)
+	(wire
+		(pts
+			(xy 279.4 149.86) (xy 279.4 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c166b14a-c275-4a46-9d55-31d3c092070c")
 	)
 	(wire
 		(pts
@@ -11549,6 +11849,28 @@
 			)
 		)
 	)
+	(global_label "~{MUX_RESET}"
+		(shape input)
+		(at 245.11 144.78 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "19ee5426-911a-49bc-9606-3127f6baae1b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 231.4207 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "RF1_IO4"
 		(shape bidirectional)
 		(at 359.41 210.82 0)
@@ -11878,6 +12200,28 @@
 			)
 		)
 	)
+	(global_label "SCL1"
+		(shape bidirectional)
+		(at 250.19 148.59 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "5f57ecc6-1ba9-4937-a0b8-af8443e57aac")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 241.3764 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SWCLK"
 		(shape input)
 		(at 115.57 48.26 0)
@@ -12098,50 +12442,6 @@
 			)
 		)
 	)
-	(global_label "SDA1"
-		(shape bidirectional)
-		(at 294.64 135.89 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "73f09c02-1cd2-491e-9958-ba8e401d2978")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 285.7659 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "SCL1"
-		(shape bidirectional)
-		(at 294.64 130.81 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "74459f5d-3c78-4ee4-8f98-a3e7702a92af")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 285.8264 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "SCL0"
 		(shape bidirectional)
 		(at 36.83 270.51 180)
@@ -12226,6 +12526,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "SDA1"
+		(shape bidirectional)
+		(at 250.19 151.13 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "89966867-ca98-41db-b751-eb1664117ab4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 241.3159 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -16785,6 +17107,101 @@
 		)
 	)
 	(symbol
+		(lib_id "easyeda2kicad:TCA4307DGKR")
+		(at 264.16 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "69782eca-8e20-47d8-b0ea-d8b9022afb99")
+		(property "Reference" "U14"
+			(at 238.252 150.114 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "TCA4307DGKR"
+			(at 254.508 140.716 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "easyeda2kicad:VSSOP-8_L3.0-W3.0-P0.65-LS4.9-BL"
+			(at 264.16 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "ttps://www.ti.com/lit/ds/symlink/tca4307.pdf?ts=1753783859851"
+			(at 264.16 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 264.16 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C880333"
+			(at 264.16 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "7cff171c-6626-44d4-aadd-19ab22f346e5")
+		)
+		(pin "1"
+			(uuid "6a74de8a-f78c-4291-8a9c-7e361db53490")
+		)
+		(pin "2"
+			(uuid "e9c97fcb-d53e-4ff4-9b1e-010c3b597bea")
+		)
+		(pin "3"
+			(uuid "8c06ecfb-84ba-4436-8bc0-27b127fd0eb5")
+		)
+		(pin "6"
+			(uuid "17f37cf9-d2ee-40dc-bb1b-d633eb7cfcf1")
+		)
+		(pin "5"
+			(uuid "58b7bd78-f08a-420c-b6ed-dd9289968498")
+		)
+		(pin "8"
+			(uuid "9d7f1242-af7d-4ee0-92bc-eae9a15d5e6e")
+		)
+		(pin "7"
+			(uuid "acc66a15-ab00-4b4e-a611-83c5fc206c15")
+		)
+		(instances
+			(project ""
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "U14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 19.05 67.31 0)
 		(unit 1)
@@ -18840,6 +19257,72 @@
 			(project "FC_V5a_Rev1"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 264.16 157.48 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9a31df2e-29e0-4569-921d-01e2ddae396d")
+		(property "Reference" "#PWR089"
+			(at 264.16 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 264.16 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 264.16 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 264.16 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 264.16 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1f0e58db-a0d6-4ba7-80a9-e2ceb326ec48")
+		)
+		(instances
+			(project "FC_V5c"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "#PWR089")
 					(unit 1)
 				)
 			)
@@ -21317,6 +21800,72 @@
 			(project "FC_V5"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 264.16 135.89 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ee916b34-ff25-45e3-b2c5-ba669ce23c28")
+		(property "Reference" "#PWR099"
+			(at 264.16 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 264.16 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 264.16 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 264.16 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 264.16 135.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "68e229e4-1143-4ee5-8da7-136f36afed6a")
+		)
+		(instances
+			(project "FC_V5c"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "#PWR099")
 					(unit 1)
 				)
 			)
