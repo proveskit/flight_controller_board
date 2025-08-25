@@ -18,18 +18,20 @@ If you have just received a flight controller board, getting started with develo
 | V4c | Pleiades - Orpheus, InspireFly Content Cube (Launcing Soon!) | Supported |
 | V5dev | Unflown | Dev Only Support |
 | V5a | Unflown | Dev Only Support |
-| V5b | Unflown | In Development |
+| V5b | Unflown | Supported |
+| V5c | Unflown | Dev Only Support |
+| V5d | Unflown | In Development |
 
 V0 through V3 Flight Controller Boards were the cornerstone of the 2023 Release V1 PROVES Kit. With the 2024 V2 PROVES Kit we introduced the V4 Flight Controller board and changed the version scheme to have `a`, `b`, `c`, etc varients of a single version rather than ascending the version ladder in record time (we'd be on V9 now if we did that!). This change was primarily based on the idea that a revisions on a major version number would be similar enough to each other to not require completely different firmware to be compiled for operation.
 
 ## Current Features
-The Latest (V5b) FC board implements the following components: 
+The Latest (V5c) FC board implements the following components: 
 - RP2350A Microcontroller
 - 128M-Bit W25Q128JVSIQ Flash Memory
 - HopeRF RFM9X UHF Radio Module Slot
 - Ebyte E28-2G4M27S S-Band Radio
 - OreSat Derived Radiation Tolerant Watchdog Circuit!
-- SD Card NAND Flash
+- SD Card Emulating NAND Flash
 - TCA9548ARGER(Q1) I2C Multiplexer
 - RV3028 Real Time Clock
 - LSM6DSOTR Accelerometer and Gyroscope
@@ -38,9 +40,9 @@ The Latest (V5b) FC board implements the following components:
 - AP22652W6-7 Load Switches
 - MCP9808T-E/MS I2C Temperature Sensor
 - LT3652IMSE MPP Solar Charge Controller
-- INA219AIDR I2C Power Monitor
+- INA260 I2C Power Monitor
 - TPS54225PWPR 3.3V Switching Voltage Regulator
-- TPS7A4501DCQR 5V Linear Regulator
+- TPS54225PWPR 5V Switching Voltage Regulator
 
 ## Current Status and Upcoming Plans
 The latest V5 generation of Flight Controller boards takes in lessons learned from Orpheus and InspireFly to create a 2025 Release V3 of the PROVES Kit. Both V5dev and V5a will not be distributed beyond the PROVES developer community due to significant design errata that make them tricky to work with. The incoming V5b is intended to be the stable release for this version of the kit.
