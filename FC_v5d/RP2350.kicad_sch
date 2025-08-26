@@ -4524,16 +4524,6 @@
 	)
 	(wire
 		(pts
-			(xy 234.95 130.81) (xy 209.55 130.81)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ae278064-71a1-4bdd-be9d-084018377302")
-	)
-	(wire
-		(pts
 			(xy 194.31 20.32) (xy 194.31 21.59)
 		)
 		(stroke
@@ -5596,28 +5586,6 @@
 			)
 		)
 	)
-	(global_label "WDT_WDI"
-		(shape output)
-		(at 209.55 133.35 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "13694529-ea6c-4cdb-aee1-2ce6e062e4d3")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 220.518 133.35 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "RF2_RST"
 		(shape input)
 		(at 209.55 115.57 0)
@@ -5937,6 +5905,28 @@
 		(uuid "8ad97e92-0700-4757-8437-c2b6efe0a8fa")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 277.6402 85.0106 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "WDT_WDI"
+		(shape output)
+		(at 209.55 130.81 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9090654d-dfc7-45ee-8e5d-b8e950055106")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 220.518 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
