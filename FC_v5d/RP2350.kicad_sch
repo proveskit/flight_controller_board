@@ -4458,7 +4458,7 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 85.09) (xy 270.51 85.09)
+			(xy 209.55 85.09) (xy 217.17 85.09)
 		)
 		(stroke
 			(width 0)
@@ -4988,7 +4988,7 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 82.55) (xy 270.51 82.55)
+			(xy 209.55 82.55) (xy 217.17 82.55)
 		)
 		(stroke
 			(width 0)
@@ -5731,6 +5731,28 @@
 			)
 		)
 	)
+	(global_label "RX1"
+		(shape bidirectional)
+		(at 217.17 85.09 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "197d8513-d6da-4e7d-8df1-b9bb9537a4ba")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 224.9555 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "~{RESET}"
 		(shape input)
 		(at 128.27 123.19 90)
@@ -5766,6 +5788,28 @@
 		(uuid "36a99880-bcd8-4e54-832c-7d4fcfc091f9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 222.3928 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "TX1"
+		(shape bidirectional)
+		(at 217.17 82.55 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3accde6e-905b-4ab2-ad22-5a54f203fc43")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 224.6531 82.55 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5863,7 +5907,7 @@
 			)
 		)
 	)
-	(global_label "RX"
+	(global_label "RX0"
 		(shape bidirectional)
 		(at 217.17 74.93 0)
 		(fields_autoplaced yes)
@@ -5875,7 +5919,7 @@
 		)
 		(uuid "7da4f923-c504-40ca-a769-d6e92d48bdb0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 223.6666 74.93 0)
+			(at 224.9555 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5994,7 +6038,7 @@
 			)
 		)
 	)
-	(global_label "TX"
+	(global_label "TX0"
 		(shape bidirectional)
 		(at 217.17 72.39 0)
 		(fields_autoplaced yes)
@@ -6006,7 +6050,7 @@
 		)
 		(uuid "b4104ed2-e198-4397-a28b-b71f74395103")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 223.3642 72.39 0)
+			(at 224.6531 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6060,7 +6104,7 @@
 			)
 		)
 	)
-	(global_label "TX"
+	(global_label "TX0"
 		(shape bidirectional)
 		(at 13.97 96.52 90)
 		(fields_autoplaced yes)
@@ -6072,7 +6116,7 @@
 		)
 		(uuid "bed25a3f-9355-48aa-913a-f8166cab509f")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 13.97 90.2464 90)
+			(at 13.97 89.0369 90)
 			(effects
 				(font
 					(size 1.27 1.27)

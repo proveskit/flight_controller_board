@@ -11857,7 +11857,7 @@
 		)
 		(uuid "f75d84fd-1bec-4102-9bc8-7470ea4b662e")
 	)
-	(global_label "SDA_Break"
+	(global_label "SDA1"
 		(shape bidirectional)
 		(at 36.83 267.97 180)
 		(fields_autoplaced yes)
@@ -11869,7 +11869,7 @@
 		)
 		(uuid "001bbe34-35b6-4a94-9574-291fa87785e3")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 22.8759 267.97 0)
+			(at 27.9559 267.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11901,7 +11901,7 @@
 			)
 		)
 	)
-	(global_label "SCL_Break"
+	(global_label "SCL1"
 		(shape bidirectional)
 		(at 69.85 274.32 180)
 		(fields_autoplaced yes)
@@ -11913,7 +11913,7 @@
 		)
 		(uuid "05f0bee0-b551-4c52-bfa7-5dfb2c88e1e9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 55.9564 274.32 0)
+			(at 61.0364 274.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12164,7 +12164,29 @@
 			)
 		)
 	)
-	(global_label "TX"
+	(global_label "RX1"
+		(shape output)
+		(at 120.65 274.32 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2da9c551-cc72-4cd1-a852-24b4ec52231e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 127.3242 274.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "TX0"
 		(shape bidirectional)
 		(at 157.48 173.99 90)
 		(fields_autoplaced yes)
@@ -12176,7 +12198,7 @@
 		)
 		(uuid "34e432db-97c7-44c9-8a27-33b2b58b99ff")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 157.48 167.7164 90)
+			(at 157.48 166.5069 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12186,7 +12208,7 @@
 			)
 		)
 	)
-	(global_label "RX"
+	(global_label "RX0"
 		(shape output)
 		(at 120.65 269.24 0)
 		(fields_autoplaced yes)
@@ -12198,7 +12220,7 @@
 		)
 		(uuid "39c48e34-3086-4ad9-9014-de87dae8fb13")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 126.1147 269.24 0)
+			(at 127.3242 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12362,6 +12384,28 @@
 			)
 		)
 	)
+	(global_label "TX1"
+		(shape input)
+		(at 107.95 274.32 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4d4756df-232e-4745-a9d3-1160c79a0e1b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 101.5782 274.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "SPI0_MISO"
 		(shape output)
 		(at 321.31 208.28 180)
@@ -12428,7 +12472,7 @@
 			)
 		)
 	)
-	(global_label "TX"
+	(global_label "TX0"
 		(shape input)
 		(at 107.95 269.24 180)
 		(fields_autoplaced yes)
@@ -12440,7 +12484,7 @@
 		)
 		(uuid "5985d008-f184-4f25-853f-1778a4a92146")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 103.3598 269.1606 0)
+			(at 101.5782 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12648,7 +12692,7 @@
 			)
 		)
 	)
-	(global_label "SCL_Break"
+	(global_label "SCL1"
 		(shape bidirectional)
 		(at 36.83 270.51 180)
 		(fields_autoplaced yes)
@@ -12660,7 +12704,7 @@
 		)
 		(uuid "79b6d450-b0c0-4c9c-b45a-2a8cf0c2c387")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 22.9364 270.51 0)
+			(at 28.0164 270.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12868,7 +12912,7 @@
 			)
 		)
 	)
-	(global_label "TX"
+	(global_label "TX0"
 		(shape input)
 		(at 69.85 266.7 180)
 		(fields_autoplaced yes)
@@ -12880,7 +12924,7 @@
 		)
 		(uuid "97df6099-3b97-4545-b96d-89801f280755")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 65.2598 266.6206 0)
+			(at 63.4782 266.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13109,7 +13153,7 @@
 			)
 		)
 	)
-	(global_label "RX"
+	(global_label "RX0"
 		(shape bidirectional)
 		(at 148.59 173.99 90)
 		(fields_autoplaced yes)
@@ -13121,7 +13165,7 @@
 		)
 		(uuid "aaa2d0e1-58ec-4bbc-bb86-ae20765f8f98")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 148.59 167.414 90)
+			(at 148.59 166.2045 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13329,7 +13373,7 @@
 			)
 		)
 	)
-	(global_label "SDA_Break"
+	(global_label "SDA1"
 		(shape bidirectional)
 		(at 69.85 271.78 180)
 		(fields_autoplaced yes)
@@ -13341,7 +13385,7 @@
 		)
 		(uuid "cac58a62-1e2a-49bf-90ab-67a8ecf4ccfa")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 55.8959 271.78 0)
+			(at 60.9759 271.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13373,7 +13417,7 @@
 			)
 		)
 	)
-	(global_label "RX"
+	(global_label "RX0"
 		(shape output)
 		(at 69.85 269.24 180)
 		(fields_autoplaced yes)
@@ -13385,7 +13429,7 @@
 		)
 		(uuid "d1ac2866-f323-43a5-8adf-5c115e5f1026")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 64.9574 269.1606 0)
+			(at 63.1758 269.24 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21021,6 +21065,101 @@
 			(project "FC_V5a"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "#PWR014")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "easyeda2kicad:TCA4307DGKR")
+		(at 250.19 190.5 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b87789a3-835f-4227-ac5c-c9f95080f30f")
+		(property "Reference" "U15"
+			(at 224.282 192.024 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "TCA4307DGKR"
+			(at 240.538 182.626 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "easyeda2kicad:VSSOP-8_L3.0-W3.0-P0.65-LS4.9-BL"
+			(at 250.19 201.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tca4307.pdf?ts=1756183410246&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTCA4307"
+			(at 250.19 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 250.19 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C880333"
+			(at 250.19 204.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "e73d9fa0-a376-4ce0-b557-7f414da5b80b")
+		)
+		(pin "1"
+			(uuid "1b37a76c-19b4-408e-82ab-1add1bbf10ff")
+		)
+		(pin "2"
+			(uuid "91da0cf3-98ae-478f-8462-825e33b85cc8")
+		)
+		(pin "3"
+			(uuid "50760686-5198-4dd1-821c-7eb56f093f89")
+		)
+		(pin "6"
+			(uuid "d429e653-f211-41d8-b8dd-ef005ceb12ec")
+		)
+		(pin "5"
+			(uuid "681c39d1-93d6-41d3-9d5e-6463a9e32147")
+		)
+		(pin "8"
+			(uuid "a3d0bc6c-839f-48ac-84f9-e4b7b4635a2d")
+		)
+		(pin "7"
+			(uuid "96375cc2-4b22-44df-9e3d-d17b7a391916")
+		)
+		(instances
+			(project "FC_v5d"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "U15")
 					(unit 1)
 				)
 			)
