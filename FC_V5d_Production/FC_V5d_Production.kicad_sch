@@ -3750,6 +3750,189 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Jumper:SolderJumper_2_Open"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "JP"
+				(at 0 2.032 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SolderJumper_2_Open"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Solder Jumper, 2-pole, open"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "solder jumper SPST"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SolderJumper*Open*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SolderJumper_2_Open_0_1"
+				(polyline
+					(pts
+						(xy -0.254 1.016) (xy -0.254 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start -0.254 -1.016)
+					(mid -1.2656 0)
+					(end -0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 0.254 1.016)
+					(mid 1.2656 0)
+					(end 0.254 -1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 1.016) (xy 0.254 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SolderJumper_2_Open_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "LSM6DSOTR:LSM6DSOTR"
 			(pin_names
 				(offset 0.254)
@@ -8014,12 +8197,6 @@
 		(uuid "587c66ff-1200-4a9e-a0cc-30c7e98ae27c")
 	)
 	(junction
-		(at 309.88 190.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "59a07c3c-d39b-4ebe-8d0c-d10df62ccd58")
-	)
-	(junction
 		(at 36.83 52.07)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8036,6 +8213,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5fd43562-6ec4-47d1-bdf8-24b20d698722")
+	)
+	(junction
+		(at 309.88 186.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "610e84ee-9321-41ca-ab23-6c08dce0348b")
 	)
 	(junction
 		(at 349.25 27.94)
@@ -8998,16 +9181,6 @@
 			(type default)
 		)
 		(uuid "2b851dde-fce7-4dea-a726-85a9c05b0f90")
-	)
-	(wire
-		(pts
-			(xy 316.23 195.58) (xy 316.23 190.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2bf24eb6-b0d0-47a9-975f-24daacf3ca82")
 	)
 	(wire
 		(pts
@@ -10671,6 +10844,16 @@
 	)
 	(wire
 		(pts
+			(xy 309.88 186.69) (xy 309.88 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae0b227c-767e-4f05-9c96-d83d72125083")
+	)
+	(wire
+		(pts
 			(xy 299.72 90.17) (xy 318.77 90.17)
 		)
 		(stroke
@@ -10688,6 +10871,16 @@
 			(type default)
 		)
 		(uuid "afe67f5e-22c9-4a6e-8336-5f45908d69a7")
+	)
+	(wire
+		(pts
+			(xy 316.23 186.69) (xy 309.88 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b10c32a3-ebaa-48ea-bc3c-544e409bd885")
 	)
 	(wire
 		(pts
@@ -10758,16 +10951,6 @@
 			(type default)
 		)
 		(uuid "b68a7c91-e5f2-4e39-a392-110c9b6a8ac7")
-	)
-	(wire
-		(pts
-			(xy 316.23 190.5) (xy 309.88 190.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b7663bb1-3ed6-4665-bf0a-e379220b39ec")
 	)
 	(wire
 		(pts
@@ -11231,6 +11414,16 @@
 	)
 	(wire
 		(pts
+			(xy 316.23 187.96) (xy 316.23 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d655b625-8330-49c7-9159-00f03d804457")
+	)
+	(wire
+		(pts
 			(xy 351.79 100.33) (xy 356.87 100.33)
 		)
 		(stroke
@@ -11651,7 +11844,7 @@
 	)
 	(wire
 		(pts
-			(xy 309.88 190.5) (xy 309.88 187.96)
+			(xy 309.88 190.5) (xy 309.88 186.69)
 		)
 		(stroke
 			(width 0)
@@ -13453,27 +13646,6 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
-				(hide yes)
-			)
-		)
-	)
-	(global_label "3.3V"
-		(shape bidirectional)
-		(at 323.85 195.58 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 0.254 0.254)
-			)
-			(justify right)
-		)
-		(uuid "dc260f1c-fa56-4fa6-a238-36062fcc7187")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 287.02 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
 				(hide yes)
 			)
 		)
@@ -20240,17 +20412,24 @@
 		)
 	)
 	(symbol
-		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:+3V3")
-		(at 309.88 185.42 0)
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 316.23 191.77 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9ca8daff-5438-435d-91fa-34e21f815c99")
-		(property "Reference" "#+3V013"
-			(at 309.88 185.42 0)
+		(uuid "9ae73e5a-4b92-4c82-adc1-5c22a0d0f586")
+		(property "Reference" "JP7"
+			(at 313.436 192.024 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SolderJumper_2_Open"
+			(at 330.2 191.77 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20258,16 +20437,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3V3"
-			(at 309.88 182.88 0)
-			(effects
-				(font
-					(size 1.778 1.5113)
-				)
-			)
-		)
-		(property "Footprint" "Adafruit ItsyBitsy RP2040:"
-			(at 309.88 185.42 0)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_RoundedPad1.0x1.5mm"
+			(at 316.23 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20275,8 +20446,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 309.88 185.42 0)
+		(property "Datasheet" "~"
+			(at 316.23 191.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20285,7 +20456,75 @@
 			)
 		)
 		(property "Description" ""
-			(at 309.88 185.42 0)
+			(at 316.23 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ba925f8b-9224-4430-9704-7e4f01b190fd")
+		)
+		(pin "2"
+			(uuid "322ad4b4-7bcc-4d3f-b0b7-1d22558c97e2")
+		)
+		(instances
+			(project "FC_V5d_Production"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "JP7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:+3V3")
+		(at 309.88 181.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9ca8daff-5438-435d-91fa-34e21f815c99")
+		(property "Reference" "#+3V013"
+			(at 309.88 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 302.768 181.61 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+			)
+		)
+		(property "Footprint" "Adafruit ItsyBitsy RP2040:"
+			(at 309.88 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 309.88 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 309.88 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -23458,7 +23697,7 @@
 			)
 		)
 		(instances
-			(project "FC_v5d"
+			(project "FC_V5d_Production"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(page "6")
 				)
@@ -23500,7 +23739,7 @@
 			)
 		)
 		(instances
-			(project "FC_v5d"
+			(project "FC_V5d_Production"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(page "4")
 				)
@@ -23542,7 +23781,7 @@
 			)
 		)
 		(instances
-			(project "FC_v5d"
+			(project "FC_V5d_Production"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(page "3")
 				)
