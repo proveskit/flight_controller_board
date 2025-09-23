@@ -10,7 +10,7 @@
 #define MICROPY_HW_BOARD_NAME       "PROVESKit FC Board RP2350 V5d"
 #define MICROPY_HW_MCU_NAME         "rp2350a"
 
-#define CIRCUITPY_DRIVE_LABEL       "PROVESKIT"
+#define CIRCUITPY_DRIVE_LABEL       "PYSQAURED"
 
 // Default I2C
 #define DEFAULT_I2C_BUS_SDA (&pin_GPIO2)
