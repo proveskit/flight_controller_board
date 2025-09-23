@@ -4,6 +4,5 @@
 //
 // SPDX-License-Identifier: MIT
 
+#include "py/obj.h"
 #include "supervisor/board.h"
-#include "mpconfigboard.h"
-#include "common-hal/microcontroller/Pin.h"

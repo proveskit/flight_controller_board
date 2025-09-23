@@ -5,24 +5,16 @@
 // SPDX-License-Identifier: MIT
 
 #include "shared-bindings/board/__init__.h"
-#include "supervisor/board.h"
 
 static const mp_rom_map_elem_t board_module_globals_table[] = {
     CIRCUITPYTHON_BOARD_DICT_STANDARD_ITEMS
     
-    // come back to this one
-
-
-
-
     { MP_ROM_QSTR(MP_QSTR_TX0), MP_ROM_PTR(&pin_GPIO0) },
     { MP_ROM_QSTR(MP_QSTR_RX0), MP_ROM_PTR(&pin_GPIO1) },
 
     { MP_ROM_QSTR(MP_QSTR_I2C1_SDA), MP_ROM_PTR(&pin_GPIO2) },
     { MP_ROM_QSTR(MP_QSTR_I2C1_SCL), MP_ROM_PTR(&pin_GPIO3) },
     
-
-    // MP_QSTR_I2C0_SDA -- MP_QSTR_I2C0_SCL
     { MP_ROM_QSTR(MP_QSTR_TX1), MP_ROM_PTR(&pin_GPIO4) },
     { MP_ROM_QSTR(MP_QSTR_RX1), MP_ROM_PTR(&pin_GPIO5) },
 
