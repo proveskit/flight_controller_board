@@ -297,10 +297,6 @@
           "U12 is Fine at JLC"
         ],
         [
-          "courtyards_overlap|215925000|103847500|007342a2-285d-4c7a-88df-2e8d063bbd50|f9d00b89-5f6c-47f6-baac-b557d97d579c",
-          ""
-        ],
-        [
           "footprint_type_mismatch|156200000|121400000|5d29bc0d-f06b-4618-9e12-ff1017156402|00000000-0000-0000-0000-000000000000",
           ""
         ],
@@ -329,6 +325,10 @@
           ""
         ],
         [
+          "footprint_type_mismatch|217226655|109475000|b72225aa-b6bb-435a-b071-f8e770baf201|00000000-0000-0000-0000-000000000000",
+          ""
+        ],
+        [
           "lib_footprint_issues|179149724|126416514|b587ccfc-ce8d-4dfe-ad58-080f869c4be7|00000000-0000-0000-0000-000000000000",
           ""
         ],
@@ -342,7 +342,7 @@
       },
       "rule_severities": {
         "annular_width": "error",
-        "clearance": "warning",
+        "clearance": "error",
         "connection_width": "warning",
         "copper_edge_clearance": "error",
         "copper_sliver": "warning",
