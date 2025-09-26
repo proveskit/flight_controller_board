@@ -989,176 +989,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:Conn_Coaxial"
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "J"
-				(at 0.254 3.048 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "Conn_Coaxial"
-				(at 2.921 0 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "BNC SMA SMB SMC LEMO coaxial connector CINCH RCA"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "*BNC* *SMA* *SMB* *SMC* *Cinch* *LEMO*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Conn_Coaxial_0_1"
-				(polyline
-					(pts
-						(xy -2.54 0) (xy -0.508 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start 1.778 0)
-					(mid 0.222 -1.8079)
-					(end -1.778 -0.508)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(arc
-					(start -1.778 0.508)
-					(mid 0.2221 1.8084)
-					(end 1.778 0)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 0 0)
-					(radius 0.508)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy 0 -1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Conn_Coaxial_1_1"
-				(pin passive line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "In"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "Ext"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector:TestPoint"
 			(pin_numbers
 				(hide yes)
@@ -5979,6 +5809,225 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "easyeda2kicad:KH-MMCX-Z"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "RF"
+				(at 0 12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "KH-MMCX-Z"
+				(at 0 -12.7 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "easyeda2kicad:MMCX-TH_KH-MMCX-Z"
+				(at 0 -15.24 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://lcsc.com/product-detail/RF-Connectors-Coaxial-Connectors_Shenzhen-Kinghelm-Elec-KH-MMCX-Z_C530664.html"
+				(at 0 -17.78 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "LCSC Part" "C530664"
+				(at 0 -20.32 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "KH-MMCX-Z_0_1"
+				(rectangle
+					(start -12.7 2.54)
+					(end -3.3 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.3 2.03) (xy -0.76 2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.3 -2.03) (xy -0.76 -2.03)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -0.76 2.54)
+					(end 6.1 -2.54)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(circle
+					(center 2.54 0)
+					(radius 0.51)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.05 0) (xy 5.08 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin unspecified line
+					(at 0 7.62 270)
+					(length 5.08)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 0 -7.62 90)
+					(length 5.08)
+					(name "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 5.08 7.62 270)
+					(length 5.08)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 5.08 -7.62 90)
+					(length 5.08)
+					(name "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin unspecified line
+					(at 10.16 0 180)
+					(length 5.08)
+					(name "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "easyeda2kicad:MY-1220-03"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -8263,6 +8312,12 @@
 		(uuid "81ee7828-0dea-4b99-9f5a-d98d9df7f6ef")
 	)
 	(junction
+		(at 378.46 204.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "870c01eb-0668-4126-9983-76aa46b91d21")
+	)
+	(junction
 		(at 257.81 95.25)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8327,6 +8382,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b5a87867-c5e2-4a0c-b5cf-e264dcb5f864")
+	)
+	(junction
+		(at 375.92 184.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b5fc3016-6966-4ae6-aebd-f146d50589d0")
 	)
 	(junction
 		(at 276.86 113.03)
@@ -8711,6 +8772,16 @@
 			(type default)
 		)
 		(uuid "077c4829-7746-43ef-8628-7ab7dd30dc81")
+	)
+	(wire
+		(pts
+			(xy 369.57 184.15) (xy 369.57 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07b443ef-f76e-4606-b719-03b105948268")
 	)
 	(wire
 		(pts
@@ -9184,6 +9255,26 @@
 	)
 	(wire
 		(pts
+			(xy 354.33 195.58) (xy 370.84 195.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d0b9273-069b-4a22-a4b5-91d3f30463cb")
+	)
+	(wire
+		(pts
+			(xy 381 204.47) (xy 378.46 204.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e074d4f-094b-42a1-9660-a7906f78beb9")
+	)
+	(wire
+		(pts
 			(xy 355.6 203.2) (xy 355.6 210.82)
 		)
 		(stroke
@@ -9191,6 +9282,16 @@
 			(type default)
 		)
 		(uuid "2e9911ba-a43f-4168-b674-8971ce8c3b66")
+	)
+	(wire
+		(pts
+			(xy 375.92 184.15) (xy 369.57 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2fe1cec3-3360-474a-ba98-4e14bf639538")
 	)
 	(wire
 		(pts
@@ -9234,6 +9335,16 @@
 	)
 	(wire
 		(pts
+			(xy 378.46 204.47) (xy 378.46 205.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33a5327f-2587-4243-8aa1-dc22a8771c74")
+	)
+	(wire
+		(pts
 			(xy 16.51 62.23) (xy 19.05 62.23)
 		)
 		(stroke
@@ -9251,6 +9362,16 @@
 			(type default)
 		)
 		(uuid "352441c3-2235-472e-ac79-e3270a1138c8")
+	)
+	(wire
+		(pts
+			(xy 375.92 203.2) (xy 375.92 204.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "362fd81c-ca19-4738-85cb-9cc8acd6d0e1")
 	)
 	(wire
 		(pts
@@ -10244,6 +10365,16 @@
 	)
 	(wire
 		(pts
+			(xy 375.92 187.96) (xy 375.92 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "80e128d7-d60f-4e4e-99f7-9b0998fb4df9")
+	)
+	(wire
+		(pts
 			(xy 238.76 146.05) (xy 243.84 146.05)
 		)
 		(stroke
@@ -10271,6 +10402,16 @@
 			(type dash)
 		)
 		(uuid "835d4212-be78-465f-a4ae-188280db9d5c")
+	)
+	(wire
+		(pts
+			(xy 381 184.15) (xy 375.92 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "844cb537-8fa6-4700-a87f-027f928ce621")
 	)
 	(wire
 		(pts
@@ -10671,16 +10812,6 @@
 			(type default)
 		)
 		(uuid "a3216a68-3987-4efd-968f-f54dcdd4edfd")
-	)
-	(wire
-		(pts
-			(xy 354.33 195.58) (xy 382.016 195.58)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a410dfa2-af86-4835-a4df-1b1a496c197c")
 	)
 	(wire
 		(pts
@@ -11154,6 +11285,16 @@
 	)
 	(wire
 		(pts
+			(xy 375.92 204.47) (xy 378.46 204.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb1b6bad-2802-481b-b9fc-098fcea2a01b")
+	)
+	(wire
+		(pts
 			(xy 193.04 26.67) (xy 193.04 27.94)
 		)
 		(stroke
@@ -11441,6 +11582,16 @@
 			(type default)
 		)
 		(uuid "d7d5d747-949e-466e-ac8c-ba1c778c17fe")
+	)
+	(wire
+		(pts
+			(xy 381 187.96) (xy 381 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d900fe77-87b7-4ace-9527-ec7a808bb799")
 	)
 	(wire
 		(pts
@@ -11734,6 +11885,16 @@
 	)
 	(wire
 		(pts
+			(xy 381 203.2) (xy 381 204.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed89601a-ad96-408a-a748-5a2823bdfab7")
+	)
+	(wire
+		(pts
 			(xy 245.11 125.73) (xy 302.26 125.73)
 		)
 		(stroke
@@ -11973,7 +12134,7 @@
 		(uuid "89169930-49ac-4e6d-b84f-4e435834f975")
 	)
 	(label "RF1_ANT"
-		(at 355.6 195.58 0)
+		(at 355.854 195.58 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -13870,28 +14031,6 @@
 			)
 		)
 	)
-	(global_label "RF_VCC"
-		(shape bidirectional)
-		(at 387.223 233.045 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "f5c82b53-f654-424e-add9-597c4e070659")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 387.223 222.0731 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "F4_SCL"
 		(shape output)
 		(at 233.68 123.19 180)
@@ -14315,7 +14454,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 387.096 200.66 0)
+		(at 378.46 205.74 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14324,7 +14463,7 @@
 		(fields_autoplaced yes)
 		(uuid "026be261-bcce-4e46-bdb1-71f102535785")
 		(property "Reference" "#PWR047"
-			(at 387.096 207.01 0)
+			(at 378.46 212.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14333,7 +14472,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 387.096 205.1034 0)
+			(at 378.46 210.1834 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14341,7 +14480,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 387.096 200.66 0)
+			(at 378.46 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14350,7 +14489,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 387.096 200.66 0)
+			(at 378.46 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14359,7 +14498,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 387.096 200.66 0)
+			(at 378.46 205.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21653,6 +21792,94 @@
 		)
 	)
 	(symbol
+		(lib_id "easyeda2kicad:KH-MMCX-Z")
+		(at 381 195.58 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c3f80072-708c-471c-9278-dfbf3dc6df7c")
+		(property "Reference" "RF1"
+			(at 394.97 194.3099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "KH-MMCX-Z"
+			(at 394.97 196.8499 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "easyeda2kicad:MMCX-TH_KH-MMCX-Z"
+			(at 381 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://lcsc.com/product-detail/RF-Connectors-Coaxial-Connectors_Shenzhen-Kinghelm-Elec-KH-MMCX-Z_C530664.html"
+			(at 381 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 381 195.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C530664"
+			(at 381 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cdd101a6-ff84-4afc-907e-639760b81084")
+		)
+		(pin "5"
+			(uuid "095c7680-92d1-4c80-bd6d-c21a326b8936")
+		)
+		(pin "3"
+			(uuid "4744b68c-6ae7-4564-901c-50133bb753c1")
+		)
+		(pin "4"
+			(uuid "aaab62a5-7e55-427a-8474-cb0cdc49ad43")
+		)
+		(pin "2"
+			(uuid "15170af6-9229-400a-988f-69b15acfcee9")
+		)
+		(instances
+			(project ""
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "RF1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 374.65 97.79 0)
 		(unit 1)
@@ -22071,76 +22298,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_Coaxial")
-		(at 387.096 195.58 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ce5909af-a542-4176-a445-31feb9d820b3")
-		(property "Reference" "J6"
-			(at 390.398 195.2382 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Conn_Coaxial"
-			(at 390.398 197.7782 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_Coaxial:SMA_Amphenol_901-144_Vertical"
-			(at 387.096 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" " ~"
-			(at 387.096 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 387.096 195.58 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "22780507-8b78-4bf3-a9d2-6ed37b1ff5dc")
-		)
-		(pin "2"
-			(uuid "2f0dcecc-0483-4cb6-9eaf-73ede946684e")
-		)
-		(instances
-			(project "FC_V5"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 34.29 67.31 0)
 		(unit 1)
@@ -22201,6 +22358,72 @@
 			(project "FC_V5"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 369.57 186.69 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cf431ed5-f048-4027-b538-6f2e717b2950")
+		(property "Reference" "#PWR051"
+			(at 369.57 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 369.57 191.1334 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 369.57 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 369.57 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 369.57 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "82b587f9-2de4-4949-a694-836c29bef665")
+		)
+		(instances
+			(project "FC_V5d_Production"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "#PWR051")
 					(unit 1)
 				)
 			)
