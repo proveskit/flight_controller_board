@@ -12,8 +12,8 @@ static const mp_rom_map_elem_t board_module_globals_table[] = {
     { MP_ROM_QSTR(MP_QSTR_TX0), MP_ROM_PTR(&pin_GPIO0) },
     { MP_ROM_QSTR(MP_QSTR_RX0), MP_ROM_PTR(&pin_GPIO1) },
 
-    { MP_ROM_QSTR(MP_QSTR_I2C1_SDA), MP_ROM_PTR(&pin_GPIO2) },
-    { MP_ROM_QSTR(MP_QSTR_I2C1_SCL), MP_ROM_PTR(&pin_GPIO3) },
+    { MP_ROM_QSTR(MP_QSTR_SDA1), MP_ROM_PTR(&pin_GPIO2) },
+    { MP_ROM_QSTR(MP_QSTR_SCL1), MP_ROM_PTR(&pin_GPIO3) },
     
     { MP_ROM_QSTR(MP_QSTR_TX1), MP_ROM_PTR(&pin_GPIO4) },
     { MP_ROM_QSTR(MP_QSTR_RX1), MP_ROM_PTR(&pin_GPIO5) },
@@ -44,8 +44,8 @@ static const mp_rom_map_elem_t board_module_globals_table[] = {
     { MP_ROM_QSTR(MP_QSTR_RF2_TX_EN), MP_ROM_PTR(&pin_GPIO22) },
     { MP_ROM_QSTR(MP_QSTR_WDT_WDI), MP_ROM_PTR(&pin_GPIO23) },
 
-    { MP_ROM_QSTR(MP_QSTR_I2C0_SDA), MP_ROM_PTR(&pin_GPIO24) },
-    { MP_ROM_QSTR(MP_QSTR_I2C0_SCL), MP_ROM_PTR(&pin_GPIO25) },
+    { MP_ROM_QSTR(MP_QSTR_SDA0), MP_ROM_PTR(&pin_GPIO24) },
+    { MP_ROM_QSTR(MP_QSTR_SCL0), MP_ROM_PTR(&pin_GPIO25) },
 
     { MP_ROM_QSTR(MP_QSTR_MUX_RESET), MP_ROM_PTR(&pin_GPIO26) },
     { MP_ROM_QSTR(MP_QSTR_RTC_INT), MP_ROM_PTR(&pin_GPIO27) },
