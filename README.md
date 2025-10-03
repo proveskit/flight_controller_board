@@ -4,7 +4,7 @@ This is the repo for the main Flight Controller (FC) Board for the PROVES Kit.
 For detailed documentation on the Flight Controller Board, check out the docs [here](https://docs.proveskit.space/en/latest/core_documentation/hardware/FC_board/). 
 
 # Quick Start
-If you have just received a flight controller board, getting started with developing on one is quick and easy! V4 Flight Controller Boards require the soldering of the JP1 solder jumper to enable powering via USB (it is in the bottom right). V5 Flight Controller Boards have a nifty switch! Once the board is powered up you can refer to [our developer's guide](https://github.com/proveskit/pysquared/blob/main/docs/dev-guide.md) for notes on how to get code loaded and the board running.
+If you have just received a flight controller board, getting started with developing on one is quick and easy! V4 Flight Controller Boards require the soldering of the JP1 solder jumper to enable powering via USB (it is in the bottom right). V5 Flight Controller Boards have a nifty switch! Once the board is powered up you can refer to [our quick start guide](https://proveskit.github.io/pysquared/getting-started/) for notes on how to get code loaded and the board running.
 
 ## Flight Heritage and Version History
 | Version | Flights | Status |
@@ -15,17 +15,20 @@ If you have just received a flight controller board, getting started with develo
 | V3 | Unflown | Legacy Support |
 | V4a (aka V1a Internal) | Unflown | Unsupported |
 | V4b | Unflown | Supported |
-| V4c | Pleiades - Orpheus, InspireFly Content Cube (Launcing Soon!) | Supported |
+| V4c | Pleiades - Orpheus, InspireFly Content Cube | Supported |
 | V5dev | Unflown | Dev Only Support |
 | V5a | Unflown | Dev Only Support |
 | V5b | Unflown | Supported |
 | V5c | Unflown | Dev Only Support |
-| V5d | Unflown | In Development |
+| V5d | Unflown | Dev Only Support |
+| V5d Pro | Unflown | Supported |
 
 V0 through V3 Flight Controller Boards were the cornerstone of the 2023 Release V1 PROVES Kit. With the 2024 V2 PROVES Kit we introduced the V4 Flight Controller board and changed the version scheme to have `a`, `b`, `c`, etc varients of a single version rather than ascending the version ladder in record time (we'd be on V9 now if we did that!). This change was primarily based on the idea that a revisions on a major version number would be similar enough to each other to not require completely different firmware to be compiled for operation.
 
+For V5d we added a "Pro" for "Production" version!
+
 ## Current Features
-The Latest (V5c) FC board implements the following components: 
+The Latest (V5d) FC board implements the following components: 
 - RP2350A Microcontroller
 - 128M-Bit W25Q128JVSIQ Flash Memory
 - HopeRF RFM9X UHF Radio Module Slot
