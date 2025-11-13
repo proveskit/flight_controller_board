@@ -6221,6 +6221,12 @@
 		(uuid "5dbf6f6a-fd41-4667-911b-caff799fca85")
 	)
 	(junction
+		(at 309.88 125.73)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "60738b57-bf1a-46ea-b08c-cc4a5e44bb71")
+	)
+	(junction
 		(at 134.62 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7448,16 +7454,6 @@
 	)
 	(wire
 		(pts
-			(xy 309.88 121.92) (xy 309.88 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3689bbb6-ad77-4c0d-ade9-3259dcc3e9b1")
-	)
-	(wire
-		(pts
 			(xy 38.1 276.86) (xy 38.1 279.4)
 		)
 		(stroke
@@ -8105,6 +8101,16 @@
 			(type default)
 		)
 		(uuid "5be4c4e0-466d-4eea-b2c8-4bac65b803aa")
+	)
+	(wire
+		(pts
+			(xy 307.34 125.73) (xy 309.88 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bfd9d0d-90d5-44f6-9dcf-fa4a7d6cf8b1")
 	)
 	(wire
 		(pts
@@ -9705,6 +9711,16 @@
 			(type default)
 		)
 		(uuid "b4b820d8-f07d-405a-a28f-10041a052958")
+	)
+	(wire
+		(pts
+			(xy 309.88 121.92) (xy 309.88 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5290291-df3c-4e00-a3f9-1fabc4cb40b0")
 	)
 	(wire
 		(pts
@@ -11389,28 +11405,6 @@
 			)
 		)
 	)
-	(global_label "VBUSP"
-		(shape bidirectional)
-		(at 309.88 114.3 90)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "65dac353-783a-47d1-a917-ca2f1f0a72da")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 309.88 104.0349 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "PAYLOAD_PWR_ENABLE"
 		(shape output)
 		(at 91.44 250.19 0)
@@ -11473,6 +11467,28 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "~{5V_RESET}"
+		(shape input)
+		(at 307.34 125.73 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7b1c9840-1bdb-4933-8f62-529834ca9e74")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 295.344 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -11850,8 +11866,8 @@
 			)
 		)
 	)
-	(global_label "READONLY"
-		(shape input)
+	(global_label "~{5V_RESET}"
+		(shape output)
 		(at 91.44 240.03 0)
 		(fields_autoplaced yes)
 		(effects
@@ -11862,7 +11878,7 @@
 		)
 		(uuid "adeaf051-5245-46b8-b9c5-8c92730cfe5d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 103.9805 240.03 0)
+			(at 103.436 240.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13383,6 +13399,71 @@
 			(project "FC_V5c"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471"
 					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:+3V3")
+		(at 309.88 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1ff0b62d-2514-43c9-9d84-3df4b05f72da")
+		(property "Reference" "#+3V02"
+			(at 309.88 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 318.516 112.014 0)
+			(effects
+				(font
+					(size 1.778 1.5113)
+				)
+			)
+		)
+		(property "Footprint" "Adafruit ItsyBitsy RP2040:"
+			(at 309.88 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 309.88 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 309.88 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "90b6d51b-5a23-4aa5-8e91-e0f44f7c635d")
+		)
+		(instances
+			(project "FC_V5d_Pro_Rev1"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471"
+					(reference "#+3V02")
 					(unit 1)
 				)
 			)
@@ -20494,7 +20575,7 @@
 			)
 		)
 		(instances
-			(project "FC_V5d_Production"
+			(project "FC_V5d_Pro_Rev1"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471"
 					(page "5")
 				)
