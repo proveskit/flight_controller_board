@@ -3644,150 +3644,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "easyeda2kicad:KCMSH3-40MA"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "D"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "KCMSH3-40MA"
-				(at 0 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "easyeda2kicad:SMA_L4.3-W2.5-LS5.0-FD"
-				(at 0 -7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "LCSC Part" "C2892544"
-				(at 0 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "KCMSH3-40MA_0_1"
-				(polyline
-					(pts
-						(xy -1.78 1.27) (xy -1.78 1.78) (xy -1.27 1.78) (xy -1.27 -1.78) (xy -0.76 -1.78) (xy -0.76 -1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.27 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.78) (xy -1.27 0) (xy 1.27 -1.78) (xy 1.27 1.78)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 0) (xy 1.27 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin unspecified line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "easyeda2kicad:SPM6530T-3R3M-HZ"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -6317,12 +6173,6 @@
 		(uuid "837a0450-eb0a-4aaa-b2ec-4ad7974fb141")
 	)
 	(junction
-		(at 81.28 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "83c4b7d9-70ee-43d4-8943-14bb2f17980c")
-	)
-	(junction
 		(at 185.42 57.15)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6573,12 +6423,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d3a07feb-ce6c-4802-b399-6b3620739653")
-	)
-	(junction
-		(at 165.1 63.5)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "db2a523a-b3f4-4289-961d-c39a433826d6")
 	)
 	(junction
 		(at 69.85 185.42)
@@ -7284,7 +7128,7 @@
 	)
 	(wire
 		(pts
-			(xy 165.1 63.5) (xy 165.1 69.85)
+			(xy 165.1 63.5) (xy 165.1 86.36)
 		)
 		(stroke
 			(width 0)
@@ -9054,16 +8898,6 @@
 	)
 	(wire
 		(pts
-			(xy 81.28 63.5) (xy 165.1 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9398f806-4ff3-4b19-8bdd-37c7c8270259")
-	)
-	(wire
-		(pts
 			(xy 157.48 138.43) (xy 163.83 138.43)
 		)
 		(stroke
@@ -9631,16 +9465,6 @@
 			(type default)
 		)
 		(uuid "afa26e2a-f7e4-4e8e-8c7b-13e9213e5f8d")
-	)
-	(wire
-		(pts
-			(xy 165.1 80.01) (xy 165.1 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b02064bd-15cd-467a-8ed9-187e776fcf55")
 	)
 	(wire
 		(pts
@@ -10822,7 +10646,7 @@
 		)
 		(uuid "ff82dec5-baec-4ba6-aacd-d21a5f0d0140")
 	)
-	(label "V_SYS"
+	(label "V_SOLAR_SENSE"
 		(at 55.88 63.5 0)
 		(effects
 			(font
@@ -15605,7 +15429,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "787K 0603"
+		(property "Description" ""
 			(at 148.59 87.63 0)
 			(effects
 				(font
@@ -17122,84 +16946,6 @@
 			(project "FC_V5"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471"
 					(reference "L2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "easyeda2kicad:KCMSH3-40MA")
-		(at 165.1 74.93 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "a1b95b56-b7e0-4690-98b0-3300644594d4")
-		(property "Reference" "D8"
-			(at 160.274 77.724 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "KCMSH3-40MA"
-			(at 165.862 77.978 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "easyeda2kicad:SMA_L4.3-W2.5-LS5.0-FD"
-			(at 157.48 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 165.1 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 165.1 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part" "C2892544"
-			(at 154.94 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a23c8c6c-95ff-4834-9abb-7fd7022dc802")
-		)
-		(pin "2"
-			(uuid "43b06bcf-eaa4-4c16-a84b-899844b54208")
-		)
-		(instances
-			(project ""
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538/7cbc73fc-c188-4597-842f-d15f69db7471"
-					(reference "D8")
 					(unit 1)
 				)
 			)
