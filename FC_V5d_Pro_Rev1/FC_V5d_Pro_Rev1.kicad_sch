@@ -6708,6 +6708,152 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "mainboard:22UF-1210-16V-20%"
+			(pin_names
+				(offset 1.016)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 1.524 2.921 0)
+				(effects
+					(font
+						(size 1.778 1.778)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Value" "22UF-1210-16V-20%"
+				(at 1.524 -2.159 0)
+				(effects
+					(font
+						(size 1.778 1.778)
+					)
+					(justify left bottom)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "22UF-1210-16V-20%_1_0"
+				(rectangle
+					(start -2.032 1.524)
+					(end 2.032 2.032)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -2.032 0.508)
+					(end 2.032 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 0 0)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "mainboard:GND"
 			(power)
 			(pin_names
@@ -8356,6 +8502,12 @@
 		(uuid "e9711306-bde5-4106-b8c2-230276b3ab7f")
 	)
 	(junction
+		(at 344.17 212.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ed31812e-8df6-4250-9a95-b5495e3537c3")
+	)
+	(junction
 		(at 165.1 247.65)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -8378,6 +8530,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f69b275d-57a0-46ce-92b4-12d910de97a2")
+	)
+	(junction
+		(at 335.28 212.09)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f8d39a53-7adb-4ffc-8ff7-a266a1bc21a1")
 	)
 	(junction
 		(at 163.83 232.41)
@@ -8797,6 +8955,16 @@
 	)
 	(wire
 		(pts
+			(xy 335.28 203.2) (xy 335.28 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "113e4106-e12a-4800-9596-88adc94bcf48")
+	)
+	(wire
+		(pts
 			(xy 368.3 114.3) (xy 368.3 123.19)
 		)
 		(stroke
@@ -8854,6 +9022,16 @@
 			(type default)
 		)
 		(uuid "140afdd1-5346-434a-97ba-6553d474d2fb")
+	)
+	(wire
+		(pts
+			(xy 344.17 203.2) (xy 342.9 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1499a99b-4316-4210-9fe3-c57288f90421")
 	)
 	(wire
 		(pts
@@ -9997,7 +10175,7 @@
 	)
 	(wire
 		(pts
-			(xy 344.17 212.09) (xy 340.36 212.09)
+			(xy 344.17 212.09) (xy 341.63 212.09)
 		)
 		(stroke
 			(width 0)
@@ -10827,6 +11005,16 @@
 	)
 	(wire
 		(pts
+			(xy 336.55 212.09) (xy 335.28 212.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b2a082a3-6975-4274-b000-e72a32bffbd1")
+	)
+	(wire
+		(pts
 			(xy 106.68 229.87) (xy 107.95 229.87)
 		)
 		(stroke
@@ -11584,6 +11772,16 @@
 			(type default)
 		)
 		(uuid "e7de70d7-0365-4888-a411-e91e680c5344")
+	)
+	(wire
+		(pts
+			(xy 344.17 212.09) (xy 344.17 203.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e86b356b-3e16-48a8-bbcf-323e2091cc76")
 	)
 	(wire
 		(pts
@@ -14137,7 +14335,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 337.82 212.09 90)
+		(at 339.09 212.09 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14145,7 +14343,7 @@
 		(dnp no)
 		(uuid "02575521-6875-4655-a0ba-6b7302d51bd1")
 		(property "Reference" "C14"
-			(at 337.82 206.2734 90)
+			(at 339.09 206.2734 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14153,7 +14351,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 337.82 208.5848 90)
+			(at 339.09 208.5848 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14161,7 +14359,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 337.82 212.09 0)
+			(at 339.09 212.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14170,7 +14368,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 337.82 212.09 0)
+			(at 339.09 212.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14179,7 +14377,7 @@
 			)
 		)
 		(property "Description" "10uF +-20% 10V X5R"
-			(at 337.82 212.09 0)
+			(at 339.09 212.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16877,6 +17075,75 @@
 			(project "FC_V5c"
 				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
 					(reference "R89")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "mainboard:22UF-1210-16V-20%")
+		(at 340.36 203.2 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "499966fd-673a-4474-a83d-0410e97d8597")
+		(property "Reference" "C11"
+			(at 339.09 200.66 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Value" "100uF"
+			(at 342.519 201.676 0)
+			(effects
+				(font
+					(size 1.778 1.778)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+			(at 340.36 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 340.36 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "100uF 16V X5R 1210"
+			(at 340.36 203.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a029d981-29bb-4b2b-b1ce-18fb655f4df5")
+		)
+		(pin "2"
+			(uuid "0c60b8c4-ee07-492f-913d-7763a85102c6")
+		)
+		(instances
+			(project "FC_V5d_Pro_Rev1"
+				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
+					(reference "C11")
 					(unit 1)
 				)
 			)
