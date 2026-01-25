@@ -14,14 +14,16 @@ If you have just received a flight controller board, getting started with develo
 | V2 | Unflown | Unsupported |
 | V3 | Unflown | Legacy Support |
 | V4a (aka V1a Internal) | Unflown | Unsupported |
-| V4b | Unflown | Supported |
-| V4c | Pleiades - Orpheus, InspireFly Content Cube | Supported |
-| V5dev | Unflown | Dev Only Support |
-| V5a | Unflown | Dev Only Support |
-| V5b | Unflown | Supported |
+| V4b | Unflown | Unsupported |
+| V4c | Pleiades - Orpheus, InspireFly Content Cube | Dev Only Support |
+| V5dev | Unflown | Unsupported |
+| V5a | Unflown | Unsupported |
+| V5b | Unflown | Dev Only Support |
 | V5c | Unflown | Dev Only Support |
 | V5d | Unflown | Dev Only Support |
 | V5d Pro | Unflown | Supported |
+| V5d Pro Rev 1 | PROVES - Alycone, PROVES - Atlas, PROVES - Electra, HUCSat-1 | Supported |
+| V5d Pro Rev 2 | Unflown | Supported |
 
 V0 through V3 Flight Controller Boards were the cornerstone of the 2023 Release V1 PROVES Kit. With the 2024 V2 PROVES Kit we introduced the V4 Flight Controller board and changed the version scheme to have `a`, `b`, `c`, etc varients of a single version rather than ascending the version ladder in record time (we'd be on V9 now if we did that!). This change was primarily based on the idea that a revisions on a major version number would be similar enough to each other to not require completely different firmware to be compiled for operation.
 
