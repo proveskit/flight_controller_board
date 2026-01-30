@@ -5644,7 +5644,7 @@
 			)
 		)
 	)
-	(global_label "RF1_IO4"
+	(global_label "RF_IRQ"
 		(shape bidirectional)
 		(at 209.55 105.41 0)
 		(fields_autoplaced yes)
@@ -5656,11 +5656,12 @@
 		)
 		(uuid "167b3287-cb90-440c-b9a5-4831a7525680")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 139.7 -36.83 0)
+			(at 220.178 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -5885,7 +5886,7 @@
 			)
 		)
 	)
-	(global_label "RF1_IO0"
+	(global_label "RF_BUSY"
 		(shape bidirectional)
 		(at 209.55 107.95 0)
 		(fields_autoplaced yes)
@@ -5897,11 +5898,12 @@
 		)
 		(uuid "7e2eda3e-81ed-4500-b88d-7499f064ad66")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 243.84 257.81 0)
+			(at 221.8713 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
+				(justify left)
 				(hide yes)
 			)
 		)
