@@ -7575,12 +7575,6 @@
 		(uuid "5644c766-6be0-46a8-a4cf-a98f007fadd1")
 	)
 	(junction
-		(at 36.83 52.07)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "5b6ef0c4-a700-4feb-b121-e17f4b2c8d0d")
-	)
-	(junction
 		(at 283.21 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7877,6 +7871,10 @@
 		(uuid "3469ef7a-1e93-42cc-993f-c73d6ceb61d5")
 	)
 	(no_connect
+		(at 283.21 198.12)
+		(uuid "4304700b-6a4b-4b15-888f-2e8f2f177351")
+	)
+	(no_connect
 		(at 156.21 237.49)
 		(uuid "55f9a0bc-8c37-4821-bbe4-2912f0f73ed0")
 	)
@@ -8166,7 +8164,7 @@
 	)
 	(wire
 		(pts
-			(xy 298.45 176.53) (xy 298.45 185.42)
+			(xy 298.45 177.8) (xy 298.45 185.42)
 		)
 		(stroke
 			(width 0)
@@ -8226,7 +8224,7 @@
 	)
 	(wire
 		(pts
-			(xy 307.34 176.53) (xy 306.07 176.53)
+			(xy 307.34 177.8) (xy 306.07 177.8)
 		)
 		(stroke
 			(width 0)
@@ -10906,7 +10904,7 @@
 	)
 	(wire
 		(pts
-			(xy 307.34 185.42) (xy 307.34 176.53)
+			(xy 307.34 185.42) (xy 307.34 177.8)
 		)
 		(stroke
 			(width 0)
@@ -14285,73 +14283,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 36.83 52.07 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1e381cf8-201c-4918-8b33-371d61b3508e")
-		(property "Reference" "TP2"
-			(at 38.6588 53.5432 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "RESET"
-			(at 37.5158 53.5432 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded"
-			(at 36.83 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 36.83 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 36.83 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "bec051f4-282b-466a-be19-de0c26a49383")
-		)
-		(instances
-			(project "FC_V5"
-				(path "/c64c0d72-a9f6-4f3a-891e-1f647558f538"
-					(reference "TP2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Adafruit ItsyBitsy RP2040-eagle-import:+3V3")
 		(at 168.91 168.91 0)
 		(unit 1)
@@ -15517,7 +15448,7 @@
 	)
 	(symbol
 		(lib_id "mainboard:22UF-1210-16V-20%")
-		(at 303.53 176.53 90)
+		(at 303.53 177.8 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15525,7 +15456,7 @@
 		(dnp no)
 		(uuid "499966fd-673a-4474-a83d-0410e97d8597")
 		(property "Reference" "C11"
-			(at 299.72 173.99 90)
+			(at 299.72 175.26 90)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -15534,7 +15465,7 @@
 			)
 		)
 		(property "Value" "100uF"
-			(at 312.42 173.736 90)
+			(at 312.42 175.006 90)
 			(effects
 				(font
 					(size 1.778 1.778)
@@ -15543,7 +15474,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
-			(at 303.53 176.53 0)
+			(at 303.53 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15552,7 +15483,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 303.53 176.53 0)
+			(at 303.53 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15561,7 +15492,7 @@
 			)
 		)
 		(property "Description" "100uF 16V X5R 1210"
-			(at 303.53 176.53 0)
+			(at 303.53 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
