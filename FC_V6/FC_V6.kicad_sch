@@ -1,7 +1,7 @@
 (kicad_sch
-	(version 20250114)
+	(version 20260306)
 	(generator "eeschema")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(uuid "f080da98-69f4-43da-b75c-192226370aa3")
 	(paper "A4")
 	(lib_symbols)
@@ -18,11 +18,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "08fa5eb3-fc85-408f-8e91-976c239f9e00")
 		(property "Sheetname" "Onboard Sensors"
 			(at 69.85 72.9484 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -32,6 +34,8 @@
 		)
 		(property "Sheetfile" "sensors.kicad_sch"
 			(at 69.85 89.4846 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -60,11 +64,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "1f738dd9-d80b-458c-8048-9b53f4691302")
 		(property "Sheetname" "Load Switches"
 			(at 214.63 37.3884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -74,6 +80,8 @@
 		)
 		(property "Sheetfile" "load_switches.kicad_sch"
 			(at 214.63 56.4646 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -102,11 +110,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "2617906e-3a58-4e5f-878d-8a3f39721f0a")
 		(property "Sheetname" "Rad Tolerant Watchdog"
 			(at 207.01 72.9484 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -116,6 +126,8 @@
 		)
 		(property "Sheetfile" "watchdog.kicad_sch"
 			(at 207.01 89.4846 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -144,11 +156,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "2b5637d7-0183-4ecc-a112-76f78d675450")
 		(property "Sheetname" "Power Inhibits"
 			(at 40.64 37.3884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -158,6 +172,8 @@
 		)
 		(property "Sheetfile" "power_inhibits.kicad_sch"
 			(at 40.64 56.4646 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -186,11 +202,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "2e7e4a31-10bb-49da-9f99-71765168b49d")
 		(property "Sheetname" "Radios"
 			(at 93.98 112.3184 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -200,6 +218,8 @@
 		)
 		(property "Sheetfile" "radios.kicad_sch"
 			(at 93.98 130.1246 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -211,48 +231,6 @@
 			(project "FC_V6"
 				(path "/f080da98-69f4-43da-b75c-192226370aa3"
 					(page "7")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 128.27 72.39)
-		(size 38.1 16.51)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "62153ef6-d39c-4c3d-8add-145da0e06ff3")
-		(property "Sheetname" "RP2350B"
-			(at 128.27 71.6784 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "rp2350b.kicad_sch"
-			(at 128.27 89.4846 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "FC_V6"
-				(path "/f080da98-69f4-43da-b75c-192226370aa3"
-					(page "2")
 				)
 			)
 		)
@@ -270,11 +248,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "be4cf85a-cd33-424d-8798-b1c79bc2d789")
 		(property "Sheetname" "Connectors"
 			(at 27.94 142.7984 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -284,6 +264,8 @@
 		)
 		(property "Sheetfile" "connectors.kicad_sch"
 			(at 27.94 149.1746 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -312,11 +294,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "e4218437-125a-4f07-a907-50576605df75")
 		(property "Sheetname" "Peripherals"
 			(at 170.18 114.8584 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -326,6 +310,8 @@
 		)
 		(property "Sheetfile" "untitled.kicad_sch"
 			(at 170.18 131.3946 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -354,11 +340,13 @@
 			(type solid)
 		)
 		(fill
-			(color 0 0 0 0.0000)
+			(color 0 0 0 0)
 		)
 		(uuid "f6e6690f-e937-4e33-9416-f51b41f339a1")
 		(property "Sheetname" "Power Management"
 			(at 127 37.3884 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -368,6 +356,8 @@
 		)
 		(property "Sheetfile" "power.kicad_sch"
 			(at 127 57.7346 0)
+			(show_name no)
+			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
