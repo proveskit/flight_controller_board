@@ -6,8 +6,8 @@
 	(paper "A4")
 	(lib_symbols)
 	(sheet
-		(at 69.85 73.66)
-		(size 30.48 15.24)
+		(at 66.04 73.66)
+		(size 34.29 21.59)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -22,7 +22,7 @@
 		)
 		(uuid "08fa5eb3-fc85-408f-8e91-976c239f9e00")
 		(property "Sheetname" "Onboard Sensors"
-			(at 69.85 72.9484 0)
+			(at 66.04 72.9484 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -33,7 +33,7 @@
 			)
 		)
 		(property "Sheetfile" "sensors.kicad_sch"
-			(at 69.85 89.4846 0)
+			(at 66.04 95.8346 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -231,6 +231,52 @@
 			(project "FC_V6"
 				(path "/f080da98-69f4-43da-b75c-192226370aa3"
 					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 128.27 74.93)
+		(size 36.83 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "7676bf69-690a-4f70-b199-c28848f5d528")
+		(property "Sheetname" "STM32 Microcontroller"
+			(at 128.27 74.2184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "stm32_mcu.kicad_sch"
+			(at 128.27 93.2946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "FC_V6"
+				(path "/f080da98-69f4-43da-b75c-192226370aa3"
+					(page "2")
 				)
 			)
 		)
