@@ -419,6 +419,52 @@
 			)
 		)
 	)
+	(sheet
+		(at 22.86 177.8)
+		(size 25.4 12.7)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 255 95 45 1)
+		)
+		(uuid "f7270bca-0fbf-4ba2-b1f3-6056d88a053a")
+		(property "Sheetname" "Power System Block Diagram"
+			(at 22.86 177.0884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power_block_diagram.kicad_sch"
+			(at 22.86 191.0846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "FC_V6"
+				(path "/f080da98-69f4-43da-b75c-192226370aa3"
+					(page "11")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")

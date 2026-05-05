@@ -1,0 +1,400 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "7eae0a47-d40a-424b-b5aa-2cc958c02199")
+	(paper "A4")
+	(lib_symbols)
+	(rectangle
+		(start 49.53 100.838)
+		(end 67.31 111.76)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 145 255 190 1)
+		)
+		(uuid "444ea914-0b41-492e-9adc-1194162829e6")
+	)
+	(rectangle
+		(start 49.53 79.248)
+		(end 67.31 90.17)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 145 255 190 1)
+		)
+		(uuid "4589a582-1489-4b0e-b052-a0bd3628a0df")
+	)
+	(rectangle
+		(start 25.146 75.438)
+		(end 43.18 93.98)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 255 227 36 1)
+		)
+		(uuid "531ff13c-59e2-46d3-b9e2-e6dbe1f4eb35")
+	)
+	(rectangle
+		(start 81.28 130.302)
+		(end 91.44 169.672)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 150 255 90 1)
+		)
+		(uuid "5479da09-1a25-46d0-8998-f9e28f58161c")
+	)
+	(rectangle
+		(start 25.146 128.778)
+		(end 43.18 147.32)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 255 227 36 1)
+		)
+		(uuid "5d5de00e-c84f-496e-b2cb-ceb1aa3db411")
+	)
+	(rectangle
+		(start 25.4 151.13)
+		(end 43.18 170.18)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 255 161 86 1)
+		)
+		(uuid "6849e2b9-fb66-46d9-807e-493628357c91")
+	)
+	(rectangle
+		(start 25.146 43.688)
+		(end 43.18 63.5)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 255 227 36 1)
+		)
+		(uuid "85641a50-ac9b-42c5-9402-adc78e06642f")
+	)
+	(rectangle
+		(start 50.8 47.498)
+		(end 68.58 58.42)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 145 255 190 1)
+		)
+		(uuid "c1748a6a-ed0d-464a-99f6-e537bc967075")
+	)
+	(rectangle
+		(start 81.28 75.946)
+		(end 91.44 115.316)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 150 255 90 1)
+		)
+		(uuid "c6acb168-d08e-44eb-be05-9987fe6850c5")
+	)
+	(rectangle
+		(start 25.146 97.028)
+		(end 43.18 115.57)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 255 227 36 1)
+		)
+		(uuid "d255ac8a-efeb-45ca-9785-abe364b8928d")
+	)
+	(rectangle
+		(start 49.53 132.588)
+		(end 67.31 143.51)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 145 255 190 1)
+		)
+		(uuid "d63feded-f7e8-44a2-9f90-3a3d63251a36")
+	)
+	(rectangle
+		(start 25.146 22.098)
+		(end 43.18 40.64)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 255 227 36 1)
+		)
+		(uuid "d9cfd7fc-9210-46d9-9d04-ab87fd6c2fe2")
+	)
+	(rectangle
+		(start 81.28 22.606)
+		(end 91.44 61.976)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 150 255 90 1)
+		)
+		(uuid "e001681f-d184-4dbc-ae47-6308f0a90b3e")
+	)
+	(rectangle
+		(start 50.8 25.908)
+		(end 68.58 36.83)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type color)
+			(color 145 255 190 1)
+		)
+		(uuid "fddd5936-9dc4-4669-8998-10e0b3cf0e58")
+	)
+	(text "Power Monitor 4\n"
+		(exclude_from_sim no)
+		(at 58.42 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "14d56331-1e09-407c-86d5-c4458e0f0b43")
+	)
+	(text "Power Monitor 2"
+		(exclude_from_sim no)
+		(at 59.69 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "1c2db6b5-1ea0-4050-8fdf-11af4c17c01f")
+	)
+	(text "Power Monitor 1"
+		(exclude_from_sim no)
+		(at 59.69 31.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "20ba1d50-7626-495e-8f4e-63d6681f44d8")
+	)
+	(text "Y+ Solar\nInput"
+		(exclude_from_sim no)
+		(at 34.29 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "22747f5c-a714-46e6-9179-559ea9ea0235")
+	)
+	(text "MPPT 3"
+		(exclude_from_sim no)
+		(at 86.36 149.606 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "2404884a-f639-430d-946d-9232a5a52021")
+	)
+	(text "Power Monitor 5"
+		(exclude_from_sim no)
+		(at 58.42 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "4ef1bf45-3b72-44d4-8d50-fba7a1ea0566")
+	)
+	(text "X- Solar\nInput"
+		(exclude_from_sim no)
+		(at 34.29 53.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "6353a89e-7850-470e-b33e-ad69cfbbb4c1")
+	)
+	(text "USB\nInput"
+		(exclude_from_sim no)
+		(at 34.544 160.782 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "72ae99ea-092c-4949-b276-c837ff2ff1d9")
+	)
+	(text "MPPT 1"
+		(exclude_from_sim no)
+		(at 86.36 41.91 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "80e7e083-d564-4768-96ff-928602e5aa30")
+	)
+	(text "MPPT 2"
+		(exclude_from_sim no)
+		(at 86.36 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "947201aa-7773-4628-9ae3-de1f0eaff244")
+	)
+	(text "Y- Solar\nInput"
+		(exclude_from_sim no)
+		(at 34.29 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ad2c6147-a0b8-4b98-851d-f1e949e43622")
+	)
+	(text "Power Monitor 3"
+		(exclude_from_sim no)
+		(at 58.42 85.09 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "eb6f5770-534b-4454-9856-3fb29ea21500")
+	)
+	(text "Z- Solar\nInput\n(Aux)"
+		(exclude_from_sim no)
+		(at 34.29 138.43 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "f0e2189d-8575-484d-92ce-0cb2d5eba6ba")
+	)
+	(text "X+ Solar\nInput"
+		(exclude_from_sim no)
+		(at 34.29 31.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "fa9301fa-c4b5-4491-a498-0b1aefd5c9da")
+	)
+	(polyline
+		(pts
+			(xy 68.58 53.34) (xy 81.28 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a304643-79a7-4e93-9fa0-a1d1e54d2ea2")
+	)
+	(polyline
+		(pts
+			(xy 68.58 31.496) (xy 81.28 31.496)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0bb9d5a-71ae-4a43-8391-385d0466508a")
+	)
+	(polyline
+		(pts
+			(xy 68.58 138.176) (xy 81.28 138.176)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a82417f1-66a5-47c8-bf2e-49bea16fc79a")
+	)
+	(polyline
+		(pts
+			(xy 43.18 31.75) (xy 50.8 31.75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "adb311c9-32ae-4647-b69c-bc3d3e8ab575")
+	)
+	(polyline
+		(pts
+			(xy 68.58 106.426) (xy 81.28 106.426)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aff51a3e-7a92-4688-88d7-d8bd566cde63")
+	)
+	(polyline
+		(pts
+			(xy 43.18 53.34) (xy 50.8 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc6a9abf-3bc2-4380-9de8-cedaf9ff4e1e")
+	)
+	(polyline
+		(pts
+			(xy 68.58 86.106) (xy 81.28 86.106)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "edd646a5-ea8f-45e6-bbc3-e18cf538dc89")
+	)
+)
