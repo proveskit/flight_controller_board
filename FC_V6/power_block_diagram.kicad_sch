@@ -2,12 +2,12 @@
 	(version 20260306)
 	(generator "eeschema")
 	(generator_version "10.0")
-	(uuid "7eae0a47-d40a-424b-b5aa-2cc958c02199")
+	(uuid "80c99fb9-0f2d-4cc8-a3cb-67549636fcfb")
 	(paper "A4")
 	(lib_symbols)
 	(rectangle
-		(start 49.53 100.838)
-		(end 67.31 111.76)
+		(start 50.8 100.838)
+		(end 68.58 111.76)
 		(stroke
 			(width 0)
 			(type solid)
@@ -19,8 +19,8 @@
 		(uuid "444ea914-0b41-492e-9adc-1194162829e6")
 	)
 	(rectangle
-		(start 49.53 79.248)
-		(end 67.31 90.17)
+		(start 50.8 79.248)
+		(end 68.58 90.17)
 		(stroke
 			(width 0)
 			(type solid)
@@ -136,8 +136,8 @@
 		(uuid "d255ac8a-efeb-45ca-9785-abe364b8928d")
 	)
 	(rectangle
-		(start 49.53 132.588)
-		(end 67.31 143.51)
+		(start 50.8 132.588)
+		(end 68.58 143.51)
 		(stroke
 			(width 0)
 			(type solid)
@@ -189,7 +189,7 @@
 	)
 	(text "Power Monitor 4\n"
 		(exclude_from_sim no)
-		(at 58.42 106.68 0)
+		(at 59.69 106.68 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -239,7 +239,7 @@
 	)
 	(text "Power Monitor 5"
 		(exclude_from_sim no)
-		(at 58.42 138.43 0)
+		(at 59.69 138.43 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -299,7 +299,7 @@
 	)
 	(text "Power Monitor 3"
 		(exclude_from_sim no)
-		(at 58.42 85.09 0)
+		(at 59.69 85.09 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -329,6 +329,16 @@
 	)
 	(polyline
 		(pts
+			(xy 43.18 138.43) (xy 50.8 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4678991a-f154-46ab-a785-f71eaafd5720")
+	)
+	(polyline
+		(pts
 			(xy 68.58 53.34) (xy 81.28 53.34)
 		)
 		(stroke
@@ -336,6 +346,16 @@
 			(type default)
 		)
 		(uuid "5a304643-79a7-4e93-9fa0-a1d1e54d2ea2")
+	)
+	(polyline
+		(pts
+			(xy 43.18 85.09) (xy 50.8 85.09)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "652871e9-0f18-4301-b0f8-7e004268f7aa")
 	)
 	(polyline
 		(pts
@@ -396,5 +416,15 @@
 			(type default)
 		)
 		(uuid "edd646a5-ea8f-45e6-bbc3-e18cf538dc89")
+	)
+	(polyline
+		(pts
+			(xy 43.18 106.68) (xy 50.8 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fe172624-4cd9-43c6-8059-f4e3a958c233")
 	)
 )
