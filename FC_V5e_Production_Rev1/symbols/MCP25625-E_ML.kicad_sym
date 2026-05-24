@@ -1,0 +1,251 @@
+
+(kicad_symbol_lib (version 20211014) (generator kicad_symbol_editor)
+  (symbol "MCP25625-E{slash}ML" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+    (property "Reference" "U" (id 0) (at 40.652 -33.0298 0)
+      (effects (font (size 1.27 1.27)) (justify bottom left))
+    )
+    (property "Value" "MCP25625-E{slash}ML" (id 1) (at 40.6941 -35.6074 0)
+      (effects (font (size 1.27 1.27)) (justify bottom left))
+    )
+    (property "Footprint" "QFN-28L" (id 2) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (symbol "MCP25625-E{slash}ML_0_0"
+      (rectangle (start 3.5527136788e-15 -35.56) (end 38.1 12.7)
+        (stroke (width 0.254)) (fill (type background))
+      )
+      (pin bidirectional inverted (at -5.08 0.0 0) (length 5.08)
+        (name "CS"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "1"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional inverted (at -5.08 -3.81 0) (length 5.08)
+        (name "RESET"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "2"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -5.08 -7.62 0) (length 5.08)
+        (name "VDD@1"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "3"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -5.08 -11.43 0) (length 5.08)
+        (name "TXCAN"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "4"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -5.08 -15.24 0) (length 5.08)
+        (name "RXCAN"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "5"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at -5.08 -19.05 0) (length 5.08)
+        (name "CLKOUT"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "6"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional inverted (at -5.08 -22.86 0) (length 5.08)
+        (name "TX0RTS"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "7"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional inverted (at 7.62 -40.64 90.0) (length 5.08)
+        (name "TX1RTS"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "8"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional inverted (at 11.43 -40.64 90.0) (length 5.08)
+        (name "TX2RTS"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "9"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 15.24 -40.64 90.0) (length 5.08)
+        (name "RXD"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "10"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 19.05 -40.64 90.0) (length 5.08)
+        (name "VIO"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "11"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 22.86 -40.64 90.0) (length 5.08)
+        (name "CANL"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "12"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 26.67 -40.64 90.0) (length 5.08)
+        (name "CANH"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "13"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 -40.64 90.0) (length 5.08)
+        (name "NC"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "14"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 43.18 -22.86 180.0) (length 5.08)
+        (name "STBY"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "15"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 43.18 -19.05 180.0) (length 5.08)
+        (name "TXD"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "16"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 43.18 -15.24 180.0) (length 5.08)
+        (name "NC@1"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "17"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 43.18 -11.43 180.0) (length 5.08)
+        (name "VSS@1"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "18"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 43.18 -7.62 180.0) (length 5.08)
+        (name "VDDA"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "19"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 43.18 -3.81 180.0) (length 5.08)
+        (name "OSC2"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "20"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 43.18 0.0 180.0) (length 5.08)
+        (name "OSC1"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "21"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 30.48 17.78 270.0) (length 5.08)
+        (name "GND"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "22"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional inverted (at 26.67 17.78 270.0) (length 5.08)
+        (name "RX1BF"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "23"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional inverted (at 22.86 17.78 270.0) (length 5.08)
+        (name "RX0BF"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "24"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional inverted (at 19.05 17.78 270.0) (length 5.08)
+        (name "INT"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "25"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 15.24 17.78 270.0) (length 5.08)
+        (name "SCK"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "26"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 11.43 17.78 270.0) (length 5.08)
+        (name "SI"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "27"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 7.62 17.78 270.0) (length 5.08)
+        (name "SO"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "28"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin bidirectional line (at 43.18 -27.94 180.0) (length 5.08)
+        (name "GND@1"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "29"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+    )
+  )
+)
