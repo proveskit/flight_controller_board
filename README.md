@@ -9,28 +9,30 @@ If you have just received a flight controller board, getting started with develo
 ## Flight Heritage and Version History
 | Version | Flights | Status |
 | ----------- | ----------- | ----------- |
-| V0 | Unflown | Unsupported|
-| V1 | Pleiades - Yearling, Pleiades - Squared | Unsupported |
-| V2 | Unflown | Unsupported |
-| V3 | Unflown | Legacy Support |
-| V4a (aka V1a Internal) | Unflown | Unsupported |
-| V4b | Unflown | Unsupported |
+| V0 | Unflown | Deprecated |
+| V1 | Pleiades - Yearling, Pleiades - Squared | Deprecated |
+| V2 | Unflown | Deprecated |
+| V3 | Unflown | Deprecated |
+| V4a (aka V1a Internal) | Unflown | Deprecated |
+| V4b | Unflown | Deprecated |
 | V4c | Pleiades - Orpheus, InspireFly Content Cube | Dev Only Support |
-| V5dev | Unflown | Unsupported |
-| V5a | Unflown | Unsupported |
-| V5b | Unflown | Dev Only Support |
-| V5c | Unflown | Dev Only Support |
-| V5d | Unflown | Dev Only Support |
+| V5dev | Unflown | Deprecated |
+| V5a | Unflown | Deprecated |
+| V5b | Unflown | Deprecated |
+| V5c | Unflown | Deprecated |
+| V5d | Unflown | Deprecated |
 | V5d Pro | Unflown | Supported |
 | V5d Pro Rev 1 | PROVES - Alycone, PROVES - Atlas, PROVES - Electra, HUCSat-1 | Supported |
 | V5d Pro Rev 2 | Unflown | Supported |
+| V5e | Unflown | Dev Support Only |
+| V5e Pro Rev 1 | PROVES - Maia, PROVES - Taygeta | Supported |
 
-V0 through V3 Flight Controller Boards were the cornerstone of the 2023 Release V1 PROVES Kit. With the 2024 V2 PROVES Kit we introduced the V4 Flight Controller board and changed the version scheme to have `a`, `b`, `c`, etc varients of a single version rather than ascending the version ladder in record time (we'd be on V9 now if we did that!). This change was primarily based on the idea that a revisions on a major version number would be similar enough to each other to not require completely different firmware to be compiled for operation.
+V0 through V3 Flight Controller Boards were the cornerstone of the 2023 Release V1 PROVES Kit. With the 2024 V2 PROVES Kit we introduced the V4 Flight Controller board and changed the version scheme to have `a`, `b`, `c`, etc varients of a single version rather than ascending the version ladder in record time (we'd be on V17 now if we did that!). This change was primarily based on the idea that a revisions on a major version number would be similar enough to each other to not require completely different firmware to be compiled for operation.
 
 For V5d we added a "Pro" for "Production" version!
 
 ## Current Features
-The Latest (V5d) FC board implements the following components: 
+The Latest (V5e) FC board implements the following components: 
 - RP2350A Microcontroller
 - 128M-Bit W25Q128JVSIQ Flash Memory
 - HopeRF RFM9X UHF Radio Module Slot
