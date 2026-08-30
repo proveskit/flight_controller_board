@@ -1,0 +1,28 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model CMSH3-40MA_TR13_PBFREE
+#/1844112/1047671/2.49/2/3/Schottky Diode
+DEF CMSH3-40MA_TR13_PBFREE D 0 30 Y Y 1 F N
+F0 "D" 500 350 50 H V L CNN
+F1 "CMSH3-40MA_TR13_PBFREE" 500 250 50 H V L CNN
+F2 "DIOM5226X262N" 500 150 50 H I L CNN
+F3 "https://www.arrow.com/en/products/cmsh3-40ma-tr13-pbfree/central-semiconductor" 500 50 50 H I L CNN
+F4 "SURFACE MOUNT SILICON SCHOTTKY RECTIFIERS 3.0 AMP, 20 THRU 100 VOLT" 500 -50 50 H I L CNN "Description"
+F5 "2.62" 500 -150 50 H I L CNN "Height"
+F6 "610-CMSH3-40MA" 500 -250 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Central-Semiconductor/CMSH3-40MA-TR13-PBFREE?qs=u16ybLDytRbWQ%252BRmK%252B2%252Bgg%3D%3D" 500 -350 50 H I L CNN "Mouser Price/Stock"
+F8 "Central Semiconductor" 500 -450 50 H I L CNN "Manufacturer_Name"
+F9 "CMSH3-40MA TR13 PBFREE" 500 -550 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X ~ 1 100 0 100 R 50 50 0 0 P
+X ~ 2 700 0 100 L 50 50 0 0 P
+P 2 0 1 6 300 100 300 -100 N
+P 3 0 1 6 300 100 340 100 340 60 N
+P 3 0 1 6 300 -100 260 -100 260 -60 N
+P 2 0 1 6 200 0 300 0 N
+P 2 0 1 6 500 0 600 0 N
+P 4 0 1 10 300 0 500 100 500 -100 300 0 F
+ENDDRAW
+ENDDEF
+#
+#End Library
