@@ -1,0 +1,125 @@
+;Proteus Design Interchange Format
+(PDIF
+ (vendor "SamacSys Limited")
+ (version 1 0)
+ (library
+  (part "CMSH3-40MA_TR13_PBFREE"
+   (description "SURFACE MOUNT SILICON SCHOTTKY RECTIFIERS 3.0 AMP, 20 THRU 100 VOLT")
+   (family "DIO")
+   (package "DIOM5226X262N")
+   (attribute "Datasheet Link" "https://www.arrow.com/en/products/cmsh3-40ma-tr13-pbfree/central-semiconductor")
+   (attribute "Geometry.Height" "2.62mm")
+   (attribute "Mouser Part Number" "610-CMSH3-40MA")
+   (attribute "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Central-Semiconductor/CMSH3-40MA-TR13-PBFREE?qs=u16ybLDytRbWQ%252BRmK%252B2%252Bgg%3D%3D")
+   (attribute "Manufacturer_Name" "Central Semiconductor")
+   (attribute "Manufacturer_Part_Number" "CMSH3-40MA TR13 PBFREE")
+   (gate
+    (symbol "CMSH3-40MA_TR13_PBFREE")
+    (pin "K" 1 PS)
+    (pin "A" 2 PS)
+   )
+  )
+  (symbol "CMSH3-40MA_TR13_PBFREE"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 300 100) (pt 300 -100))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 300 100) (pt 340 100) (pt 340 60))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 300 -100) (pt 260 -100) (pt 260 -60))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 200 0) (pt 300 0))
+   )
+   (graphic
+    (stroke 10)
+    (path (pt 500 0) (pt 600 0))
+   )
+   (graphic
+    (stroke 10)
+    (path (closed true) (pt 300 0) (pt 500 100) (pt 500 -100) (pt 300 0))
+   )
+   (terminal
+    (body (symbol "PINSHORT") (pt 100 0) (rot 0) (mir 0) (visible true))
+    (name (pt 140 10) (rot 0) (just MIDDLE LEFT) (visible false))
+    (number (pt 60 10) (rot 0) (just BOTTOM RIGHT) (visible true)))
+   (terminal
+    (body (symbol "PINSHORT") (pt 700 0) (rot 0) (mir X) (visible true))
+    (name (pt 140 10) (rot 0) (just MIDDLE LEFT) (visible false))
+    (number (pt 60 10) (rot 0) (just BOTTOM RIGHT) (visible true)))
+  )
+  (symbol "PIN"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 200 0))))
+  (symbol "PINSHORT"
+   (units THOU)
+   (origin (pt 0 0))
+   (graphic
+    (stroke 10)
+    (path (pt 0 0) (pt 100 0))))
+  (package "DIOM5226X262N"
+   (units MM)
+   (layer OCCA
+    (graphic
+     (stroke 0.05)
+     (path
+      (closed true)
+      (pt -3.575 1.71)
+      (pt 3.575 1.71)
+      (pt 3.575 -1.71)
+      (pt -3.575 -1.71)
+      (pt -3.575 1.71))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed true)
+      (pt -2.592 1.302)
+      (pt 2.592 1.302)
+      (pt 2.592 -1.302)
+      (pt -2.592 -1.302)
+      (pt -2.592 1.302))))
+   (layer TASM
+    (graphic
+     (stroke 0.1)
+     (path
+      (closed false)
+      (pt -2.592 0.452)
+      (pt -1.742 1.302))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt 2.592 1.302)
+      (pt -3 1.302))))
+   (layer TSLK
+    (graphic
+     (stroke 0.2)
+     (path
+      (closed false)
+      (pt -2.592 -1.302)
+      (pt 2.592 -1.302))))
+   (leg 1 (pt -2.15 0) (padstack 0))
+   (leg 2 (pt 2.15 0) (padstack 0))
+   (padstack 0
+    (plated false)
+    (pad (layer TCOP) (rectf 1.7 2.35 0 0 0))
+   )
+   (model "CMSH3-40MA_TR13_PBFREE.stp"
+    (euler 0 0 0)
+    (offset 0 0 0)
+   )
+  )
+ )
+)
