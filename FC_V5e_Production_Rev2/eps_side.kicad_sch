@@ -10581,15 +10581,9 @@
 		)
 		(uuid "e91712db-0258-417a-aa50-2bba0a880631")
 	)
-	(wire
-		(pts
-			(xy 91.44 240.03) (xy 86.36 240.03)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e954e4ae-3515-45d1-8265-59b6df6903fa")
+	(no_connect
+		(at 86.36 240.03)
+		(uuid "2f2c8e03-ad0c-4cf3-b620-848aa01e88b4")
 	)
 	(wire
 		(pts
@@ -11906,30 +11900,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-	)
-	(global_label "~{5V_RESET}"
-		(shape output)
-		(at 91.44 240.03 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "adeaf051-5245-46b8-b9c5-8c92730cfe5d")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 103.436 240.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
 			)
 		)
 	)
@@ -17266,7 +17236,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Value" "TPS54226PWPRPWP14_2P31X2P46-L"
+		(property "Value" "TPS54225PWPR"
 			(at 311.15 99.06 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -17310,7 +17280,7 @@
 				)
 			)
 		)
-		(property "Flight" "TPS54226PWPR"
+		(property "Flight" "TPS54225PWPR"
 			(at 368.3 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -17332,7 +17302,7 @@
 				)
 			)
 		)
-		(property "Manufacturer_Part_Number" "TPS54226PWPR"
+		(property "Manufacturer_Part_Number" "TPS54225PWPR"
 			(at 337.4644 81.5086 0)
 			(hide yes)
 			(show_name no)
@@ -17343,7 +17313,7 @@
 				)
 			)
 		)
-		(property "Proto" "TPS54226PWPR"
+		(property "Proto" "TPS54225PWPR"
 			(at 368.3 90.17 0)
 			(hide yes)
 			(show_name no)
