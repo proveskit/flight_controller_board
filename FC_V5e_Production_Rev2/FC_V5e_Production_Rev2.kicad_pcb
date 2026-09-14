@@ -166926,6 +166926,17 @@
 				(justify mirror)
 			)
 		)
+		(property "LCSC" "C555460"
+			(at 0 0 0)
+			(layer "B.SilkS")
+			(hide yes)
+			(uuid "0e266c21-6756-4c9f-a3a7-ab87b6d298d1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(path "/7cbc73fc-c188-4597-842f-d15f69db7471/9bfd0ba2-6386-401e-b2f0-85b318a20093")
 		(sheetname "/Power Systems/")
 		(sheetfile "eps_side.kicad_sch")
@@ -166935,7 +166946,7 @@
 				(pins "1" "2" "3" "4" "5" "6" "7" "15" "14" "13" "12" "11" "10" "9" "8")
 			)
 		)
-		(attr smd dnp)
+		(attr smd)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start 2.2 2.61)

@@ -87,13 +87,13 @@ IC6,LT3652IMSE#PBF,MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm,207.698799,-108.8512,
 J1,Conn_01x06,Molex_Pico-Lock_504050-0691_1x06-1MP_P1.50mm_Horizontal,223.6594,-91.3444,90.0,top
 J10,INHIBIT_P2,Hirose_DF11-4DP-2DSA_2x02_P2.00mm_Vertical,196.0,-122.475001,90.0,top
 J11,Conn_01x06,Molex_Pico-Lock_504050-0691_1x06-1MP_P1.50mm_Horizontal,223.7,-121.55,90.0,top
-J12,USB_C_Receptacle_USB2.0_16P,USB_C_Receptacle_HRO_TYPE-C-31-M-12,221.7,-78.6,-90.0,bottom
+J12,USB_C_Receptacle_USB2.0_16P,USB_C_Receptacle_HRO_TYPE-C-31-M-12,221.7,-78.6,270.0,bottom
 J13,Conn_01x06,Molex_Pico-Lock_504050-0691_1x06-1MP_P1.50mm_Horizontal,223.6,-121.55,270.0,bottom
-J14,Battery Input,Hirose_DF11-12DP-2DSA_2x06_P2.00mm_Vertical,207.999999,-126.2,-90.0,top
+J14,Battery Input,Hirose_DF11-12DP-2DSA_2x06_P2.00mm_Vertical,207.999999,-126.2,270.0,top
 J15,ISS_INHIBIT_Picolock,Molex_Pico-Lock_504050-0291_1x02-1MP_P1.50mm_Horizontal,215.75,-137.525,0.0,top
-J16,DEBUG,Hirose_DF11-12DP-2DSA_2x06_P2.00mm_Vertical,223.5,-66.0,-90.0,top
+J16,DEBUG,Hirose_DF11-12DP-2DSA_2x06_P2.00mm_Vertical,223.5,-66.0,270.0,top
 J18,Payload,Hirose_DF11-12DP-2DSA_2x06_P2.00mm_Vertical,211.7,-66.0,0.0,top
-J19,ISS_INHIBIT,Hirose_DF11-4DP-2DSA_2x02_P2.00mm_Vertical,214.1,-129.100001,-90.0,top
+J19,ISS_INHIBIT,Hirose_DF11-4DP-2DSA_2x02_P2.00mm_Vertical,214.1,-129.100001,270.0,top
 J2,Conn_01x06,Molex_Pico-Lock_504050-0691_1x06-1MP_P1.50mm_Horizontal,223.695,-91.55,270.0,bottom
 J20,RBF_Inhibit,Hirose_DF11-4DP-2DSA_2x02_P2.00mm_Vertical,189.9,-126.1,90.0,top
 J21,Heater Output,Molex_Pico-Lock_504050-0491_1x04-1MP_P1.50mm_Horizontal,151.9,-118.6,-90.0,top
@@ -231,6 +231,7 @@ TP5,TestPoint,TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded,184.5,-98.4,0.0,top
 TP6,RESET,TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded,189.7,-70.4,90.0,bottom
 TP8,RESET,TestPoint_Loop_D1.80mm_Drill1.0mm_Beaded,159.2,-87.1,0.0,top
 U1,TLV1704,TSSOP-14_4.4x5mm_P0.65mm,161.3375,-130.3,90.0,top
+U10,TPS54225PWPR,HTSSOP-14-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask3x3.1mm_ThermalVias,186.23125,-117.65,270.0,bottom
 U11,W25Q128JVS,SOIC-8_5.3x5.3mm_P1.27mm,211.7,-74.3,270.0,top
 U12,LT8610ABEMSE#TRPBF,MSOP-16_L4.0-W3.0-P0.50-LS4.9-BL-EP,183.4,-107.3,270.0,bottom
 U13,E22-400M30S,WIRELM-SMD_E22-400M30S,173.59,-71.0,90.0,top
