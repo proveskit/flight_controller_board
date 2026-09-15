@@ -1,0 +1,25 @@
+{
+  "placements": {
+    "D600":  {"x": 177.625, "y": 152.335, "rot": 0, "side": "F"},
+    "D601":  {"x": 181.575, "y": 152.335, "rot": 0, "side": "F"},
+    "D602":  {"x": 185.525, "y": 152.335, "rot": 0, "side": "F"},
+    "JP600": {"x": 153.795, "y": 145.795, "rot": 0, "side": "F"},
+    "JP601": {"x": 158.385, "y": 145.795, "rot": 0, "side": "F"},
+    "JP602": {"x": 211.9,   "y": 145.79,  "rot": 0, "side": "F"},
+    "JP603": {"x": 200.3,   "y": 145.79,  "rot": 0, "side": "F"},
+    "JP604": {"x": 206.1,   "y": 145.79,  "rot": 0, "side": "F"},
+    "JP605": {"x": 194.5,   "y": 145.79,  "rot": 0, "side": "F"},
+    "JP606": {"x": 188.75,  "y": 145.79,  "rot": 0, "side": "F"},
+    "JP607": {"x": 217.7,   "y": 145.79,  "rot": 0, "side": "F"},
+    "LED600":{"x": 153.545, "y": 158.935, "rot": 0, "side": "F"},
+    "R600":  {"x": 159.915, "y": 158.635, "rot": 0, "side": "F"},
+    "R601":  {"x": 162.825, "y": 158.635, "rot": 0, "side": "F"},
+    "R602":  {"x": 157.005, "y": 158.635, "rot": 0, "side": "F"},
+    "SW600": {"x": 156.475, "y": 154.015, "rot": 0, "side": "F"},
+    "TP600": {"x": 163.225, "y": 152.415, "rot": 0, "side": "F"},
+    "TP601": {"x": 166.775, "y": 152.415, "rot": 0, "side": "F"},
+    "TP602": {"x": 170.325, "y": 152.415, "rot": 0, "side": "F"},
+    "TP603": {"x": 173.875, "y": 152.415, "rot": 0, "side": "F"}
+  },
+  "notes": "strip_left_pyro_shunts detail placement: only R600/R601/R602 change vs v1 (permuted among their own three slots so R602, the LED series resistor, sits adjacent to LED600 instead of 8 mm away across R600/R601). D600-602 (anode-north / cathode-east orientation), TP600-603 (open vertical probe access, no header overhead) and all 9 fixed anchors (JP600-607, SW600) are unchanged from v1 -- already consistent with generic diode/test-point placement practice on review."
+}

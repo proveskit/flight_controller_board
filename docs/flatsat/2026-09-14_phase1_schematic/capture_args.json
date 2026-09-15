@@ -1,0 +1,23 @@
+{
+  "project": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1",
+  "root": "FlatSat_V1.kicad_sch",
+  "rootUuid": "c64c0d72-a9f6-4f3a-891e-1f647558f538",
+  "brief": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase1_schematic/00_pm_brief.md",
+  "docs": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase1_schematic",
+  "scratch": "/private/tmp/claude-501/-Users-ncc-michael-GitHut/76ce4476-5b98-4bdc-b249-03b85212b6e5/scratchpad",
+  "kicad": "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+  "baselineErc": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/baseline/erc.json",
+  "baselineNetlist": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/baseline/netlist.kicadxml",
+  "sheets": [
+    { "key": "emulator_mcu", "file": "emulator_mcu.kicad_sch", "name": "Emulator MCU", "uuid": "8394a2ec-8c1e-41a1-b086-be3289cedfbc", "page": 7, "refdes": "200-299", "model": "opus", "section": "6.1" },
+    { "key": "solar_emulation", "file": "solar_emulation.kicad_sch", "name": "Solar and Sensor Emulation", "uuid": "0ec7a68a-65de-4eda-8407-9dcf20e51c0b", "page": 8, "refdes": "300-399", "model": "opus", "section": "6.2" },
+    { "key": "solar_power_injection", "file": "solar_power_injection.kicad_sch", "name": "Solar Power Injection", "uuid": "88d5f13b-6a4a-4f50-805f-872821082e52", "page": 9, "refdes": "400-449", "model": "sonnet", "section": "6.3" },
+    { "key": "battery_protection_replica", "file": "battery_protection_replica.kicad_sch", "name": "Battery Replica and Bench Power", "uuid": "bb4d499a-05c5-44dd-bd1a-4ed07bbd6ca0", "page": 10, "refdes": "500-599", "model": "opus", "section": "6.4" },
+    { "key": "pyro_inhibit", "file": "pyro_inhibit.kicad_sch", "name": "Pyro Inhibit and Jumpers", "uuid": "ba398093-e7fc-4f25-8f04-4265c3e55b54", "page": 11, "refdes": "600-649", "model": "sonnet", "section": "6.5" },
+    { "key": "bench_io", "file": "bench_io.kicad_sch", "name": "Bench IO", "uuid": "54b8f29e-9dcb-4e24-99b9-415a110b338a", "page": 12, "refdes": "700-799", "model": "sonnet", "section": "6.6" }
+  ],
+  "integrator": { "model": "opus" },
+  "maxFixRounds": 2,
+  "maxCheckRounds": 2,
+  "context": "PROVES FlatSat V1, Phase 1 schematic capture, 2026-09-14. The brief (00_pm_brief.md, rev 2) is the spec; the Fable critique 01_brief_critique.md (21 items) has been folded into it and its datasheet citations are the ones to reuse. The eight label promotions (brief 4.3) are already applied and verified. The FC portion of the project is flight heritage and must not change beyond the eight label promotions. Six sheets are captured in parallel by different agents; each owns one file. Exit criteria: ERC clean on all new sheets (no errors, warnings triaged), every connector-facing net traced, decisions D1-D10 reflected. A separate Fable review-and-fix workflow runs after this one, so do not gold-plate: correct, complete, readable, documented."
+}

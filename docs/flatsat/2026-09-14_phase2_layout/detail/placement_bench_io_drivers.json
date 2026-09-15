@@ -1,0 +1,15 @@
+{
+  "notes": "bench_io_drivers detailed placement v2 -- Q701/Q702/Q703/SW703 unchanged from v1 (0 mm move); R705-R710 (gate-series/gate-pulldown pairs) re-assigned to the 3 existing slot-pairs so each pair sits under its OWN FET's gate pin in left-to-right FET order (Q703, Q701, Q702), fixing the v1 defect where R709/R710 (Q703's gate network) sat 3 columns away under Q702 (12.8/15.6 mm gate-loop legs) instead of under Q703. No new geometry: the 3 slot-pair x-positions (244.955/247.865, 250.775/253.685, 256.595/259.505) and the shared y=76.995 row are reused verbatim from v1, only the ref-to-slot assignment changed. See placement_bench_io_drivers.md for the full rationale and measurements.",
+  "placements": {
+    "Q701": {"x": 251.0,   "y": 73.670, "rot": 0, "side": "F"},
+    "Q702": {"x": 256.0,   "y": 73.670, "rot": 0, "side": "F"},
+    "Q703": {"x": 245.955, "y": 73.675, "rot": 0, "side": "F"},
+    "SW703": {"x": 250.475, "y": 67.475, "rot": 0, "side": "F"},
+    "R709": {"x": 244.955, "y": 76.995, "rot": 0, "side": "F"},
+    "R710": {"x": 247.865, "y": 76.995, "rot": 0, "side": "F"},
+    "R705": {"x": 250.775, "y": 76.995, "rot": 0, "side": "F"},
+    "R706": {"x": 253.685, "y": 76.995, "rot": 0, "side": "F"},
+    "R707": {"x": 256.595, "y": 76.995, "rot": 0, "side": "F"},
+    "R708": {"x": 259.505, "y": 76.995, "rot": 0, "side": "F"}
+  }
+}

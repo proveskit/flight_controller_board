@@ -1,0 +1,128 @@
+{
+  "_comment": "Brief L1 default: right wing to x=296.39 (full height) + bottom strip to y=172.12 (full new width). Validated by the PM on a copy; floorplan proposals may adjust the wing/strip sizes (\u00b115 mm) but must keep the remove regions (they match the exact Rev2 edge segments that the extension replaces) and keep the polyline endpoints on the surviving Rev2 edge endpoints (228.441,47.579) and (143.343,139.074). Wing GND pours carry priority 1 and strip pours priority 2 so they may overlap the FC GND pours that spill past the old edge (same net, different priority = legal).",
+  "remove_edge_regions": [
+    [
+      228.0,
+      47.0,
+      232.0,
+      58.0
+    ],
+    [
+      227.45,
+      55.0,
+      232.0,
+      143.0
+    ],
+    [
+      143.0,
+      138.0,
+      232.0,
+      143.0
+    ]
+  ],
+  "add_edges": {
+    "points": [
+      [
+        228.441,
+        47.579
+      ],
+      [
+        296.39,
+        47.579
+      ],
+      [
+        296.39,
+        172.12
+      ],
+      [
+        143.343,
+        172.12
+      ],
+      [
+        143.343,
+        139.074
+      ]
+    ],
+    "fillet_vertices": [
+      1,
+      2,
+      3
+    ],
+    "fillet_radius": 4.0
+  },
+  "grow_in1_gnd_rect": [
+    139.77,
+    45.13,
+    298.5,
+    174.5
+  ],
+  "new_gnd_pours": [
+    {
+      "layer": "F.Cu",
+      "rect": [
+        232.0,
+        48.5,
+        295.5,
+        171.2
+      ],
+      "name": "GND_F_Cu_wing",
+      "priority": 1
+    },
+    {
+      "layer": "B.Cu",
+      "rect": [
+        232.0,
+        48.5,
+        295.5,
+        171.2
+      ],
+      "name": "GND_B_Cu_wing",
+      "priority": 1
+    },
+    {
+      "layer": "F.Cu",
+      "rect": [
+        144.3,
+        143.0,
+        232.0,
+        171.2
+      ],
+      "name": "GND_F_Cu_strip",
+      "priority": 2
+    },
+    {
+      "layer": "B.Cu",
+      "rect": [
+        144.3,
+        143.0,
+        232.0,
+        171.2
+      ],
+      "name": "GND_B_Cu_strip",
+      "priority": 2
+    }
+  ],
+  "mounting_holes": [
+    [
+      292.39,
+      51.58
+    ],
+    [
+      292.39,
+      168.12
+    ],
+    [
+      147.3,
+      168.12
+    ]
+  ],
+  "stitching": {
+    "via": [
+      0.8,
+      0.4
+    ],
+    "points": []
+  },
+  "clip_heritage_zones_to": "tools/baseline/heritage_rev2.json",
+  "clip_inset_mm": 0.2
+}

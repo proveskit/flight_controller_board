@@ -1,0 +1,882 @@
+{
+ "sheets": [
+  {
+   "datasheet_urls_added": 3,
+   "filled": [],
+   "files_changed": [
+    "/Users/ncc-michael/GitHub/flight_controller_board/FlatSat_V1/emulator_mcu.kicad_sch",
+    "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/gen/emulator_mcu_gen.py",
+    "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/supply_emulator_mcu.md"
+   ],
+   "key": "emulator_mcu",
+   "netlist_diff_summary": "components: base 479, new 479, added 0, removed 0; nets: base 354, new 354; added 0 / removed 0 / changed 0 nets; 0 value/footprint changes project-wide. Sheet-local proof: sch_lint 0 errors/0 warnings (93 instances, 14 lib symbols, 185 wires); harness_erc.sh \"Emulator MCU\" -> 0 violations, 0 error delta. Regeneration is byte-identical to the committed sheet (uuid-stable). Only change: 3 Datasheet property values filled (D201, D202, L200), which were previously empty strings; no LCSC/value/footprint touched.",
+   "report_path": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/supply_emulator_mcu.md",
+   "reverified": [
+    {
+     "ref": "C200",
+     "lcsc": "C15849",
+     "ok": true
+    },
+    {
+     "ref": "C201",
+     "lcsc": "C1525",
+     "ok": true
+    },
+    {
+     "ref": "C202",
+     "lcsc": "C19702",
+     "ok": true
+    },
+    {
+     "ref": "C203",
+     "lcsc": "C1525",
+     "ok": true
+    },
+    {
+     "ref": "C204",
+     "lcsc": "C1525",
+     "ok": true
+    },
+    {
+     "ref": "C205",
+     "lcsc": "C1525",
+     "ok": true
+    },
+    {
+     "ref": "C206",
+     "lcsc": "C1525",
+     "ok": true
+    },
+    {
+     "ref": "C207",
+     "lcsc": "C1525",
+     "ok": true
+    },
+    {
+     "ref": "C208",
+     "lcsc": "C1525",
+     "ok": true
+    },
+    {
+     "ref": "C209",
+     "lcsc": "C1525",
+     "ok": true
+    },
+    {
+     "ref": "C210",
+     "lcsc": "C1525",
+     "ok": true
+    },
+    {
+     "ref": "C211",
+     "lcsc": "C1525",
+     "ok": true
+    },
+    {
+     "ref": "C212",
+     "lcsc": "C1525",
+     "ok": true
+    },
+    {
+     "ref": "C213",
+     "lcsc": "C23733",
+     "ok": true
+    },
+    {
+     "ref": "C214",
+     "lcsc": "C15850",
+     "ok": true
+    },
+    {
+     "ref": "C215",
+     "lcsc": "C23733",
+     "ok": true
+    },
+    {
+     "ref": "C216",
+     "lcsc": "C23733",
+     "ok": true
+    },
+    {
+     "ref": "C217",
+     "lcsc": "C23733",
+     "ok": true
+    },
+    {
+     "ref": "C218",
+     "lcsc": "C1525",
+     "ok": true
+    },
+    {
+     "ref": "C219",
+     "lcsc": "C1525",
+     "ok": true
+    },
+    {
+     "ref": "C220",
+     "lcsc": "C1525",
+     "ok": true
+    },
+    {
+     "ref": "C221",
+     "lcsc": "C1548",
+     "ok": true
+    },
+    {
+     "ref": "C222",
+     "lcsc": "C1548",
+     "ok": true
+    },
+    {
+     "ref": "D200",
+     "lcsc": "C48192",
+     "ok": true,
+     "note": "DB Package=SOD-323 vs symbol footprint D_SOD-323F; F-suffix is a flat-variant footprint naming, not a real package mismatch (FC D4 parity stick)"
+    },
+    {
+     "ref": "D201",
+     "lcsc": "C2290",
+     "ok": true,
+     "note": "Datasheet URL added"
+    },
+    {
+     "ref": "D202",
+     "lcsc": "C2290",
+     "ok": true,
+     "note": "Datasheet URL added"
+    },
+    {
+     "ref": "L200",
+     "lcsc": "C42411119",
+     "ok": true,
+     "note": "DB Package=0806 = metric 2016 = L_pol_2016 footprint; match. Datasheet URL added"
+    },
+    {
+     "ref": "R200",
+     "lcsc": "C25105",
+     "ok": true
+    },
+    {
+     "ref": "R201",
+     "lcsc": "C11702",
+     "ok": true
+    },
+    {
+     "ref": "R202",
+     "lcsc": "C25744",
+     "ok": true
+    },
+    {
+     "ref": "R203",
+     "lcsc": "C17168",
+     "ok": true
+    },
+    {
+     "ref": "R204",
+     "lcsc": "C11702",
+     "ok": true
+    },
+    {
+     "ref": "R205",
+     "lcsc": "C25744",
+     "ok": true
+    },
+    {
+     "ref": "R206",
+     "lcsc": "C11702",
+     "ok": true
+    },
+    {
+     "ref": "R207",
+     "lcsc": "C25900",
+     "ok": true
+    },
+    {
+     "ref": "R208",
+     "lcsc": "C25900",
+     "ok": true
+    },
+    {
+     "ref": "R209",
+     "lcsc": "C25900",
+     "ok": true
+    },
+    {
+     "ref": "R210",
+     "lcsc": "C25900",
+     "ok": true
+    },
+    {
+     "ref": "R211",
+     "lcsc": "C11702",
+     "ok": true
+    },
+    {
+     "ref": "U200",
+     "lcsc": "C42411118",
+     "ok": true,
+     "note": "Extended, stock only 9546 - scarce, buy early per brief"
+    },
+    {
+     "ref": "U201",
+     "lcsc": "C97521",
+     "ok": true
+    },
+    {
+     "ref": "U202",
+     "lcsc": "C51118",
+     "ok": true,
+     "note": "DB Package field reads SOT-25-5; cross-checked against C22365427 (equivalent AP2112K-3.3 part, different mfr, explicitly listed as SOT-23-5 in same DB) confirming this is a DB naming alias for the same physical SOT-23-5 footprint, not a mismatch"
+    },
+    {
+     "ref": "Y200",
+     "lcsc": "C20625731",
+     "ok": true
+    }
+   ],
+   "still_blank": [
+    "TP200 (test point VBUS_EMU) - no LCSC by FC convention, verified against TP2/TP5/TP6/TP8 on the root/eps_side sheets which also carry no LCSC Part property at all and are NOT excluded from BOM/position (in_bom yes, in_pos_files yes, dnp no) - TP200 already matches this exactly, no change made",
+    "TP201 (test point 3V3_EMU) - same as TP200",
+    "TP202 (test point 1V1_EMU) - same as TP200",
+    "TP203 (test point EMU_GPIO_RSVD) - same as TP200"
+   ],
+   "verdict": {
+    "pass": true,
+    "checks_run": "1) Exported a fresh kicadxml netlist from the live project via kicad-cli and ran tools/netlist_diff.py against the frozen Phase-1 final netlist.xml: components base 479/new 479, 0 added/removed; nets base 354/new 354, 0 added/removed/changed \u2014 matches owner's claim exactly. 2) Wrote a project-wide component value/footprint/field diff (base vs current netlist.xml): 0 value/footprint changes anywhere; field-level diffs exist project-wide (other agents' sheets already landed LCSC/Datasheet fills) but for Emulator MCU refs only 3 changes appear \u2014 D201, D202, L200 Datasheet URLs (None -> filled) \u2014 exactly matching 'datasheet_urls_added: 3' and 'filled: []' (no LCSC newly assigned). 3) Ran tools/sch_lint.py --project FlatSat_V1 --path /c64c0d72.../8394a2ec... --refdes-block 200-299 emulator_mcu.kicad_sch: 93 symbol instances, 14 lib symbols, 185 wires, 0 errors, 0 warnings \u2014 matches. 4) Ran tools/harness_erc.sh 'Emulator MCU': violations on sheets matching 'Emulator MCU' = 0 (both from stdout summary and independently parsed erc.json), matches '0 violations, 0 error delta'. 5) Extracted the 47 Emulator MCU components from the fresh netlist (sheetpath names=='/Emulator MCU/'), confirmed count=47, and confirmed exactly TP200-203 (the 4 test points) have no LCSC Part field \u2014 all 43 others do. 6) For every distinct LCSC number on the sheet (18 unique: C15849, C1525, C19702, C23733, C15850, C1548, C48192, C2290, C42411119, C25105, C11702, C25744, C17168, C25900, C42411118, C97521, C51118, C20625731, plus cross-check C22365427) ran `SELECT * FROM parts WHERE \"LCSC Part\"=?` against parts-fts5.db and checked Package vs symbol footprint, MFR.Part vs Value, Library Type and Stock \u2014 all consistent with the reported table; confirmed the two flagged naming aliases (D200 SOD-323 DB row vs D_SOD-323F footprint = FC D4 parity convention; U202 SOT-25-5 DB label vs SOT-23-5 footprint, cross-verified via C22365427's explicit 'SOT-23-5' listing for the same physical AP2112K-3.3 device) are real DB naming quirks, not mismatches. 7) Cross-checked the C200/C15849 as-ordered-BOM citation directly against FC_V5e_Production_Rev2/jlcpcb/production_files/BOM-FC_V5e_Production_Rev2.csv line 19 \u2014 exact match. 8) Verified TP-convention claim directly in FlatSat_V1.kicad_sch (TP2, TP6, TP8) and eps_side.kicad_sch (TP5): all carry in_bom yes/on_board yes/in_pos_files yes/dnp no and no LCSC Part property at all \u2014 TP200-203 in emulator_mcu.kicad_sch match this exactly (verified by grepping the raw symbol blocks). 9) Regenerated the sheet with FLATSAT_PANTRY=tools/pantry python3 tools/gen/emulator_mcu_gen.py (script writes atomically to its default project-relative path); resulting file is git-clean (no diff vs tracked state) and byte-identical (md5 d98e2dcd95e2a462f0c3caae396581f3) to the owner's own before/after scratch copies (emulator_mcu_new.kicad_sch, emulator_mcu_verify.kicad_sch) \u2014 confirms uuid-stable, byte-identical regeneration. 10) Confirmed report_path doc (supply_emulator_mcu.md) content matches all of the above.",
+    "defects": [
+     {
+      "severity": "minor",
+      "ref": "files_changed[0]",
+      "title": "Reported file path uses wrong repo root (GitHub vs GitHut)",
+      "evidence": "Owner's files_changed lists \"/Users/ncc-michael/GitHub/flight_controller_board/FlatSat_V1/emulator_mcu.kicad_sch\" (GitHub, no 't'), but the actual project root is /Users/ncc-michael/GitHut/flight_controller_board (confirmed: /Users/ncc-michael/GitHub does not exist on disk; the real file at the GitHut path has the expected recent mtime and content). This is a typo in the JSON report only \u2014 the correct file was in fact edited and all substantive claims about it verified correctly.",
+      "fix": "Correct the path string in the report/handoff JSON to use GitHut; no code or schematic change needed."
+     }
+    ]
+   }
+  },
+  {
+   "key": "solar_emulation",
+   "datasheet_urls_added": 1,
+   "files_changed": [
+    "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/gen/solar_emulation_gen.py",
+    "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/solar_emulation.kicad_sch",
+    "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/supply_solar_emulation.md"
+   ],
+   "filled": [
+    {
+     "ref": "R304",
+     "value": "43R",
+     "footprint": "Resistor_SMD:R_2010_5025Metric",
+     "lcsc": "C7467404",
+     "mpn": "FRC2010F43R0TS",
+     "lib_type": "Extended",
+     "stock": 9737,
+     "source": "DB query MATCH 'Package:2010 \"MFR.Part\":43R0', highest-stock \u00b11% 750mW row; no Basic 43R/2010 part exists in catalogue"
+    },
+    {
+     "ref": "J300",
+     "value": "Coil Out",
+     "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+     "lcsc": "C492401",
+     "mpn": "PZ254V-11-02P",
+     "lib_type": "Extended",
+     "stock": 1222203,
+     "source": "DB query MATCH '\"Second Category\":\"Pin Header\"', filtered for 1*2P/2.54/Through Hole, highest-stock straight male header; no Basic 2.54mm headers exist in catalogue"
+    }
+   ],
+   "reverified": [
+    {
+     "ref": "C300/C302/C303/C310-C316",
+     "lcsc": "C1525",
+     "ok": true,
+     "note": "100nF 0402 X7R, matches"
+    },
+    {
+     "ref": "C301",
+     "lcsc": "C15195",
+     "ok": true,
+     "note": "10nF 0402 X7R, matches"
+    },
+    {
+     "ref": "C304",
+     "lcsc": "C52923",
+     "ok": true,
+     "note": "1uF 0402 X5R, matches"
+    },
+    {
+     "ref": "R300/R301/R302/R303/R310/R311/R320/R321/R330/R331/R340/R341/R350/R351/R360/R370/R371",
+     "lcsc": "C25744",
+     "ok": true,
+     "note": "10k 0402 1%, matches"
+    },
+    {
+     "ref": "R312-R314/R322-R324/R332-R334/R342-R344/R352-R354/R362/R363/R372-R374",
+     "lcsc": "C25900",
+     "ok": true,
+     "note": "4.7k 0402 1%, matches"
+    },
+    {
+     "ref": "U300/U310-U316",
+     "lcsc": "C130025",
+     "ok": true,
+     "note": "TCA4311ADGKR MSOP-8, matches"
+    },
+    {
+     "ref": "U301",
+     "lcsc": "C28927",
+     "ok": true,
+     "note": "TMP112AIDRLR SOT-563, matches"
+    },
+    {
+     "ref": "U302",
+     "lcsc": "C3678616",
+     "ok": true,
+     "note": "VEML6031X00, matches"
+    },
+    {
+     "ref": "U303",
+     "lcsc": "C527464",
+     "ok": true,
+     "note": "DRV2605LDGSR; JLC package listed VSSOP-10-0.5mm vs schematic footprint TSSOP-10_3x3mm_P0.5mm \u2014 a pre-existing, documented Phase-1 footprint substitution in the generator (library-availability workaround), not an LCSC/value defect; footprint left untouched per this stage's field-only mandate"
+    }
+   ],
+   "still_blank": [],
+   "netlist_diff_summary": "tools/netlist_diff.py against the Phase-1 final netlist.xml: components base 479 new 479 (added 0, removed 0); nets base 354 new 354; added nets (0); removed nets (0); changed nets (0) \u2014 0 value/footprint changes anywhere in the project, confirming this sheet's edits were field-only (LCSC Part + Datasheet on R304 and J300).",
+   "report_path": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/supply_solar_emulation.md",
+   "verdict": {
+    "pass": true,
+    "checks_run": "1) Exported fresh kicadxml netlist from FlatSat_V1.kicad_sch and ran tools/netlist_diff.py against the Phase-1 final netlist.xml: components base 479/new 479 (0 added/removed), nets base 354/new 354, 0 added/removed/changed nets, 0 '~' value/footprint change lines anywhere in the project \u2014 matches owner's claim exactly. 2) Regenerated solar_emulation.kicad_sch via tools/gen/solar_emulation_gen.py (with FLATSAT_PANTRY set) into scratch: output is byte-identical (raw diff empty, not just uuid-stripped) to the committed sheet \u2014 generator round-trips exactly. 3) Ran tools/sch_lint.py on the sheet: '101 symbol instances, 10 lib symbols, 191 wires, 0 errors, 0 warnings' \u2014 matches report verbatim. 4) Ran tools/harness_erc.sh 'Solar and Sensor Emulation': sheet-scoped section shows 'errors: 0', 'warning pin_to_pin 52' \u2014 matches report verbatim (whole-project delta lines are pre-existing baseline noise from other Phase-1 sheets, as the report explains). 5) Queried parts-fts5.db directly for every one of the 9 distinct LCSC numbers used on the sheet (C7467404, C492401, C1525, C15195, C52923, C25744, C25900, C130025, C28927, C3678616, C527464): package/value/tolerance/lib-type/stock/MPN/datasheet all match the schematic Value/Footprint fields and the report's table exactly. 6) Verified R304 (C7467404/FRC2010F43R0TS) is the highest-stock 2010/43R0 row and that zero Basic-library rows exist for 2010/43R0 (39 total rows, all Extended) \u2014 confirms 'no Basic part exists' claim. 7) Verified J300 (C492401/PZ254V-11-02P) is the highest-stock candidate among 143 matching 1x2P/2.54mm/through-hole/male headers, and that the Pin Header second-category has 0 Basic rows total \u2014 confirms 'no Basic 2.54mm headers exist' claim. 8) Verified the added Datasheet URL on J300 matches the DB's Datasheet column for C492401 exactly; confirmed R304 (a passive) intentionally has no Datasheet URL per brief L9 (24 non-passives only). 9) Parsed every non-power symbol block on the sheet (69 refdes) confirming every non-TP part carries an LCSC field and every TP (TP300-306) does not. 10) Checked all three existing root-sheet TestPoint instances (TP2, TP6, TP8 \u2014 the only TP1-8 that exist on the root sheet) directly in FlatSat_V1.kicad_sch: all are in_bom yes / in_pos_files yes / dnp no / no LCSC Part property, and confirmed TP300-306 mirror this pattern exactly (owner correctly left them untouched, matching the FC convention). 11) Confirmed U303's DRV2605L VSSOP-10 vs TSSOP-10 footprint note is a pre-existing, documented Phase-1 substitution in the generator's own LIB_FIXUPS/comments, not a new defect, and correctly left untouched given the field-only mandate.",
+    "defects": [
+     {
+      "severity": "minor",
+      "ref": "U300/U310-U316, U301, U302, U303 (critical ICs)",
+      "title": "No live cart.jlcpcb.com verification recorded for critical ICs",
+      "evidence": "Phase-2 brief L9 says LCSC blanks are filled from the DB 'then live-verified for critical ICs'; the repo CLAUDE.md pre-order procedure step 4 also calls for live verification against cart.jlcpcb.com/shoppingCart/smtGood/getComponentDetail. The owner's report only re-queries the local parts-fts5.db for the 9 already-present LCSC numbers (all of which check out) and does not record any live cart lookup for the four critical IC part numbers on this sheet (TCA4311ADGKR, TMP112AIDRLR, VEML6031X00, DRV2605LDGSR).",
+      "fix": "Not blocking for this stage's scope (all DB data independently reproduced and correct, and the task's reproduce instructions did not require a live cart check), but the PM/integrator should confirm whether a separate aggregate live-verification pass across all six sheets is still planned before order, per brief L9 and CLAUDE.md step 4."
+     }
+    ]
+   }
+  },
+  {
+   "datasheet_urls_added": 4,
+   "filled": [
+    {
+     "ref": "J400",
+     "value": "Terminal_2P_5.08mm",
+     "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+     "lcsc": "C8409",
+     "mpn": "Ningbo Kangnex WJ2EDGKA-5.08-02P-14-00A",
+     "lib_type": "Extended",
+     "stock": 9409,
+     "source": "sqlite3 parts-fts5.db: Description LIKE '%5.08mm%' AND '%1x2P%' AND '%Horizontal Termination%' ORDER BY Stock DESC -> C8409"
+    },
+    {
+     "ref": "J401",
+     "value": "Terminal_2P_5.08mm",
+     "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal",
+     "lcsc": "C8409",
+     "mpn": "Ningbo Kangnex WJ2EDGKA-5.08-02P-14-00A",
+     "lib_type": "Extended",
+     "stock": 9409,
+     "source": "same query as J400"
+    },
+    {
+     "ref": "JP400",
+     "value": "Jumper_2_Open",
+     "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+     "lcsc": "C492401",
+     "mpn": "XFCN PZ254V-11-02P",
+     "lib_type": "Extended",
+     "stock": 1222203,
+     "source": "sqlite3 parts-fts5.db: Second Category='Pin Headers' AND Description LIKE '%1x2P%' AND '%2.54mm%', excluding Right Angle/SMD, ORDER BY Stock DESC -> C492401"
+    },
+    {
+     "ref": "JP401",
+     "value": "Jumper_2_Open",
+     "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+     "lcsc": "C492401",
+     "mpn": "XFCN PZ254V-11-02P",
+     "lib_type": "Extended",
+     "stock": 1222203,
+     "source": "same query as JP400"
+    }
+   ],
+   "key": "solar_power_injection",
+   "netlist_diff_summary": "tools/netlist_diff.py against the Phase-1 final netlist: components base 479 / new 479, added 0 removed 0; nets base 354 / new 354, added 0 / removed 0 / changed 0. Per-ref Value+Footprint check on all 11 sheet refs: identical base vs. fresh. Only LCSC Part / Datasheet / Description fields changed on J400, J401, JP400, JP401 (new LCSC filled); F400/F401/D400/D401 re-verified against the DB, unchanged, no mismatch; TP400/TP401/TP402 unchanged (no LCSC, matches FC test-point convention).",
+   "reverified": [
+    {
+     "ref": "F400",
+     "lcsc": "C207086",
+     "ok": true,
+     "note": "Littelfuse 2920L185DR, package 2920 = Fuse_2920_7451Metric, value 1.85A_PTC_33V matches MFR.Part; no mismatch"
+    },
+    {
+     "ref": "F401",
+     "lcsc": "C207086",
+     "ok": true,
+     "note": "same as F400"
+    },
+    {
+     "ref": "D400",
+     "lcsc": "C2886093",
+     "ok": true,
+     "note": "Comchip CDBA240LL-HF, package SMA(DO-214AC) = D_SMA, value CDBA240LL-HF matches MFR.Part; no mismatch"
+    },
+    {
+     "ref": "D401",
+     "lcsc": "C2886093",
+     "ok": true,
+     "note": "same as D400"
+    }
+   ],
+   "still_blank": [
+    "TP400: no LCSC \u2014 intentional, matches FC's own Connector:TestPoint convention (checked TP2/TP5/TP6/TP8 on the FC root/eps_side sheets: no LCSC Part property, in_bom yes, in_pos_files yes, dnp no \u2014 not excluded from BOM/position, so TP400 is left exactly as-is)",
+    "TP401: no LCSC \u2014 same FC test-point convention, left as-is",
+    "TP402: no LCSC \u2014 same FC test-point convention, left as-is"
+   ],
+   "files_changed": [
+    "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/solar_power_injection.kicad_sch",
+    "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/gen/solar_power_injection_gen.py",
+    "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/supply_solar_power_injection.md"
+   ],
+   "report_path": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/supply_solar_power_injection.md",
+   "verdict": {
+    "pass": true,
+    "checks_run": "1) Exported a fresh kicadxml netlist from the live FlatSat_V1.kicad_sch via kicad-cli and ran tools/netlist_diff.py against the Phase-1 final netlist.xml: components base 479/new 479 (0 added/removed), nets base 354/new 354 (0 added/removed/changed) -- matches owner's summary exactly. 2) Wrote a per-ref field/value/footprint differ over both netlist XMLs for all 11 sheet refs (J400,J401,JP400,JP401,F400,F401,D400,D401,TP400,TP401,TP402): confirmed Value and Footprint are byte-identical for all 11; only LCSC Part/Datasheet/Description changed, and only on J400,J401,JP400,JP401 (4 field-change sets = the claimed 4 datasheet URL additions); F400/F401/D400/D401/TP400-402 have zero field diffs. 3) Independently queried parts-fts5.db for all 4 LCSC numbers on the sheet (C207086, C2886093, C8409, C492401): each returned exactly 1 row matching the report's MPN, package<->footprint, Library Type (Extended), stock, and price tier verbatim (F400/401 2920<->Fuse_2920_7451Metric, D400/401 SMA(DO-214AC)<->D_SMA, J400/401 5.08mm 1x2P Horizontal Termination<->TerminalBlock_Phoenix..._5.08mm_Horizontal, JP400/401 2.54mm 1x2P THT<->PinHeader_1x02_P2.54mm_Vertical). 4) Reproduced the owner's fallback queries: confirmed 0 Basic-library rows exist for Pin Headers or for any 5.08mm-pitch terminal block; re-ran both stock-ranked candidate queries and confirmed C8409 and C492401 are each the highest-stock match among same-pitch/orientation candidates (C492401 by a huge margin: 1,222,203 vs next 237,277). 5) Regenerated the sheet with tools/gen/solar_power_injection_gen.py (FLATSAT_PANTRY=tools/pantry) and diffed against the live solar_power_injection.kicad_sch: byte-for-byte IDENTICAL (proves uuid-stable, generator/sheet parity, and that all field edits are mirrored in the generator). 6) Ran tools/sch_lint.py --strict on the sheet: 17 symbol instances, 8 lib symbols, 24 wires, 0 errors, 0 warnings. 7) Ran tools/harness_erc.sh \"Solar Power Injection\": sheet-scoped violations total 0, errors 0. 8) Independently inspected the FC's own Connector:TestPoint instances (TP2/TP8/TP6 on the root sheet, TP5 on eps_side): all show in_bom yes, on_board yes, dnp no, no LCSC Part property -- then confirmed TP400/TP401/TP402 on this sheet match exactly (in_bom yes, on_board yes, dnp no, no LCSC Part property anywhere in their symbol blocks, verified with a properly bounded block search after an initial unbounded-regex false positive on TP401 was caught and corrected). 9) Checked file mtimes: jlcpcb/project.db and FlatSat_V1.kicad_pcb are older than the sheet/generator/report edits (untouched, consistent with the hard rules), and no project.db rows exist yet for these refs (board not re-synced, as expected at this stage).",
+    "defects": []
+   }
+  },
+  {
+   "datasheet_urls_added": 3,
+   "files_changed": [
+    "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/gen/battery_protection_replica_gen.py",
+    "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/battery_protection_replica.kicad_sch",
+    "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/supply_battery_protection_replica.md"
+   ],
+   "filled": [
+    {
+     "ref": "C512",
+     "value": "47nF",
+     "lcsc": "C1622",
+     "mpn": "CL10B473KB8NNNC",
+     "footprint": "Capacitor_SMD:C_0603_1608Metric",
+     "lib_type": "Basic",
+     "stock": 1010662,
+     "source": "query 2 (unchanged by review-fix)"
+    },
+    {
+     "ref": "C516",
+     "value": "4.7uF",
+     "lcsc": "C19666",
+     "mpn": "CL10A475KO8NNNC",
+     "footprint": "Capacitor_SMD:C_0603_1608Metric",
+     "lib_type": "Basic",
+     "stock": 3663291,
+     "source": "query 3 (unchanged by review-fix)"
+    },
+    {
+     "ref": "J500",
+     "value": "BENCH PSU B+/MID/B-",
+     "lcsc": "C72334",
+     "mpn": "WJ500V-5.08-03P-14-00A",
+     "footprint": "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal",
+     "lib_type": "Extended",
+     "stock": 226856,
+     "source": "query 4, corrected in review-fix pass: SELECT \"LCSC Part\",\"MFR.Part\",Package,\"Library Type\",Description,Stock FROM parts WHERE Package='Plugin,P=5.08mm' AND Description LIKE '%3P%' ORDER BY CAST(Stock AS INTEGER) DESC LIMIT 20; top row (excl. Board Side/Socket 2-part systems) = C72334"
+    },
+    {
+     "ref": "JP500",
+     "value": "MID DIV - FIT",
+     "lcsc": "C358684",
+     "mpn": "MTP125-1102S1",
+     "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+     "lib_type": "Extended",
+     "stock": 237277,
+     "source": "query 5, corrected in review-fix pass: SELECT \"LCSC Part\",\"MFR.Part\",Package,\"Library Type\",Description,Stock FROM parts WHERE Package='Plugin,P=2.54mm' AND Description LIKE '%1x2P%' ORDER BY CAST(Stock AS INTEGER) DESC LIMIT 20; top pin-header row (excl. square-pin/socket part C492401) = C358684"
+    },
+    {
+     "ref": "JP510",
+     "value": "CHG OUT - OPEN",
+     "lcsc": "C358684",
+     "mpn": "MTP125-1102S1",
+     "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+     "lib_type": "Extended",
+     "stock": 237277,
+     "source": "same as JP500, query 5 corrected"
+    },
+    {
+     "ref": "R503",
+     "value": "1.0k 1%",
+     "lcsc": "C17513",
+     "mpn": "0805W8F1001T5E",
+     "footprint": "Resistor_SMD:R_0805_2012Metric",
+     "lib_type": "Basic",
+     "stock": 30684161,
+     "source": "query 6 (unchanged by review-fix)"
+    },
+    {
+     "ref": "R504",
+     "value": "1.0k 1%",
+     "lcsc": "C17513",
+     "mpn": "0805W8F1001T5E",
+     "footprint": "Resistor_SMD:R_0805_2012Metric",
+     "lib_type": "Basic",
+     "stock": 30684161,
+     "source": "query 6 (unchanged by review-fix)"
+    },
+    {
+     "ref": "R514",
+     "value": "750",
+     "lcsc": "C23241",
+     "mpn": "0603WAF7500T5E",
+     "footprint": "Resistor_SMD:R_0603_1608Metric",
+     "lib_type": "Extended",
+     "stock": 603086,
+     "source": "query 7 (unchanged by review-fix)"
+    },
+    {
+     "ref": "R516",
+     "value": "5.23k",
+     "lcsc": "C23068",
+     "mpn": "0603WAF5231T5E",
+     "footprint": "Resistor_SMD:R_0603_1608Metric",
+     "lib_type": "Extended",
+     "stock": 51539,
+     "source": "query 8 (unchanged by review-fix)"
+    },
+    {
+     "ref": "R517",
+     "value": "30.1k",
+     "lcsc": "C23000",
+     "mpn": "0603WAF3012T5E",
+     "footprint": "Resistor_SMD:R_0603_1608Metric",
+     "lib_type": "Extended",
+     "stock": 74544,
+     "source": "query 9 (unchanged by review-fix)"
+    },
+    {
+     "ref": "U511",
+     "value": "BQ25886RGE",
+     "lcsc": "C2765094",
+     "mpn": "BQ25886RGER",
+     "footprint": "Package_DFN_QFN:Texas_RGE0024H_VQFN-24-1EP_4x4mm_P0.5mm_EP2.7x2.7mm",
+     "lib_type": "Extended",
+     "stock": 6948,
+     "source": "query 10 (unchanged by review-fix)"
+    }
+   ],
+   "reverified": [
+    {
+     "ref": "J500",
+     "lcsc": "C72334",
+     "ok": true,
+     "note": "corrected from C474953 in review-fix pass; footprint-compatible single-piece 5.08mm/3P pluggable screw terminal, true top-stock in Package='Plugin,P=5.08mm' class (226,856 vs 11,903 previously)"
+    },
+    {
+     "ref": "JP500",
+     "lcsc": "C358684",
+     "ok": true,
+     "note": "corrected from C7430358 in review-fix pass; true top-stock 1x2P 2.54mm straight pin header in Package='Plugin,P=2.54mm' class (237,277 vs 66,713 previously)"
+    },
+    {
+     "ref": "JP510",
+     "lcsc": "C358684",
+     "ok": true,
+     "note": "same correction as JP500"
+    },
+    {
+     "ref": "C500",
+     "lcsc": "C14663",
+     "ok": true,
+     "note": "pre-existing, re-verified query 1, no mismatch"
+    },
+    {
+     "ref": "C510",
+     "lcsc": "C28323",
+     "ok": true,
+     "note": "pre-existing, re-verified query 1, no mismatch"
+    },
+    {
+     "ref": "C511",
+     "lcsc": "C52306",
+     "ok": true,
+     "note": "pre-existing, re-verified query 1, matches Phase-1 review's own confirmed line"
+    },
+    {
+     "ref": "Q500",
+     "lcsc": "C10879",
+     "ok": true,
+     "note": "pre-existing, re-verified query 1; stock thin (57 units) - flagged as supply risk, unchanged by review-fix"
+    },
+    {
+     "ref": "U511",
+     "lcsc": "C2765094",
+     "ok": true,
+     "note": "pre-existing MPN-exact tape-and-reel match, re-verified query 10; Datasheet field confirmed unchanged (pre-existing, not part of the 3-added count)"
+    }
+   ],
+   "still_blank": [
+    "R515 (5.7k, ICHGSET): non-standard value (not E24 or E96); zero SMD catalogue rows at any package for 5.7k; substituting a nearby E96 value would silently change the design's charge-current setpoint, which this pass is not authorized to do. Left blank, flagged for PM/hardware-lead decision. Unaffected by this review-fix pass."
+   ],
+   "netlist_diff_summary": "Re-ran full proof after the fix: kicad-cli netlist export of the live regenerated project vs the Phase-1 final baseline netlist.xml via tools/netlist_diff.py -> components: base 479, new 479, added 0, removed 0; nets: base 354, new 354, added 0, removed 0, changed 0. Separate field-by-field diff over all 479 components confirms 0 value/footprint changes project-wide. On this sheet exactly 11 LCSC Part additions and 3 Datasheet additions (J500, JP500, JP510) were found, matching the corrected report; R515 remains None->None (untouched). 50 other field-only changes belong to other sheets' concurrently-owned parts, not this sheet.",
+   "report_path": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/supply_battery_protection_replica.md",
+   "key": "battery_protection_replica",
+   "verdict": {
+    "pass": false,
+    "checks_run": "Exported a fresh kicadxml netlist of the live project via kicad-cli and diffed it against the Phase-1 final baseline with tools/netlist_diff.py (0 added/removed/changed nets, 0 added/removed components, 479/479). Wrote an independent field-by-field diff script over all 479 components: confirmed the only differences project-wide are LCSC Part/Datasheet/Description field additions, zero value/footprint changes anywhere, and exactly the 11 LCSC + 3 Datasheet additions on this sheet (C512, C516, J500, JP500, JP510, R503, R504, R514, R516, R517, U511) claimed in the report - no more, no less. Queried parts-fts5.db directly for all 13 'new'/corrected LCSC codes plus the 15 relevant pre-existing codes on this sheet (C14663, C23138, C21190, C25803, C25905, C22935, C25804, C2290, C10879, C87572, C442635, C3235552, C259714, C28323, C165948) and cross-checked MFR.Part, Package, Library Type, Description and Stock against the schematic's Value/Footprint fields - all matched. Independently re-ran queries 4 and 5 (J500, JP500/JP510) with CAST(Stock AS INTEGER) and confirmed C72334 and C358684 are genuinely the top-stock, footprint-correct rows (matching the report's review-fix correction and its stated exclusion reasoning for Board-Side/Socket and square-pin rows). Re-ran queries 2, 3, 6, 7, 8, 9 with proper numeric stock sort to check the report's un-cast (TEXT-sort) SQL for the same latent bug it had already found and fixed for J500/JP500/JP510. Read tools/gen/battery_protection_replica_gen.py and confirmed every lcsc=/datasheet= keyword argument is on the correct ref's place() call with no ref/value cross-wiring. Ran the generator myself into a scratch file and diffed it byte-for-byte against the live battery_protection_replica.kicad_sch (identical) and against the report's own check1/check2 and regen1/regen2 determinism artifacts (each pair byte-identical). Ran tools/sch_lint.py myself (0 errors, 0 warnings, 77 instances/16 lib symbols/137 wires - matches report exactly). Checked TP500-512 exclude_from_bom/in_bom/on_board/in_pos_files/dnp flags against the FC's own TP2/TP6/TP8 root-sheet convention - match (all in_bom yes/on_board yes/in_pos_files yes/dnp no, no LCSC), confirming the 'left as-is' claim. Verified the 'zero Basic connectors in the catalogue' and 'R515 5.7k has zero in-stock SMD rows' claims by direct query.",
+    "defects": [
+     {
+      "severity": "major",
+      "ref": "R516/R517",
+      "title": "R517's LCSC pick is not the true highest-stock candidate the report claims, and the report's Q8/Q9 SQL still carries the exact TEXT-vs-numeric Stock sort bug the review-fix pass explicitly found and fixed for J500/JP500/JP510 in this same report",
+      "evidence": "Report \u00a72 queries 8 and 9 use `ORDER BY \"Library Type\", Stock DESC` (Stock is SQLite TEXT, same bug as the original queries 4/5) and the report states for R517 'Top Extended... C23000 (0603WAF3012T5E), stock 74,544 - selected.' Running the query with a correct `ORDER BY CAST(Stock AS INTEGER) DESC` over the same WHERE clause (Package='0603' AND Description LIKE '% 30.1k\u03a9 %') returns C137745 (RC0603FR-0730K1L) at stock 425,894 - genuinely the top row, ~5.7x more stock than C23000, same package/value/tolerance/tempco class ('100mW 30.1k\u03a9 75V Thick Film Resistor \u00b11% \u00b1100ppm/\u2103'). The literal query as printed in the report, run with a LIMIT and no CAST, does not even surface C23000 as its nominal top row (a raw run of the printed Q8 query returns chaotic ordering topped by a 91-unit-stock part) - meaning the report's stated selection process does not actually produce the part it claims to have picked; the real justification (unstated) appears to be 'same Uniroyal 0603WAF family as the rest of the sheet', not the stock-ranking rationale the report writes down. R516 shows the same pattern on a smaller scale: report picks C23068 (51,539) over the true top C2930111 (FRC0603F5231TS, 54,790, ~6% more stock, same spec).",
+      "fix": "Either (a) correct R517's LCSC to the genuinely top-stock, footprint/spec-matching row (C137745, 425,894 in stock) and regenerate, updating C23000 -> C137745 in the generator, schematic and report (with a fresh netlist_diff proof), or (b) if the Uniroyal-family-consistency rationale is intentional, rewrite report \u00a72 queries 8/9 to state that as the actual selection criterion instead of the currently-false 'Top Extended... selected' stock claim, and fix the SQL to use CAST(Stock AS INTEGER) so it doesn't silently misrepresent the ranking the way queries 4/5 originally did. R516 should get the same treatment (correct to C2930111 or document the real criterion) for consistency, though its stock gap is small enough to be a minor issue on its own."
+     }
+    ]
+   },
+   "unresolved": true
+  },
+  {
+   "key": "pyro_inhibit",
+   "filled": [
+    {
+     "ref": "D600, D601, D602",
+     "value": "BAT54W",
+     "lcsc": "C77328",
+     "mpn": "BAT54W (Jiangsu Changjing)",
+     "lib_type": "Extended",
+     "stock": 7403,
+     "footprint": "Package_TO_SOT_SMD:SOT-323_SC-70",
+     "source": "SELECT ... FROM parts WHERE \"MFR.Part\" LIKE 'BAT54W%' AND Package='SOT-323' ORDER BY CAST(Stock AS INTEGER) DESC -- unchanged pick from rev 1; query text corrected in rev 2 to include the CAST so it actually reproduces the documented C77328/C41374260/C5240621 ordering"
+    },
+    {
+     "ref": "JP600, JP601, JP602, JP603, JP604, JP605, JP606, JP607",
+     "value": "Conn_01x02",
+     "lcsc": "C124375",
+     "mpn": "B-2100S02P-A110 (Ckmtw/Shenzhen Cankemeng)",
+     "lib_type": "Extended",
+     "stock": 159910,
+     "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+     "source": "SELECT ... FROM parts WHERE \"Second Category\"='Pin Headers' AND (Description LIKE '%1x2P%' OR Description LIKE '%1*2P%') AND Package LIKE 'Plugin%' AND Description LIKE '%2.54mm 2.54mm%' ORDER BY CAST(Stock AS INTEGER) DESC -- rev 2 re-pick, replaces rev 1's C5383111 (9,828 stock; found via a bug: FTS5 stores Stock as TEXT so an uncast ORDER BY Stock DESC sorts lexicographically). C124375 is the verified numeric-max within the report's own exact-2.54mm-pitch tie-break filter, 16x the stock of the rev-1 pick."
+    }
+   ],
+   "reverified": [
+    {
+     "ref": "LED600",
+     "lcsc": "C2290",
+     "ok": true,
+     "note": "Match: KT-0603W white 0603, Basic, stock 1,158,040 -- unaffected by the FTS5-stock-sort bug (this query filtered on LCSC Part IN (...), no ORDER BY Stock). No change in rev 2."
+    },
+    {
+     "ref": "R600, R601",
+     "lcsc": "C25900",
+     "ok": true,
+     "note": "Match: 0402WGF4701TCE 4.7k, Basic, stock 18,365,039. Unaffected by the bug (same reasoning as LED600). No change in rev 2."
+    },
+    {
+     "ref": "R602",
+     "lcsc": "C25117",
+     "ok": true,
+     "note": "Match: 0402WGF4700TCE 470R, Basic, stock 1,362,254. Unaffected by the bug. No change in rev 2."
+    }
+   ],
+   "still_blank": [
+    "SW600 (SW_SPST, no matching-footprint part in catalogue -- unchanged, see report)",
+    "TP600, TP601, TP602, TP603 (test points, FC convention -- no LCSC by design, unchanged)"
+   ],
+   "datasheet_urls_added": 8,
+   "netlist_diff_summary": "tools/netlist_diff.py vs final/netlist.xml after the rev-2 fix: components base 479 / new 479, added 0, removed 0; nets base 354 / new 354, added nets (0), removed nets (0), changed nets (0); zero component value/footprint-change lines printed. sch_lint: 23 symbol instances, 8 lib symbols, 41 wires, 0 errors, 0 warnings. harness_erc.sh \\\"Pyro Inhibit\\\": 0 violations, 0 errors (unchanged from rev 1). Generator regenerated twice in a row, byte-identical output (uuid-stable).",
+   "files_changed": [
+    "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/gen/pyro_inhibit_gen.py",
+    "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/pyro_inhibit.kicad_sch",
+    "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/supply_pyro_inhibit.md"
+   ],
+   "report_path": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/supply_pyro_inhibit.md",
+   "verdict": {
+    "pass": true,
+    "checks_run": "Read supply_pyro_inhibit.md and pyro_inhibit_gen.py in full. Independently re-ran every SQL query cited in the report against parts-fts5.db: (1) BAT54W cast query reproduces the exact documented ranking C77328(7403)/C41374260(7108)/C5240621(3000)/.../C2970145 BAT54WFILMY(374) excluded; uncast version reproduces the claimed bug (C28750440 stock='90' sorts first lexicographically) -- confirms the rev-2 CAST fix narrative is accurate. (2) JP600-607 cast query reproduces C124375 (159910, B-2100S02P-A110) as numeric-max within the stated pitch-exact filter, with C5383111 (9828) correctly demoted to 7th place -- confirms the re-pick claim. (3) Re-verified LCSC IN (C2290,C25900,C25117) query reproduces LED600/R600-601/R602 exactly as tabulated (package, Basic, stock, description). Confirmed 0 Basic-library 2.54mm Pin Headers exist in the catalogue (supports the Extended-only claim for JP600-607). Confirmed SW600's reference MFR.Part family (1MS1T1B1M2QES/C22422208) is 0 stock as claimed, supporting the 'left blank' call. Parsed pyro_inhibit.kicad_sch directly: every listed ref (D600-602, JP600-607, LED600, R600-602, SW600, TP600-603) has exactly the Value/Footprint/LCSC/Datasheet/in_bom/in_pos_files fields the report's tables claim, including LCSC=NONE for SW600/TP600-603 as documented. Confirmed FlatSat_V1.kicad_sch root sheet has only TP2/TP6/TP8 as symbols (report's claim about which root TPs exist), and TP2's block shows in_bom yes/in_pos_files yes/no LCSC field, matching the convention pyro_inhibit's TPs follow. Regenerated pyro_inhibit.kicad_sch from tools/gen/pyro_inhibit_gen.py twice in a row: byte-identical to each other and to the committed file (uuid-stable, 78940 bytes both times). Exported a fresh kicadxml netlist from the live project and ran tools/netlist_diff.py against the Phase-1 final netlist: components base 479/new 479, added 0/removed 0; nets base 354/new 354, added/removed/changed nets all 0 -- exact match to the report's claim. Ran tools/sch_lint.py on pyro_inhibit.kicad_sch: '23 symbol instances, 8 lib symbols, 41 wires, 0 errors, 0 warnings' -- verbatim match. Ran tools/harness_erc.sh 'Pyro Inhibit': whole-project baseline 133->192 (+59, pre-existing, errors 11) and sheet-filtered 'total 0, errors: 0' -- verbatim match. Confirmed jlcpcb/project.db mtime (00:20) predates this session's work (now 10:35) and FlatSat_V1.kicad_pcb was not touched by this pass's file list.",
+    "defects": []
+   }
+  },
+  {
+   "key": "bench_io",
+   "filled": [
+    {
+     "ref": "C701",
+     "value": "10uF",
+     "footprint": "Capacitor_SMD:C_0805_2012Metric",
+     "lcsc": "C2182156",
+     "mpn": "EMK212BB7106KG-T",
+     "lib_type": "Extended",
+     "stock": 82290,
+     "source": "DB query: MATCH 10uF+X7R, Package LIKE 0805%, ordered by Library Type then Stock; no Basic 10uF/16V/X7R/0805 exists"
+    },
+    {
+     "ref": "J703",
+     "value": "Bench Header",
+     "footprint": "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical",
+     "lcsc": "C492422",
+     "mpn": "PZ254V-12-10P",
+     "lib_type": "Extended",
+     "stock": 108087,
+     "source": "DB query: Second Category='Pin Headers', Description LIKE 2x5P/2.54mm/Through Hole, ordered by CAST(Stock AS INTEGER) DESC; no Basic pin headers exist at all"
+    },
+    {
+     "ref": "Q701",
+     "value": "BSS138",
+     "footprint": "Package_TO_SOT_SMD:SOT-23",
+     "lcsc": "C78284",
+     "mpn": "BSS138",
+     "lib_type": "Extended",
+     "stock": 212211,
+     "source": "DB query: MFR.Part='BSS138' ORDER BY Stock DESC; no Basic BSS138 exists in any package"
+    },
+    {
+     "ref": "Q702",
+     "value": "BSS138",
+     "footprint": "Package_TO_SOT_SMD:SOT-23",
+     "lcsc": "C78284",
+     "mpn": "BSS138",
+     "lib_type": "Extended",
+     "stock": 212211,
+     "source": "same query as Q701"
+    },
+    {
+     "ref": "Q703",
+     "value": "BSS138",
+     "footprint": "Package_TO_SOT_SMD:SOT-23",
+     "lcsc": "C78284",
+     "mpn": "BSS138",
+     "lib_type": "Extended",
+     "stock": 212211,
+     "source": "same query as Q701"
+    }
+   ],
+   "reverified": [
+    {
+     "ref": "J701",
+     "lcsc": "C165948",
+     "ok": true,
+     "note": "TYPE-C-31-M-12, matches USB_C_Receptacle_HRO_TYPE-C-31-M-12 footprint"
+    },
+    {
+     "ref": "J702",
+     "lcsc": "C160389",
+     "ok": true,
+     "note": "BM03B-SRSS-TB(LF)(SN), matches JST_SH_BM03B-SRSS-TB_1x03-1MP footprint"
+    },
+    {
+     "ref": "R701",
+     "lcsc": "C25905",
+     "ok": true,
+     "note": "5.1k 0402 Basic, matches"
+    },
+    {
+     "ref": "R702",
+     "lcsc": "C25905",
+     "ok": true,
+     "note": "5.1k 0402 Basic, matches"
+    },
+    {
+     "ref": "R703",
+     "lcsc": "C25092",
+     "ok": true,
+     "note": "22R 0402 Basic, matches"
+    },
+    {
+     "ref": "R704",
+     "lcsc": "C25092",
+     "ok": true,
+     "note": "22R 0402 Basic, matches"
+    },
+    {
+     "ref": "R705",
+     "lcsc": "C11702",
+     "ok": true,
+     "note": "1k 0402 Basic, matches"
+    },
+    {
+     "ref": "R706",
+     "lcsc": "C25900",
+     "ok": true,
+     "note": "4.7k 0402 Basic, matches"
+    },
+    {
+     "ref": "R707",
+     "lcsc": "C11702",
+     "ok": true,
+     "note": "1k 0402 Basic, matches"
+    },
+    {
+     "ref": "R708",
+     "lcsc": "C25900",
+     "ok": true,
+     "note": "4.7k 0402 Basic, matches"
+    },
+    {
+     "ref": "R709",
+     "lcsc": "C11702",
+     "ok": true,
+     "note": "1k 0402 Basic, matches"
+    },
+    {
+     "ref": "R710",
+     "lcsc": "C25900",
+     "ok": true,
+     "note": "4.7k 0402 Basic, matches"
+    },
+    {
+     "ref": "SW701",
+     "lcsc": "C72443",
+     "ok": true,
+     "note": "KMR221GLFS SMD 4.6x2.8mm, matches BTN_KMR2_4.6X2.8"
+    },
+    {
+     "ref": "SW702",
+     "lcsc": "C72443",
+     "ok": true,
+     "note": "KMR221GLFS SMD 4.6x2.8mm, matches BTN_KMR2_4.6X2.8"
+    },
+    {
+     "ref": "SW703",
+     "lcsc": "C2887259",
+     "ok": true,
+     "note": "SS12D10G4 071, matches SW-TH_SHOU-HAN_SS12D10G4 THT footprint and Value"
+    }
+   ],
+   "still_blank": [],
+   "datasheet_urls_added": 5,
+   "netlist_diff_summary": "tools/netlist_diff.py against /private/tmp/.../scratchpad/final/netlist.xml vs a fresh kicad-cli sch export netlist of the live regenerated project: components base 479 new 479 (0 added, 0 removed); nets base 354 new 354; added nets (0), removed nets (0), changed nets (0); 0 component value/footprint changes printed. sch_lint.py bench_io.kicad_sch: 39 symbol instances, 12 lib symbols, 66 wires, 0 errors, 0 warnings. harness_erc.sh bench_io: ERC delta vs promoted baseline +0 (pin_not_connected 5/5, power_pin_not_driven 6/6, all pre-existing), 0 violations on Bench IO sheet.",
+   "files_changed": [
+    "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/gen/bench_io_gen.py",
+    "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/bench_io.kicad_sch",
+    "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/supply_bench_io.md"
+   ],
+   "report_path": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/supply_bench_io.md",
+   "verdict": {
+    "pass": true,
+    "checks_run": "1) Exported a fresh kicadxml netlist via kicad-cli from the live project and ran tools/netlist_diff.py against the Phase-1 final netlist.xml: components base 479 new 479 (0 added/removed), nets base 354 new 354, added/removed/changed nets all 0 -- matches claim exactly. 2) Ran tools/sch_lint.py bench_io.kicad_sch --project FlatSat_V1 --path ... --refdes-block 700-799: '39 symbol instances, 12 lib symbols, 66 wires, 0 errors, 0 warnings' -- exact match to claim. 3) Ran tools/harness_erc.sh bench_io: 'violations on sheets matching bench_io: total 0, errors 0'; ERC delta table shows pin_not_connected 5/5 +0 and power_pin_not_driven 6/6 +0 -- matches claim. 4) Copied bench_io.kicad_sch aside, re-ran tools/gen/bench_io_gen.py, diffed output against the copy: byte-identical (REGEN IDENTICAL) -- confirms uuid-stable generator, field-only edits. 5) Queried parts-fts5.db directly for all 11 LCSC numbers on this sheet (C165948, C160389, C492422, C2182156, C78284, C25905, C25092, C11702, C25900, C72443, C2887259): every MFR.Part, Package, Library Type and Stock value returned matches the owner's table exactly. 6) Verified 'no Basic exists' claims independently: BSS138 Basic count = 0 (44 Extended rows total, C78284 is highest stock at 212211, confirmed top of ORDER BY Stock DESC); Pin Headers Basic count = 0; Basic 10uF/0805 rows are only X5R 25V (C15850) and X5R 50V (C440198), not X7R/16V, confirming no Basic match for C701's spec. 7) Verified J703's C492422 is genuinely the highest-stock exact 2x5P/2.54mm/Through-Hole match (108087 vs next-best 24263). 8) Read the actual symbol property blocks in bench_io.kicad_sch for C701, J701, J702, J703, Q701, Q702, Q703, R701, R703, R705, R706, SW701, SW703, TP701 and confirmed Value/Footprint/LCSC Part/Description/Datasheet text matches the report's table verbatim. 9) Confirmed TP701 has (in_bom yes)(on_board yes)(in_pos_files yes)(dnp no) and no LCSC field, matching the three Connector:TestPoint instances on the root sheet (same flags) -- FC test-point convention correctly followed, no change needed as claimed. 10) Confirmed exactly 5 lcsc.com datasheet URLs present (J701, J702, J703, SW701, SW702) matching the claimed count, and confirmed the '(needs LCSC)' TODO string is absent from both the sheet and the generator (trim claim consistent with current state).",
+    "defects": []
+   }
+  }
+ ],
+ "report": {
+  "report_path": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/supply_chain_report.md",
+  "filled": 33,
+  "blank": 2,
+  "extended_count": 67,
+  "risks": [
+   "IRF7458 (Q500/Q501, battery_protection_replica, C10879): stock 57, 2/board -> only ~28 boards' worth; scarcest part in the whole pass, pre-existing pick unchanged, top lifetime-buy candidate",
+   "VEML6031X00 (U302, solar_emulation, C3678616): stock 519, thinnest margin among the 7 named critical ICs",
+   "RP2350A (U200, emulator_mcu, C42411118): stock 9546, same LCSC line as the FC's own U18 RP2350A -- emulator now competes with the flight board for the same scarce Extended SKU",
+   "BQ25886RGER (U511, battery_protection_replica, C2765094): stock 6948, Extended, no Basic BQ2588x alternative exists",
+   "R5460N208AA-TR-FE (U500, battery_protection_replica, C259714): stock 2860, Extended, pre-existing/unchanged",
+   "TCA4311ADGKR (U300/U310-U316 x8 per board, solar_emulation, C130025): stock 2691, Extended, single SKU, no sibling checked",
+   "DRV2605LDGSR (U303, solar_emulation, C527464): stock 2442, Extended; DB Package label VSSOP-10 vs schematic footprint TSSOP-10 is a documented pre-existing Phase-1 substitution, not touched this stage",
+   "battery_protection_replica sheet verdict = FAIL (unresolved): R516/R517 were picked via a stock-sort SQL bug (TEXT not numeric) -- both LCSC picks are electrically/footprint correct and in stock, but not the true top-stock rows (true top for R517 is C137745 at 425,894 vs picked C23000 at 74,544, ~5.7x gap; R516 true top C2930111 at 54,790 vs picked C23068 at 51,539, ~6% gap) -- not a build-stopper but flagged for PM/integrator to accept or re-pick before board re-sync",
+   "R515 (battery_protection_replica, ICHGSET): non-standard 5.7k value with zero SMD catalogue rows at any package; left blank rather than silently substitute a nearby E96 value that would change the replica's charge-current setpoint -- needs a PM/hardware-lead decision",
+   "SW600 (pyro_inhibit, slide switch): no catalogue part matches the footprint; left blank, unchanged from Phase 1",
+   "2.54mm pin headers used across all six sheets concentrate on 2-3 LCSC SKUs (C492401, C358684, C492422); zero Basic-library pin headers exist in the catalogue at any pin count, confirmed by direct query"
+  ]
+ }
+}

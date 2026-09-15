@@ -1,0 +1,19 @@
+{
+  "_runs": "Run 1: stage=floorplan (stops for the owner's review of floorplan.md + img/). Run 2: stage=build with floorplanJson = the approved docs/.../floorplan.json.",
+  "stage": "floorplan",
+  "keepoutJson": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/pcb/fc_keepout.json",
+  "project": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1",
+  "board": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/FlatSat_V1.kicad_pcb",
+  "docs": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout",
+  "scratch": "/private/tmp/claude-501/-Users-ncc-michael-GitHut/76ce4476-5b98-4bdc-b249-03b85212b6e5/scratchpad",
+  "brief": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/00_pm_brief.md",
+  "kicadPy": "/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3",
+  "kicad": "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+  "heritageSnap": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/baseline/heritage_rev2.json",
+  "drcBaseline": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/baseline/drc_prelayout.json",
+  "netlist": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/baseline/netlist_phase2.kicadxml",
+  "models": { "proposal": "sonnet", "judge": "opus", "build": "sonnet", "route": "sonnet", "fix": "sonnet", "fixEscalate": "opus", "docs": "sonnet" },
+  "proposals": 3,
+  "maxFixRounds": 3,
+  "context": "PROVES FlatSat V1 Phase 2 layout, 2026-09-14. The live board has been synced from the post-supply-chain schematic (218 new footprints staged east of the outline, 8 nets renamed, parity at the 11 pre-existing FC items, heritage 0). tools/pcb/outline_L1.json is the validated default extension (board 153 x 125 mm); floorplan proposals may adjust it within brief L1. The routing recipe in tools/pcb/README.md was validated by an agent on a scratch copy; follow it literally. Model policy: Sonnet for everything except the floorplan judge and DRC escalation (Opus). Nothing on the flatsat-v1 branch is committed; do not commit."
+}

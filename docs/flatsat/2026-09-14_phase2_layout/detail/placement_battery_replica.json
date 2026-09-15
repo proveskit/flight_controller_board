@@ -1,0 +1,36 @@
+{
+  "notes": "battery_replica detail placement v2 -- J500/JP500 fixed; U315,U500,Q500,Q501 kept at v1 position (0 mm move, rotation only where noted) to preserve L11 attachment reach exactly; all support passives re-clustered against TCA4311A (U315) and R5460N208AA (U500) pins per datasheet guidance, within courtyard-verified clearances of the fixed anchors and of neighbouring blocks' v1 parts (JP602-607, JP401, J400, F400, D400).",
+  "placements": {
+    "J500":  {"x": 202.92, "y": 165.2,  "rot": 0,   "side": "F"},
+    "JP500": {"x": 213.1,  "y": 154.18, "rot": 0,   "side": "F"},
+    "U315":  {"x": 223.0,  "y": 147.5,  "rot": 0,   "side": "F"},
+    "U500":  {"x": 207.8,  "y": 155.45, "rot": 0,   "side": "F"},
+    "Q500":  {"x": 192.6,  "y": 155.45, "rot": 0,   "side": "F"},
+    "Q501":  {"x": 201.3,  "y": 155.45, "rot": 0,   "side": "F"},
+
+    "C315":  {"x": 220.24, "y": 145.35, "rot": 90,  "side": "F"},
+    "R362":  {"x": 226.5,  "y": 145.35, "rot": 0,   "side": "F"},
+    "R363":  {"x": 226.5,  "y": 149.65, "rot": 0,   "side": "F"},
+    "R360":  {"x": 222.02, "y": 151.8,  "rot": 0,   "side": "F"},
+
+    "R501":  {"x": 199.425,"y": 151.3,  "rot": 0,   "side": "F"},
+    "R502":  {"x": 202.775,"y": 151.3,  "rot": 0,   "side": "F"},
+    "C502":  {"x": 206.125,"y": 151.3,  "rot": 0,   "side": "F"},
+    "C500":  {"x": 209.475,"y": 151.3,  "rot": 0,   "side": "F"},
+    "C501":  {"x": 212.825,"y": 151.3,  "rot": 0,   "side": "F"},
+    "R500":  {"x": 216.175,"y": 151.3,  "rot": 0,   "side": "F"},
+
+    "R503":  {"x": 217.0,  "y": 154.0,  "rot": 0,   "side": "F"},
+    "R504":  {"x": 220.75, "y": 154.0,  "rot": 0,   "side": "F"},
+
+    "C503":  {"x": 191.0,  "y": 160.0,  "rot": 0,   "side": "F"},
+    "R505":  {"x": 195.0,  "y": 160.0,  "rot": 0,   "side": "F"},
+
+    "TP500": {"x": 190.0,  "y": 163.5,  "rot": 0,   "side": "F"},
+    "TP501": {"x": 194.0,  "y": 163.5,  "rot": 0,   "side": "F"},
+    "TP502": {"x": 198.0,  "y": 163.5,  "rot": 0,   "side": "F"},
+    "TP503": {"x": 190.0,  "y": 168.5,  "rot": 0,   "side": "F"},
+    "TP504": {"x": 194.0,  "y": 168.5,  "rot": 0,   "side": "F"},
+    "TP505": {"x": 198.0,  "y": 168.5,  "rot": 0,   "side": "F"}
+  }
+}

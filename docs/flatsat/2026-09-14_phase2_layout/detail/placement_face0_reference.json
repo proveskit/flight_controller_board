@@ -1,0 +1,21 @@
+{
+  "notes": "Detailed placement, block face0_reference -- fix round 1 (audit response). Passives re-placed adjacent to the specific IC pin each one decouples/pulls-up/loads, per the flown XY_Face_V4 reference layout (same schematic, refs/upgraded/XY_Face_V4) measured directly with pcbnew, and per TCA4311A/DRV2605L/TMP112/VEML6031X00 datasheet guidance. J300 (fixed anchor) unmoved/unrotated. Round-1 changes vs the initial delivery: (1) C301 rotated 0->270 deg and repositioned so BOTH its pads sit close to U301's V+ pin (pad5) and U301's nearest GND pin (pad4), fixing the audit's ground-return-path finding for this cap (2.478mm -> 1.505mm, and now symmetric with the hot-side 1.505mm). (2) U302 shifted an additional +0.25mm in x (total move from v1 now 1.025mm, still << 3mm budget) to widen the C302 pocket. (3) C302 repositioned within that widened pocket (now also y-aligned exactly with U302 pin6/VDD, shrinking rounding on that loop slightly) -- this fixes all 3 audit-flagged courtyard-clearance failures (C302<->U303, C302<->U302, C302<->R304), independently re-measured with true polygon-vertex distances (the same convention apply_placement.py's hard overlap gate uses), not axis-aligned bounding boxes. U301, U303, C303, C304, R304, TP300-306 unchanged from round 1.",
+  "placements": {
+    "J300":  {"x": 270.795,  "y": 118.175, "rot": 0,   "side": "F"},
+    "U301":  {"x": 270.225,  "y": 128.260, "rot": 0,   "side": "F"},
+    "C301":  {"x": 272.425,  "y": 128.510, "rot": 270, "side": "F"},
+    "U303":  {"x": 276.745,  "y": 119.680, "rot": 0,   "side": "F"},
+    "C304":  {"x": 274.600,  "y": 116.850, "rot": 0,   "side": "F"},
+    "C303":  {"x": 278.900,  "y": 116.850, "rot": 0,   "side": "F"},
+    "U302":  {"x": 283.550,  "y": 117.886, "rot": 0,   "side": "F"},
+    "C302":  {"x": 280.9125, "y": 118.006, "rot": 90,  "side": "F"},
+    "R304":  {"x": 283.600,  "y": 121.460, "rot": 0,   "side": "F"},
+    "TP300": {"x": 270.275,  "y": 124.795, "rot": 0,   "side": "F"},
+    "TP301": {"x": 273.825,  "y": 124.795, "rot": 0,   "side": "F"},
+    "TP302": {"x": 277.375,  "y": 124.795, "rot": 0,   "side": "F"},
+    "TP303": {"x": 280.925,  "y": 124.795, "rot": 0,   "side": "F"},
+    "TP304": {"x": 284.475,  "y": 124.795, "rot": 0,   "side": "F"},
+    "TP305": {"x": 288.025,  "y": 124.795, "rot": 0,   "side": "F"},
+    "TP306": {"x": 291.575,  "y": 124.795, "rot": 0,   "side": "F"}
+  }
+}

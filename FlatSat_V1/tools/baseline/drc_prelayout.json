@@ -1,0 +1,2124 @@
+{
+    "$schema": "https://schemas.kicad.org/drc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-09-14T09:59:03",
+    "ignored_checks": [
+        {
+            "description": "Thermal relief connection to zone incomplete",
+            "key": "starved_thermal"
+        },
+        {
+            "description": "Footprint has no courtyard defined",
+            "key": "missing_courtyard"
+        },
+        {
+            "description": "Track endpoint not centered on via",
+            "key": "track_not_centered_on_via"
+        },
+        {
+            "description": "Tuning profile track geometries",
+            "key": "tuning_profile_track_geometries"
+        },
+        {
+            "description": "Footprint doesn't match symbol's footprint filters",
+            "key": "footprint_filters_mismatch"
+        },
+        {
+            "description": "Silkscreen clearance",
+            "key": "silk_overlap"
+        },
+        {
+            "description": "Silkscreen clipped by solder mask",
+            "key": "silk_over_copper"
+        },
+        {
+            "description": "Silkscreen clipped by board edge",
+            "key": "silk_edge_clearance"
+        },
+        {
+            "description": "Text height out of range",
+            "key": "text_height"
+        },
+        {
+            "description": "PTH inside courtyard",
+            "key": "pth_inside_courtyard"
+        },
+        {
+            "description": "NPTH inside courtyard",
+            "key": "npth_inside_courtyard"
+        },
+        {
+            "description": "Footprint doesn't match copy in library",
+            "key": "lib_footprint_mismatch"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.1",
+    "schematic_parity": [
+        {
+            "description": "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad doesn't match footprint given by symbol ()",
+            "items": [
+                {
+                    "description": "Footprint H1",
+                    "pos": {
+                        "x": 147.3,
+                        "y": 138.0
+                    },
+                    "uuid": "24fa59b6-bbbe-413d-93a0-3c82fc48fd92"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad doesn't match footprint given by symbol ()",
+            "items": [
+                {
+                    "description": "Footprint H2",
+                    "pos": {
+                        "x": 227.3,
+                        "y": 138.0
+                    },
+                    "uuid": "17944db7-8e7d-4fbb-97e7-acf6c8f6441b"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint R26",
+                    "pos": {
+                        "x": 219.5,
+                        "y": 76.4
+                    },
+                    "uuid": "349c4a2f-1445-433c-9a4a-b802e26f5cb8"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Footprint attributes don't match symbol: 'Exclude from bill of materials' settings differ",
+            "items": [
+                {
+                    "description": "Footprint R27",
+                    "pos": {
+                        "x": 219.2,
+                        "y": 80.9
+                    },
+                    "uuid": "28badd70-2101-4268-a86b-fd5561f6f2e4"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Missing footprint TP9 (TestPoint-MinTH)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP10 (TestPoint-MinTH)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP11 (TestPoint-MinTH)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP12 (TestPoint-MinTH)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP13 (TestPoint-MinTH)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Pad net (/Power Systems/VBATT_SENSE) doesn't match net given by schematic (VBATT_SENSE)",
+            "items": [
+                {
+                    "description": "Pad 1 [/Power Systems/VBATT_SENSE] of C42 on B.Cu",
+                    "pos": {
+                        "x": 204.708799,
+                        "y": 106.391199
+                    },
+                    "uuid": "e8774927-9941-4afc-b4ea-ba26ec5fbe76"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/VBATT_SENSE) doesn't match net given by schematic (VBATT_SENSE)",
+            "items": [
+                {
+                    "description": "Pad 2 [/Power Systems/VBATT_SENSE] of D12 on F.Cu",
+                    "pos": {
+                        "x": 205.475,
+                        "y": 104.6
+                    },
+                    "uuid": "d0d66cda-a133-4c27-a598-f270331153b3"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/VBATT_SENSE) doesn't match net given by schematic (VBATT_SENSE)",
+            "items": [
+                {
+                    "description": "Pad 9 [/Power Systems/VBATT_SENSE] of IC6 on B.Cu",
+                    "pos": {
+                        "x": 207.373799,
+                        "y": 106.7012
+                    },
+                    "uuid": "960e4927-7201-407a-9ed7-9e95c25e14cc"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/VBATT_SENSE) doesn't match net given by schematic (VBATT_SENSE)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [/Power Systems/VBATT_SENSE] of J7",
+                    "pos": {
+                        "x": 203.0,
+                        "y": 121.525001
+                    },
+                    "uuid": "2c688e70-e67d-45f2-ae69-14ef2768fae2"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/INHIB_2) doesn't match net given by schematic (INHIB_2)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/Power Systems/INHIB_2] of J7",
+                    "pos": {
+                        "x": 201.0,
+                        "y": 121.525001
+                    },
+                    "uuid": "81a92b3c-686f-46bd-9003-4b773fd4484a"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/VBATT_SENSE) doesn't match net given by schematic (VBATT_SENSE)",
+            "items": [
+                {
+                    "description": "PTH pad 3 [/Power Systems/VBATT_SENSE] of J7",
+                    "pos": {
+                        "x": 203.0,
+                        "y": 123.525001
+                    },
+                    "uuid": "44f54d4f-559f-4402-a245-5b1fdb806e75"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/INHIB_2) doesn't match net given by schematic (INHIB_2)",
+            "items": [
+                {
+                    "description": "PTH pad 4 [/Power Systems/INHIB_2] of J7",
+                    "pos": {
+                        "x": 201.0,
+                        "y": 123.525001
+                    },
+                    "uuid": "df8467d0-feba-4c1b-b75e-c3dad4e36dff"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/INHIB_1) doesn't match net given by schematic (INHIB_1)",
+            "items": [
+                {
+                    "description": "Pad 1 [/Power Systems/INHIB_1] of J8 on F.Cu",
+                    "pos": {
+                        "x": 206.0,
+                        "y": 134.73
+                    },
+                    "uuid": "cf8286c8-e222-42bd-abd4-6603fd34c28a"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/VBATT_SENSE) doesn't match net given by schematic (VBATT_SENSE)",
+            "items": [
+                {
+                    "description": "Pad 2 [/Power Systems/VBATT_SENSE] of J8 on F.Cu",
+                    "pos": {
+                        "x": 207.5,
+                        "y": 134.73
+                    },
+                    "uuid": "dbb87cd0-e8db-4413-a3d4-7bc3dbd36cad"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/INHIB_2) doesn't match net given by schematic (INHIB_2)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [/Power Systems/INHIB_2] of J10",
+                    "pos": {
+                        "x": 197.0,
+                        "y": 121.475001
+                    },
+                    "uuid": "d45e23b5-c78b-4cd6-a3bf-7c0c5dfff588"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/IN_RBF) doesn't match net given by schematic (IN_RBF)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/Power Systems/IN_RBF] of J10",
+                    "pos": {
+                        "x": 195.0,
+                        "y": 121.475001
+                    },
+                    "uuid": "1cb2369b-73e5-448b-8aef-71dfec0cd1e8"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/INHIB_2) doesn't match net given by schematic (INHIB_2)",
+            "items": [
+                {
+                    "description": "PTH pad 3 [/Power Systems/INHIB_2] of J10",
+                    "pos": {
+                        "x": 197.0,
+                        "y": 123.475001
+                    },
+                    "uuid": "15ee69c2-cd97-456a-87a5-949932e38b74"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/IN_RBF) doesn't match net given by schematic (IN_RBF)",
+            "items": [
+                {
+                    "description": "PTH pad 4 [/Power Systems/IN_RBF] of J10",
+                    "pos": {
+                        "x": 195.0,
+                        "y": 123.475001
+                    },
+                    "uuid": "6da3b21e-b452-4d70-b16e-f2f90b6b011a"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/B-) doesn't match net given by schematic (B-)",
+            "items": [
+                {
+                    "description": "PTH pad 2 [/Power Systems/B-] of J14",
+                    "pos": {
+                        "x": 209.0,
+                        "y": 131.2
+                    },
+                    "uuid": "6163878b-3210-4903-b371-cba5d1586b86"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/B-) doesn't match net given by schematic (B-)",
+            "items": [
+                {
+                    "description": "PTH pad 4 [/Power Systems/B-] of J14",
+                    "pos": {
+                        "x": 208.999999,
+                        "y": 129.2
+                    },
+                    "uuid": "b090a98f-b8d2-48d3-91d9-e4babbc39bdc"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/B-) doesn't match net given by schematic (B-)",
+            "items": [
+                {
+                    "description": "PTH pad 6 [/Power Systems/B-] of J14",
+                    "pos": {
+                        "x": 208.999999,
+                        "y": 127.199999
+                    },
+                    "uuid": "96f84ea0-bd18-4ff4-9552-8ddcb925d0a7"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/B-) doesn't match net given by schematic (B-)",
+            "items": [
+                {
+                    "description": "PTH pad 8 [/Power Systems/B-] of J14",
+                    "pos": {
+                        "x": 208.999999,
+                        "y": 125.2
+                    },
+                    "uuid": "9d7e6762-a21a-4f08-a683-948df2237ae5"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/B-) doesn't match net given by schematic (B-)",
+            "items": [
+                {
+                    "description": "Pad 1 [/Power Systems/B-] of J15 on F.Cu",
+                    "pos": {
+                        "x": 215.0,
+                        "y": 134.73
+                    },
+                    "uuid": "50015ecd-3fad-4e4a-a779-f24fe7278481"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/B-) doesn't match net given by schematic (B-)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [/Power Systems/B-] of J19",
+                    "pos": {
+                        "x": 213.1,
+                        "y": 130.100001
+                    },
+                    "uuid": "084a7eb3-e9df-4a45-a347-2c6965c64d91"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/B-) doesn't match net given by schematic (B-)",
+            "items": [
+                {
+                    "description": "PTH pad 3 [/Power Systems/B-] of J19",
+                    "pos": {
+                        "x": 213.1,
+                        "y": 128.100001
+                    },
+                    "uuid": "10fa5bf2-d899-40f8-895d-c7cfe64503ab"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/IN_RBF) doesn't match net given by schematic (IN_RBF)",
+            "items": [
+                {
+                    "description": "PTH pad 1 [/Power Systems/IN_RBF] of J20",
+                    "pos": {
+                        "x": 190.9,
+                        "y": 125.1
+                    },
+                    "uuid": "731bfb86-e381-45ae-a987-8bc2f290abc9"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/IN_RBF) doesn't match net given by schematic (IN_RBF)",
+            "items": [
+                {
+                    "description": "PTH pad 3 [/Power Systems/IN_RBF] of J20",
+                    "pos": {
+                        "x": 190.9,
+                        "y": 127.1
+                    },
+                    "uuid": "9d0e2443-df43-4cdf-95be-947de77c4f89"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/IN_RBF) doesn't match net given by schematic (IN_RBF)",
+            "items": [
+                {
+                    "description": "Pad 1 [/Power Systems/IN_RBF] of J29 on F.Cu",
+                    "pos": {
+                        "x": 196.975,
+                        "y": 134.805
+                    },
+                    "uuid": "27d270b9-82ed-4d42-bf87-3c7c604b7b2e"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/INHIB_1) doesn't match net given by schematic (INHIB_1)",
+            "items": [
+                {
+                    "description": "Pad 2 [/Power Systems/INHIB_1] of J29 on F.Cu",
+                    "pos": {
+                        "x": 198.475,
+                        "y": 134.805
+                    },
+                    "uuid": "639997cf-3c3c-4e5d-9153-16a1a9be4fab"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/IN_RBF) doesn't match net given by schematic (IN_RBF)",
+            "items": [
+                {
+                    "description": "Pad 2 [/Power Systems/IN_RBF] of J30 on F.Cu",
+                    "pos": {
+                        "x": 189.5,
+                        "y": 134.73
+                    },
+                    "uuid": "6c62edc9-f389-4066-af68-c40cec336c18"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/VBATT_SENSE) doesn't match net given by schematic (VBATT_SENSE)",
+            "items": [
+                {
+                    "description": "Pad 2 [/Power Systems/VBATT_SENSE] of R71 on B.Cu",
+                    "pos": {
+                        "x": 203.2,
+                        "y": 106.275
+                    },
+                    "uuid": "e3489734-10cd-45d7-8518-b417f5bcfa84"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/VBATT_SENSE) doesn't match net given by schematic (VBATT_SENSE)",
+            "items": [
+                {
+                    "description": "Pad 1 [/Power Systems/VBATT_SENSE] of R75 on B.Cu",
+                    "pos": {
+                        "x": 206.008799,
+                        "y": 104.8037
+                    },
+                    "uuid": "a5211e96-f12c-4c78-af68-4ff5a207406a"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/VBATT_SENSE) doesn't match net given by schematic (VBATT_SENSE)",
+            "items": [
+                {
+                    "description": "Pad 2 [/Power Systems/VBATT_SENSE] of R109 on B.Cu",
+                    "pos": {
+                        "x": 201.6,
+                        "y": 116.1
+                    },
+                    "uuid": "61acacba-7338-4a5b-8d71-55aab7a3b9fd"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Package_SO:HTSSOP-14-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask3x3.1mm_ThermalVias doesn't match footprint given by symbol (MaxLib:PWP14_2P31X2P46-L)",
+            "items": [
+                {
+                    "description": "Footprint U10",
+                    "pos": {
+                        "x": 186.23125,
+                        "y": 117.65
+                    },
+                    "uuid": "aa971def-061c-419f-8547-f77b4beee8c5"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_symbol_mismatch"
+        },
+        {
+            "description": "Pad net (/Power Systems/VBATT_SENSE) doesn't match net given by schematic (VBATT_SENSE)",
+            "items": [
+                {
+                    "description": "Pad 2 [/Power Systems/VBATT_SENSE] of U16 on F.Cu",
+                    "pos": {
+                        "x": 202.075,
+                        "y": 115.7625
+                    },
+                    "uuid": "2c9ca8cc-f4b9-4fc7-91e9-ad9a46d29fd2"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/Load Switches/Heater_EN) doesn't match net given by schematic (Heater_EN)",
+            "items": [
+                {
+                    "description": "Pad 1 [/Power Systems/Load Switches/Heater_EN] of R100 on B.Cu",
+                    "pos": {
+                        "x": 172.5,
+                        "y": 129.91
+                    },
+                    "uuid": "6520ea21-296c-4c53-bf1c-74d1d8cd133b"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/Load Switches/Deploy2_EN) doesn't match net given by schematic (Deploy2_EN)",
+            "items": [
+                {
+                    "description": "Pad 1 [/Power Systems/Load Switches/Deploy2_EN] of R103 on B.Cu",
+                    "pos": {
+                        "x": 190.29,
+                        "y": 91.9
+                    },
+                    "uuid": "97aa454b-56f9-47b8-bd23-8b41cbeffdea"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/Load Switches/Deploy1_EN) doesn't match net given by schematic (Deploy1_EN)",
+            "items": [
+                {
+                    "description": "Pad 1 [/Power Systems/Load Switches/Deploy1_EN] of R104 on F.Cu",
+                    "pos": {
+                        "x": 216.760624,
+                        "y": 85.139376
+                    },
+                    "uuid": "aa25230a-b7bf-401a-aad0-02a6570162f9"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/Load Switches/Deploy1_EN) doesn't match net given by schematic (Deploy1_EN)",
+            "items": [
+                {
+                    "description": "Pad 3 [/Power Systems/Load Switches/Deploy1_EN] of U6 on B.Cu",
+                    "pos": {
+                        "x": 174.83,
+                        "y": 132.329999
+                    },
+                    "uuid": "75bcc3bb-57e0-4fff-96cf-8ea4907e44b5"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/Load Switches/Deploy1_EN) doesn't match net given by schematic (Deploy1_EN)",
+            "items": [
+                {
+                    "description": "Pad 4 [/Power Systems/Load Switches/Deploy1_EN] of U6 on B.Cu",
+                    "pos": {
+                        "x": 174.83,
+                        "y": 131.68
+                    },
+                    "uuid": "73bc1b53-e1a7-4f07-9f7b-710a78b735b7"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/Load Switches/Heater_EN) doesn't match net given by schematic (Heater_EN)",
+            "items": [
+                {
+                    "description": "Pad 5 [/Power Systems/Load Switches/Heater_EN] of U6 on B.Cu",
+                    "pos": {
+                        "x": 174.83,
+                        "y": 131.030001
+                    },
+                    "uuid": "83407c5b-ae5a-473d-a5b3-10a530ce5c06"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Pad net (/Power Systems/Load Switches/Deploy2_EN) doesn't match net given by schematic (Deploy2_EN)",
+            "items": [
+                {
+                    "description": "Pad 6 [/Power Systems/Load Switches/Deploy2_EN] of U6 on B.Cu",
+                    "pos": {
+                        "x": 174.83,
+                        "y": 130.38
+                    },
+                    "uuid": "6445a089-263b-405a-9e53-1c04f6266dcc"
+                }
+            ],
+            "severity": "warning",
+            "type": "net_conflict"
+        },
+        {
+            "description": "Missing footprint C200 (1uF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C201 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C202 (10uF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C203 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C204 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C205 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C206 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C207 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C208 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C209 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C210 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C211 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C212 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C213 (4.7uF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C214 (10uF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C215 (4.7uF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C216 (4.7uF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C217 (4.7uF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C218 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C219 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C220 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C221 (15pF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C222 (15pF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint D200 (NSR0320)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint D201 (LED)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint D202 (LED)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint L200 (3.3u)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R200 (33)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R201 (1k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R202 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R203 (0)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R204 (1k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R205 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R206 (1k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R207 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R208 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R209 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R210 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R211 (1k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP200 (VBUS_EMU)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP201 (3V3_EMU)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP202 (1V1_EMU)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP203 (EMU_GPIO_RSVD)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U200 (RP2350A)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U201 (W25Q128JVS)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U202 (AP2112K-3.3)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint Y200 (ABM8-272-T3)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C300 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C301 (10nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C302 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C303 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C304 (1uF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C310 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C311 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C312 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C313 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C314 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C315 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C316 (100nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint J300 (Coil Out)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R300 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R301 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R302 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R303 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R304 (43R)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R310 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R311 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R312 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R313 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R314 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R320 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R321 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R322 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R323 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R324 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R330 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R331 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R332 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R333 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R334 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R340 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R341 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R342 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R343 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R344 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R350 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R351 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R352 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R353 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R354 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R360 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R362 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R363 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R370 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R371 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R372 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R373 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R374 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP300 (TestPoint)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP301 (TestPoint)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP302 (TestPoint)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP303 (TestPoint)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP304 (TestPoint)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP305 (TestPoint)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP306 (TestPoint)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U300 (TCA4311ADGKR)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U301 (TMP112xxDRL)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U302 (VEML6031X00)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U303 (DRV2605LDGS)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U310 (TCA4311ADGKR)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U311 (TCA4311ADGKR)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U312 (TCA4311ADGKR)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U313 (TCA4311ADGKR)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U314 (TCA4311ADGKR)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U315 (TCA4311ADGKR)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U316 (TCA4311ADGKR)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint D400 (CDBA240LL-HF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint D401 (CDBA240LL-HF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint F400 (1.85A_PTC_33V)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint F401 (1.85A_PTC_33V)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint J400 (Terminal_2P_5.08mm)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint J401 (Terminal_2P_5.08mm)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint JP400 (Jumper_2_Open)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint JP401 (Jumper_2_Open)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP400 (VSOLAR_BENCH_A)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP401 (VSOLAR)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP402 (VSOLAR_BENCH_B)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C500 (0.1uF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C501 (0.1uF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C502 (0.1uF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C503 (0.1uF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C510 (1uF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C511 (22uF 25V)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C512 (47nF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C513 (22uF 25V)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C514 (22uF 25V)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C515 (22uF 25V)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C516 (4.7uF)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C517 (22uF 25V)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint C518 (22uF 25V)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint D510 (LED)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint J500 (BENCH PSU B+/MID/B-)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint J510 (USB-C CHARGER IN (power only))",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint JP500 (MID DIV - FIT)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint JP510 (CHG OUT - OPEN)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint L510 (SPM6530T-1R0M120)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint Q500 (IRF7458)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint Q501 (IRF7458)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint Q510 (DMP4047LFDE-7)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R500 (330)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R501 (330)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R502 (1k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R503 (1.0k 1%)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R504 (1.0k 1%)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R505 (100k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R510 (5.1k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R511 (5.1k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R512 (1M)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R513 (1M)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R514 (750)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R515 (5.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R516 (5.23k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R517 (30.1k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R518 (10k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R519 (1k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP500 (Dir_Chrg_In)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP501 (VBAT_BENCH_N)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP502 (B-)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP503 (DOUT_GATE)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP504 (COUT_GATE)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP505 (MID_BENCH)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP510 (VBUS_CHG)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP511 (CHG_SYS)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP512 (CHG_BAT)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U500 (R5460N208AA-TR-FE)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U510 (DZDH0401DW-7)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint U511 (BQ25886RGE)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint D600 (BAT54W)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint D601 (BAT54W)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint D602 (BAT54W)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint JP600 (Conn_01x02)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint JP601 (Conn_01x02)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint JP602 (Conn_01x02)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint JP603 (Conn_01x02)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint JP604 (Conn_01x02)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint JP605 (Conn_01x02)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint JP606 (Conn_01x02)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint JP607 (Conn_01x02)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint LED600 (LED)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R600 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R601 (4.7k)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint R602 (470R)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint SW600 (SW_SPST)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Missing footprint TP600 (Deploy1_EN)",
+            "items": [],
+            "severity": "warning",
+            "type": "missing_footprint"
+        },
+        {
+            "description": "Extra footprint",
+            "items": [
+                {
+                    "description": "Footprint REF**",
+                    "pos": {
+                        "x": 178.79812,
+                        "y": 114.17637
+                    },
+                    "uuid": "b587ccfc-ce8d-4dfe-ad58-080f869c4be7"
+                }
+            ],
+            "severity": "warning",
+            "type": "extra_footprint"
+        }
+    ],
+    "source": "FlatSat_V1.kicad_pcb",
+    "unconnected_items": [],
+    "violations": [
+        {
+            "description": "Courtyards overlap",
+            "items": [
+                {
+                    "description": "Footprint SW2",
+                    "pos": {
+                        "x": 194.2,
+                        "y": 86.0
+                    },
+                    "uuid": "277e643a-105d-4653-96dc-6d79c1715938"
+                },
+                {
+                    "description": "Footprint TP2",
+                    "pos": {
+                        "x": 194.2,
+                        "y": 85.2
+                    },
+                    "uuid": "6b3b5c24-7a36-49d6-b4df-4f7254fdf5a2"
+                }
+            ],
+            "severity": "error",
+            "type": "courtyards_overlap"
+        },
+        {
+            "description": "Isolated copper fill",
+            "items": [
+                {
+                    "description": "Zone [<no net>] on F.Cu, priority 2",
+                    "pos": {
+                        "x": 153.88,
+                        "y": 55.57
+                    },
+                    "uuid": "6e271a10-81bc-4bbd-be1d-5ce20a1d4919"
+                }
+            ],
+            "severity": "warning",
+            "type": "isolated_copper"
+        },
+        {
+            "description": "Isolated copper fill",
+            "items": [
+                {
+                    "description": "Zone [<no net>] on F.Cu, priority 16",
+                    "pos": {
+                        "x": 211.4,
+                        "y": 97.975
+                    },
+                    "uuid": "945b9465-9ab4-4631-b9b5-1439e178a7a9"
+                }
+            ],
+            "severity": "warning",
+            "type": "isolated_copper"
+        },
+        {
+            "description": "Isolated copper fill",
+            "items": [
+                {
+                    "description": "Zone [<no net>] on F.Cu, priority 2",
+                    "pos": {
+                        "x": 230.35,
+                        "y": 55.5912
+                    },
+                    "uuid": "9487b898-527c-4cac-8af7-378726f7efb6"
+                }
+            ],
+            "severity": "warning",
+            "type": "isolated_copper"
+        },
+        {
+            "description": "Isolated copper fill",
+            "items": [
+                {
+                    "description": "Zone [<no net>] on F.Cu, priority 16",
+                    "pos": {
+                        "x": 190.0,
+                        "y": 49.8
+                    },
+                    "uuid": "a7d7ddca-4d94-4a24-a77f-bc927a0b32d3"
+                }
+            ],
+            "severity": "warning",
+            "type": "isolated_copper"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads (expected 'Through hole'; actual 'SMD')",
+            "items": [
+                {
+                    "description": "Footprint U18",
+                    "pos": {
+                        "x": 206.08068,
+                        "y": 85.41932
+                    },
+                    "uuid": "9ab999eb-a133-4a17-9cc7-ac932806b65e"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_type_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads (expected 'SMD'; actual 'Through hole')",
+            "items": [
+                {
+                    "description": "Footprint U29",
+                    "pos": {
+                        "x": 213.275001,
+                        "y": 72.200001
+                    },
+                    "uuid": "1e13cd9f-29d0-492b-9d7d-f9ace14e66cf"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_type_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads (expected 'Through hole'; actual 'SMD')",
+            "items": [
+                {
+                    "description": "Footprint U12",
+                    "pos": {
+                        "x": 183.4,
+                        "y": 107.3
+                    },
+                    "uuid": "318b6271-f502-4ea3-aeb3-cdda8bfa3cf1"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_type_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads (expected 'SMD'; actual 'Through hole')",
+            "items": [
+                {
+                    "description": "Footprint U27",
+                    "pos": {
+                        "x": 218.045,
+                        "y": 93.6
+                    },
+                    "uuid": "5d29bc0d-f06b-4618-9e12-ff1017156402"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_type_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads (expected 'Through hole'; actual 'SMD')",
+            "items": [
+                {
+                    "description": "Footprint U6",
+                    "pos": {
+                        "x": 177.7,
+                        "y": 129.4
+                    },
+                    "uuid": "73a69f9a-895a-4128-834d-d2ff93069476"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_type_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads (expected 'Through hole'; actual 'SMD')",
+            "items": [
+                {
+                    "description": "Footprint U10",
+                    "pos": {
+                        "x": 186.23125,
+                        "y": 117.65
+                    },
+                    "uuid": "aa971def-061c-419f-8547-f77b4beee8c5"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_type_mismatch"
+        },
+        {
+            "description": "Footprint component type doesn't match footprint pads (expected 'SMD'; actual 'Through hole')",
+            "items": [
+                {
+                    "description": "Footprint U22",
+                    "pos": {
+                        "x": 216.4,
+                        "y": 117.8
+                    },
+                    "uuid": "b72225aa-b6bb-435a-b071-f8e770baf201"
+                }
+            ],
+            "severity": "warning",
+            "type": "footprint_type_mismatch"
+        },
+        {
+            "description": "The current configuration does not include the footprint library 'mainboard'",
+            "items": [
+                {
+                    "description": "Footprint REF**",
+                    "pos": {
+                        "x": 178.79812,
+                        "y": 114.17637
+                    },
+                    "uuid": "b587ccfc-ce8d-4dfe-ad58-080f869c4be7"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "Footprint 'HTSSOP-14-1EP_4.4x5mm_P0.65mm_EP3.4x5mm_Mask3x3.1mm_ThermalVias' not found in library 'Package_SO'",
+            "items": [
+                {
+                    "description": "Footprint U10",
+                    "pos": {
+                        "x": 186.23125,
+                        "y": 117.65
+                    },
+                    "uuid": "aa971def-061c-419f-8547-f77b4beee8c5"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        },
+        {
+            "description": "Footprint 'MSOP-12-1EP_3x4mm_P0.65mm_EP1.65x2.85mm' not found in library 'Package_SO'",
+            "items": [
+                {
+                    "description": "Footprint IC6",
+                    "pos": {
+                        "x": 207.698799,
+                        "y": 108.8512
+                    },
+                    "uuid": "ad6605c2-5f04-43db-b60d-34f5a29c951d"
+                }
+            ],
+            "severity": "warning",
+            "type": "lib_footprint_issues"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+  "_note": "Arguments passed to .claude/workflows/flatsat-schematic-review.js on 2026-09-14 (same project/sheet table as capture_args.json; all fixers run as Opus; captureResult points at the saved capture workflow return value).",
+  "project": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1",
+  "root": "FlatSat_V1.kicad_sch",
+  "rootUuid": "c64c0d72-a9f6-4f3a-891e-1f647558f538",
+  "brief": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase1_schematic/00_pm_brief.md",
+  "docs": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase1_schematic",
+  "scratch": "/private/tmp/claude-501/-Users-ncc-michael-GitHut/76ce4476-5b98-4bdc-b249-03b85212b6e5/scratchpad",
+  "kicad": "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+  "baselineErc": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/baseline/erc.json",
+  "baselineNetlist": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/baseline/netlist.kicadxml",
+  "captureResult": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase1_schematic/capture_result.json",
+  "sheets": "see capture_args.json (model set to opus for every sheet so review fixes run on Opus)",
+  "maxFixRounds": 2,
+  "models": { "review": "fable", "verify": "fable", "prioritize": "sonnet", "signoff": "sonnet" },
+  "verifyModelByIndex": { "10": "sonnet" },
+  "_model_change": "Run wf_20860b85-eec was stopped by the user's request mid-Verify (five Fable lenses and 10 of 11 Fable verify batches complete) and resumed with the remaining stages on Sonnet: verify batch 10 (solar_power_injection), the chair, and the sign-off. Completed Fable agents replayed from cache. Fixers stay Opus, the post-fix checker stays Opus.",
+  "context": "Fable review-and-fix round after capture. PM rulings R1-R15 in brief section 11 are decisions, not findings; R5 (BQ25886 CSYS >= 44 uF effective), R6 (R600 100k -> 4.7k) and R7 (4.7 k device-side pull-ups on emulated channels) must be carried out by the fix stage. Fixers update both the .kicad_sch and its tools/gen generator. Known library-metadata warning classes are not findings. LCSC gaps deferred to the layout-phase supply-chain pass."
+}
