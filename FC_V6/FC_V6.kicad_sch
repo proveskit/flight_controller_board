@@ -1,0 +1,173 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "2b2eb07a-06c8-4963-a95f-9b28e6f4041c")
+	(paper "A4")
+	(title_block
+		(title "Flight Controller Board V6")
+		(date "2026-09-22")
+		(rev "V0")
+		(company "PROVES ")
+		(comment 1 "Sankritya Anand Rai @ UCSC")
+	)
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 106.68 72.39) (xy 111.76 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "304fa566-7fd5-499c-b8eb-8c0d461e12e5")
+	)
+	(wire
+		(pts
+			(xy 106.68 69.85) (xy 111.76 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "848a9a65-b402-44a3-bfb5-958ddae278a1")
+	)
+	(sheet
+		(at 111.76 60.96)
+		(size 26.67 83.82)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "20bef565-3abf-40f1-a799-734367b10279")
+		(property "Sheetname" "MCU"
+			(at 111.76 60.2484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "MCU.kicad_sch"
+			(at 111.76 145.3646 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "USB+" bidirectional
+			(at 111.76 69.85 180)
+			(uuid "7dbec998-9730-49b6-961a-8b6b0f119e62")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "USB-" bidirectional
+			(at 111.76 72.39 180)
+			(uuid "1d6ead62-147b-4271-8bd5-ab771e915991")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "FC_V6"
+				(path "/2b2eb07a-06c8-4963-a95f-9b28e6f4041c"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 77.47 60.96)
+		(size 29.21 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "654f8ba9-ad83-482e-93ee-bd8db537d23a")
+		(property "Sheetname" "USB_HUB"
+			(at 77.47 60.2484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "USB_HUB.kicad_sch"
+			(at 77.47 86.9446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "USB+" bidirectional
+			(at 106.68 69.85 0)
+			(uuid "cf6322d7-8ee7-4966-9c37-d6598197c712")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "USB-" bidirectional
+			(at 106.68 72.39 0)
+			(uuid "ba6bd174-abd7-479c-baf8-6d1c51c65779")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "FC_V6"
+				(path "/2b2eb07a-06c8-4963-a95f-9b28e6f4041c"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
