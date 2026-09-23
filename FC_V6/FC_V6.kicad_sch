@@ -164,6 +164,102 @@
 			)
 		)
 	)
+	(sheet
+		(at 154.94 60.96)
+		(size 24.13 22.86)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "88be93e4-1e45-4406-b7c9-a71816b01d2d")
+		(property "Sheetname" "Power"
+			(at 154.94 60.2484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power.kicad_sch"
+			(at 154.94 84.4046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "BAT+" input
+			(at 179.07 67.31 0)
+			(uuid "bcbac427-fe88-41fb-8d84-e93fadcb2c9c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "Pack Thermistor" input
+			(at 179.07 69.85 0)
+			(uuid "dafa0003-ca8f-443d-9278-a068164e9c5f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SCL" input
+			(at 154.94 67.31 180)
+			(uuid "77bd0517-f667-43ef-867f-589dbbda3fe9")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "+SOLAR" input
+			(at 179.07 64.77 0)
+			(uuid "8d3a8b95-edc1-4bd6-af6a-3ba660f05843")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SDA" bidirectional
+			(at 154.94 69.85 180)
+			(uuid "777fafc3-3118-45ec-ac0a-392d6cb21f8a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "FC_V6"
+				(path "/2b2eb07a-06c8-4963-a95f-9b28e6f4041c"
+					(page "4")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
