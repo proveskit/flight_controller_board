@@ -1,0 +1,2097 @@
+{
+ "_comment": "FlatSat V1 Phase-2 floorplan v2.2 (detailed passive placement, re-integration after the second PM-directed fix round, 2026-09-14). Block-level plan, outline, pours, holes, lane and mounting holes are floorplan.json unchanged; 'placements' carry every block's guideline-driven passive placement and the three relocated stitching points of the v2.1 integration are retained unchanged. This file overwrites the v2.1 file of the same name. See floorplan_v2.md.",
+ "remove_edge_regions": [
+  [
+   228.0,
+   47.0,
+   232.0,
+   58.0
+  ],
+  [
+   227.45,
+   55.0,
+   232.0,
+   143.0
+  ],
+  [
+   143.0,
+   138.0,
+   232.0,
+   143.0
+  ]
+ ],
+ "add_edges": {
+  "points": [
+   [
+    228.441,
+    47.579
+   ],
+   [
+    296.39,
+    47.579
+   ],
+   [
+    296.39,
+    172.12
+   ],
+   [
+    143.343,
+    172.12
+   ],
+   [
+    143.343,
+    139.074
+   ]
+  ],
+  "fillet_vertices": [
+   1,
+   2,
+   3
+  ],
+  "fillet_radius": 4.0
+ },
+ "grow_in1_gnd_rect": [
+  139.77,
+  45.13,
+  298.5,
+  174.5
+ ],
+ "new_gnd_pours": [
+  {
+   "layer": "F.Cu",
+   "rect": [
+    232.0,
+    48.5,
+    295.5,
+    171.2
+   ],
+   "name": "GND_F_Cu_wing",
+   "priority": 1
+  },
+  {
+   "layer": "B.Cu",
+   "rect": [
+    232.0,
+    48.5,
+    295.5,
+    171.2
+   ],
+   "name": "GND_B_Cu_wing",
+   "priority": 1
+  },
+  {
+   "layer": "F.Cu",
+   "rect": [
+    144.3,
+    143.0,
+    232.0,
+    171.2
+   ],
+   "name": "GND_F_Cu_strip",
+   "priority": 2
+  },
+  {
+   "layer": "B.Cu",
+   "rect": [
+    144.3,
+    143.0,
+    232.0,
+    171.2
+   ],
+   "name": "GND_B_Cu_strip",
+   "priority": 2
+  }
+ ],
+ "mounting_holes": [
+  [
+   292.39,
+   51.58
+  ],
+  [
+   292.39,
+   168.12
+  ],
+  [
+   147.3,
+   168.12
+  ]
+ ],
+ "clip_heritage_zones_to": "tools/baseline/heritage_rev2.json",
+ "clip_inset_mm": 0.2,
+ "stitching": {
+  "via": [
+   0.8,
+   0.4
+  ],
+  "points": [
+   [
+    234.0,
+    50.6
+   ],
+   [
+    242.49,
+    50.6
+   ],
+   [
+    250.42,
+    53.2
+   ],
+   [
+    259.46,
+    50.6
+   ],
+   [
+    267.94,
+    50.6
+   ],
+   [
+    284.91,
+    50.6
+   ],
+   [
+    293.4,
+    55.6
+   ],
+   [
+    288.4,
+    55.0
+   ],
+   [
+    293.4,
+    63.78
+   ],
+   [
+    293.4,
+    72.55
+   ],
+   [
+    293.4,
+    81.33
+   ],
+   [
+    293.4,
+    88.11
+   ],
+   [
+    291.9,
+    101.63
+   ],
+   [
+    291.5,
+    110.66
+   ],
+   [
+    293.4,
+    116.44
+   ],
+   [
+    293.4,
+    127.22
+   ],
+   [
+    293.4,
+    133.99
+   ],
+   [
+    293.4,
+    142.77
+   ],
+   [
+    288.4,
+    151.55
+   ],
+   [
+    293.4,
+    160.32
+   ],
+   [
+    288.4,
+    169.1
+   ],
+   [
+    293.4,
+    164.1
+   ],
+   [
+    286.25,
+    169.1
+   ],
+   [
+    275.1,
+    167.1
+   ],
+   [
+    268.95,
+    169.1
+   ],
+   [
+    254.8,
+    169.1
+   ],
+   [
+    250.65,
+    169.1
+   ],
+   [
+    217.2,
+    169.1
+   ],
+   [
+    200.4,
+    169.1
+   ],
+   [
+    192.0,
+    167.45
+   ],
+   [
+    183.6,
+    169.1
+   ],
+   [
+    174.45,
+    169.1
+   ],
+   [
+    165.3,
+    169.1
+   ],
+   [
+    156.15,
+    169.1
+   ],
+   [
+    147.0,
+    164.1
+   ],
+   [
+    151.3,
+    168.0
+   ],
+   [
+    146.3,
+    156.75
+   ],
+   [
+    146.3,
+    145.5
+   ],
+   [
+    233.6,
+    55.0
+   ],
+   [
+    233.6,
+    64.44
+   ],
+   [
+    233.6,
+    92.78
+   ],
+   [
+    233.6,
+    102.22
+   ],
+   [
+    233.6,
+    111.67
+   ],
+   [
+    233.6,
+    121.11
+   ],
+   [
+    233.6,
+    130.56
+   ],
+   [
+    233.6,
+    140.0
+   ],
+   [
+    234.0,
+    144.8
+   ],
+   [
+    177.33,
+    146.8
+   ],
+   [
+    168.22,
+    146.8
+   ],
+   [
+    150.0,
+    146.8
+   ],
+   [
+    266.8,
+    86.0
+   ],
+   [
+    265.3,
+    93.75
+   ],
+   [
+    265.3,
+    101.5
+   ],
+   [
+    266.8,
+    109.25
+   ],
+   [
+    266.8,
+    117.0
+   ],
+   [
+    268.0,
+    83.0
+   ],
+   [
+    276.0,
+    85.0
+   ],
+   [
+    284.0,
+    85.0
+   ],
+   [
+    292.0,
+    85.0
+   ],
+   [
+    268.0,
+    120.5
+   ],
+   [
+    276.0,
+    115.5
+   ],
+   [
+    288.0,
+    115.5
+   ],
+   [
+    292.0,
+    120.5
+   ],
+   [
+    235.5,
+    70.3
+   ],
+   [
+    235.5,
+    86.9
+   ],
+   [
+    244.2,
+    70.3
+   ],
+   [
+    244.2,
+    86.9
+   ],
+   [
+    244.2,
+    78.6
+   ]
+  ],
+  "_note": "Starting set only: generated on the new-area perimeter and as a ring around the emulator core, then filtered so no point lies within 0.7 mm of a footprint bounding box on this placement. Stage 3 (outline + ground) owns the authoritative <=10 mm stitching pass per brief L6. v2 re-integration (PM-authorised edit of this key, brief step 6b): 6 points moved so every stitching via lands on GND copper only -- each is now >=1.5 mm from the nearest non-GND pad and >=3 mm from the board edge; the two ring points moved perpendicular to the ring so the 7.75 mm ladder pitch is kept. Stage 3 still owns the authoritative <=10 mm stitching pass per brief L6. | v2.2: three further points moved (stitching._moved_in_v2_2) after emulator_core's re-place; the six v2.1 moves (stitching._moved_in_v2) are unchanged and still hold.",
+  "_moved_in_v2": [
+   {
+    "index": 2,
+    "from": [
+     250.97,
+     50.6
+    ],
+    "to": [
+     250.42,
+     53.2
+    ],
+    "moved_mm": 2.66,
+    "why": "via copper 0.13 mm from R372.2 (EMU_TOP_SDA) -> kicad-cli DRC clearance error (the face_column audit's open must-fix); point-to-pad was 0.530 mm",
+    "now_mm": 1.51
+   },
+   {
+    "index": 13,
+    "from": [
+     293.4,
+     107.66
+    ],
+    "to": [
+     291.5,
+     109.16
+    ],
+    "moved_mm": 2.42,
+    "why": "0.174 mm from TP201.1; the via was being re-netted GND -> 3V3_EMU by apply_placement",
+    "now_mm": 1.679
+   },
+   {
+    "index": 28,
+    "from": [
+     198.9,
+     169.1
+    ],
+    "to": [
+     200.4,
+     169.1
+    ],
+    "moved_mm": 1.5,
+    "why": "0.335 mm from TP505.1; the via was being re-netted GND -> MID_BENCH",
+    "now_mm": 1.725
+   },
+   {
+    "index": 29,
+    "from": [
+     192.75,
+     169.1
+    ],
+    "to": [
+     192.0,
+     167.45
+    ],
+    "moved_mm": 1.81,
+    "why": "0.638 mm from TP504.1 (COUT_GATE)",
+    "now_mm": 1.509
+   },
+   {
+    "index": 53,
+    "from": [
+     266.8,
+     93.75
+    ],
+    "to": [
+     265.3,
+     93.75
+    ],
+    "moved_mm": 1.5,
+    "why": "0.807 mm from C204.1 (3V3_EMU)",
+    "now_mm": 2.297
+   },
+   {
+    "index": 54,
+    "from": [
+     266.8,
+     101.5
+    ],
+    "to": [
+     265.3,
+     101.5
+    ],
+    "moved_mm": 1.5,
+    "why": "0.809 mm from R204.2 (Net-(D200-A))",
+    "now_mm": 2.29
+   }
+  ],
+  "_moved_in_v2_2": [
+   {
+    "index": 12,
+    "from": [
+     293.4,
+     98.88
+    ],
+    "to": [
+     291.9,
+     101.63
+    ],
+    "moved_mm": 3.132,
+    "why": "via GND but 0.928 mm from C202.1 (3V3_EMU); the whole x=293.4 ring segment y 94-106 is blocked (max 1.30 mm) by the C200/C202/C203/TP200/R211 column that emulator_core's re-place moved east -> stepped 1.5 mm inward off the ring line and 2.75 mm south",
+    "clearance_to_nearest_non_GND_pad_mm": 1.9635,
+    "edge_distance_mm": 4.49
+   },
+   {
+    "index": 13,
+    "from": [
+     291.5,
+     109.16
+    ],
+    "to": [
+     291.5,
+     110.66
+    ],
+    "moved_mm": 1.5,
+    "why": "0.928->1.176 mm from D201.2 (Net-(D201-A)) after D201 moved to (290.00,107.60); moved 1.5 mm south along the ring line, x unchanged",
+    "clearance_to_nearest_non_GND_pad_mm": 2.6317,
+    "edge_distance_mm": 4.89
+   },
+   {
+    "index": 63,
+    "from": [
+     284.0,
+     115.5
+    ],
+    "to": [
+     288.0,
+     115.5
+    ],
+    "moved_mm": 4.0,
+    "why": "via was re-netted GND -> /Emulator MCU/EMU_GPIO_RSVD by apply_placement: TP203 moved onto it (pad edge 0.254 mm). Moved 4.0 mm east along the emulator south row (y unchanged)",
+    "clearance_to_nearest_non_GND_pad_mm": 3.208,
+    "edge_distance_mm": 8.39
+   }
+  ],
+  "_slot_ring_v2_3": {
+   "removed_inside_slot": [
+    [
+     233.6,
+     73.89
+    ],
+    [
+     233.6,
+     83.33
+    ]
+   ],
+   "added_ring": [
+    [
+     235.5,
+     70.3
+    ],
+    [
+     235.5,
+     86.9
+    ],
+    [
+     244.2,
+     70.3
+    ],
+    [
+     244.2,
+     86.9
+    ],
+    [
+     244.2,
+     78.6
+    ]
+   ],
+   "why": "GND stitching around the J12 relief slot so the In1/F/B GND pours stay tied around the cut | west-side ring points dropped: that side is the FC edge (x<227.5 is the flight section, x 227.5-228.0 is a 0.5 mm bar); the In1 plane ties around the slot through the north and south bars"
+  }
+ },
+ "placements": {
+  "U316": {
+   "x": 248.0,
+   "y": 53.6,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C316": {
+   "x": 244.45,
+   "y": 51.45,
+   "rot": 180.0,
+   "side": "F"
+  },
+  "R370": {
+   "x": 245.5,
+   "y": 57.7,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R371": {
+   "x": 254.07,
+   "y": 51.45,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R372": {
+   "x": 251.57,
+   "y": 51.45,
+   "rot": 180.0,
+   "side": "F"
+  },
+  "R373": {
+   "x": 248.0,
+   "y": 57.7,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R374": {
+   "x": 250.5,
+   "y": 57.7,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "SW703": {
+   "x": 250.475,
+   "y": 67.475,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "Q701": {
+   "x": 251.0,
+   "y": 73.67,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "Q702": {
+   "x": 256.0,
+   "y": 73.67,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "Q703": {
+   "x": 245.955,
+   "y": 73.675,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R705": {
+   "x": 250.775,
+   "y": 76.995,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R706": {
+   "x": 253.685,
+   "y": 76.995,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R707": {
+   "x": 256.595,
+   "y": 76.995,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R708": {
+   "x": 259.505,
+   "y": 76.995,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R709": {
+   "x": 244.955,
+   "y": 76.995,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R710": {
+   "x": 247.865,
+   "y": 76.995,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "U313": {
+   "x": 248.0,
+   "y": 91.0,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "U314": {
+   "x": 256.0,
+   "y": 91.0,
+   "rot": 0.0,
+   "side": "B"
+  },
+  "C313": {
+   "x": 245.5,
+   "y": 86.9,
+   "rot": 180.0,
+   "side": "F"
+  },
+  "C314": {
+   "x": 256.0,
+   "y": 91.0,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R340": {
+   "x": 245.5,
+   "y": 95.1,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R341": {
+   "x": 250.5,
+   "y": 86.9,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R342": {
+   "x": 248.0,
+   "y": 86.9,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R343": {
+   "x": 248.0,
+   "y": 95.1,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R344": {
+   "x": 250.5,
+   "y": 95.1,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R350": {
+   "x": 254.75,
+   "y": 86.95,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R351": {
+   "x": 257.25,
+   "y": 95.05,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R352": {
+   "x": 254.75,
+   "y": 95.05,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R353": {
+   "x": 244.47,
+   "y": 92.3,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R354": {
+   "x": 257.25,
+   "y": 86.95,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "U300": {
+   "x": 248.0,
+   "y": 106.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "U310": {
+   "x": 256.0,
+   "y": 106.5,
+   "rot": 0.0,
+   "side": "B"
+  },
+  "C300": {
+   "x": 245.5,
+   "y": 102.4,
+   "rot": 180.0,
+   "side": "F"
+  },
+  "C310": {
+   "x": 256.0,
+   "y": 106.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R300": {
+   "x": 246.75,
+   "y": 110.6,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R301": {
+   "x": 250.5,
+   "y": 102.4,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R302": {
+   "x": 248.0,
+   "y": 102.4,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R303": {
+   "x": 249.25,
+   "y": 110.6,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R310": {
+   "x": 254.75,
+   "y": 102.45,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R311": {
+   "x": 257.25,
+   "y": 110.55,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R312": {
+   "x": 254.75,
+   "y": 110.55,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R313": {
+   "x": 257.25,
+   "y": 102.45,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R314": {
+   "x": 244.47,
+   "y": 107.309,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "U311": {
+   "x": 248.0,
+   "y": 121.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "U312": {
+   "x": 256.0,
+   "y": 121.5,
+   "rot": 0.0,
+   "side": "B"
+  },
+  "C311": {
+   "x": 245.5,
+   "y": 117.4,
+   "rot": 180.0,
+   "side": "F"
+  },
+  "C312": {
+   "x": 256.0,
+   "y": 121.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R320": {
+   "x": 245.5,
+   "y": 125.6,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R321": {
+   "x": 250.5,
+   "y": 117.4,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R322": {
+   "x": 248.0,
+   "y": 117.4,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R323": {
+   "x": 248.0,
+   "y": 125.6,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R324": {
+   "x": 250.5,
+   "y": 125.6,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R330": {
+   "x": 254.75,
+   "y": 117.45,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R331": {
+   "x": 257.25,
+   "y": 125.55,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R332": {
+   "x": 254.75,
+   "y": 125.55,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R333": {
+   "x": 244.47,
+   "y": 122.3,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R334": {
+   "x": 257.25,
+   "y": 117.45,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "U315": {
+   "x": 223.0,
+   "y": 147.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C315": {
+   "x": 220.44,
+   "y": 145.35,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "R360": {
+   "x": 222.02,
+   "y": 151.8,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R362": {
+   "x": 226.5,
+   "y": 145.35,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R363": {
+   "x": 226.5,
+   "y": 149.65,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "J701": {
+   "x": 275.0,
+   "y": 51.874,
+   "rot": 180,
+   "side": "F"
+  },
+  "J702": {
+   "x": 287.2,
+   "y": 60.6,
+   "rot": 0,
+   "side": "F"
+  },
+  "SW701": {
+   "x": 291.36,
+   "y": 66.76,
+   "rot": 0,
+   "side": "F"
+  },
+  "SW702": {
+   "x": 284.06,
+   "y": 66.76,
+   "rot": 0,
+   "side": "F"
+  },
+  "J703": {
+   "x": 270.795,
+   "y": 74.765,
+   "rot": 0,
+   "side": "F"
+  },
+  "TP701": {
+   "x": 286.0,
+   "y": 53.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C701": {
+   "x": 281.95,
+   "y": 52.95,
+   "rot": 270.0,
+   "side": "F"
+  },
+  "R701": {
+   "x": 272.0,
+   "y": 60.0,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "R702": {
+   "x": 278.5,
+   "y": 60.0,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "R703": {
+   "x": 272.845,
+   "y": 89.1,
+   "rot": 270.0,
+   "side": "F"
+  },
+  "R704": {
+   "x": 274.645,
+   "y": 89.1,
+   "rot": 270.0,
+   "side": "F"
+  },
+  "U200": {
+   "x": 273.145,
+   "y": 94.855,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "U201": {
+   "x": 285.965,
+   "y": 95.135,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "U202": {
+   "x": 293.575,
+   "y": 93.31,
+   "rot": 180.0,
+   "side": "F"
+  },
+  "Y200": {
+   "x": 273.65,
+   "y": 102.75,
+   "rot": 270.0,
+   "side": "F"
+  },
+  "L200": {
+   "x": 279.4,
+   "y": 90.75,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP200": {
+   "x": 294.6,
+   "y": 101.9,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP201": {
+   "x": 294.6,
+   "y": 107.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP202": {
+   "x": 280.0,
+   "y": 114.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP203": {
+   "x": 284.0,
+   "y": 114.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C214": {
+   "x": 279.5,
+   "y": 104.85,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "D200": {
+   "x": 285.5,
+   "y": 99.6,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "D201": {
+   "x": 290.0,
+   "y": 107.6,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "D202": {
+   "x": 289.0,
+   "y": 104.85,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C200": {
+   "x": 295.0,
+   "y": 96.8,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "C202": {
+   "x": 292.0,
+   "y": 98.4,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "R211": {
+   "x": 292.5,
+   "y": 104.85,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R200": {
+   "x": 278.8,
+   "y": 98.47,
+   "rot": 180.0,
+   "side": "F"
+  },
+  "R201": {
+   "x": 276.45,
+   "y": 101.7,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "R202": {
+   "x": 282.2,
+   "y": 90.7,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R203": {
+   "x": 284.65,
+   "y": 90.7,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R204": {
+   "x": 287.1,
+   "y": 90.7,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R205": {
+   "x": 279.9,
+   "y": 101.65,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R206": {
+   "x": 285.5,
+   "y": 104.85,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R207": {
+   "x": 282.4,
+   "y": 101.65,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R208": {
+   "x": 284.9,
+   "y": 101.65,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R209": {
+   "x": 287.4,
+   "y": 101.65,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R210": {
+   "x": 289.9,
+   "y": 101.65,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C201": {
+   "x": 294.7,
+   "y": 90.55,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C203": {
+   "x": 292.3,
+   "y": 95.8,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C204": {
+   "x": 267.91,
+   "y": 92.12,
+   "rot": 270.0,
+   "side": "F"
+  },
+  "C205": {
+   "x": 267.91,
+   "y": 96.94,
+   "rot": 270.0,
+   "side": "F"
+  },
+  "C206": {
+   "x": 271.48,
+   "y": 99.58,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C207": {
+   "x": 276.3,
+   "y": 99.58,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C208": {
+   "x": 278.8,
+   "y": 96.94,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C209": {
+   "x": 269.07,
+   "y": 99.58,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C210": {
+   "x": 268.46,
+   "y": 90.15,
+   "rot": 180.0,
+   "side": "F"
+  },
+  "C211": {
+   "x": 282.7,
+   "y": 104.85,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C212": {
+   "x": 270.87,
+   "y": 90.15,
+   "rot": 180.0,
+   "side": "F"
+  },
+  "C213": {
+   "x": 276.62,
+   "y": 90.15,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C215": {
+   "x": 278.8,
+   "y": 93.91,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C216": {
+   "x": 273.89,
+   "y": 99.58,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C217": {
+   "x": 278.8,
+   "y": 92.4,
+   "rot": 180.0,
+   "side": "F"
+  },
+  "C218": {
+   "x": 278.8,
+   "y": 95.42,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C219": {
+   "x": 267.91,
+   "y": 94.53,
+   "rot": 270.0,
+   "side": "F"
+  },
+  "C220": {
+   "x": 289.53,
+   "y": 91.63,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C221": {
+   "x": 270.42,
+   "y": 101.65,
+   "rot": 180.0,
+   "side": "F"
+  },
+  "C222": {
+   "x": 276.4,
+   "y": 104.33,
+   "rot": 270.0,
+   "side": "F"
+  },
+  "J300": {
+   "x": 270.795,
+   "y": 118.175,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "U303": {
+   "x": 276.745,
+   "y": 119.68,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "U302": {
+   "x": 283.55,
+   "y": 117.886,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R304": {
+   "x": 283.6,
+   "y": 121.46,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP300": {
+   "x": 270.275,
+   "y": 124.795,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP301": {
+   "x": 273.825,
+   "y": 124.795,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP302": {
+   "x": 277.375,
+   "y": 124.795,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP303": {
+   "x": 280.925,
+   "y": 124.795,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP304": {
+   "x": 284.475,
+   "y": 124.795,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP305": {
+   "x": 288.025,
+   "y": 124.795,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP306": {
+   "x": 291.575,
+   "y": 124.795,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "U301": {
+   "x": 270.225,
+   "y": 128.26,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C301": {
+   "x": 272.425,
+   "y": 128.51,
+   "rot": 270.0,
+   "side": "F"
+  },
+  "C302": {
+   "x": 280.9125,
+   "y": 118.006,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "C303": {
+   "x": 278.9,
+   "y": 116.85,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C304": {
+   "x": 274.6,
+   "y": 116.85,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "JP600": {
+   "x": 153.795,
+   "y": 145.795,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "JP601": {
+   "x": 158.385,
+   "y": 145.795,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "JP602": {
+   "x": 211.9,
+   "y": 145.79,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "JP603": {
+   "x": 200.3,
+   "y": 145.79,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "JP604": {
+   "x": 206.1,
+   "y": 145.79,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "JP605": {
+   "x": 194.5,
+   "y": 145.79,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "JP606": {
+   "x": 188.75,
+   "y": 145.79,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "JP607": {
+   "x": 217.7,
+   "y": 145.79,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "SW600": {
+   "x": 156.475,
+   "y": 154.015,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP600": {
+   "x": 163.225,
+   "y": 152.415,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP601": {
+   "x": 166.775,
+   "y": 152.415,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP602": {
+   "x": 170.325,
+   "y": 152.415,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP603": {
+   "x": 173.875,
+   "y": 152.415,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "D600": {
+   "x": 177.625,
+   "y": 152.335,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "D601": {
+   "x": 181.575,
+   "y": 152.335,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "D602": {
+   "x": 185.525,
+   "y": 152.335,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "LED600": {
+   "x": 153.545,
+   "y": 158.935,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R600": {
+   "x": 159.915,
+   "y": 158.635,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R601": {
+   "x": 162.825,
+   "y": 158.635,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R602": {
+   "x": 157.005,
+   "y": 158.635,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "J500": {
+   "x": 202.92,
+   "y": 165.2,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "JP500": {
+   "x": 213.1,
+   "y": 154.18,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "Q500": {
+   "x": 192.6,
+   "y": 155.45,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "Q501": {
+   "x": 201.3,
+   "y": 155.45,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "U500": {
+   "x": 207.8,
+   "y": 155.45,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP500": {
+   "x": 190.0,
+   "y": 163.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP501": {
+   "x": 194.0,
+   "y": 163.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP502": {
+   "x": 198.0,
+   "y": 163.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP503": {
+   "x": 190.0,
+   "y": 168.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP504": {
+   "x": 194.0,
+   "y": 168.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP505": {
+   "x": 198.0,
+   "y": 168.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R503": {
+   "x": 217.0,
+   "y": 154.0,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R504": {
+   "x": 220.75,
+   "y": 154.0,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R500": {
+   "x": 216.175,
+   "y": 151.35,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R501": {
+   "x": 199.425,
+   "y": 151.35,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R502": {
+   "x": 202.775,
+   "y": 151.35,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R505": {
+   "x": 195.0,
+   "y": 160.0,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C500": {
+   "x": 209.475,
+   "y": 151.35,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C501": {
+   "x": 212.825,
+   "y": 151.35,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C502": {
+   "x": 206.125,
+   "y": 151.35,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C503": {
+   "x": 191.0,
+   "y": 160.0,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "J400": {
+   "x": 228.96,
+   "y": 165.3,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "J401": {
+   "x": 241.46,
+   "y": 165.3,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "JP400": {
+   "x": 252.8,
+   "y": 145.79,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "JP401": {
+   "x": 226.2,
+   "y": 153.93,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "F400": {
+   "x": 233.8,
+   "y": 155.2,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "F401": {
+   "x": 244.4,
+   "y": 155.2,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "D400": {
+   "x": 236.0,
+   "y": 149.6,
+   "rot": 180.0,
+   "side": "F"
+  },
+  "D401": {
+   "x": 244.5,
+   "y": 149.6,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP400": {
+   "x": 232.0,
+   "y": 144.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP401": {
+   "x": 248.8,
+   "y": 144.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP402": {
+   "x": 238.5,
+   "y": 144.5,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "J510": {
+   "x": 262.0,
+   "y": 166.06,
+   "rot": 0,
+   "side": "F"
+  },
+  "L510": {
+   "x": 284.13,
+   "y": 147.7,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "JP510": {
+   "x": 257.3,
+   "y": 145.79,
+   "rot": 0,
+   "side": "F"
+  },
+  "U511": {
+   "x": 277.0,
+   "y": 152.2,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C511": {
+   "x": 277.0,
+   "y": 146.9,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "C513": {
+   "x": 282.32,
+   "y": 156.55,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C514": {
+   "x": 287.31,
+   "y": 156.55,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C515": {
+   "x": 282.32,
+   "y": 160.34,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C517": {
+   "x": 282.32,
+   "y": 164.13,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C518": {
+   "x": 287.56,
+   "y": 160.34,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "Q510": {
+   "x": 270.0,
+   "y": 156.0,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "U510": {
+   "x": 270.0,
+   "y": 152.0,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP510": {
+   "x": 262.0,
+   "y": 144.8,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP511": {
+   "x": 265.5,
+   "y": 144.8,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "TP512": {
+   "x": 269.0,
+   "y": 144.8,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "C510": {
+   "x": 274.0,
+   "y": 147.5,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "D510": {
+   "x": 272.98,
+   "y": 151.1,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "C512": {
+   "x": 280.75,
+   "y": 153.08,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "C516": {
+   "x": 277.6,
+   "y": 156.7,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "R512": {
+   "x": 266.5,
+   "y": 150.15,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "R513": {
+   "x": 266.5,
+   "y": 153.85,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "R514": {
+   "x": 277.6,
+   "y": 163.8,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "R515": {
+   "x": 277.6,
+   "y": 160.25,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "R516": {
+   "x": 275.4,
+   "y": 164.06,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "R517": {
+   "x": 275.4,
+   "y": 156.96,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "R518": {
+   "x": 275.4,
+   "y": 160.51,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "R519": {
+   "x": 273.0,
+   "y": 154.7,
+   "rot": 90.0,
+   "side": "F"
+  },
+  "R510": {
+   "x": 260.75,
+   "y": 159.68,
+   "rot": 0.0,
+   "side": "F"
+  },
+  "R511": {
+   "x": 263.75,
+   "y": 159.68,
+   "rot": 0.0,
+   "side": "F"
+  }
+ },
+ "lanes": [
+  {
+   "rect": [
+    231.39,
+    47.579,
+    243.39,
+    141.2
+   ],
+   "rule": "L3 clear lane: no parts taller than 2 mm, no headers -- keeps J1/J2/J6/J9/J11/J13/J16/J12/J22 mateable. First new component left edge in this proposal is x=244.0."
+  }
+ ],
+ "keepouts": [
+  {
+   "note": "RF: U13->RF1 trace region and U30 8 mm surroundings are both deep inside the old outline (x 147-194, y 57-105) and nowhere near this proposal's new-area placements (nearest new component >45 mm away); no explicit keepout geometry needed in the new area."
+  }
+ ],
+ "based_on": "floorplan_proposal_3.json (winner) + grafts from floorplan_proposal_1.json and _2.json",
+ "based_on_v2": {
+  "floorplan": "floorplan_v2.json (the v2.1 integration result, itself based on floorplan.json)",
+  "integration": "v2.2 - re-integration (round 3); overwrites the v2.1 package of the same names in place",
+  "blocks": [
+   "face_column",
+   "bench_io_drivers",
+   "battery_replica",
+   "bench_io_cable",
+   "emulator_core",
+   "face0_reference",
+   "strip_left_pyro_shunts",
+   "vsolar_injection",
+   "charger_bq25886"
+  ],
+  "blocks_remerged_this_round": [
+   "emulator_core",
+   "charger_bq25886"
+  ],
+  "blocks_carried_from_v2_1": [
+   "face_column",
+   "bench_io_drivers",
+   "battery_replica",
+   "bench_io_cable",
+   "face0_reference",
+   "strip_left_pyro_shunts",
+   "vsolar_injection"
+  ],
+  "detail_json": [
+   "detail/placement_face_column.json",
+   "detail/placement_bench_io_drivers.json",
+   "detail/placement_battery_replica.json",
+   "detail/placement_bench_io_cable.json",
+   "detail/placement_emulator_core.json",
+   "detail/placement_face0_reference.json",
+   "detail/placement_strip_left_pyro_shunts.json",
+   "detail/placement_vsolar_injection.json",
+   "detail/placement_charger_bq25886.json"
+  ],
+  "refs_changed_vs_v2_1": {
+   "emulator_core": [
+    "C200",
+    "C201",
+    "C202",
+    "C203",
+    "C204",
+    "C205",
+    "C206",
+    "C207",
+    "C208",
+    "C209",
+    "C210",
+    "C211",
+    "C212",
+    "C213",
+    "C214",
+    "C215",
+    "C216",
+    "C217",
+    "C218",
+    "C219",
+    "C220",
+    "C221",
+    "C222",
+    "D200",
+    "D201",
+    "D202",
+    "L200",
+    "R200",
+    "R201",
+    "R202",
+    "R203",
+    "R204",
+    "R205",
+    "R206",
+    "R207",
+    "R208",
+    "R209",
+    "R210",
+    "R211",
+    "TP200",
+    "TP201",
+    "TP202",
+    "TP203",
+    "U201",
+    "U202",
+    "Y200"
+   ],
+   "charger_bq25886": [
+    "L510",
+    "R510",
+    "R511",
+    "R516",
+    "R517",
+    "R518"
+   ]
+  },
+  "provenance_chain": [
+   "floorplan_proposal_3.json (winner) + grafts",
+   "floorplan.json (v1)",
+   "floorplan_v2.json (v2.1)",
+   "floorplan_v2.json (v2.2, this file)"
+  ]
+ },
+ "_boundary_fixes_v2": [
+  {
+   "ref": "C500",
+   "from": [
+    209.475,
+    151.3
+   ],
+   "to": [
+    209.475,
+    151.35
+   ]
+  },
+  {
+   "ref": "C501",
+   "from": [
+    212.825,
+    151.3
+   ],
+   "to": [
+    212.825,
+    151.35
+   ]
+  },
+  {
+   "ref": "C502",
+   "from": [
+    206.125,
+    151.3
+   ],
+   "to": [
+    206.125,
+    151.35
+   ]
+  },
+  {
+   "ref": "R500",
+   "from": [
+    216.175,
+    151.3
+   ],
+   "to": [
+    216.175,
+    151.35
+   ]
+  },
+  {
+   "ref": "R501",
+   "from": [
+    199.425,
+    151.3
+   ],
+   "to": [
+    199.425,
+    151.35
+   ]
+  },
+  {
+   "ref": "R502",
+   "from": [
+    202.775,
+    151.3
+   ],
+   "to": [
+    202.775,
+    151.35
+   ]
+  },
+  {
+   "ref": "C315",
+   "from": [
+    220.24,
+    145.35
+   ],
+   "to": [
+    220.44,
+    145.35
+   ]
+  }
+ ],
+ "based_on_v2_3": {
+  "from": "floorplan_v2.json (v2.2)",
+  "change": "panel PLM-01: J701 rotated 180 deg and moved to (275.0, 51.874) so the USB-C mating face is 0.145 mm off the north edge (same sense as the flown FC J12)",
+  "date": "2026-09-20",
+  "cutout": "panel PLM-02, owner decision 2026-09-20: relief slot through the wing in front of the FC USB-C J12 (bottom side, opens +X) so a plug overmold can seat; x 228.0-243.0 (0.5 mm past the receptacle face, up to the lane edge), y 71.5-85.7 (J12 centre 78.6 +/- 7.1 for a 12.35 mm max overmold), r 1.5"
+ },
+ "cutouts": [
+  {
+   "rect": [
+    228.0,
+    71.5,
+    243.0,
+    85.7
+   ],
+   "radius": 1.5,
+   "name": "J12_USB_plug_relief"
+  }
+ ]
+}

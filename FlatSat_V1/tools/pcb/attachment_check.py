@@ -33,7 +33,44 @@ except ImportError:
 # J14 / J16 / J19 within 12 mm; INHIB_2 exists only on J7 / J10 (~20 mm deep) so those get a longer allowance;
 # the three EN nets have no connector and are picked up at U6's IN pads (8-10 mm from the bottom edge, bottom side)
 # or at R104.1 / R100.1 (11-12 mm). R103 (Deploy2_EN, 35 mm deep) is not an allowed tap.
+# Owner amendment 2026-09-20 (panel PLR-01): the bottom-side face connectors J2/J9/J13 are walled off on B.Cu by the
+# heritage PAYLOAD_BATT/DEPLOY1 traces, so each of their stubs may make exactly ONE B.Cu->F.Cu layer change with a
+# via inside the attachment band (within VIA_BAND_MM of the Rev2 edge, not on a heritage endpoint). Every other via
+# inside the Rev2 outline is still a violation.
+# Extended 2026-09-20 (PM, routing attempt 2 / brief §12 F11): the same DEPLOY1/PAYLOAD_BATT wall runs north to y 65.3 and
+# also boxes in J16 pin 1 (USBBOOT) and J14 pins 10/12 (BATT_SDA/BATT_SCL); those stubs get the same single layer change.
+VIA_ALLOWED = [
+    (re.compile(r'^J(2|9|13)$'), None),
+    (re.compile(r'^J16$'), {'1'}),
+    (re.compile(r'^J14$'), {'10', '12'}),
+    # Owner ruling 2026-09-22 (brief §12 F14): Deploy2_EN at U6.6 is fenced on F.Cu (0.202 mm hole) and B.Cu (0.182 mm)
+    # by heritage copper (route report §D6); its stub gets the same single B.Cu->F.Cu layer change inside the band.
+    (re.compile(r'^U6$'), {'6'}),
+]
+VIA_BAND_MM = 24.0   # the via must lie inside the stub's own allowance band (checked as depth from the Rev2 edge)
+
+
+def via_allowed(ref, num):
+    return any(rx.match(ref) and (nums is None or num in nums) for rx, nums in VIA_ALLOWED)
+
+
+# Owner ruling 2026-09-20 (brief §12 F12): these three nets cannot be reached at their pad without touching heritage
+# copper (J6.5/J1.6 sit exactly over the bottom-side connector pads and are wrapped by their own face-power traces;
+# U6.6 is boxed on both layers). Their stub may instead END ON the same net's heritage track or via (a T-junction that
+# changes no heritage geometry) within TAP_RADIUS_MM of the named pad. Exactly one tap point per net.
+NET_TAP_EXCEPTIONS = {'F0_SCL': ('J6', '5'), 'F4_SDA': ('J1', '6'), 'Deploy2_EN': ('U6', '6')}
+TAP_RADIUS_MM = 2.5
+
+
 ALLOWED_PADS = [
+    # J14 pins 10/12 (BATT_SDA/BATT_SCL) sit 18.5 mm from the nearest Rev2 edge: PM exception 2026-09-20 (panel PLR-02),
+    # 22 mm → 24 mm (routing attempt 2, precedent J7/J10/J20), conditional on a hand-traced path. Listed first so it wins.
+    (re.compile(r'^J14$'), {'10', '12'}, 24.0),
+    # PM 2026-09-20 (closure attempt 1, brief §12 F13): J1 pin 6 (F4_SDA) — the direct exit is closed by the heritage
+    # FIRE_DEPLOY1_A diagonal, the measured minimum path is 17.9 mm → 20 mm; U6 pin 6 (Deploy2_EN) — the F12 tap opens
+    # only a pocket bounded by the bottom-edge F.Cu wall, the way out is the x 178.7–182 corridor → 24 mm.
+    (re.compile(r'^J1$'), {'6'}, 20.0),
+    (re.compile(r'^U6$'), {'6'}, 24.0),
     (re.compile(r'^J(1|2|6|9|11|13|8|29|30|15|14|16|19)$'), None, 14.0),
     (re.compile(r'^J(7|10|20)$'), None, 24.0),
     (re.compile(r'^U6$'), {'3', '4', '5', '6'}, 14.0),
@@ -175,19 +212,20 @@ def main():
             if rx.match(ref) and f.m_Uuid.AsString() in snap['footprints']:
                 for pd in f.Pads():
                     if nums is None or pd.GetNumber() in nums:
-                        pads.append((ref, pd))
-                        limit_of[(ref, pd.GetNumber())] = lim
+                        if (ref, pd.GetNumber()) not in limit_of:
+                            pads.append((ref, pd))
+                        limit_of.setdefault((ref, pd.GetNumber()), lim)   # first matching row wins (the J14 pins 10/12 exception precedes the J14 row)
     violations, warnings = [], []
     to_prune = []
     new = [t for t in board.GetTracks() if t.m_Uuid.AsString() not in old_tracks]
     inside_items = []
+    inside_vias = []   # vias inside the Rev2 outline: allowed only as the single layer change of a bottom-side-connector stub (see VIA_ALLOWED_PADS)
     for t in new:
         s, e = t.GetStart(), t.GetEnd()
         ps, pe = (mm(s.x), mm(s.y)), (mm(e.x), mm(e.y))
         if t.GetClass() == 'PCB_VIA':
             if point_in_poly(ps, poly):
-                violations.append(f'via {t.GetNetname()} at ({ps[0]:.2f},{ps[1]:.2f}) inside the flight section')
-                to_prune.append(t)
+                inside_vias.append((t, ps))
             continue
         ins = point_in_poly(ps, poly) or point_in_poly(pe, poly)
         if not ins:
@@ -233,6 +271,17 @@ def main():
 
     per_net = defaultdict(int)
     stubs = []
+    chain_pts = {cid: {key(p) for t, ps, pe in items for p in (ps, pe)} for cid, items in chains.items()}
+    via_owner = {}   # via index -> chain id (a via belongs to the chain whose endpoint it sits on)
+    for vi, (v, pv) in enumerate(inside_vias):
+        for cid, pts in chain_pts.items():
+            if key(pv) in pts:
+                via_owner[vi] = cid
+                break
+    for vi, (v, pv) in enumerate(inside_vias):
+        if vi not in via_owner:
+            violations.append(f'via {v.GetNetname()} at ({pv[0]:.2f},{pv[1]:.2f}) inside the flight section (not part of any stub)')
+            to_prune.append(v)
     for cid, items in chains.items():
         net = items[0][0].GetNetname()
         length = sum(inside_length(ps, pe) for t, ps, pe in items)
@@ -248,6 +297,51 @@ def main():
                         touched.add((ref, pd.GetNumber(), pd.GetNetname()))
                         pad_points.add(key(p))
         bad = []
+        chain_vias = [(v, pv) for vi, (v, pv) in enumerate(inside_vias) if via_owner.get(vi) == cid]
+        via_ok = False
+        if chain_vias:
+            via_pads = [tp for tp in touched if via_allowed(tp[0], tp[1])]
+            if not via_pads:
+                bad.append(f'{len(chain_vias)} via(s) inside the flight section on a stub that does not start at a via-allowed pad (J2/J9/J13 any pin, J16.1, J14.10/12)')
+            elif len(chain_vias) > 1:
+                bad.append(f'{len(chain_vias)} vias inside the flight section (rule: at most one layer change per bottom-side stub)')
+            else:
+                v, pv = chain_vias[0]
+                via_lim = max(limit_of.get((ref, num), a.max_stub) for ref, num, pnet in via_pads)
+                if dist_to_boundary(pv, poly) > min(VIA_BAND_MM, via_lim) + 1e-6:
+                    bad.append(f'stub via at ({pv[0]:.2f},{pv[1]:.2f}) is {dist_to_boundary(pv, poly):.1f} mm deep (> {min(VIA_BAND_MM, via_lim):.0f} mm allowed for these pads)')
+                elif key(pv) in old_endpoints:
+                    bad.append(f'stub via at ({pv[0]:.2f},{pv[1]:.2f}) sits on a heritage track/via endpoint')
+                else:
+                    via_ok = True
+            if bad:
+                to_prune.extend(v for v, pv in chain_vias)
+        # F12 trace-tap exception: a stub of one of the three walled nets may end on its own net's heritage track/via
+        tap = None
+        if net in NET_TAP_EXCEPTIONS and not touched:
+            tref, tnum = NET_TAP_EXCEPTIONS[net]
+            tfp = board.FindFootprintByReference(tref)
+            tpad = next((pd for pd in tfp.Pads() if pd.GetNumber() == tnum), None) if tfp else None
+            if tpad is not None:
+                pc = (mm(tpad.GetPosition().x), mm(tpad.GetPosition().y))
+                for p in endpoints:
+                    if math.hypot(p[0] - pc[0], p[1] - pc[1]) > TAP_RADIUS_MM:
+                        continue
+                    for u, ht in snap['tracks'].items():
+                        if ht['net'].split('/')[-1] != net:
+                            continue
+                        if ht['type'] == 'PCB_VIA':
+                            if math.hypot(p[0] - ht['start'][0], p[1] - ht['start'][1]) <= ht['width'] / 2 + 0.01:
+                                tap = (p, 'via', u)
+                        elif dist_point_seg(p, tuple(ht['start']), tuple(ht['end'])) <= ht['width'] / 2 + 0.01:
+                            tap = (p, ht['layer'], u)
+                        if tap:
+                            break
+                    if tap:
+                        break
+            if tap:
+                touched.add((tref, tnum, net))          # counts as the attachment for limits/reporting
+                pad_points.add(key(tap[0]))             # and its endpoint may coincide with heritage geometry
         if not touched:
             bad.append('touches no allowed pad')
         wrong_net = [tp for tp in touched if tp[2] != net]
@@ -265,12 +359,26 @@ def main():
         if touching_old:
             bad.append(f'touches heritage track/via endpoint(s) off-pad at {touching_old[:3]}')
         layers = {board.GetLayerName(t.GetLayer()) for t, ps, pe in items}
-        for ref, num, pnet in touched:
-            pd = next(pd for r, pd in pads if r == ref and pd.GetNumber() == num)
-            off = [board.GetLayerName(t.GetLayer()) for t, ps, pe in items if not pd.IsOnLayer(t.GetLayer())]
+        if tap is not None:
+            # the stub must stay on the tapped item's layer (a tapped via accepts either outer layer)
+            ok_layers = {'F.Cu', 'B.Cu'} if tap[1] == 'via' else {tap[1]}
+            off = sorted({board.GetLayerName(t.GetLayer()) for t, ps, pe in items} - ok_layers)
             if off:
-                bad.append(f'stub segment(s) on {sorted(set(off))} but pad {ref}.{num} has no copper there')
-        desc = f"stub net {net}: {len(items)} seg, {length:.1f} mm inside, pads {sorted(touched)}, layers {sorted(layers)}"
+                bad.append(f'tap stub segment(s) on {off} but the tapped heritage item is on {tap[1]}')
+        elif not via_ok:
+            for ref, num, pnet in touched:
+                pd = next((pd for r, pd in pads if r == ref and pd.GetNumber() == num), None)
+                if pd is None:
+                    continue
+                off = [board.GetLayerName(t.GetLayer()) for t, ps, pe in items if not pd.IsOnLayer(t.GetLayer())]
+                if off:
+                    bad.append(f'stub segment(s) on {sorted(set(off))} but pad {ref}.{num} has no copper there')
+        else:
+            # one layer change allowed: only F.Cu / B.Cu segments (no inner-layer stubs)
+            inner = [l for l in layers if l not in ('F.Cu', 'B.Cu')]
+            if inner:
+                bad.append(f'stub segment(s) on inner layer(s) {sorted(inner)}')
+        desc = f"stub net {net}: {len(items)} seg, {length:.1f} mm inside, pads {sorted(touched)}, layers {sorted(layers)}" + (f", via at ({chain_vias[0][1][0]:.2f},{chain_vias[0][1][1]:.2f})" if chain_vias else '') + (f", TAP on heritage {tap[1]} at ({tap[0][0]:.2f},{tap[0][1]:.2f}) (F12)" if tap else '')
         stubs.append(desc)
         if bad:
             violations.append(desc + ' -> ' + '; '.join(bad))

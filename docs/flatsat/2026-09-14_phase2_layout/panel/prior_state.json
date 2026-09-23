@@ -1,0 +1,147 @@
+{
+ "junior_developer": {
+  "scope_checked": "Junior developer / bench-user pass over FlatSat V1 floorplan v2.2 (scratch copy, read-only): all 8 workflow steps in the brief (simultaneous connector mating, wrong-plug/jumper risk, bench-mode shunt row + SAFE switch, probe reachability incl. which nets have no test point, mounting/handling, firmware bring-up button/SWD reach, FC's own left/top edges, general send-it-back check). Measured with pcbnew courtyard polygons + pad/net queries on the scratch board; cross-checked against floorplan_v2.md, 00_pm_brief.md, blocks.json and panel/facts/facts.md. Manufacturer datasheet fetches (Phoenix MKDS, HRO USB-C, JST SH, MSK12C02) mostly failed to yield numeric drawings (403s / image-only PDFs); fell back to measured KiCad courtyard geometry and generic connector-family knowledge where noted.",
+  "findings": [
+   {
+    "id": "JD-01",
+    "title": "No test point exists anywhere on any I2C bus net",
+    "category": "usability",
+    "severity": "major",
+    "refs": "TP200-TP203,TP300-TP306,TP500-TP512,TP600-TP603,U300,U310-U316,U301-U303",
+    "block": "board",
+    "location": "board-wide; all TestPoint_Pad_D1.5mm refs",
+    "description": "Direct pad-net query of every TP footprint on the board (28 refs, TP200-306/400-402/500-512/600-603/701) shows none of them is connected to a buffered I2C signal. TP300-306 are actually F0_PWR...F5_PWR/+3V3 (power, not I2C, despite reading as generic 'TestPoint' in facts.md's value column). Every I2C signal net in the design -- F0_SCL/SDA through F5_SCL/SDA, SCL_Top/SDA_Top, BATT_SCL/BATT_SDA (7 buffered channels), and the emulator-side EMU_F*_SCL/SDA equivalents -- has zero test points. This is the single most useful bring-up probe point set (verifying each face's I2C bus is alive) and it doesn't exist.",
+    "evidence": "pcbnew pad-net dump of every TPxxx footprint on FlatSat_V1.kicad_pcb (this session's query): TP200=VBUS_EMU, TP201=3V3_EMU, TP202=1V1_EMU, TP300..306=F0_PWR..F5_PWR/+3V3, TP500..505=Dir_Chrg_In/VBAT_BENCH_N/B-/DOUT_GATE/COUT_GATE/MID_BENCH, TP510..512=VBUS_CHG/CHG_SYS/CHG_BAT, TP600..603=Deploy1_EN/Heater_EN/Deploy2_EN/PYRO_INH_COM. No TP net name contains SCL or SDA anywhere in the dump.",
+    "reference": "Task brief workflow step 4, explicit example ('the shared I2C buses'); attachment map floorplan_v2.md \u00a72 lists F0-F5 SCL/SDA, SCL_Top/SDA_Top, BATT_SCL/SDA as the 14 buffered I2C nets with no counterpart TP.",
+    "recommendation": "Before routing locks in, decide whether to add a small test-point stub off each buffer's SCL/SDA output pin (U300/U310-U316 pins 3/6) -- cheapest is one shared TP per face on the buffered side, or at minimum on the raw emulator-side EMU_SCL/SDA bus (2 TPs instead of 14). This needs a schematic-level part addition, so it should go to the owner now, not after Phase 3 routing.",
+    "confidence": 0.85
+   },
+   {
+    "id": "JD-02",
+    "title": "J400/J401 solar-injection terminals: 1.24 mm apart, identical parts, no room for a legend between them",
+    "category": "usability",
+    "severity": "major",
+    "refs": "J400,J401,J500",
+    "block": "vsolar_injection",
+    "location": "x 225.9-249.6, y 159.5-170.4 (new bottom-right area of the strip)",
+    "description": "J400 (VSOLAR_BENCH_A) and J401 (VSOLAR_BENCH_B) are the identical footprint (TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02), same pitch, same pole count, 12.5 mm apart center-to-center, with only 1.24 mm of clear board between their courtyard bodies. They are fixed screw terminals, not a keyed pluggable connector, so nothing mechanical stops a solar-sim wire going into the wrong channel's block. L8's planned legend ('VSOLAR A/B' + polarity marks, text >=1.2 mm high) is the only disambiguation, and 1.24 mm isn't enough clear board to fit a legend between the two bodies -- it has to go above/below instead, which needs to be planned for explicitly. J500 (3-pin bench PSU block) is lower risk: it's visibly wider (16.34 mm courtyard vs 11.26 mm) and sits 9.7 mm clear of J400, so pole-count + distance already differentiate it.",
+    "evidence": "pcbnew courtyard BBox: J400 F.CrtYd (225.875,159.545)-(237.135,170.445); J401 F.CrtYd (238.375,159.545)-(249.635,170.445) -> gap = 238.375-237.135 = 1.24 mm. J400 pad1 net=VSOLAR_BENCH_A, J401 pad1 net=VSOLAR_BENCH_B (pad2=GND on both). J500-J400 courtyard gap = 225.875-216.175 = 9.7 mm.",
+    "reference": "00_pm_brief.md L8 (silkscreen legend plan, deferred to stage 6 but 'needs room now'); brief workflow step 2.",
+    "recommendation": "Either widen the J400-J401 gap by a mm or two if the strip layout has slack, or explicitly plan the legend to run above the pair (north, toward JP400/D400/F400) rather than between them, and confirm that space is pad-free before stage 6.",
+    "confidence": 0.8
+   },
+   {
+    "id": "JD-03",
+    "title": "JP602-JP607 bench-mode shunt bank: only 2.17 mm between adjacent header bodies",
+    "category": "usability",
+    "severity": "major",
+    "refs": "JP602,JP603,JP604,JP605,JP606,JP607",
+    "block": "strip_left_pyro_shunts",
+    "location": "x 186.9-219.5, y 143.98-150.16 (bottom strip, under U6/J29/J30/J8/J15)",
+    "description": "The six main-bank jumpers sit on a clean 5.75-5.80 mm pitch, but each PinHeader_1x02_P2.54mm_Vertical has a 3.63 mm wide courtyard, leaving only 2.17 mm clear between every adjacent pair (measured on all 5 pairs: 2.12-2.17 mm). This is the row a bench user reaches into every time they change bench mode. A standard 2.54 mm shorting-block body (the brief's own hardware list calls out '2.54 mm headers + standard 6 mm shunts') typically has a flared grip tab; 2.17 mm of clearance to the next populated header is tight to pull one shunt with fingers and tighter with pliers without nudging its neighbor.",
+    "evidence": "pcbnew courtyard BBox for JP602-607, all w=3.63mm h=6.18mm; center x-positions 188.75/194.5/200.3/206.1/211.9/217.7 (5.75-5.8mm pitch); adjacent courtyard gaps computed: JP606-JP605=2.12mm, JP605-JP603=2.17mm, JP603-JP604=2.17mm, JP604-JP602=2.17mm, JP602-JP607=2.17mm.",
+    "reference": "Task brief workflow step 3 ('can you move shunts with fingers or pliers'); computed task's own connector list ('2.54 mm headers + standard 6 mm shunts').",
+    "recommendation": "If the strip has any spare width, open the pitch on this bank slightly (even 0.5-1 mm more per gap materially helps finger access); if not, note in the assembly/bring-up doc that only alternating shunts should be swapped by hand and a small tool (not fingers) is recommended for the full bank.",
+    "confidence": 0.65
+   },
+   {
+    "id": "JD-04",
+    "title": "JP400 (VSOLAR select) and JP510 (charger CHG OUT select) are identical headers 0.87 mm apart, far from either's own block",
+    "category": "usability",
+    "severity": "major",
+    "refs": "JP400,JP510",
+    "block": "vsolar_injection",
+    "location": "(252.8, 145.79) and (257.3, 145.79) -- same row, north of the strip's charger/vsolar area",
+    "description": "Both are the identical PinHeader_1x02_P2.54mm_Vertical footprint, in the same y-row, with a 0.87 mm courtyard-to-courtyard gap (confirmed against facts.md's own courtyard table: 'JP510 | JP400 | 0.870 | F'). JP400 selects a VSOLAR_BENCH routing option; JP510 selects the charger's CHG OUT routing -- two unrelated subsystems. Neither sits near the connector/block it logically belongs to (JP400 is 19.5 mm from J400/J401's screw terminals; JP510 is 15.9 mm from J510), so there's no positional cue to catch a shunt moved one slot over, only a legend that isn't drawn yet and has under a millimeter of room to fit between the two.",
+    "evidence": "pcbnew courtyard BBox: JP400 (250.985,143.975)-(254.615,150.155); JP510 (255.485,143.975)-(259.115,150.155) -> gap=0.87mm. Cross-checked against panel/facts/facts.md courtyard-gap table row 'JP510 | JP400 | 0.870 | F'.",
+    "reference": "Task brief workflow step 2 ('is there room for the L8 legend + polarity marks beside each terminal and each jumper JP400/401/500/510/600-607').",
+    "recommendation": "Increase the JP400-JP510 gap if the row has slack, or at minimum put a strong silkscreen divider/box around each with its function name close enough to read without ambiguity at this spacing.",
+    "confidence": 0.8
+   },
+   {
+    "id": "JD-05",
+    "title": "J12 (FC's own laptop USB-C) is bottom-side; every other daily-use bench connector is top-side",
+    "category": "usability",
+    "severity": "note",
+    "refs": "J12",
+    "block": "board",
+    "location": "(223.16, 78.6), B side, opens east into the L3 lane",
+    "description": "J12 is a heritage Rev2 part (frozen, L4) mounted on the board's B (bottom) side, while J701 (emulator USB-C), J510 (charger USB-C), J500/J400/J401 (screw terminals), J22 (SWD), J702 (SWD), and J703 (ribbon header) are all F side. The lane sizing works fine for J12's cable geometrically (16.14 mm clear to the nearest new part), but a bench fixture that lets you plug a laptop into J12 at the same time as everything else needs open access to the underside of the board simultaneously with the top -- not a board resting flat on a solid plate.",
+    "evidence": "pcbnew: J12 side=B, rot=-90 deg, pos=(223.160,78.600). Courtyard face (mating opening, east) at x=227.355; nearest new part (face_column west edge, per floorplan_v2.md) at x=243.495 -> 16.14mm clear. All bench-use connectors listed above confirmed side=F via the same query.",
+    "reference": "Task brief workflow step 1 ('a laptop USB-C into the FC's own J12').",
+    "recommendation": "Document the required standoff/fixture height and open-underside access in the bring-up guide; not a placement change (J12 is heritage-frozen).",
+    "confidence": 0.9
+   },
+   {
+    "id": "JD-06",
+    "title": "Test-point pitch across the board (0.96-1.41 mm clear) is tighter than a typical hook-clip or probe tip",
+    "category": "usability",
+    "severity": "minor",
+    "refs": "TP300,TP301,TP302,TP303,TP304,TP305,TP306,TP500,TP501,TP502,TP600,TP601,TP602,TP603,TP202,TP203",
+    "block": "face0_reference",
+    "location": "multiple TestPoint_Pad_D1.5mm banks: face0 y=124.8 x=270.3-291.6; pyro y=152.4 x=163.2-173.9; battery y=163.5/168.5 x=190-198; emulator y=114.5 x=280/284",
+    "description": "Every TestPoint_Pad_D1.5mm bank on the board is spaced 3.5-4.0 mm pitch, leaving only 0.96-1.41 mm clear between neighboring TP courtyards. A standard hook-clip jaw or a 2.5 mm bare probe tip is wider than that gap, so landing on one TP risks brushing its immediate neighbor -- on TP500-505 that's Dir_Chrg_In next to VBAT_BENCH_N next to B-, nets you don't want briefly shorted together.",
+    "evidence": "pcbnew courtyard gaps: TP300-TP301=0.96mm, TP600-TP601=0.957mm, TP202-TP203=1.41mm, TP500-TP501=1.41mm (center pitch 4.0mm, courtyard w=2.59mm each).",
+    "reference": "Task brief workflow step 4 ('with a 2.5 mm scope-probe tip and a hook clip, which ... can you reach without touching a neighbouring pad').",
+    "recommendation": "No placement change needed given the block-level audits already passed; note in the bring-up doc to use a fine needle probe (not a hook/alligator clip) on these clustered banks, or add a thin silkscreen keep-away ring reminder around each cluster.",
+    "confidence": 0.7
+   },
+   {
+    "id": "JD-07",
+    "title": "SW701/SW702 sit 1.78 mm from J702 (SWD); brief's own BOOTSEL/RESET guess is backwards",
+    "category": "usability",
+    "severity": "minor",
+    "refs": "SW701,SW702,J702",
+    "block": "bench_io_cable",
+    "location": "(291.36,66.76) / (284.06,66.76) / (287.2,60.6)",
+    "description": "Pad-net check: SW701 is on net EMU_RUN (run/reset control) and SW702 is on net EMU_BOOTSEL_SW -- i.e. SW702 = BOOTSEL, SW701 = RUN/RESET, the reverse of the guess in the review brief. Both buttons' courtyards are only 1.78 mm from J702 (SWD)'s courtyard, and 1.93 mm from each other. J702 mates straight up (vertical header, cable exits out-of-plane) so it doesn't block side access, but an SWD probe housing overhanging its footprint sits right where a thumb lands on SW702 for a BOOTSEL-hold-and-plug bring-up sequence.",
+    "evidence": "pcbnew pad dump: SW701 pads A/A'=EMU_RUN, B/B'=GND; SW702 pads A/A'=EMU_BOOTSEL_SW, B/B'=GND. Courtyard gaps: SW701-J702=1.78mm, SW702-J702=1.78mm, SW701-SW702=1.93mm.",
+    "reference": "Task brief workflow step 6 ('SW701 (BOOTSEL?) / SW702 (RESET?) reachable while J701 plugged').",
+    "recommendation": "Fix the BOOTSEL/RESET labeling in silkscreen and the bring-up doc to match the real nets (SW702=BOOTSEL, SW701=RUN/RESET). No placement change needed -- 1.78-1.93 mm is workable, just worth knowing before writing the bring-up procedure.",
+    "confidence": 0.85
+   },
+   {
+    "id": "JD-08",
+    "title": "SW600 (pyro SAFE switch) is pinched between the JP600/601 shunts and LED600/R602 with under 1 mm clear on both sides",
+    "category": "usability",
+    "severity": "minor",
+    "refs": "SW600,JP600,JP601,LED600,R602",
+    "block": "strip_left_pyro_shunts",
+    "location": "(156.475, 154.015), far west end of the strip",
+    "description": "SW600 (SPDT slide switch, safety-relevant pyro SAFE/ARM control) has JP600/JP601 0.957 mm above it and LED600/R602 ~1.0 mm below it (both courtyard-to-courtyard). SW600 is a low-profile SMD part (~8x2.8mm body, ~1.4mm slide travel per the JLC listing), so it's unlikely to get bumped accidentally -- but if a shunt cap is seated on JP600 or JP601 right above it, there's very little vertical room left for a fingernail or small tool to actuate the slider for what's meant to be a deliberate safety action.",
+    "evidence": "panel/facts/facts.md courtyard table: 'JP600 | SW600 | 0.960 | F', 'SW600 | R600 | 0.960 | F'; pcbnew: SW600 F.CrtYd (151.980,151.120)-(160.970,157.160), LED600 F.CrtYd (152.020,158.160)-(155.070,159.710) -> gap ~1.0mm.",
+    "reference": "Task brief workflow step 3 ('Is the SAFE switch operable ... while cables are plugged in').",
+    "recommendation": "No move needed (this block already passed its manufacturer-guideline audit and PM review) -- but call out in the bring-up/assembly doc that JP600/601 shunts should be removed or the SAFE switch actuated with a small flat tool, not a fingernail, when a shunt is seated there.",
+    "confidence": 0.6
+   }
+  ],
+  "routing_forecast": "",
+  "report_md_path": "/Users/ncc-michael/GitHub/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/panel/junior_developer.md"
+ },
+ "verdicts": [
+  {
+   "id": "JD-01",
+   "verdict": "refuted",
+   "severity_after": "note",
+   "reason": "Measurement reproduces exactly (0 of 32 TP footprints touch an SCL/SDA net), but this is not a placement finding: which nets get a test point was fixed in Phase 1 schematic capture, already reviewed and closed (00_pm_brief.md S5: 'Test points (28) have no LCSC \u2014 correct per FC convention; unchanged'; floorplan_v2.md row 5/R4 already audited every existing TP's placement against its schematic-assigned net, all PASS). No move of any of the 218 placed parts can add a new test point \u2014 the finding's own recommendation concedes it 'needs a schematic-level part addition' and 'should go to the owner now', i.e. it is a schematic-revision request, not a floorplan defect. Also, the cited 'Task brief workflow step 4 ... shared I2C buses' text does not appear anywhere in floorplan_v2.md, 00_pm_brief.md, or blocks.json.",
+   "evidence": "Independent pcbnew pad-net dump on a fresh copy of FlatSat_V1.kicad_pcb (scratchpad/panel/skeptic/): 32 TP footprints total (TP2/TP5/TP6/TP8 heritage + 28 new). TP300..306 = F0_PWR..F5_PWR/+3V3; TP200=VBUS_EMU, TP201=3V3_EMU, TP202=1V1_EMU, TP203=EMU_GPIO_RSVD; TP500..512 = Dir_Chrg_In/VBAT_BENCH_N/B-/DOUT_GATE/COUT_GATE/MID_BENCH/VBUS_CHG/CHG_SYS/CHG_BAT; TP600..603 = Deploy1_EN/Heater_EN/Deploy2_EN/PYRO_INH_COM; TP701=VBUS_EMU. grep of 'TP refs touching SCL/SDA' = []. 00_pm_brief.md line 54 (S5) and floorplan_v2.md line 546/571 (rows 5, R4) confirm TP roster/placement already reviewed in Phase 1/2b, PASS.",
+   "recommendation_after": "Drop from this floorplan review. If the owner still wants I2C bring-up probe points, log it as a note for the next schematic revision (new TestPoint symbols on U300/U310-U316 pins 3/6, or 2 TPs on EMU_SCL/EMU_SDA) addressed as a schematic change request, not a Phase-2 placement action."
+  },
+  {
+   "id": "JD-05",
+   "verdict": "confirmed",
+   "severity_after": "note",
+   "reason": "All measurements reproduce independently and the finding is correctly scoped: informational only, no placement action requested or possible (J12 is Rev2 heritage, frozen under L4 \u2014 no existing footprint moves/flips/rotations allowed), consistent with PM decisions.",
+   "evidence": "Independent pcbnew query on a fresh copy of FlatSat_V1.kicad_pcb: J12 side=B, rot=-90.0 deg, pos=(223.160, 78.600) mm, matching reporter exactly. J701/J510/J500/J400/J401/J22/J702/J703 all confirmed side=F. J12 B.Courtyard east edge measured at x=227.335 mm (reporter 227.355, 0.02 mm apart \u2014 courtyard-segment selection rounding); versus face_column west edge x=243.495 mm (floorplan_v2.md block envelope) gives 16.16 mm clear (reporter: 16.14 mm) \u2014 same result within noise, well clear of any USB-C cable geometry. 00_pm_brief.md line 37 (L4) confirms heritage parts including J12 cannot be moved/flipped/rotated.",
+   "recommendation_after": "Unchanged: document required underside access / fixture standoff for J12 in the bring-up guide; not a placement change."
+  },
+  {
+   "id": "JD-07",
+   "verdict": "downgraded",
+   "severity_after": "note",
+   "reason": "Every measured fact holds up (net assignments SW701=EMU_RUN/SW702=EMU_BOOTSEL_SW reproduced exactly via pcbnew pad dump; courtyard gaps reproduced within ~0.04mm of the claim; J702 confirmed a vertical/top-entry JST SH connector via its LCSC listing, supporting the finding's own 'doesn't block side access' reasoning), but the 'backwards guess' lives only in the review workflow's own checklist question mark, not in any owner document -- the project's actual placement doc (detail/placement_bench_io_cable.md lines 32-33) already states the correct net/button mapping. The recommended fix (silkscreen + bring-up doc) targets a silkscreen legend that does not exist yet (grepped the board file: SW701/SW702 carry only their KMR2 part-number Value, no BOOTSEL/RESET text), which is explicitly a stage-6 deliverable per owner rule L8, and the finding itself states 'No placement change needed' -- i.e. zero placement consequence. Per the panel's own reporting rule (don't report things belonging to silkscreen stages absent a placement consequence), this is informational, not an actionable stage-2 item, so severity moves from minor to note rather than being refuted outright.",
+   "evidence": "pcbnew pad dump on the scratch board: SW701 A/A'=EMU_RUN, B/B'=GND; SW702 A/A'=EMU_BOOTSEL_SW, B/B'=GND. Courtyard-bbox gaps measured this session: SW701-J702=1.82mm, SW702-J702=1.82mm, SW701-SW702=1.97mm (finding: 1.78/1.78/1.93mm -- same conclusion, ~0.04mm method noise). grep of the .kicad_pcb for BOOTSEL/RESET text near SW701/SW702 footprints: none found (only Value='KMR2'). detail/placement_bench_io_cable.md lines 32-33 already read: 'SW701 ... EMU_RUN momentary button -- RP2350 reset' / 'SW702 ... EMU_BOOTSEL_SW momentary button -- RP2350 BOOTSEL entry'. LCSC product listing for C160389 (JST BM03B-SRSS-TB, J702) describes it as 'Surface Mount, Vertical' (top-entry, cable exits perpendicular to PCB).",
+   "recommendation_after": "No placement change (confirmed correct). Carry forward as a note for the stage-6 silkscreen pass and any future bring-up doc: label SW701 'RUN/RST' and SW702 'BOOTSEL' per the EMU_RUN/EMU_BOOTSEL_SW nets, matching the text already in detail/placement_bench_io_cable.md (no edit needed there -- it's already correct). No datasheet-checklist row changes required."
+  }
+ ]
+}

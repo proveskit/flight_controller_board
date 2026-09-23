@@ -494,3 +494,33 @@ since `route.sh` bundles export+route+import+DRC in one non-resumable shot, repl
    must be 0. Do this in addition to, not instead of, the heritage check in step 8 -- they prove
    different things.
 10. Only then run a full DRC pass and hand the board to the normal pre-order review procedure.
+
+### 8. Routing attempt 1 on floorplan v2.3 (2026-09-20) — three more tool fixes
+
+1. `attachment_check.py` ALLOWED_PADS was last-match-wins, so the J14 pins 10/12 exception (22 mm) listed
+   first was overwritten by the general J14 row (14 mm). Now first-match-wins (`setdefault`).
+2. `route.sh` copied only the `.kicad_pro` beside its intermediate boards. KiCad falls back to factory-default
+   design rules when `.kicad_dru` / lib tables are missing, which inflated clearance and lib-footprint DRC
+   counts and shifted zone fills. `siblings()` now copies `.kicad_pro`, `.kicad_dru`, both lib tables and the
+   local libraries next to PREP / EXPORT / POST / OUT. Same lesson as `build_floorplan.sh`.
+3. `heritage.py check` flagged the FC's F.Cu +3V3 pour: −28 mm² inside the 12 mm core, −110 mm² in the band.
+   Cause: compliant stubs (14–24 mm deep, wider than the pour's slivers between adjacent connectors) carve the
+   pour and isolate slivers that KiCad removes as islands — so the change reaches past the 12 mm line without
+   any new copper there. The check now excludes fill changes within `--exclude-new-mm` (1.0) of new copper and
+   classifies a core loss whose every piece touches new copper as a note ("stub carve-out / removed island");
+   lost copper that touches no new copper still fails. The +3V3 net is carried by the In2 plane; the F.Cu pour
+   loss along the right edge is the accepted price of the L11 stubs.
+
+### 9. Closure rounds (2026-09-20) — what closed the last connections
+
+Routing attempt 2 (Opus) delivered a heritage-clean, DRC-clean board with 76 unconnected items; the two Sonnet
+DRC-cleanup rounds could not move that number, so the workflow gained a `stage: "close"` mode (args `boardPath`,
+`priorUnconnected`, `closureNotes`) that resumes from a routed board with new rulings. Closure attempt 1 took 76 → 39
+and measured the rest: the RP2350's 0.4 mm QFN-60 ring cannot escape 21 more signals under the Default 0.20 mm
+clearance with 0.46/0.20 vias (one via per two lands; the 0.34 mm gap between first-row vias is less than the
+0.527 mm a track needs, so no second row). Rulings F11–F13 (brief §12): single-via allowance extended to J16.1 and
+J14.10/12 (24 mm); trace taps for F0_SCL / F4_SDA / Deploy2_EN (`NET_TAP_EXCEPTIONS`); J1.6 → 20 mm, U6.6 → 24 mm;
+an `EMU_FANOUT` constraint-only rule area with a `.kicad_dru` rule (clearance 0.127 mm, via 0.40/0.20) so a
+0.127 mm track passes between 0.40 mm first-row vias and a second row exists — inside JLCPCB's 4-layer capability
+(0.09/0.09 mm, via 0.15/0.25) and the same scoped-0.127 practice as the FC's own `.kicad_dru`; GND lands go inward
+on F.Cu to the exposed pad, as the flown FC's U18 does (same footprint, rotated 45°, 34 of 60 lands surface-routed).

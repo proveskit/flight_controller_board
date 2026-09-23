@@ -34,10 +34,33 @@ def zone_polys(z):
     return out
 
 
-def snapshot(board, clip_outline=None, core_inset=None):
+def new_copper_poly(board, snap_tracks, inflate_mm):
+    """Union of every track/via NOT in the snapshot (i.e. new copper), inflated by inflate_mm, as one SHAPE_POLY_SET.
+    Subtracting it from the fills before measuring hides the carve-out a compliant stub causes in a heritage pour
+    (which may extend past the 12 mm core line: stubs are allowed 14-24 mm deep) while still catching fill changes
+    anywhere else. The same polygon is subtracted from the reference board's fills so both sides measure the same area."""
+    poly = pcbnew.SHAPE_POLY_SET()
+    clr = pcbnew.FromMM(inflate_mm)
+    maxerr = pcbnew.FromMM(0.02)
+    n = 0
+    for t in board.GetTracks():
+        if t.m_Uuid.AsString() in snap_tracks:
+            continue
+        layer = pcbnew.F_Cu if t.GetClass() == 'PCB_VIA' else t.GetLayer()
+        try:
+            t.TransformShapeToPolygon(poly, layer, clr, maxerr, pcbnew.ERROR_OUTSIDE)
+            n += 1
+        except Exception:
+            pass
+    poly.Simplify()
+    return poly, n
+
+
+def snapshot(board, clip_outline=None, core_inset=None, exclude=None):
     """clip_outline: when checking a grown board, pass the stored Rev2 outline so 'fill_in_rev2' is measured
     inside the ORIGINAL outline rather than the current one. core_inset: additionally measure 'fill_in_core'
-    inside the outline deflated by this many mm (the flight core beyond the L11 attachment band)."""
+    inside the outline deflated by this many mm (the flight core beyond the L11 attachment band).
+    exclude: a SHAPE_POLY_SET subtracted from every fill before measuring (new copper + clearance, see new_copper_poly)."""
     fps = {}
     for f in board.GetFootprints():
         p = f.GetPosition()
@@ -89,10 +112,14 @@ def snapshot(board, clip_outline=None, core_inset=None):
                 for layer in z.GetLayerSet().Seq():
                     fp = pcbnew.SHAPE_POLY_SET(z.GetFilledPolysList(layer))
                     fp.BooleanIntersection(clip)
+                    if exclude is not None:
+                        fp.BooleanSubtract(exclude)
                     fill_in += fp.Area() / 1e12
                     if core_inset is not None:
                         fc = pcbnew.SHAPE_POLY_SET(z.GetFilledPolysList(layer))
                         fc.BooleanIntersection(core)
+                        if exclude is not None:
+                            fc.BooleanSubtract(exclude)
                         fill_core += fc.Area() / 1e12
             except Exception:
                 fill_in = fill_core = None
@@ -148,24 +175,65 @@ def refill(board):
     return filler.Fill(board.Zones())
 
 
-def check(snap, board, allow_zone_growth, allow_edge, do_refill=False, core_inset=None, ref_board=None):
+def check(snap, board, allow_zone_growth, allow_edge, do_refill=False, core_inset=None, ref_board=None, exclude_new_mm=None):
     """do_refill: refill zones (in memory) before measuring, so copper carved by new tracks is seen.
     core_inset: fills inside the Rev2 outline deflated by this many mm must be identical; fills in the band
     outside it (where L11 stubs are allowed) are only reported. ref_board: a Rev2 board to measure the
-    reference fills from with the same filler/insets (required for core_inset; refilled too if do_refill)."""
+    reference fills from with the same filler/insets (required for core_inset; refilled too if do_refill).
+    exclude_new_mm: ignore fill changes within this distance of any NEW track/via (the carve-out of a compliant
+    stub); the same area is excluded from the reference. None = no exclusion."""
     if do_refill:
         refill(board)
-    now = json.loads(json.dumps(snapshot(board, clip_outline=snap.get('rev2_outline'), core_inset=core_inset)))  # normalise tuples -> lists like the stored snapshot
+    excl = None
+    n_new = 0
+    if exclude_new_mm is not None:
+        excl, n_new = new_copper_poly(board, set(snap['tracks']), exclude_new_mm)
+    now = json.loads(json.dumps(snapshot(board, clip_outline=snap.get('rev2_outline'), core_inset=core_inset, exclude=excl)))  # normalise tuples -> lists like the stored snapshot
     ref = None
+    rb = None
     if ref_board is not None:
         rb = pcbnew.LoadBoard(ref_board)
         if do_refill:
             refill(rb)
-        ref = json.loads(json.dumps(snapshot(rb, clip_outline=snap.get('rev2_outline'), core_inset=core_inset)))['zones']
+        ref = json.loads(json.dumps(snapshot(rb, clip_outline=snap.get('rev2_outline'), core_inset=core_inset, exclude=excl)))['zones']
+    zones_now = {z.m_Uuid.AsString(): z for z in board.Zones()}
+    zones_ref = {z.m_Uuid.AsString(): z for z in rb.Zones()} if rb is not None else {}
+
+    def core_poly():
+        c = pcbnew.SHAPE_POLY_SET(); c.NewOutline()
+        for x, y in snap.get('rev2_outline'):
+            c.Append(pcbnew.VECTOR2I_MM(x, y))
+        c.Inflate(-pcbnew.FromMM(core_inset), pcbnew.CORNER_STRATEGY_ROUND_ALL_CORNERS, pcbnew.FromMM(0.05))
+        return c
+
+    def lost_far_from_new_copper(u):
+        """mm² of core copper the reference zone has and the current zone lacks that does NOT touch the new-copper
+        exclusion (i.e. is not a carve-out / removed island caused by a stub). Returns (far_mm2, near_mm2)."""
+        zn, zr = zones_now.get(u), zones_ref.get(u)
+        if zn is None or zr is None or excl is None:
+            return None, None
+        core = core_poly()
+        touch = pcbnew.SHAPE_POLY_SET(excl); touch.Inflate(pcbnew.FromMM(0.6), pcbnew.CORNER_STRATEGY_ROUND_ALL_CORNERS, pcbnew.FromMM(0.05))
+        far = near = 0.0
+        for layer in zr.GetLayerSet().Seq():
+            fr = pcbnew.SHAPE_POLY_SET(zr.GetFilledPolysList(layer)); fr.BooleanIntersection(core)
+            fn = pcbnew.SHAPE_POLY_SET(zn.GetFilledPolysList(layer)); fn.BooleanIntersection(core)
+            lost = pcbnew.SHAPE_POLY_SET(fr); lost.BooleanSubtract(fn); lost.Fracture()
+            for i in range(lost.OutlineCount()):
+                piece = pcbnew.SHAPE_POLY_SET(); piece.AddOutline(lost.Outline(i))
+                a = piece.Area() / 1e12
+                t = pcbnew.SHAPE_POLY_SET(piece); t.BooleanIntersection(touch)
+                if t.Area() > 0:
+                    near += a
+                else:
+                    far += a
+        return far, near
     problems = []
     notes = []
     if do_refill:
         notes.append('zones refilled in memory before measuring' + (' (reference board too)' if ref is not None else ''))
+    if excl is not None:
+        notes.append(f'fill changes within {exclude_new_mm:g} mm of the {n_new} new tracks/vias are excluded from the comparison (stub carve-out)')
     # net renames from the Phase-1 promotions are expected; compare pad nets modulo those
     RENAME = {'/Power Systems/B-': 'B-', '/Power Systems/VBATT_SENSE': 'VBATT_SENSE', '/Power Systems/INHIB_1': 'INHIB_1', '/Power Systems/INHIB_2': 'INHIB_2', '/Power Systems/IN_RBF': 'IN_RBF', '/Power Systems/Load Switches/Deploy1_EN': 'Deploy1_EN', '/Power Systems/Load Switches/Heater_EN': 'Heater_EN', '/Power Systems/Load Switches/Deploy2_EN': 'Deploy2_EN'}
     rn = lambda n: RENAME.get(n, n)
@@ -211,7 +279,12 @@ def check(snap, board, allow_zone_growth, allow_edge, do_refill=False, core_inse
             # core: identical; band: report the carve-out (stubs are allowed there, the fill legitimately changes around them)
             if r.get('fill_in_core') and g.get('fill_in_core') is not None:
                 if abs(g['fill_in_core'] - r['fill_in_core']) / r['fill_in_core'] > 0.001:
-                    problems.append(f"zone {z['net']} on {z['layer']}: filled copper inside the flight core (outline -{core_inset:g} mm) changed {r['fill_in_core']:.1f} -> {g['fill_in_core']:.1f} mm²")
+                    far, near = lost_far_from_new_copper(u)
+                    msg = f"zone {z['net']} on {z['layer']}: filled copper inside the flight core (outline -{core_inset:g} mm) changed {r['fill_in_core']:.1f} -> {g['fill_in_core']:.1f} mm²"
+                    if far is not None and far <= 0.1:
+                        notes.append(msg + f" — all {near:.1f} mm² of the lost copper touches new copper (stub carve-out / removed island): accepted")
+                    else:
+                        problems.append(msg + (f" — {far:.1f} mm² of the lost copper is NOT adjacent to any new copper" if far is not None else ''))
             if r.get('fill_in_rev2') and g.get('fill_in_rev2') is not None:
                 band_ref = r['fill_in_rev2'] - (r.get('fill_in_core') or 0)
                 band_now = g['fill_in_rev2'] - (g.get('fill_in_core') or 0)
@@ -242,6 +315,7 @@ def main():
     s2.add_argument('--refill', action='store_true', help='refill zones in memory before measuring (see copper carved by new tracks)')
     s2.add_argument('--core-inset', type=float, default=None, help='fills inside the Rev2 outline deflated by this many mm must be identical; band changes are notes (needs --ref-board)')
     s2.add_argument('--ref-board', default=None, help='Rev2 board to measure reference fills from (same filler, same insets); read-only')
+    s2.add_argument('--exclude-new-mm', type=float, default=1.0, help='ignore fill changes within this distance of new tracks/vias (stub carve-out); 0 disables (default 1.0 when --ref-board is given)')
     a = ap.parse_args()
     if a.cmd == 'check' and a.core_inset is not None and not a.ref_board:
         ap.error('--core-inset needs --ref-board')
@@ -253,7 +327,8 @@ def main():
         return 0
     snap = json.load(open(a.snap))
     b = pcbnew.LoadBoard(a.board)
-    problems, notes = check(snap, b, a.allow_zone_growth, a.allow_edge, do_refill=a.refill, core_inset=a.core_inset, ref_board=a.ref_board)
+    excl = (a.exclude_new_mm if (a.ref_board and a.exclude_new_mm and a.exclude_new_mm > 0) else None)
+    problems, notes = check(snap, b, a.allow_zone_growth, a.allow_edge, do_refill=a.refill, core_inset=a.core_inset, ref_board=a.ref_board, exclude_new_mm=excl)
     for n in notes:
         print('note:', n)
     for p in problems:

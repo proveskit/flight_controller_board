@@ -135,6 +135,13 @@ def main():
                 segs.append(('arc', pa, pm, pb))
     elif spec.get('outline'):
         segs = fillet_polygon([tuple(p) for p in spec['outline']], spec.get('fillet_vertices', []), float(spec.get('fillet_radius', 4.0)))
+    # internal cutouts (e.g. a connector plug relief slot): closed rounded rectangles on Edge.Cuts.
+    # spec: "cutouts": [{"rect": [x0, y0, x1, y1], "radius": r, "name": "..."}]; zone fills heal around them on refill.
+    for co in spec.get('cutouts', []):
+        x0, y0, x1, y1 = co['rect']
+        r = float(co.get('radius', 1.0))
+        segs += fillet_polygon([(x0, y0), (x1, y0), (x1, y1), (x0, y1)], [0, 1, 2, 3], r)
+        print('cutout %s: x %.2f..%.2f y %.2f..%.2f r %.1f' % (co.get('name', ''), x0, x1, y0, y1, r))
     if segs:
         for s in segs:
             sh = pcbnew.PCB_SHAPE(board)

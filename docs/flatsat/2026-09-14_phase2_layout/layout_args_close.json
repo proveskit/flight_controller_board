@@ -1,0 +1,32 @@
+{
+ "stage": "close",
+ "keepoutJson": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/pcb/fc_keepout.json",
+ "project": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1",
+ "board": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/FlatSat_V1.kicad_pcb",
+ "docs": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout",
+ "scratch": "/private/tmp/claude-501/-Users-ncc-michael-GitHut/76ce4476-5b98-4bdc-b249-03b85212b6e5/scratchpad",
+ "brief": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/00_pm_brief.md",
+ "kicadPy": "/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3",
+ "kicad": "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+ "heritageSnap": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/baseline/heritage_rev2.json",
+ "drcBaseline": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/baseline/drc_prelayout.json",
+ "netlist": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/baseline/netlist_phase2.kicadxml",
+ "models": {
+  "proposal": "sonnet",
+  "judge": "opus",
+  "build": "sonnet",
+  "route": "sonnet",
+  "fix": "sonnet",
+  "fixEscalate": "opus",
+  "docs": "sonnet"
+ },
+ "proposals": 3,
+ "maxFixRounds": 3,
+ "context": "PROVES FlatSat V1 Phase 2 layout, CLOSURE stage, 2026-09-20 (continues run wf_9e44daf6-b9d: build done, routing attempt 2 delivered a heritage-clean, DRC-clean board with 76 unconnected items, all attributed; two Sonnet cleanup rounds made no progress and were stopped). Floorplan v2.3 (docs/.../floorplan_v2_3.json + .md) is OWNER-APPROVED for routing: v2.2 (block plan + datasheet-audited passives) plus the stage 2c panel fixes (J701 rotated to face the edge; J12 plug relief slot through the wing) with every gate clean (heritage 0 refilled vs Rev2, attachment 0, overlaps 0, DRC parity = the 11 known FC items). The panel's fix plan (docs/.../panel/panel_fix_plan.json) is binding for routing order and layer use; the owner/PM rulings are in the brief \u00a712 F5\u2013F10 (one B.Cu\u2192F.Cu via per J2/J9/J13 stub; J14 pins 10/12 stub \u2264 22 mm with a hand-traced path; 3V3_EMU and PYRO_INHIBIT_STATE on In2). Routing recipe: tools/pcb/README.md (\u00a77 = the smoke-run findings) and tools/pcb/route.sh; build recipe: tools/pcb/build_floorplan.sh. Lesson from v2.3: never fill or DRC a board copy that has no sibling .kicad_pro. Model policy: Sonnet for build/route/fix/docs, Opus only for escalation. Nothing is committed beyond checkpoint d56c9df on flatsat-v1; do not commit; the live board FlatSat_V1/FlatSat_V1.kicad_pcb is never written \u2014 the final routed board is delivered as a copy and the PM installs it.",
+ "floorplanJson": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/floorplan_v2_3.json",
+ "floorplanMd": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/floorplan_v2_3.md",
+ "panelFixPlan": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/panel/panel_fix_plan.json",
+ "refBoard": "/Users/ncc-michael/GitHut/flight_controller_board/FC_V5e_Production_Rev2/FC_V5e_Production_Rev2.kicad_pcb",
+ "boardPath": "/private/tmp/claude-501/-Users-ncc-michael-GitHut/76ce4476-5b98-4bdc-b249-03b85212b6e5/scratchpad/layout_route2/deliver/FlatSat_V1.kicad_pcb",
+ "priorUnconnected": 76
+}

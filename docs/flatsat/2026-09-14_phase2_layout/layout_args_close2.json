@@ -1,0 +1,33 @@
+{
+ "stage": "close",
+ "keepoutJson": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/pcb/fc_keepout.json",
+ "project": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1",
+ "board": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/FlatSat_V1.kicad_pcb",
+ "docs": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout",
+ "scratch": "/private/tmp/claude-501/-Users-ncc-michael-GitHut/76ce4476-5b98-4bdc-b249-03b85212b6e5/scratchpad",
+ "brief": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/00_pm_brief.md",
+ "kicadPy": "/Applications/KiCad/KiCad.app/Contents/Frameworks/Python.framework/Versions/Current/bin/python3",
+ "kicad": "/Applications/KiCad/KiCad.app/Contents/MacOS/kicad-cli",
+ "heritageSnap": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/baseline/heritage_rev2.json",
+ "drcBaseline": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/baseline/drc_prelayout.json",
+ "netlist": "/Users/ncc-michael/GitHut/flight_controller_board/FlatSat_V1/tools/baseline/netlist_phase2.kicadxml",
+ "models": {
+  "proposal": "sonnet",
+  "judge": "opus",
+  "build": "sonnet",
+  "route": "sonnet",
+  "fix": "sonnet",
+  "fixEscalate": "opus",
+  "docs": "sonnet"
+ },
+ "proposals": 3,
+ "maxFixRounds": 3,
+ "context": "PROVES FlatSat V1 Phase 2 layout, CLOSURE stage, 2026-09-20 (continues run wf_9e44daf6-b9d: build done, routing attempt 2 delivered a heritage-clean, DRC-clean board with 76 unconnected items, all attributed; two Sonnet cleanup rounds made no progress and were stopped). Floorplan v2.3 (docs/.../floorplan_v2_3.json + .md) is OWNER-APPROVED for routing: v2.2 (block plan + datasheet-audited passives) plus the stage 2c panel fixes (J701 rotated to face the edge; J12 plug relief slot through the wing) with every gate clean (heritage 0 refilled vs Rev2, attachment 0, overlaps 0, DRC parity = the 11 known FC items). The panel's fix plan (docs/.../panel/panel_fix_plan.json) is binding for routing order and layer use; the owner/PM rulings are in the brief \u00a712 F5\u2013F10 (one B.Cu\u2192F.Cu via per J2/J9/J13 stub; J14 pins 10/12 stub \u2264 22 mm with a hand-traced path; 3V3_EMU and PYRO_INHIBIT_STATE on In2). Routing recipe: tools/pcb/README.md (\u00a77 = the smoke-run findings) and tools/pcb/route.sh; build recipe: tools/pcb/build_floorplan.sh. Lesson from v2.3: never fill or DRC a board copy that has no sibling .kicad_pro. Model policy: Sonnet for build/route/fix/docs, Opus only for escalation. Nothing is committed beyond checkpoint d56c9df on flatsat-v1; do not commit; the live board FlatSat_V1/FlatSat_V1.kicad_pcb is never written \u2014 the final routed board is delivered as a copy and the PM installs it.",
+ "floorplanJson": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/floorplan_v2_3.json",
+ "floorplanMd": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/floorplan_v2_3.md",
+ "panelFixPlan": "/Users/ncc-michael/GitHut/flight_controller_board/docs/flatsat/2026-09-14_phase2_layout/panel/panel_fix_plan.json",
+ "refBoard": "/Users/ncc-michael/GitHut/flight_controller_board/FC_V5e_Production_Rev2/FC_V5e_Production_Rev2.kicad_pcb",
+ "boardPath": "/private/tmp/claude-501/-Users-ncc-michael-GitHut/76ce4476-5b98-4bdc-b249-03b85212b6e5/scratchpad/layout_close1/deliver/FlatSat_V1.kicad_pcb",
+ "priorUnconnected": 39,
+ "closureNotes": "Start from the closure-attempt-1 board (39 unconnected; its closure notes are in route_report.md 'closure' section and summarised here). NEW PM RULINGS (brief \u00a712 F13, already in tools/pcb/attachment_check.py): (1) U200 ESCAPES: add a constraint-only rule area (pcbnew ZONE with SetIsRuleArea(True), no keepouts, name 'EMU_FANOUT', all copper layers) covering x 266.5-280.0 / y 88.0-101.5, and append to the board's .kicad_dru: (rule \"emu_fanout\" (condition \"A.intersectsArea('EMU_FANOUT') && B.intersectsArea('EMU_FANOUT')\") (constraint clearance (min 0.127mm))) and (rule \"emu_fanout_via\" (condition \"A.Type == 'Via' && A.intersectsArea('EMU_FANOUT')\") (constraint annular_width (min 0.10mm)) (constraint via_diameter (min 0.40mm)) (constraint hole_size (min 0.20mm))). Verify with kicad-cli DRC that a 0.40/0.20 via and 0.127 mm spacing inside the area report no violation while the rest of the board keeps 0.20 (put a deliberate test via/track in, DRC, remove). Then re-fan U200 with exact-polygon fan-out (your fanout.py): two staggered via rows of 0.40/0.20 at alternate lands (row 1 \u2248 0.55 mm and row 2 \u2248 1.25 mm from the land tips, hole-to-hole \u2265 0.5 mm), 0.127 mm tracks from the row-2 lands passing between the row-1 vias (0.40 mm gap vs 0.381 mm needed - construct, do not search), escape onto In2 (the panel's In2 population) and B.Cu; keep the caps where they are (they were measured not to be the binding constraint). (2) The 9 GND lands: connect each INWARD on F.Cu to U200's exposed pad (net GND, 3.4 x 3.4 mm with 9 thermal vias, 1.3 mm gap from the land inner end) with a 0.127-0.2 mm radial track - no via needed; this is how the flown FC's U18 does it. (3) ALLOWED_PADS now gives J1 pin 6 (F4_SDA) 20 mm and U6 pin 6 (Deploy2_EN) 24 mm: route F4_SDA by the F12 tap along the measured 17.9 mm path south around J1/J2, and Deploy2_EN from its F12 via tap at (173.500,130.100) out through the x 178.7-182 corridor (both were measured feasible in attempt 1). (4) The 5 isolated islands of the GND_F_Cu_wing pour: find them with pcbnew (fill with islands kept, then list each filled polygon not connected to the plane via CONNECTIVITY_DATA or by testing each polygon for a via/pad) and drop one 0.46/0.20 GND stitching via in each. (5) The U6.1-U6.29 unconnected item is between two heritage pads on the FC (pre-existing, present on Rev2): leave it, list it as the FC baseline. (6) Deliver with heritage.py --refill --core-inset 12 --ref-board (0 violations), attachment_check (0), DRC with parity inside the project directory. Target: 0 unconnected. If anything remains, name it with the exact geometric reason and the smallest rule change that would close it."
+}

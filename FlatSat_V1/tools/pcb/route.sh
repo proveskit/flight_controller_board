@@ -34,10 +34,16 @@ py() { "$KPY" "$@" 2>&1 | grep -vE 'stdpbase\.cpp|pcb_track\.cpp|memory leak|Deb
 
 echo "route: 1/8 prep (unique refs so DSN export works)"
 py "$HERE/route_merge.py" prep "$PRE" "$PREP" || { echo "route: prep failed"; exit 2; }
-cp "${PRE%.kicad_pcb}.kicad_pro" "${PREP%.kicad_pcb}.kicad_pro" 2>/dev/null || true
+siblings() {  # every KiCad load/fill/DRC must see the project rules and libraries: .kicad_pro, .kicad_dru, lib tables, local libs
+  local src="${1%.kicad_pcb}" dst="${2%.kicad_pcb}" sdir ddir; sdir="$(dirname "$1")"; ddir="$(dirname "$2")"
+  cp "$src.kicad_pro" "$dst.kicad_pro" 2>/dev/null || true; cp "$src.kicad_dru" "$dst.kicad_dru" 2>/dev/null || true
+  if [ "$sdir" != "$ddir" ]; then for f in sym-lib-table fp-lib-table; do [ -e "$ddir/$f" ] || cp "$sdir/$f" "$ddir/$f" 2>/dev/null || true; done
+    for d in footprints.pretty symbols Backup_Footprints; do [ -e "$ddir/$d" ] || cp -R "$sdir/$d" "$ddir/$d" 2>/dev/null || true; done; fi
+}
+siblings "$PRE" "$PREP"
 
 echo "route: 2/8 keep-out on the export copy (${KEEPOUT_JSON:-none})"
-cp "$PREP" "$EXPORT"; cp "${PREP%.kicad_pcb}.kicad_pro" "${EXPORT%.kicad_pcb}.kicad_pro" 2>/dev/null || true
+cp "$PREP" "$EXPORT"; siblings "$PREP" "$EXPORT"
 if [ -n "$KEEPOUT_JSON" ]; then
   py - "$EXPORT" "$KEEPOUT_JSON" <<'PY'
 import sys, json, pcbnew
@@ -96,10 +102,11 @@ b = pcbnew.LoadBoard(sys.argv[1]); ok = pcbnew.ImportSpecctraSES(b, sys.argv[2])
 print('SES import', 'ok' if ok else 'FAILED', '| tracks+vias now', len(b.GetTracks()))
 PY
 [ -s "$POST" ] || { echo "route: SES import failed"; exit 5; }
+siblings "$PREP" "$POST"
 
 echo "route: 6/8 merge (heritage from PRE untouched + only new tracks/vias)"
 py "$HERE/route_merge.py" merge "$PRE" "$POST" "$OUT" --report || { echo "route: merge failed"; exit 6; }
-cp "${PRE%.kicad_pcb}.kicad_pro" "${OUT%.kicad_pcb}.kicad_pro" 2>/dev/null || true
+siblings "$PRE" "$OUT"
 
 echo "route: 7/8 attachment gate (+ prune) and heritage check"
 py "$HERE/attachment_check.py" "$HERITAGE_SNAP" "$OUT" > "$WORK/$BASE.attach.txt"; grep -c '^VIOLATION' "$WORK/$BASE.attach.txt" > /dev/null
