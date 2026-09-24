@@ -5528,6 +5528,12 @@
 		(uuid "9ea94b08-4e1e-4ac1-9394-c3849383a329")
 	)
 	(junction
+		(at 162.56 195.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9f2f032c-b317-4acc-92dd-a9b9c115240f")
+	)
+	(junction
 		(at 309.88 66.04)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5850,6 +5856,16 @@
 			(type default)
 		)
 		(uuid "383472c4-326c-4087-b058-0a7caa77ea05")
+	)
+	(wire
+		(pts
+			(xy 138.43 195.58) (xy 162.56 195.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40427cb3-f5b6-4dcf-b3d6-c1864995e23d")
 	)
 	(wire
 		(pts
@@ -6610,6 +6626,16 @@
 			(type default)
 		)
 		(uuid "f69c575f-7dba-4f38-b389-9170612c8048")
+	)
+	(wire
+		(pts
+			(xy 162.56 195.58) (xy 162.56 194.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7b05fb9-ef8e-43d5-af81-fc4146de8438")
 	)
 	(wire
 		(pts
@@ -8531,6 +8557,83 @@
 			(project "FC_V6"
 				(path "/2b2eb07a-06c8-4963-a95f-9b28e6f4041c/20bef565-3abf-40f1-a799-734367b10279"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 162.56 200.66 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3a5229a9-be15-49be-946e-21cd1a928b5b")
+		(property "Reference" "#PWR096"
+			(at 162.56 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 162.56 204.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 162.56 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 162.56 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b852d2ce-5270-472e-9930-fefe9ea16fba")
+		)
+		(instances
+			(project "FC_V6"
+				(path "/2b2eb07a-06c8-4963-a95f-9b28e6f4041c/20bef565-3abf-40f1-a799-734367b10279"
+					(reference "#PWR096")
 					(unit 1)
 				)
 			)
@@ -13055,6 +13158,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 162.56 194.31 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f6741daa-b3b8-4531-8a7e-ba3f8359eda8")
+		(property "Reference" "#PWR035"
+			(at 162.56 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 162.56 189.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 162.56 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 162.56 194.31 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b4515242-0fbb-4ffc-8962-6e9e0c799cb6")
+		)
+		(instances
+			(project "FC_V6"
+				(path "/2b2eb07a-06c8-4963-a95f-9b28e6f4041c/20bef565-3abf-40f1-a799-734367b10279"
+					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small_US")
 		(at 320.04 119.38 0)
 		(unit 1)
@@ -13209,6 +13390,87 @@
 			(project "FC_V6"
 				(path "/2b2eb07a-06c8-4963-a95f-9b28e6f4041c/20bef565-3abf-40f1-a799-734367b10279"
 					(reference "#PWR030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small_US")
+		(at 162.56 198.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ff2d3315-fbe1-4241-a36c-037e0bfd48b8")
+		(property "Reference" "C65"
+			(at 165.1 196.9769 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 165.1 199.5169 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 162.56 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 162.56 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "capacitor, small US symbol"
+			(at 162.56 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c79f8864-af03-4f72-a25c-70dd6d70f61d")
+		)
+		(pin "2"
+			(uuid "8078d83e-f83a-4768-bd24-73039437c24d")
+		)
+		(instances
+			(project "FC_V6"
+				(path "/2b2eb07a-06c8-4963-a95f-9b28e6f4041c/20bef565-3abf-40f1-a799-734367b10279"
+					(reference "C65")
 					(unit 1)
 				)
 			)
