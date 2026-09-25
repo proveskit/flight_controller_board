@@ -1,0 +1,54 @@
+(version 1)
+
+# Fine-pitch sensor packages have manufacturer land patterns with pad-to-pad
+# gaps below the 0.2 mm netclass clearance:
+#   U7  LSM6DSO  LGA-14 0.5 mm pitch  (0.15 / 0.175 mm gaps)
+#   U15 LIS2MDL  LGA-12 0.5 mm pitch  (0.15 mm)
+#   U8, U16 INA219 DCN                (0.15 mm)
+# JLCPCB 4-layer minimum copper clearance is 0.127 mm. Relax clearance only
+# between pads of the same listed footprint. Tracks, vias and zones near these
+# pads keep the full netclass clearance. Same geometry flew on V5d and was built
+# and validated on V5e Rev1.
+(rule "fine-pitch-pad-pitch"
+	(condition "A.Type == 'Pad' && B.Type == 'Pad' && ((A.memberOfFootprint('U7') && B.memberOfFootprint('U7')) || (A.memberOfFootprint('U15') && B.memberOfFootprint('U15')) || (A.memberOfFootprint('U8') && B.memberOfFootprint('U8')) || (A.memberOfFootprint('U16') && B.memberOfFootprint('U16')))")
+	(constraint clearance (min 0.127mm)))
+
+# Phase-2 (FlatSat V1) new fine-pitch/manufacturer-datasheet footprints with
+# intra-footprint pad-to-pad gaps below the applicable netclass clearance
+# (0.2 mm Default / 0.25 mm BenchPower once the L5 netclasses are applied):
+#   U200  RP2350 QFN-60 0.4 mm pitch escape pattern      (0.20 / 0.2121 mm gaps)
+#   J701, J510  USB-C receptacle (24-pin) manufacturer land pattern (0.20 mm A/B row gaps)
+#   Q510  dual-MOSFET SOT23-6 (0.19 / 0.24 mm gaps)
+#   U301  Face-0 reference IC SOT/DFN (0.15 mm gaps)
+#   U511  BQ25886 VQFN-24 (Texas RGE0024H) land pattern   (0.20 mm gaps)
+#         -- surfaced at the routing stage only, because the BenchPower class
+#         (0.25 mm) did not reach CHG_BAT / CHG_SYS until their netclass
+#         patterns were corrected for the hierarchical net names.
+# All measured gaps clear the JLCPCB 4-layer minimum copper clearance of
+# 0.127 mm. Relax clearance only between pads of the same listed footprint;
+# tracks, vias and zones near these pads keep the full netclass clearance.
+# Datasheet-audited placement, stage 2b/2c (floorplan_v2.md, panel review) --
+# not a routing-introduced defect. Listed in build_report.md.
+(rule "phase2-fine-pitch-pad-pitch"
+	(condition "A.Type == 'Pad' && B.Type == 'Pad' && ((A.memberOfFootprint('U200') && B.memberOfFootprint('U200')) || (A.memberOfFootprint('J701') && B.memberOfFootprint('J701')) || (A.memberOfFootprint('J510') && B.memberOfFootprint('J510')) || (A.memberOfFootprint('Q510') && B.memberOfFootprint('Q510')) || (A.memberOfFootprint('U301') && B.memberOfFootprint('U301')) || (A.memberOfFootprint('U511') && B.memberOfFootprint('U511')))")
+	(constraint clearance (min 0.127mm)))
+
+# Phase-2 closure round 2 (brief §12 F13a, PM ruling 2026-09-20): EMU_FANOUT.
+# U200 (RP2350 QFN-60, 0.40 mm pitch, 0.200 x 0.875 mm lands) cannot be escaped with a single
+# through-via row at the board-wide 0.20 mm clearance / 0.13 mm annular ring: one via fits per two
+# lands and the track to a second row would need 0.527 mm between two first-row vias where 0.34 mm
+# exists (route_report.md C3). Inside the EMU_FANOUT rule area only, copper clearance is 0.127 mm and
+# a 0.40/0.20 via (0.10 mm annular ring) is allowed, which opens a staggered two-row fan-out
+# (0.40 mm gap between first-row vias vs the 0.381 mm a 0.127 mm track needs).
+# Both numbers are inside JLCPCB's published 4-layer capability (0.09/0.09 mm track/space,
+# 0.15 mm hole / 0.25 mm via pad) and follow the same scoped-relaxation practice as the FC's own
+# fine-pitch pad rules above. Hole-to-hole stays at the board minimum 0.5 mm everywhere.
+(rule "emu_fanout"
+	(condition "A.intersectsArea('EMU_FANOUT') && B.intersectsArea('EMU_FANOUT')")
+	(constraint clearance (min 0.127mm)))
+
+(rule "emu_fanout_via"
+	(condition "A.Type == 'Via' && A.intersectsArea('EMU_FANOUT')")
+	(constraint annular_width (min 0.10mm))
+	(constraint via_diameter (min 0.40mm))
+	(constraint hole_size (min 0.20mm)))

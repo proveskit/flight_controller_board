@@ -16,6 +16,8 @@ const M = Object.assign({ proposal: 'sonnet', judge: 'opus', build: 'sonnet', ro
 const EFF = m => (m === 'fable' ? 'xhigh' : m === 'opus' ? 'xhigh' : 'high')
 const NPROP = A.proposals ?? 3
 const MAX_FIX = A.maxFixRounds ?? 3
+const OK_ERR = A.acceptErrors ?? 0   // drc_summary errors that are attributed baseline (accepted unconnected items + pre-existing Rev2 errors)
+const OK_UNCONN = A.acceptUnconnected ?? 0   // attributed baseline items the cleanup loop must not chase (e.g. the pre-existing FC U6.1/U6.29 item)
 const RUN_STAGE = A.stage || 'floorplan'   // 'floorplan' = propose/judge/apply, then STOP for the owner's review; 'build' = from an approved floorplan.json
 const KEEPOUT = A.keepoutJson || `${A.project}/tools/pcb/fc_keepout.json`
 const REF_BOARD = A.refBoard || `${A.project}/../FC_V5e_Production_Rev2/FC_V5e_Production_Rev2.kicad_pcb`   // read-only reference for the refilled core-fill check
@@ -125,7 +127,32 @@ if (RUN_STAGE === 'close') {
   if (!A.boardPath) throw new Error('stage "close" needs args.boardPath (the routed board to continue from, with its project siblings next to it)')
   built = { board_path: A.boardPath, summary: 'routed board from the previous run (project siblings next to it)', heritage_violations: 0, drc_errors: -1, drc_unconnected: -1, outside_outline: 0 }
   phase('Route')
-  for (let attempt = 1; attempt <= 2; attempt++) {
+  if (A.closePlan) {
+    // Plan mode (round 3+): independent workstreams on their own copies of boardPath, each writes a delta JSON of the
+    // items it added/removed; a merge step applies the deltas to one board; serial steps then chain board_path.
+    const P = A.closePlan
+    const STEP = (s, input, extra) => COMMON + `
+${PANEL}
+${A.closureNotes ? 'PM NOTES FOR THIS CLOSURE ROUND (binding; they supersede generic instructions above where they conflict): ' + A.closureNotes : ''}
+ROLE: ${s.label} (${s.model || M.fixEscalate}). Input board: ${input} (project siblings next to it — copy the whole directory, never work on a bare .kicad_pcb). Workstream brief: ${s.prompt}
+${extra || ''}`
+    const opts = s => ({ label: `close:${s.key}`, phase: 'Route', model: s.model || M.fixEscalate, effort: EFF(s.model || M.fixEscalate), schema: STAGE })
+    const streams = (await parallel((P.parallel || []).map(s => () => agent(STEP(s, A.boardPath), opts(s)).then(r => r && Object.assign(r, { key: s.key })))))
+    streams.forEach((r, i) => log(r ? `Workstream ${r.key}: unconnected ${r.drc_unconnected}, errors ${r.drc_errors}, heritage ${r.heritage_violations}` : `Workstream ${P.parallel[i].key}: returned nothing`))
+    routed = { board_path: A.boardPath, drc_unconnected: A.priorUnconnected ?? -1, drc_errors: -1, heritage_violations: 0, open_issues: [] }
+    if (P.merge && streams.filter(Boolean).length) {
+      routed = await agent(STEP(P.merge, A.boardPath, 'WORKSTREAM RESULTS (each names its board and its delta JSON in summary/report_path): ' + JSON.stringify(streams.filter(Boolean))), opts(P.merge))
+      if (!routed) throw new Error('merge returned nothing')
+      log(`Merge: unconnected ${routed.drc_unconnected}, errors ${routed.drc_errors}, heritage ${routed.heritage_violations}`)
+    }
+    for (const s of P.serial || []) {
+      const prev = routed
+      routed = await agent(STEP(s, prev.board_path, 'PREVIOUS STEP LEFT: ' + JSON.stringify({ unconnected: prev.drc_unconnected, errors: prev.drc_errors, issues: prev.open_issues })), opts(s))
+      if (!routed) throw new Error(`${s.key} returned nothing`)
+      log(`${s.key}: unconnected ${routed.drc_unconnected}, errors ${routed.drc_errors}, heritage ${routed.heritage_violations}`)
+    }
+  }
+  for (let attempt = 1; attempt <= 2 && !A.closePlan; attempt++) {
     const model = attempt === 1 ? M.fixEscalate : M.fixEscalate
     routed = await agent(COMMON + `
 ${PANEL}
@@ -165,11 +192,12 @@ ${attempt > 1 ? 'The previous attempt left problems: ' + JSON.stringify(routed &
 phase('Cleanup')
 let current = routed
 for (let round = 1; round <= MAX_FIX; round++) {
-  if (current.drc_errors === 0 && current.heritage_violations === 0 && current.drc_unconnected === 0) { log('Cleanup: nothing to fix'); break }
+  if (current.drc_errors <= OK_ERR && current.heritage_violations === 0 && current.drc_unconnected <= OK_UNCONN && !(A.cleanupNotes && round === 1)) { log('Cleanup: nothing to fix'); break }
   const model = round < MAX_FIX ? M.fix : M.fixEscalate
   const fixed = await agent(COMMON + `
 ROLE: DRC cleanup (round ${round}, ${model}). Input board: ${current.board_path}. Current state: errors ${current.drc_errors}, unconnected ${current.drc_unconnected}, heritage ${current.heritage_violations}; by type: ${current.drc_by_type}; open issues: ${JSON.stringify(current.open_issues)}.
-Run DRC yourself (--all-track-errors --schematic-parity --refill-zones), list every error with --list and --new-only, and fix them by class with pcbnew scripting on a copy (clearance: move/reroute the offending new track/via; courtyard: nudge new parts only; copper-edge: pull back; unconnected: route the missing connection; solder-mask bridge / silk over pad: adjust; hole-to-hole: move new vias). Never touch heritage items — if an error involves only heritage items it is pre-existing (compare with the baseline) and is triaged, not fixed. After each class re-run DRC + heritage + attachment_check (0 violations; a fix may not push copper into the flight section). Write/append ${A.docs}/drc_triage.md: every remaining warning with a disposition (fixed / pre-existing / accepted-with-reason). Return board_path.`, { label: `cleanup:${round}`, phase: 'Cleanup', model, effort: EFF(model), schema: STAGE })
+Run DRC yourself (--all-track-errors --schematic-parity --refill-zones), list every error with --list and --new-only, and fix them by class with pcbnew scripting on a copy (clearance: move/reroute the offending new track/via; courtyard: nudge new parts only; copper-edge: pull back; unconnected: route the missing connection; solder-mask bridge / silk over pad: adjust; hole-to-hole: move new vias). Never touch heritage items — if an error involves only heritage items it is pre-existing (compare with the baseline) and is triaged, not fixed. After each class re-run DRC + heritage + attachment_check (0 violations; a fix may not push copper into the flight section). Write/append ${A.docs}/drc_triage.md: every remaining warning with a disposition (fixed / pre-existing / accepted-with-reason). Return board_path.
+${A.cleanupNotes ? 'PM NOTES FOR THIS CLEANUP (binding; they supersede the generic instructions above where they conflict): ' + A.cleanupNotes : ''}`, { label: `cleanup:${round}`, phase: 'Cleanup', model, effort: EFF(model), schema: STAGE })
   if (!fixed) break
   current = fixed
   log(`Cleanup round ${round}: errors ${current.drc_errors}, unconnected ${current.drc_unconnected}, heritage ${current.heritage_violations}`)

@@ -296,27 +296,7 @@ def main():
                     if point_in_poly(p, poly) and pd.HitTest(pcbnew.VECTOR2I_MM(p[0], p[1]), 0):
                         touched.add((ref, pd.GetNumber(), pd.GetNetname()))
                         pad_points.add(key(p))
-        bad = []
-        chain_vias = [(v, pv) for vi, (v, pv) in enumerate(inside_vias) if via_owner.get(vi) == cid]
-        via_ok = False
-        if chain_vias:
-            via_pads = [tp for tp in touched if via_allowed(tp[0], tp[1])]
-            if not via_pads:
-                bad.append(f'{len(chain_vias)} via(s) inside the flight section on a stub that does not start at a via-allowed pad (J2/J9/J13 any pin, J16.1, J14.10/12)')
-            elif len(chain_vias) > 1:
-                bad.append(f'{len(chain_vias)} vias inside the flight section (rule: at most one layer change per bottom-side stub)')
-            else:
-                v, pv = chain_vias[0]
-                via_lim = max(limit_of.get((ref, num), a.max_stub) for ref, num, pnet in via_pads)
-                if dist_to_boundary(pv, poly) > min(VIA_BAND_MM, via_lim) + 1e-6:
-                    bad.append(f'stub via at ({pv[0]:.2f},{pv[1]:.2f}) is {dist_to_boundary(pv, poly):.1f} mm deep (> {min(VIA_BAND_MM, via_lim):.0f} mm allowed for these pads)')
-                elif key(pv) in old_endpoints:
-                    bad.append(f'stub via at ({pv[0]:.2f},{pv[1]:.2f}) sits on a heritage track/via endpoint')
-                else:
-                    via_ok = True
-            if bad:
-                to_prune.extend(v for v, pv in chain_vias)
-        # F12 trace-tap exception: a stub of one of the three walled nets may end on its own net's heritage track/via
+        # F12 trace-tap exception: a stub of one of the three walled nets may end on its own net's heritage track/via (detected before the via rules so a tap stub can also use an F14 via allowance, e.g. Deploy2_EN at U6.6)
         tap = None
         if net in NET_TAP_EXCEPTIONS and not touched:
             tref, tnum = NET_TAP_EXCEPTIONS[net]
@@ -342,6 +322,26 @@ def main():
             if tap:
                 touched.add((tref, tnum, net))          # counts as the attachment for limits/reporting
                 pad_points.add(key(tap[0]))             # and its endpoint may coincide with heritage geometry
+        bad = []
+        chain_vias = [(v, pv) for vi, (v, pv) in enumerate(inside_vias) if via_owner.get(vi) == cid]
+        via_ok = False
+        if chain_vias:
+            via_pads = [tp for tp in touched if via_allowed(tp[0], tp[1])]
+            if not via_pads:
+                bad.append(f'{len(chain_vias)} via(s) inside the flight section on a stub that does not start at a via-allowed pad (J2/J9/J13 any pin, J16.1, J14.10/12, U6.6)')
+            elif len(chain_vias) > 1:
+                bad.append(f'{len(chain_vias)} vias inside the flight section (rule: at most one layer change per bottom-side stub)')
+            else:
+                v, pv = chain_vias[0]
+                via_lim = max(limit_of.get((ref, num), a.max_stub) for ref, num, pnet in via_pads)
+                if dist_to_boundary(pv, poly) > min(VIA_BAND_MM, via_lim) + 1e-6:
+                    bad.append(f'stub via at ({pv[0]:.2f},{pv[1]:.2f}) is {dist_to_boundary(pv, poly):.1f} mm deep (> {min(VIA_BAND_MM, via_lim):.0f} mm allowed for these pads)')
+                elif key(pv) in old_endpoints:
+                    bad.append(f'stub via at ({pv[0]:.2f},{pv[1]:.2f}) sits on a heritage track/via endpoint')
+                else:
+                    via_ok = True
+            if bad:
+                to_prune.extend(v for v, pv in chain_vias)
         if not touched:
             bad.append('touches no allowed pad')
         wrong_net = [tp for tp in touched if tp[2] != net]
@@ -359,8 +359,8 @@ def main():
         if touching_old:
             bad.append(f'touches heritage track/via endpoint(s) off-pad at {touching_old[:3]}')
         layers = {board.GetLayerName(t.GetLayer()) for t, ps, pe in items}
-        if tap is not None:
-            # the stub must stay on the tapped item's layer (a tapped via accepts either outer layer)
+        if tap is not None and not via_ok:
+            # without a layer change the stub must stay on the tapped item's layer (a tapped via accepts either outer layer); with an allowed via the else-branch rule applies
             ok_layers = {'F.Cu', 'B.Cu'} if tap[1] == 'via' else {tap[1]}
             off = sorted({board.GetLayerName(t.GetLayer()) for t, ps, pe in items} - ok_layers)
             if off:

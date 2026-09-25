@@ -263,3 +263,211 @@ or a scope decision, as documented in §3.
 
 Board returned byte-identical to input (checksum-verified against `<scratch>/layout_drc1/FlatSat_V1.kicad_pcb`),
 delivered from `<scratch>/layout_drc2/FlatSat_V1.kicad_pcb`.
+
+---
+
+## 10. Cleanup after closure round 3 (Opus, 2026-09-23)
+
+**Input:** `.flatsat_work/phase2/round3/layout_wing/deliver/FlatSat_V1.kicad_pcb` (md5 `a5ce1b17…`, the
+round-3 wing delivery: errors 3, unconnected 2, track_dangling 30, via_dangling 17, footprint_type_mismatch 9).
+**Output:** `.flatsat_work/phase2/round3/layout_cleanup/deliver/FlatSat_V1.kicad_pcb` (md5 `521b350f…`, whole
+project directory beside it, `.kicad_dru` unchanged). Working boards `layout_cleanup/work/`, tools
+`layout_cleanup/tools/` (scratch; nothing under `FlatSat_V1/tools/` was changed). The live board was not written.
+Finalised with the round-1/2/3 convention: all zones refilled, then the 41 heritage zones' stored fills restored
+from `round3/base` (`restorefills.py`), so `attachment_check.py` reads the Rev2 fills; the DRC below refills.
+
+### 10.1 Gates on the delivered board
+
+```
+$ heritage.py check tools/baseline/heritage_rev2.json <board> --allow-zone-growth --allow-edge
+note: new items: footprints +221, tracks/vias +3019, zones +6
+heritage check: 0 violation(s)
+$ heritage.py check … --allow-zone-growth --allow-edge --refill --core-inset 12 --ref-board FC_V5e_Production_Rev2
+note: zone +3V3 on F.Cu: band fill 291.0 -> 273.7 mm² (-5.9 %, stub carve-out)
+note: zone VSOLAR on In2.Cu: band fill 91.8 -> 91.2 mm² (-0.6 %, stub carve-out)
+note: zone /Power Systems/B- on In2.Cu: … core 20.2 -> 20.1 mm² — all … touches new copper: accepted
+heritage check: 0 violation(s)                      (same three notes as the round-3 input)
+$ attachment_check.py tools/baseline/heritage_rev2.json <board>
+attachment check: 3019 new tracks/vias, 37 stub chain(s) into the flight section, 0 violation(s), 0 warning(s)
+$ kicad-cli pcb drc --format json --severity-all --all-track-errors --schematic-parity --refill-zones …
+Found 16 violations / Found 1 unconnected items / Found 11 schematic parity issues
+$ drc_summary.py drc.json --baseline tools/baseline/drc_prelayout.json
+unconnected_items 0 -> 1 (+1) | courtyards_overlap 1 -> 1 | footprint_type_mismatch 7 -> 8 (+1)
+isolated_copper 4 -> 4 | lib_footprint_issues 3 -> 3 | parity: extra 1, footprint_symbol_mismatch 5, missing 5
+errors: 2  unconnected: 1  parity: 11
+$ drc_summary.py drc.json --list --new-only
+footprint_type_mismatch 1: Footprint U200 @(273.145,94.855)          (disposition in 10.3)
+```
+Zero clearance / short / hole / hole-to-hole / annular / width / edge / silk / mask items. Footprints outside the
+outline: 0. Vias inside the Rev2 outline: the same 13 F6/F11/F14 stub vias as the input (no new via there).
+
+### 10.2 Class-by-class, round-3 input → this delivery
+
+| Class | Input | Now | Disposition |
+|---|---|---|---|
+| unconnected_items | 2 | **1** | C207.2 GND **fixed** (10.5); U6.1↔U6.29 **pre-existing** FC heritage (F13e) |
+| courtyards_overlap | 1 | 1 | SW2/TP2 **pre-existing** (Rev2 item, §6) |
+| track_dangling | 30 | **0** | **fixed** (10.4) |
+| via_dangling | 17 | **0** | **fixed** (10.4) |
+| footprint_type_mismatch | 9 | **8** | U302 **fixed**; U200 **accepted-with-reason**; 7 **pre-existing** (10.3) |
+| isolated_copper | 4 | 4 | **pre-existing** (§6): no-net F.Cu fills of the FC at (153.88,55.57), (220.16,100.41), (230.35,50.19), (203.93,56.68) |
+| lib_footprint_issues | 3 | 3 | **pre-existing** (§6): REF** (`mainboard` lib), U10 HTSSOP-14, IC6 MSOP-12 not in the installed libraries |
+| schematic parity | 11 | 11 | **pre-existing** = §6 exactly: H1, H2, R26, R27, TP9–TP13, U10, REF** |
+
+### 10.3 footprint_type_mismatch — every item
+
+| Ref | Message | Disposition |
+|---|---|---|
+| U302 (283.55, 117.89) | expected SMD, footprint typed "Through hole" | **fixed.** VEML6031X00 easyeda2kicad footprint: all 6 pads SMD, the footprint type was "Through hole" (easyeda2kicad default). Set to SMD on the board (`tools/fix_u302_attr.py`; nothing else on the footprint changed). Matters for any `--smd-only` position export. The easyeda2kicad library copy is not in the project's fp-lib-table; if the part is re-imported, fix the type there too. |
+| U200 (273.145, 94.855) | expected Through hole, footprint typed SMD | **accepted-with-reason.** Same footprint as the FC's U18 (`RP2350-QFN-60-1EP_7x7_P0.4mm_EP3.4x3.4mm_ThermalVias`, cloned from the flown board): the 9 exposed-pad thermal vias are PTH pads, so KiCad expects "Through hole". U18's identical warning is a §6 baseline item. Retyping U200 would drop it from SMD placement exports, so it stays SMD. |
+| U18, U29, U12, U27, U6, U10, U22 | as in `drc_prelayout.json` | **pre-existing** (§6: "7 footprint-type mismatches") |
+
+### 10.4 Dangling items: 30 track + 17 via → 0 + 0
+
+Tool `layout_cleanup/tools/fixdangle.py` works on new copper only. Heritage items are never candidates, and none was
+flagged. For each DRC-flagged item, one action, kept only if KiCad's connectivity engine (zones refilled in memory)
+shows no net losing a connection:
+(a) **remove** it when its net's cluster count does not rise (a dead end or a redundant via);
+(b) **via → segments** for a via connected on one layer only: short segments on that layer from each attached track
+end to the via centre, all inside the via's own copper, then remove the via;
+(c) **shorten** a needed track's free end back to the last contact on its body (the overshoot past a T-junction).
+The whole board was DRC'd after every pass (11 passes). A removal re-exposes the next dead end, which is why
+the passes continue until no action is left. Unconnected stayed at 1 after every pass except one (pass 5 of a first run, where an aliasing bug in
+the tool mis-restored a failed shortening on EMU_GPIO_SPARE0). That run was discarded, the tool fixed (VECTOR2I copies), and
+passes 5–11 re-run from pass 4.
+The last item, EMU_GPIO_SPARE0 B.Cu (282.230,94.500)–(282.930,92.800), was a T-join made by copper overlap only
+(0.125 mm off the centreline). Its free end was moved to the projection point (282.680,93.408), and a 0.2 mm joining segment was added
+inside the existing copper (`tools/fix_spare0_t.py`).
+
+| Action | Count | Notes |
+|---|---|---|
+| removed (dead-end track / redundant via) | 79 (60 tracks, 19 vias) | incl. **F5_PWR dead copper on In1.Cu** (the GND plane layer), 3 segments at (253.45–259.06, 95.28–97.47): removed, which restores the In1 GND plane there. Also the dead F5_PWR F.Cu tail (228.325,96.775)–(233.052,92.048) across the old edge, and dead VBUSP/F0_SDA/F5_SCL/F0_PWR bits at the J2/J6/J8 stubs (each net stayed one cluster, and attachment_check still counts 37 stubs) |
+| via → segments | 9 vias | GPIO_RSVD (284.688,94.373); TOP_SCL (268.345,87.680); F4_SENSE (272.045,87.680); SPARE0 (277.570,96.955); WDT_DIS (277.220,102.030); F5_SDA (260.447,98.010); SPARE1 (289.295,89.555), (285.420,85.680); F3_SENSE (280.870,96.955) |
+| shortened overshoot | 12 + 1 | F0_PWR ×2, F5_SDA (stub ends east of the old edge, outside the Rev2 outline), QSPI_SS, QSPI_SD1, SWCLK, F5_SCL, UART_RX, PYRO_INHIBIT_STATE, GPIO_RSVD, VREG_AVDD_EMU, F1_SDA; + the SPARE0 T-join above |
+| **remaining** | **0** | nothing to triage |
+
+Side effect on path lengths (connectivity is unchanged, but a removed dead end can also remove a short cut): QSPI_SD1/SD2 +0.22 mm and one via fewer
+each; TP202.1 (1V1 test point) series path 112 → 122 mΩ. Nothing else measured changed.
+
+### 10.5 C207.2 (GND), the last non-heritage unconnected item: **closed**
+
+`gndwhat.py --pairs` on the current board found exactly one unlock pair: {1V1_EMU In2 (276.789,101.199)–(278.189,97.799)
+w0.25 + EMU_STATUS_LED B.Cu (277.645,97.830)–(277.695,99.930)}. Both were ripped. C207.2 then got a 0.25 mm F.Cu stub to
+an **off-pad** 0.40/0.20 GND via at **(277.320, 99.705)** (inside EMU_FANOUT; the via copper stays ≥ 0.04 mm off every pad,
+**no via-in-pad**), which lands on the In1 GND plane. The victims were re-routed without further rip-up. The order and
+window that worked: STATUS_LED first, window = cluster box + 4 mm. STATUS_LED: 6.11 mm, 0.25 mm, In2 + F.Cu, one 0.40/0.20 via at
+(279.895,100.705). 1V1_EMU: 6.65 mm, 0.25 mm, In2 only, 0 vias. The round-3 cascades had used STATUS_LED second and a 2 mm window.
+Cost: the 1V1 branch to DVDD pin 23 / C216 is longer. Least-resistance path from L200.2 to U200.23 goes from 63.0 to 72.9 mΩ and from 2 to 4 vias; C216.1 goes from 57.9 to 67.8 mΩ.
+DVDD pin 39 / C218 (26.4 mΩ), pin 6 and VREG_FB are unchanged. C216 (4.7 µF) sits 1.3 mm from pin 23, so the pin's high-frequency supply is still local.
+The PM's two suggested unlocks were not usable on this board. The EMU_UART_RX (275.570,100.188)–(281.420,100.188) segment and the
+C207.1 0.5 mm link appear in no single or pair unlock at w 0.127. The C207.1 link also now carries C207.1/C208.1/U200.30 to
+the south-east pour (10.6).
+
+### 10.6 3V3_EMU power integrity (PM item 1) — before / after
+
+Metrics come from `tools/g33*.py`: KiCad copper after a refill; pads, tracks, vias and In2 pour pieces as graph nodes.
+Track R = ρL/(w·t) with t = 35 µm outer and 17.5 µm inner. A 0.20 mm via ≈ 2.2 mΩ. Pour pieces count as 0 Ω, which is optimistic, but equally so before and after.
+
+| Link | Before | After |
+|---|---|---|
+| **South-east group → U202 side, new path A** | none | **B.Cu 1.0 mm, 2.65 mm, 2 × 0.46/0.20 vias** (287.370,103.555) → (290.020,103.555): SE In2 pour piece ↔ east In2 3V3_EMU pour (the U202/C202/C203 side) |
+| **South-east group → U202 side, new path B** | none | **B.Cu 1.0 mm, 3.17 mm, 2 × 0.46/0.20 vias** (286.845,105.780) → (290.020,105.780), parallel to A |
+| U202.5 → east In2 pour | 1 via (291.570,96.050), which sits in C203.1's pad | **2 vias**: + 0.46/0.20 at (291.970,95.080) on the 1.0 mm U202.5 F.Cu track, off every pad |
+| Old west link (the round-3 joincl link) | B.Cu **0.30 mm** (268.420,99.405)–(267.420,96.930), 2 × 0.40/0.20 vias; F.Cu 0.30 to C205.1 | B.Cu **0.40**, F.Cu **0.40**: the clearance limit (C209/C205 pads, EMU_FANOUT neighbours). Now the second, redundant path |
+| Old chain, other segments | F.Cu 0.25 (268.150,100.020)–(268.590,99.580); B.Cu 0.25 and 0.127 at C206; C204.1→C205.1 F.Cu thread 5 × 0.127 mm (3.6 mm); C206.1 via stub 0.20 | 0.50; 0.275 and 0.425; thread 0.325–0.35 on 4 of 5 segments (the 0.48 mm segment at C204.1 stays 0.127 because there is no clearance); stub 0.40 |
+| U200.38 (IOVDD) land link | F.Cu 0.127 to its inward via (275.785,94.855) | F.Cu **0.200** (= land width) |
+| U200.38 In2 link | In2 0.127 mm, 3.4 mm, to the north-west pour piece | **unchanged, 0.127 mm**. The channel between the ring via column (x 275.785) and EMU_UART_TX In2 (x 276.495) is 0.41 mm, so the most that fits is about 0.15 mm |
+| U200.38 second path | none | **none possible without re-escaping a ring net.** `unlock33.py`: only {EMU_RUN B.Cu (277.295,96.355)–(275.670,96.355)} or {EMU_F3_SENSE via (275.785,93.255)} unlock one. Both were executed. With a 0.2–0.5 mm B.Cu path to C207's via (276.738,98.594) in place, EMU_RUN has no route at any width in a 16 × 16 mm window. Re-siting F3_SENSE's via re-cuts the new In2 path. Both discarded |
+| Other 3V3 land links | U200.20, .30, .44/.45, .53/.54, .1 at 0.127; U200.11 0.152 | 0.200 (U200.20 third segment 0.175, U200.11 0.175) |
+
+| Pad (series path from U202.5) | Before: mΩ / vias on path / narrowest | After |
+|---|---|---|
+| C206.1 | 50.6 / 11 / 0.127 | 18.3 / 5 / 0.275 |
+| C207.1 = U200.30 (IOVDD) | 63.8 / 13 / 0.127 | 13.1 / 4 / 0.50 |
+| C208.1 | 65.2 / 13 / 0.127 | 14.5 / 4 / 0.25 |
+| C209.1 | 43.1 / 9 / 0.127 | 22.9 / 6 / 0.275 |
+| C211.1 / C214.1 | 62.2 / 62.1, 13 vias | 11.5 / 11.4, 4 vias, 1.0 mm |
+| R200.1 / R205.1 / R207.1 | 62.5 / 61.0 / 61.9, 13 vias | 15.2 / 10.3 / 11.2, 4–5 vias |
+| U200.20 (IOVDD) | 58.3 / 11 | 23.4 / 5 |
+| R602.2 (west branch to the strip) | 114.4 / 12 | 93.6 / 9 (dominated by its own 1.0 mm run to the strip) |
+| U200.38 (IOVDD) | 30.8 / 4 / 0.127 | 29.7 / 4 / 0.127 |
+| U200.38 → its datasheet cap C208.1 | 78.9 mΩ, 11 vias | 43.9 mΩ, 8 vias |
+
+Node-disjoint paths SE group → U202.5: **1 → 2** (the old west chain and the new south-east pour ↔ east pour links).
+U200.38 → U202.5: 1 → 1.
+
+### 10.7 EMU QSPI lengths (PM item 4; not re-routed)
+
+`tools/padlen.py`: routed centreline length, pad centre to pad centre, along the net's copper (T-joins split at the
+contact, vias counted at zero planar length).
+
+| Net | From → to | Routed mm | Vias | Layers |
+|---|---|---|---|---|
+| EMU_QSPI_SCLK | U200.56 → U201.6 | **30.00** | 4 | F/In2/B |
+| EMU_QSPI_SD0 | U200.57 → U201.5 | **45.74** | 3 | F/In2/B |
+| EMU_QSPI_SD1 | U200.59 → U201.2 | **44.23** | 8 | F/In2/B |
+| EMU_QSPI_SD2 | U200.58 → U201.3 | **46.04** | 8 | F/In2/B |
+| EMU_QSPI_SD3 | U200.55 → U201.7 | **30.92** | 5 | F/In2/B |
+| EMU_QSPI_SS | U200.60 → R203.1 (0 Ω) | **22.18** | 4 | F/In2 |
+| EMU_FLASH_SS | R203.2 → U201.1 | **4.13** | 0 | F |
+| EMU_QSPI_SS (BOOTSEL branch) | U200.60 → R204.1 | 24.28 | 6 | F/In2 |
+
+The spread is 30.0–46.0 mm: SCLK is 14–16 mm shorter than SD0–SD2 and about 1 mm shorter than SD3. SD1/SD2 have 8 vias each.
+The same RP2350 → W25Q128 bus on the flown FC (U18 → U11, same tool) is SCLK 12.45, SD0 12.02, SD1 9.82, SD2 8.30,
+SD3 12.78 mm, with 0–2 vias. For the review: 16 mm is about 0.1 ns of skew, and the data lines are sampled against SCLK.
+At bench QSPI clocks (≤ 75 MHz) that is not length-critical, but it is 3–4× the heritage length and via count.
+
+### 10.8 Findings for the review (not DRC items; not changed this round)
+
+* **Via-in-pad in earlier-round new copper.** 45 new vias have their centre inside an SMD pad of their own net, and 19 more
+  overlap a pad edge (`tools/viapad2.py`; list in `layout_cleanup/viapad_final.txt`). Examples: C203.1, C202.1, C220.1, C209.1,
+  R205.1 (3V3_EMU); U201.2/3/5/7 (QSPI); U202.1/.2/.3, C200.1, C201.1 (VBUS_EMU/GND); L200.1 (VREG_LX); Y200.4, C221.2 (GND).
+  All were created by routing rounds 1–3. This round added none and removed none. The PM's standing position is
+  that via-in-pad needs an owner decision (filled-and-capped cost). These need that decision: order POFV, or move them off-pad.
+* 1V1_EMU pin-23 branch longer by the C207.2 unlock (10.5).
+* U200.38 keeps a single 0.127 mm In2 feed (10.6).
+
+## 11. Stage 6 (silkscreen + docs + preview, Sonnet, 2026-09-23)
+
+**Input:** `round3/layout_cleanup/deliver/FlatSat_V1.kicad_pcb` (10.1–10.8 above). **Delivered:**
+`round3/layout_finish/deliver/FlatSat_V1.kicad_pcb`. This stage added only F.SilkS `PCB_TEXT` items
+and flipped `Reference.Visible` on 21 already-placed new footprints (see `layout_report.md` §5 for
+the full silkscreen list); it re-routed nothing, moved no footprint, and touched no track, via or
+zone. Re-running every gate from 10.2 on the result reproduces it **exactly, item for item**:
+
+```
+errors: 2  unconnected: 1  parity: 11
+schematic_parity   warning  extra_footprint                     1      1     +0
+schematic_parity   warning  footprint_symbol_mismatch           5      5     +0
+schematic_parity   warning  missing_footprint                 199      5   -194
+schematic_parity   warning  net_conflict                       36      0    -36
+unconnected_items  error    unconnected_items                   0      1     +1
+violations         error    courtyards_overlap                  1      1     +0
+violations         warning  footprint_type_mismatch             7      8     +1
+violations         warning  isolated_copper                     4      4     +0
+violations         warning  lib_footprint_issues                3      3     +0
+```
+
+`heritage.py check --allow-zone-growth --allow-edge`: **0 violations** (same edge/zone notes as
+every prior round — outline growth and zone reshaping only). `heritage.py check --refill
+--core-inset 12 --ref-board FC_V5e_Production_Rev2`: **0 violations**, the same three band notes as
+10.1/E6 (`+3V3` F.Cu band fill −5.9 %, `VSOLAR` In2 band fill −0.6 %, `B-` In2 2.2 mm² island —
+all three "every piece touches new copper" and accepted, not new this round).
+`attachment_check.py`: **0 violations, 0 warnings, 37 stub chains** (same list as 10.1, unchanged —
+this stage added no track or via inside the Rev2 outline). No DRC class not already itemised in
+§10.2/§10.6 appeared; in particular there is **no silkscreen-vs-pad or silkscreen-vs-mask DRC class in
+this KiCad 10 ruleset** (`--severity-all` was on throughout; kicad-cli's DRC does not check text
+overlap, so the silkscreen tool's own collision search — every candidate placement checked against
+the real KiCad bounding box of every pad on the board and of every other label already placed, on top
+of DRC — is what stands in for that gate here; see `layout_report.md` §5 for the two collisions it
+found and fixed during development, both caught by render inspection rather than DRC).
+
+**One quality note for the review, not a DRC item:** the jumper-header legend block between JP602/
+JP603/JP604/JP607, JP500's own two-word legend and the four-line J500 bench-mode legend all compete
+for the same crowded pocket between the JP60x row and J500/Q500/Q501 (the header pitch there is only
+5.6–11.6 mm and the row sits directly above J500's own silkscreen). The placer's collision search
+keeps every item legible and clear of every pad, at font sizes down to 0.6 mm (project default is
+1.0 mm) and some up to ~9 mm from their own header; it is correct and non-overlapping but genuinely
+busy in that one pocket — a human pass with more room to negotiate (e.g. shortening JP602–605's
+own legends further, or moving SW600's `CLOSED=SAFE`/`OPEN=ARMED` block to free area) could make it
+easier to read at 1:1 scale. Flagged for `pcb-flight-review`, not fixed here.

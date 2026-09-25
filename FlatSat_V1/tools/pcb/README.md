@@ -524,3 +524,36 @@ an `EMU_FANOUT` constraint-only rule area with a `.kicad_dru` rule (clearance 0.
 0.127 mm track passes between 0.40 mm first-row vias and a second row exists — inside JLCPCB's 4-layer capability
 (0.09/0.09 mm, via 0.15/0.25) and the same scoped-0.127 practice as the FC's own `.kicad_dru`; GND lands go inward
 on F.Cu to the exposed pad, as the flown FC's U18 does (same footprint, rotated 45°, 34 of 60 lands surface-routed).
+
+## 10. `tools/pcb/closure/` — promoted closure-round tooling (2026-09-22)
+
+Three tools from the closure-round scratchpad (`.flatsat_work/phase2/`), worth keeping because
+nothing else on the project does what they do (route_report.md D2/D7/C5): every path is now an
+argument (no hard-coded scratch paths), read `--help` on any of them for the full option list.
+
+| Tool | What it does | Exactness guarantee |
+|---|---|---|
+| `clusters.py` | Connected-component view of a net via KiCad's own connectivity engine (`BuildConnectivity`/`GetConnectivity`). With no net args, lists every net that has more than one cluster and a lower-bound "extra clusters" count; with net args, lists every item in every cluster. Read-only — never calls `SaveBoard`. | Uses the same connectivity engine DRC's unconnected-item count uses, not an independent geometry model. |
+| `fan2.py` | Exact-polygon staggered fan-out for a fine-pitch part (default U200) inside a relaxed-clearance rule area (default the `EMU_FANOUT` bbox, brief 12 F13a): two staggered via rows, 1/2/3-segment tracks, same-net pad/via sharing. | Every emitted track/via is checked with KiCad's own `TransformShapeToPolygon` + boolean intersection at the true per-pair rule (area-relaxed clearance only when both items intersect `--area`) before being kept — not an inscribed-circle approximation. |
+| `micro.py` | Area-aware fine router for short hops out of a fan-out ring — the only router on the project that can leave a rule area, because it is the only one that rasterises two obstacle sets (default netclass and the relaxed rule-area clearance) and only trusts the relaxed set `--inset` mm inside the area. Depends on `rgeo.py`/`mlroute.py` (multi-layer Dijkstra) and `clusters.py`, copied alongside unchanged. | The raster search is a heuristic accelerator only: every segment/via it proposes is re-verified with `fan2.py`'s exact-polygon check before being added, and a raster win that fails that check is discarded, never emitted. |
+
+All three (and `rgeo.py`/`mlroute.py`, promoted alongside `micro.py` as its unmodified
+dependencies) keep their original algorithms; the only functional fix was `fan2.py`'s and
+`micro.py`'s `load_cls()`/snapshot calls, which previously pointed at one hard-coded session
+scratchpad `.kicad_pro`/heritage-snapshot path regardless of the board passed in — both now
+default to the board's own sibling / the repo's `tools/baseline/heritage_rev2.json` and accept
+`--project`/`--snap` overrides. `micro.py` and `fan2.py` also gained `--dry-run` (do everything
+except `SaveBoard`, so they can be smoke-tested against a board copy without writing to it).
+
+Smoke-tested 2026-09-22 against a read-only copy of the closure-round-3 input board
+(`.flatsat_work/phase2/round3/base/`, copied whole so `.kicad_pro`/`.kicad_dru`/libraries travel
+with it): `clusters.py` with no net args reproduced the input board's open-item picture (28 of the
+documented 29 unconnected shown as named multi-cluster nets — GND's ten extra clusters plus 18
+single-extra-cluster emulator/Deploy2_EN nets; the 29th is the pre-existing heritage U6.1/U6.29
+GND item folded into GND's own count); `fan2.py --dry-run --pads 18,60` on U200 reproduced route_
+report.md D2's documented "no site" result for exactly those two lands (U200.18, U200.60), with
+`OUT.json` written and the input board's checksum unchanged; `micro.py --dry-run --only
+EMU_CTL_FC_RESET` ran the full raster-Dijkstra-then-exact-check pipeline end to end and correctly
+reported no route at 29.83 mm gap (consistent with D8: this class of net needs autorouter work,
+not fan-out routing), again with the input board's checksum unchanged. `--help` on all three was
+also verified. No board file was modified by any of this — see `--dry-run`/`--dry` above.

@@ -810,3 +810,202 @@ simpler, add the ring to `fc_keepout.json` as a routing keep-out for the Freerou
 the router treats the 51 escape vias as fixed terminals and routes the wing from them outward. The
 17 open signals of D6 are all "via → destination across the wing" hops with no fine-pitch geometry
 left in them, which is the case Freerouting handles well.
+
+---
+
+# Closure stage, round 3 (Opus, 2026-09-22)
+
+**Workstreams merged before this step:** Deploy2_EN (F14, `round3/layout_deploy2en`), GND/3V3 island
+(`round3/layout_gnd`), tool promotion (`round3/layout_toolpromo_sonnet`, no board change), delta merge
+(`round3/layout_deltamerge_sonnet`). **This step (wing closure):** `round3/layout_wing` — notes in
+`round3/layout_wing/notes.md`, progress log `round3/layout_wing/PROGRESS.md`.
+**Delivered board:** `.flatsat_work/phase2/round3/layout_wing/deliver/FlatSat_V1.kicad_pcb` (whole project
+directory beside it, `.kicad_dru` unchanged from round 2).
+
+| Gate | Round 3 input (after delta merge) | Round 3 out |
+|---|---|---|
+| `heritage.py check --allow-zone-growth --allow-edge` | 0 | **0** |
+| `heritage.py … --refill --core-inset 12 --ref-board Rev2` | 0 (3 band notes) | **0** (same 3 notes: +3V3 F.Cu band 291.0 → 273.7 mm², VSOLAR In2 91.8 → 91.2, B- In2 core 20.2 → 20.1 all touching stubs) |
+| `attachment_check.py` | 5 (zone-fill, see E6) | **0 violations, 0 warnings, 37 stubs** |
+| DRC clearance / short / hole / edge / width / annular | 0 | **0** |
+| DRC `courtyards_overlap` | 1 (Rev2 SW2/TP2) | 1 (same) |
+| DRC schematic parity | 11 = §6 baseline | **11 = §6 baseline** |
+| DRC unconnected | 23 | **2** — U6.1↔U6.29 (heritage, accepted) + **C207.2 GND** (E4) |
+
+## E1. Deploy2_EN, GND and the merge (the three earlier workstreams, from their notes)
+
+* **Deploy2_EN (F14):** stub from U6.6 = F12 T-tap on the net's own heritage via (173.500, 130.100), F.Cu
+  3.85 mm to the single F14 via (169.980, 130.900) 11.2 mm deep, B.Cu out of the outline to an extension via
+  (170.380, 143.300), F.Cu to the existing Deploy2_EN via; 15.1 mm inside the Rev2 outline (limit 24).
+  The PM fixed `attachment_check.py` (tap detected before the via rule; a legal layer change overrides the
+  tap's single-layer rule) — `layout_deploy2en/PM_RULING.md`. 29 → 28.
+* **GND/3V3 island (layout_gnd):** 5 of 11 GND items closed (U200.47 inward to the exposed pad; C217.2 and
+  C219.2 by 0.40/0.20 vias; C215.2+C218.2 chained to C217.2) and the isolated `3V3_EMU_In2` island stitched
+  by one 0.46/0.20 via; the remaining six pads were proven fenced by signal copper (fence/what-if proofs).
+  28/29 → 24.
+* **Delta merge:** both deltas applied by exact geometry (29 added, 1 removed, 0 conflicts) → 23. It saved a
+  full zone refill, which is why `attachment_check.py` then read 5 zone-fill changes (E6).
+
+## E2. Why the PM breakout method needed a ring re-plan first
+
+A raster flood (F/In2/B, legal 0.40 vias) from each of the 16 open escape vias showed every one sealed in a
+pocket by *other* nets' round-2 In2/B.Cu ring copper (`layout_wing/img/reach_f3scl.png`); micro.py-style
+single-net routing broke out 2 of 14. So step (1) was widened to a re-plan of the whole ring:
+
+* `rip.py` removed the 175 In2/B.Cu segments of the 23 signal nets crossing EMU_FANOUT + 1 mm (outside
+  parts kept as clipped stubs; F.Cu lands/links/caps and the 3V3/1V1/VREG/XIN/XOUT/USB copper untouched).
+* `ringplan.py` routed all 39 U200 nets / 48 connections **together** by negotiated congestion (PathFinder):
+  raster on U200's 0.4 mm land lattice (0.025 mm; cell centres fall on the 0.40 mm gaps between 0.8 mm-pitch
+  ring vias), C Dijkstra (`gdijk.c`), 0.127 mm only ≥ 0.6 mm inside EMU_FANOUT, 0.40/0.20 vias inside and
+  0.46/0.20 outside; the 16 open nets end on a **0.46/0.20 breakout via 0.3–1.5 mm outside the rectangle**,
+  pulled toward their destination; converged at iteration 12. Every emitted segment/via was checked with
+  `world.py` (KiCad `SHAPE::Collide`, per-pair rule, shape-exact `intersectsArea`); `shortcut.py` then
+  straightened the staircases (1136 → 260 segments) under the same exact check.
+* **One footprint move, under F11(d):** C206 (0402, U200.20 IOVDD decoupling) 0.30 mm south, which gives
+  U200.18 / EMU_CTL_FC_RESET — the land §D2 proved had no site — a 0.40/0.20 via on its own axis at
+  (271.145, 99.150). C206's GND track end, the U200.20→C206.1 link and C206.1's 3V3 via (now (270.570,
+  100.140)) were carried and exact-checked (`mod_c206.py`).
+
+## E3. Hops: Freerouting as specified, then the exact router
+
+**Freerouting (PM step 2, run exactly as specified):** export copy with U200 and every footprint inside the
+rectangle removed, all tracks clipped at the rectangle (outside parts kept, so breakout stubs stay visible),
+vias inside removed, the rectangle added to a private copy of `fc_keepout.json`
+(`layout_wing/fr/keepout_wing.json`; the shared file untouched); `route.sh exp routed 8`, `PRUNE=1`,
+`REF_BOARD`, `FR_TIMEOUT_MIN=150`, in the background. Fanout: 297 SMD pins "not routed"; auto-routing passes
+1–8: **364 → 360 unrouted, 7852 violations on every pass**, 14–20 min per pass ("auto-routing stage
+completed: started with 438 unrouted nets … 360 unrouted and 7852 violations" after 8761 s); `route.sh`'s
+150-min timeout then stopped it in the optimizer, no SES (exit 4, `layout_wing/fr/route_sh.log`). The export copy still carries every connection whose ring copper was removed (all 51 U200 nets plus
+the ring caps' rails), and Freerouting spends each pass on those. **Nothing from it was adopted.**
+
+**Own router (`hop.py`, `hopr.py`):** C Dijkstra on a 0.05 mm raster over the wing and strip, new copper barred
+from the Rev2 outline (+0.25 mm) and from EMU_FANOUT, vias only outside both, exact emission. `hopr.py` adds
+rip-up: other nets' new copper is passable at 40× cost, the items the chosen path collides with are ripped
+and their nets re-routed cluster-to-cluster; nets with any pad on a heritage footprint (all L11 stub nets)
+and every power/bench net are never ripped. Results (breakout via → destination, routed length):
+STATUS_LED 6.6 mm, UART_TX 16.6, FC3V3_SENSE 37.7, TOP_SCL 36.2, F1_SENSE 36.5, F3_SENSE 39.4, F3_SCL 59.5,
+BATT_SDA 63.8 (to U315/R362 in the strip), SWCLK 52.4, WDT_DIS 55.0, FC_RESET 52.6, F1_SDA 45.1,
+F2_SENSE 51.8; SWDIO, F2_SDA, PYRO_INHIBIT_STATE and GPIO_SPARE0 needed rip-up (victims all re-routed:
+QSPI_SCLK/SD1/SD2/SD3, GPIO_RSVD, SPARE1, SWCLK, D200-A, F1_SDA, F4_SCL, F4_SENSE, F5_SCL, F5_SDA, U310-EN,
+BOOTSEL_SW, F3_SENSE, RUN, UART_RX, F2_SENSE). Widths 0.20 mm where they fit, 0.152/0.127 mm where not.
+**PYRO_INHIBIT_STATE** (F9): 163.8 mm on In2, 8.7 mm B.Cu and 6.2 mm F.Cu (breakout and two crossings), 9 vias,
+to R601.2 (163.3, 158.6).
+
+## E4. GND pads, 3V3_EMU and the one item left
+
+Each fenced GND pad was attacked with `gndwhat.py` (single- and pair-item "what unlocks this pad" proofs on
+the real rules) and closed with `gndfix.py` (pad → GND copper, or → an off-pad 0.40/0.46 GND via), the
+displaced signal re-routed immediately:
+
+| Pad | Unlock (ripped) → re-route | Closed by |
+|---|---|---|
+| U316.4 | EMU_TOP_SCL loop segment that wrapped pin 4 → U316.2→R373.2 re-drawn without the wrap | via (249.420, 56.130) |
+| U303.8 | F0_COIL_P (281.288,120.204)–(278.920,120.204) → 3.0 mm, one via, B.Cu | via (279.345, 121.555) |
+| C216.2 | redundant 1V1_EMU F.Cu segment (net stayed connected) | GND copper at (274.620, 101.005) |
+| U201.4 | one QSPI_SD1 In2 segment → QSPI_SD1 re-routed | via (282.495, 97.880) |
+| C208.2 | two EMU_GPIO_SPARE0 F.Cu segments → SPARE0 re-routed | GND copper at (279.495, 95.630) |
+| C212.2 | QSPI_SD1's own land link + escape via (269.745, 90.530) → QSPI_SD1 re-escaped from U200.59, nothing else ripped | via (269.870, 90.280) |
+| C215/C217/C218 return (PM item 2) | — | 0.40/0.20 via **(279.730, 95.845)** + 0.25 mm stub to C218.2; 0.035 mm from the PM's point so the via copper clears the pad |
+
+**3V3_EMU:** the re-plan's In2 tracks cut the core In2 pour; after a refill the rail split into the U202
+side and the south-east group (C206–C209, C211, C214, R200/R205/R207, the R602 west branch, U200.20/.30),
+plus U200.38 alone. Joined by a 0.30 mm track with 2 vias (`joincl.py`) and, for U200.38, after re-routing
+one EMU_UART_TX In2 segment. One cluster in DRC.
+
+**Still open: C207.2 (GND), the only non-heritage unconnected item.** On F.Cu the pad sits in a closed pocket:
+3V3_EMU 0.5 mm link C207.1→(278.137, 99.630) to the north, EMU_UART_RX (275.570,100.188)–(281.420,100.188)
+to the south, C207.1 to the west, the 3V3_EMU via (278.137, 99.630) to the east; inside it no off-pad via
+site is legal because In2/B.Cu carry 1V1_EMU (276.789,101.199)–(278.189,97.799), EMU_STATUS_LED and
+EMU_CTL_WDT_DIS under it. Only **pairs** unlock it ({1V1 F.Cu stub + UART_RX F.Cu},
+{1V1 In2 + STATUS_LED B.Cu}); both were executed — each closes C207.2, but the displaced ring net can only
+re-escape by ripping further ring nets, and all four cascades tried ended with one other net open (best:
+C207.2 closed, EMU_GPIO_RSVD open — `layout_wing/fix/p3d`); a full re-plan with the pad as a negotiated job
+did not converge. **Smallest rule change that closes it:** one filled-and-capped via-in-pad (JLC POFV) on
+C207.2 — a 0.40/0.20 GND via centred at **(276.975, 99.370)** passes every other rule (exact check; legal
+centres span (276.950–277.000, 99.345–99.395)) and closes the pad with no other change. Electrically C207
+(U200 IOVDD decoupling) has no ground return until then.
+
+## E5. Numbers
+
+Against the round-3 input board: **+757 / −221 tracks and vias** (the −221 are the 175 ripped ring segments,
+16 vias and the pieces the rip-up/victim re-routes replaced); **145 new vias** — 133 × 0.46/0.20 (breakout,
+hop layer changes, GND stitching of U316/U303/U201 outside EMU_FANOUT) and 12 × 0.40/0.20 inside EMU_FANOUT
+(FC_RESET escape (271.145, 99.150), QSPI_SD1 re-escape (269.320, 90.730), GND for C212.2 (269.870, 90.280) and
+C218 (279.730, 95.845), 3V3_EMU ×3 incl. C206.1's re-sited via, and 5 ring layer changes on F1_SDA, UART_TX,
+WDT_DIS, SPARE0, F3_SENSE). Most vias per net: 9–10 (SWDIO, FC_RESET, PYRO; the hops change layer to cross
+existing wing routing); new track length
+In2 711 mm, B.Cu 560 mm, F.Cu 114 mm. 45 nets touched (all emulator-side, plus GND, 3V3_EMU, 1V1_EMU,
+F0_COIL_P, D200-A, U310-EN — no net shared with the FC). One footprint moved: C206, (271.48, 99.58) →
+(271.48, 99.88). No new copper inside the Rev2 outline (routers barred it; `attachment_check.py` 37 stubs,
+0 violations).
+
+## E6. `attachment_check.py` and the stored zone fills
+
+The delta merge saved a full zone refill, so the heritage zones' **stored** fills in the flight section
+changed (KiCad 10 refills the FC's own pours slightly differently from what Rev2 stored, plus the band
+carve-out), and `attachment_check.py` — which reads stored fills with a 0.1 % tolerance over the whole
+flight section — reported 5 zone violations. The delivered board follows the round-1/2 practice
+(`restorefills.py`): all zones refilled, then the 41 heritage zones' stored fills copied back from
+`round3/base` (whose heritage fills are the Rev2 ones). The comparison that matters —
+`heritage.py --refill --core-inset 12 --ref-board` — refills in memory and reports 0 violations with the
+same three band notes as rounds 1–2. The checker itself was not changed.
+
+## E7. Tooling written for this round
+
+Scratch only (`.flatsat_work/phase2/round3/layout_wing/tools/`); **no shared file under `FlatSat_V1/tools/`
+was modified** and `fc_keepout.json` was only copied. The ones worth promoting into `tools/pcb/closure/`:
+
+| Tool | What it does |
+|---|---|
+| `gdijk.c` (+ ctypes wrapper in `ringplan.py`) | multi-layer grid Dijkstra with via transitions, per-cell cost and terminal cost, plus flood fill; ~100× the pure-Python `mlroute` search — the reason whole-wing hops take seconds |
+| `wr.py` | router core: raster aligned to U200's land lattice, EMU_FANOUT-aware obstacle sets, exact emission through `world.py` (KiCad `SHAPE::Collide`) |
+| `ringplan.py` | negotiated-congestion re-plan of every connection inside a rule area, with breakout / either / GND-pad jobs, outside-reach filter and rip-up repair |
+| `hopr.py` | long hops with rip-up and automatic victim re-route; never rips FC-shared or power nets |
+| `gndwhat.py` | "which one or two items unlock this pad" proofs on the real rules |
+| `gate.sh` / `finalize.sh` | gates in a sibling-complete directory; final refill with heritage stored fills restored |
+
+## E8. What remains and what to do next
+
+* **C207.2 GND** — see E4; the smallest change is one via-in-pad (PM/owner ruling); alternatively accept
+  `layout_wing/fix/p3d` (C207.2 closed, EMU_GPIO_RSVD — the RP2350 reserved GPIO to R210/TP203 — open).
+* **U6.1↔U6.29** — FC heritage, accepted (§D6, F13e).
+* Warnings: `track_dangling` 15 → 30, `via_dangling` 23 → 17 against the round-3 input (every other warning
+  +0). They are dead-end pieces left by the rip-ups; a DRC-verified trim (`trimloop2.py`: remove a batch, keep it
+  only if the unconnected count does not rise, bisect otherwise) removed 34 this-round items in four passes; the
+  rest are ends that DRC flags although removing them would disconnect a net (T-joins), so they stay.
+* Quality flags for review: the hops use 0.20 mm (0.127–0.152 mm where needed) and change layer often (up to
+  10 vias per net) because they thread existing wing routing; QSPI_SD0–SD3/SCLK/SS were re-routed inside the
+  ring and toward U201 by the rip-up passes (lengths not matched — the RP2350 QSPI at bench speeds is not
+  length-critical, but a reviewer should look); 3V3_EMU's south-east group now hangs on a 0.30 mm link
+  because the In2 3V3 pour over the core is cut by the re-planned escapes (F9's pour intent is only partly
+  met — a wider link or a second one is a cheap improvement).
+
+# Cleanup after round 3 (Opus, 2026-09-23)
+
+**Input:** `round3/layout_wing/deliver/FlatSat_V1.kicad_pcb`. **Delivered:** `round3/layout_cleanup/deliver/FlatSat_V1.kicad_pcb`
+(whole project directory beside it, `.kicad_dru` unchanged; finalised with the round-1/2/3 stored-fill convention).
+Full triage in `drc_triage.md` §10.
+
+**Result:** unconnected 2 → **1** (only the accepted FC-heritage U6.1↔U6.29 is left); DRC errors 3 → **2** (that item + the Rev2
+SW2/TP2 courtyard); track_dangling 30 → **0**; via_dangling 17 → **0**; footprint_type_mismatch 9 → **8** (U302 retyped
+SMD; U200 = the flown U18 footprint, accepted); parity **11 = §6**. Zero clearance/short/hole/edge/width items.
+heritage 0 (plain and `--refill --core-inset 12 --ref-board`, the same three band notes as round 3). attachment_check 0 violations, 37 stubs.
+No new via inside the Rev2 outline (the same 13 stub vias). No via-in-pad added. No heritage item touched. No footprint moved (C206 stays where F11(d) put it).
+The one footprint property change: U302 type "Through hole" → SMD.
+
+**(1) 3V3_EMU.** The south-east group now reaches the U202 side through **two new 1.0 mm B.Cu links** from the SE In2 pour
+piece to the east In2 3V3_EMU pour: (287.370,103.555)–(290.020,103.555) and (286.845,105.780)–(290.020,105.780), each with 2 × 0.46/0.20 vias.
+U202.5 now feeds that east pour through **two vias** instead of one; the new one is at (291.970,95.080). The old west
+link becomes the redundant second path. It is widened to the clearance limit: B.Cu/F.Cu 0.30 → 0.40, and the rest of the chain 0.127–0.25 → 0.275–0.50.
+The thread at C204.1 (0.48 mm, 0.127) has no room. Series resistance U202.5 → SE pads falls from 43–65 mΩ over 9–13 vias to 10–23 mΩ over 4–6 vias. Node-disjoint
+paths go from 1 to 2. U200.38: its land link 0.127 → 0.200 mm. The 0.127 mm In2 link cannot be widened (0.41 mm channel). A second path needs
+EMU_RUN or EMU_F3_SENSE re-escaped from the ring; both were tried, and neither victim could be re-routed. The other 3V3 land links went to 0.200 mm.
+(2) **C207.2 closed.** The pair unlock {1V1 In2, STATUS_LED B.Cu} was executed with an off-pad 0.40/0.20 GND via at (277.320,99.705).
+The victims were re-routed in the other order (STATUS_LED first) with a wider window: STATUS_LED 6.1 mm with 1 via; 1V1 6.65 mm on In2. Cost:
+the 1V1 path to DVDD pin 23 / C216 +10 mΩ and +2 vias. (3) **Dangling:** 79 dead ends/redundant vias removed, 9 one-layer vias
+turned into segments inside their own copper, 13 T-join overshoots shortened. Every step was checked by connectivity and the board was DRC'd after every
+pass. This includes 3 dead F5_PWR segments on **In1.Cu** (the GND plane), which are now gone. (4) **QSPI** was not re-routed. Pad-to-pad lengths: SCLK 30.0, SD0 45.7,
+SD1 44.2, SD2 46.0, SD3 30.9, SS 22.2 + 4.1 mm; 3–8 vias. The FC's own U18→U11 bus is 8.3–12.8 mm with 0–2 vias. Table in `drc_triage.md` §10.7.
+**For the review:** 45 via-in-pad and 19 via-at-pad-edge contacts from routing rounds 1–3 need the owner's POFV/move decision
+(`drc_triage.md` §10.8). Tools (scratch): `layout_cleanup/tools/` — `g33*.py` (power-net graph, max-flow, series R),
+`join33.py` (second-path router), `widen33.py`, `unlock33.py`, `fixdangle.py`, `padlen.py`, `viapad2.py`.
