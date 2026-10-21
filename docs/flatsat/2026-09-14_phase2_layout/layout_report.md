@@ -270,3 +270,60 @@ LCSC number has one**.
 * Renders: `docs/flatsat/2026-09-14_phase2_layout/img/layout_final_*`
 * Production preview: `FlatSat_V1/jlcpcb/preview/` (+ its own `README.md`)
 * Silkscreen tool (scratch, not promoted to `tools/pcb/`): `.flatsat_work/phase2/round3/layout_finish/silkscreen.py`
+
+## 11. Closeout, 2026-10-21 (install, via-in-pad, pre-order review)
+
+Owner rulings `OWNER_RULINGS_2026-10-21.md`: F15 (attachment fill test is a warning; `heritage.py --refill
+--core-inset 12` stays the fill gate), F16 (move via-in-pad off-pad), F17 (free every remaining one, re-placement
+allowed). Gate numbers per step: `../PROGRESS.md`. All numbers below are KiCad 10.0.6 on zone-refilled boards.
+
+### 11.1 Via-in-pad
+
+| Pass | In-pad | Edge | Distinct new vias on a pad | Notes |
+|---|---|---|---|---|
+| Round 3 (`routed_r3/`) | 45 | 19 | 62 | flown Rev2: 0 in-pad |
+| F16 dogbone (`closure/dogbone.py`) | 7 | 0 | 7 | 55 moved, `via_off_pad.md` |
+| F17 rip-up / re-place (`closure/reroute.py`) | **0** | **0** | **0** | `emulator_replace.md`; only C215/C218 swapped, U200 and EMU_FANOUT unchanged |
+
+No via is ordered filled-and-capped (POFV). The last seven: C209.1, U201.3 and L200.1 moved off-pad after
+low-priority nets were rerouted; the R204.1 QSPI_SS jumper became an F.Cu run; Y200.4 grounds through Y200.2;
+C218.1 lost its via in the C215/C218 swap (1V1 now L200 -> C217 -> C218 -> pin 39 on F.Cu); C500.1 got an off-pad via.
+
+### 11.2 Final gates
+
+| Gate | Round 3 (10.0.1) | Final (10.0.6) |
+|---|---|---|
+| heritage `--refill --core-inset 12 --ref-board` | 0 | 0 (same 3 band notes) |
+| attachment_check | 0 / 0 warnings / 37 stubs | 0 / 7 F15 warnings / 37 stubs (J16.8 Dir_Chrg_In stub replaced by a J14.1 In1 stub) |
+| DRC errors | 2 | 14 = the same 2 + 12 `annular_width` on heritage U6 pad 29 (10.0.6 reports them on flown Rev2) |
+| unconnected / parity | 1 / 11 | 1 / 11 |
+| via-in-pad | 45 / 19 | 0 / 0 |
+| `track_width` (new `bench_power_width` rule) | not checked | 95 deferred residuals (`residual_widths.txt`) |
+| ERC errors | 11 | 12 (+ U7 `pin_to_pin`, also on Rev2 under 10.0.6) |
+
+### 11.3 Pre-order review (`docs/reviews/2026-10-21_FlatSat_V1/`)
+
+| Pass | Items | Fix-this-rev | Outcome |
+|---|---|---|---|
+| 1 | 12 | 6: Mode 2 from SYS; Dir_Chrg_In at J14.1 (307 -> 35 mOhm); replica sense loop 68 -> 8 mOhm; BQ25886 hot loop + EP thermal pads; `bench_power_width` rule; VSOLAR max 18 V | all applied (`review_fixes.md`); item 4 accepted without the extra 0402 SYS cap |
+| 2 | 7 | 3: J510 face 0.46 mm proud of the edge; J500 OVP note + `8.4V MAX` silk; gate-probing note | all applied (`review2_fixes.md`); pass 2 confirmed every pass-1 fix |
+
+Monitor-in-test: pass-1 item 5 (U200 core-regulator cell). Partly addressed in F17. Matching the flown U18 cell
+fully needs R703/R704 moved about 2 mm west. Next rev: pass-1 items 8-11, pass-2 items 4-5, the residual widths.
+QSPI U200-U201 stays 26-49 mm (U200's QSPI pins face out of the emulator block); judged fine at the 75 MHz default.
+
+### 11.4 Carry-overs (HANDOFF §4.5)
+
+Fiducials FID1 (232.5, 50.5) and FID2 (252.0, 140.0) placed board-only (`add_fiducials.py`). SW703 already had a
+courtyard. Not done here, owner steps: header SKU collapse to C492401 (PLM-08) in `project.db`, rotation checks in
+the JLC placement viewer for every moved or first-use footprint (CLAUDE.md rule 5: C513, L510, C512, TP512, C215,
+C218, J510, U511, plus the PLM-05 list), bench-usability silk and bring-up notes, I2C test points as a schematic
+revision note.
+
+### 11.5 Before ordering (owner)
+
+1. In the KiCad GUI: F8 Update PCB from Schematic (expect no changes; schematic and board were edited in step), save,
+   open JLCPCB Tools, confirm the LCSC column, Generate (CLAUDE.md pre-order step 6).
+2. Supply-chain pass on `project.db` (CLAUDE.md step 4), including the PLM-08 header collapse.
+3. Order settings: JLC04161H-7628, no POFV needed, flag the tight east edge (PLM-03).
+4. Bench procedure lines from the sheet notes: VSOLAR PSU OVP <= 18 V, J500 PSU OVP <= 9 V, gate-drive probing note.

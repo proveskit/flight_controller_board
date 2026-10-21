@@ -1,7 +1,7 @@
 # Routed board after closure round 3 (2026-09-23)
 
 Copy of `.flatsat_work/phase2/round3/layout_finish/deliver/` (git-ignored working dir), committed so the work is
-portable. NOT yet installed into `FlatSat_V1/` — the live board stays unrouted until the owner rules on via-in-pad.
+portable. Historical: installed into `FlatSat_V1/` on 2026-10-21 after owner rulings F15/F16 and then reworked (via-off-pad, review fixes); `FlatSat_V1/` is the live board, this directory is the round-3 snapshot.
 
 - Unconnected 1 (U6.1/U6.29, Rev2 baseline), heritage 0, attachment 0, DRC errors 2 (both Rev2 baseline), parity 11.
 - The `.kicad_dru` here carries the EMU_FANOUT rules (F13) and must travel with the board.
