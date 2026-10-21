@@ -23,3 +23,18 @@ two Fable principals (PCB, QA), Fable chair. 16 agents, about 58 minutes.
 Files: `final_list.md` (chair's list with locations, rationale, actions, verification, dropped items),
 `final.json` (same, structured), `agents.json` (every agent's raw return: reviewers, verifiers, principals).
 Fix outcomes for the fix-this-rev items are in `docs/flatsat/PROGRESS.md`.
+
+## Pass 2 (final board, commit `1ccbd07`)
+
+Rerun `wf_8830004d-04b` after the six fixes and the F17 via-in-pad rework. 15 agents, about 47 minutes.
+All six pass-1 fixes confirmed correct, with no new failure or damage path. Files in `pass2/`.
+
+| Rank | Severity | Disposition | Item |
+|---|---|---|---|
+| 1 | major | fix-this-rev | J510 USB-C face 2.41 mm behind the edge (HRO drawing: 0.46 mm proud); plugs may not seat |
+| 2 | minor | fix-this-rev | J500 bench PSU: no OVP procedure or voltage legend; FC-copy 10 V caps behind it |
+| 3 | info | fix-this-rev | ATP text: TP503/TP504 are referenced to floating nets, not GND |
+| 4 | minor | next-rev | BQ25886 REGN/BTST caps not at their pins |
+| 5 | minor | next-rev | C216.2/Y200.4 GND island returns through ~6 mm of 0.25 mm trace |
+| 6 | info | accept-with-rationale | Mode 2 bypasses the ISS inhibit chain; sheet note added |
+| 7 | info | accept-with-rationale | Mode-1 current through three 0.5 oz inner-layer 1.0 mm runs |
