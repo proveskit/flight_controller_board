@@ -38,3 +38,8 @@ reachable without moving the emulator block). Review item 5 partly addressed (se
 | 5 | review pass 2 fix-this-rev 1-3 + item-6 note installed (J510 0.46 mm proud of edge, J500 OVP note + 8.4V MAX silk, probing note) | 7 (expected) | **0** | **0** / 7 / 37 | **14** | **1** | **11** | **0 / 0**; track_width 95 |
 
 Step 5: DRC item set identical to step 4; ERC 12. Details: `2026-09-14_phase2_layout/review2_fixes.md`.
+| 6 | carry-overs: FID1 (232.5,50.5) / FID2 (252.0,140.0) fiducials, board-only (`add_fiducials.py`); SW703 already had a courtyard | 7 (expected) | **0** | **0** / 7 / 37 | **14** | **1** | **11** | **0 / 0**; track_width 95 |
+
+Step 6: DRC item set identical to step 5. Preview regenerated (`tools/pcb/preview.sh`): 182 BOM groups, 474 placements,
+every new non-test-point group has an LCSC number. Header-SKU collapse (PLM-08) is left for the owner's supply-chain /
+`project.db` pass, since `project.db` decides what is ordered and agents may not write it.

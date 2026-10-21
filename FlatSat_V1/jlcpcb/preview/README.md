@@ -7,8 +7,10 @@ step 6, the official production package comes from the owner's own JLCPCB-plugin
 (`project.db`, F8 Update PCB from Schematic, Generate) over the reviewed, order-ready board --
 never from this directory, and never from an agent.
 
-Source board: `.flatsat_work/phase2/round3/layout_finish/work/FlatSat_V1.kicad_pcb` (stage-6
-silkscreen pass output; see `layout_report.md`). Generated 2026-09-23.
+Source board: `FlatSat_V1/FlatSat_V1.kicad_pcb` as installed on branch `claude/project-thread-ywww1h` after both
+pre-order review passes, the F17 via-in-pad rework (0 via-in-pad, no filled-and-capped vias) and the two reserved
+fiducials (FID1/FID2, board-only, excluded from BOM and pos). Zones refilled. Regenerated 2026-10-21 with
+`FlatSat_V1/tools/pcb/preview.sh`. Still a preview: the order package is the owner's JLCPCB-plugin GUI step.
 
 | Dir | Contents | Command |
 |---|---|---|
