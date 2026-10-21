@@ -1,3 +1,7 @@
+> **Superseded 2026-10-21 (owner ruling F17):** "We're not tied to this layout, go ahead and attempt to reroute and
+> free all of these via in pad items." The 7 POFV vias below were freed by the emulator re-place/reroute pass
+> (`emulator_replace.md`). Via-in-pad is now **0 in-pad / 0 edge**; nothing is ordered filled-and-capped.
+
 # F16 via-off-pad (dogbone) workstream, 2026-10-21
 
 Input: `routed_r3/`. Output: installed as `FlatSat_V1/FlatSat_V1.kicad_pcb` and refilled.

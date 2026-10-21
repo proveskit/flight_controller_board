@@ -1,0 +1,130 @@
+{
+ "ops": [
+  {
+   "op": "ripup",
+   "nets": [
+    "EMU_GPIO_RSVD",
+    "EMU_GPIO_SPARE0",
+    "EMU_GPIO_SPARE1",
+    "EMU_F2_SENSE",
+    "EMU_F3_SENSE"
+   ],
+   "window": [
+    277.4,
+    89.0,
+    279.6,
+    92.0
+   ]
+  },
+  {
+   "op": "dogbone",
+   "pad": "L200.1",
+   "max_r": 1.5
+  },
+  {
+   "op": "move",
+   "ref": "C218",
+   "x": 278.8,
+   "y": 93.91,
+   "rot": 0
+  },
+  {
+   "op": "move",
+   "ref": "C215",
+   "x": 278.8,
+   "y": 95.42,
+   "rot": 180
+  },
+  {
+   "op": "ripup",
+   "nets": [
+    "1V1_EMU",
+    "VREG_AVDD_EMU",
+    "GND",
+    "EMU_GPIO_SPARE0",
+    "EMU_GPIO_SPARE1",
+    "EMU_GPIO_RSVD",
+    "EMU_F2_SENSE",
+    "EMU_F3_SENSE",
+    "PYRO_INHIBIT_STATE"
+   ],
+   "window": [
+    277.85,
+    91.6,
+    280.7,
+    96.35
+   ]
+  },
+  {
+   "op": "prune",
+   "nets": [
+    "GND",
+    "1V1_EMU",
+    "VREG_AVDD_EMU"
+   ]
+  },
+  {
+   "op": "stitch",
+   "pad": "C217.2",
+   "max_r": 1.2
+  },
+  {
+   "op": "stitch",
+   "pad": "C218.2",
+   "max_r": 1.2
+  },
+  {
+   "op": "stitch",
+   "pad": "C215.2",
+   "max_r": 1.2
+  },
+  {
+   "op": "route",
+   "nets": [
+    "1V1_EMU"
+   ],
+   "widths": [
+    0.3,
+    0.25,
+    0.2
+   ],
+   "pad": 3,
+   "rounds": 8
+  },
+  {
+   "op": "route",
+   "nets": [
+    "VREG_AVDD_EMU"
+   ],
+   "widths": [
+    0.25,
+    0.2,
+    0.152
+   ],
+   "pad": 3,
+   "rounds": 8
+  },
+  {
+   "op": "stitch",
+   "pad": "C208.2",
+   "max_r": 1.2
+  },
+  {
+   "op": "route",
+   "nets": [
+    "EMU_GPIO_SPARE0",
+    "EMU_F3_SENSE",
+    "EMU_F2_SENSE",
+    "PYRO_INHIBIT_STATE",
+    "EMU_GPIO_RSVD",
+    "EMU_GPIO_SPARE1"
+   ],
+   "widths": [
+    0.2,
+    0.152,
+    0.127
+   ],
+   "pad": 4
+  }
+ ]
+}

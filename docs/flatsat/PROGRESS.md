@@ -30,3 +30,8 @@ Step 3: DRC item set vs step 2: 0 removed, 1 added (footprint_type_mismatch U511
 U18 carries the same). ERC errors 12, unchanged. Details and before/after numbers: `2026-09-14_phase2_layout/review_fixes.md`.
 Item 4 sub-asks not met (PM accepts (a) this rev): no 0402 across SYS/PGND (SW pins sit between them); CSYS return goes
 via In1. Item 2 trunk layer changes stay single 0.8/0.4 vias.
+| 4 | emulator re-place/reroute (owner F17: free every via-in-pad) installed | 7 (expected) | **0** | **0** / 7 F15 / 37 | **14** | **1** | **11** | **0 / 0** (no POFV); track_width 95 |
+
+Step 4: DRC item set identical to step 3. Only C215/C218 swapped slots (C215 now rot 180); U200 and EMU_FANOUT did not
+move. QSPI lengths unchanged (25.7-48.5 mm; U200's QSPI pins face out of the block, so the flown 8-13 mm is not
+reachable without moving the emulator block). Review item 5 partly addressed (see `emulator_replace.md`).

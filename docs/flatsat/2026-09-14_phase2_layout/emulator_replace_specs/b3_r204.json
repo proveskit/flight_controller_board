@@ -1,0 +1,6 @@
+{"ops":[
+ {"op":"ripup","nets":["EMU_QSPI_SS"],"window":[284.6,90.3,286.8,90.9],"layers":["In2.Cu"]},
+ {"op":"ripup","nets":["EMU_GPIO_RSVD","EMU_UART_RX","EMU_BOOTSEL_SW","EMU_RUN"],"window":[284.5,89.0,288.5,92.5]},
+ {"op":"route","nets":["EMU_QSPI_SS"],"widths":[0.2,0.152,0.127],"pad":3},
+ {"op":"route","nets":["EMU_BOOTSEL_SW","EMU_RUN","EMU_GPIO_RSVD","EMU_UART_RX"],"widths":[0.2,0.152,0.127],"pad":4}
+]}
