@@ -4277,6 +4277,160 @@
 		)
 		(uuid "548717bb-7932-4760-8a69-b4bd9b87156d")
 	)
+	(text "J500 OVER-VOLTAGE (no OV element on J500 this rev; legend 8.4V MAX on the board):"
+		(exclude_from_sim no)
+		(at 205 248.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dc1fa520-8a1a-4591-9f1c-510f75f735d2")
+	)
+	(text "  PSU OVP <= 9 V; verify the trip with J500 disconnected before each session;"
+		(exclude_from_sim no)
+		(at 205 252.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a2fa7de4-c8fd-4e50-b1be-617dca83afc4")
+	)
+	(text "  never use the 12-18 V VSOLAR supply on J500 (heritage C42/C1/C3 are 10 V"
+		(exclude_from_sim no)
+		(at 205 255.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e76c3a22-c5ed-4730-b652-700b46fbc7ff")
+	)
+	(text "  rated, U500 VDD abs max 12 V)."
+		(exclude_from_sim no)
+		(at 205 259.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d1c8b6bd-fbcc-4d28-9617-4b2aa9f77a44")
+	)
+	(text "MODE 2 returns through board GND: the ISS inhibit (J15/J19/JP607) and the R5460"
+		(exclude_from_sim no)
+		(at 205 267.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ef5eca35-8959-48ba-8c99-a76fe9365b66")
+	)
+	(text "  replica are NOT in circuit; JP607 is needed in Mode 1 only; safe the bus with"
+		(exclude_from_sim no)
+		(at 205 271.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9c8a7765-d1ec-4525-9685-7e465734df29")
+	)
+	(text "  JP606/RBF; run ISS-inhibit, deployment-switch and protection-trip tests in"
+		(exclude_from_sim no)
+		(at 205 274.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "95f920e1-8fd9-4575-b281-44206d348331")
+	)
+	(text "  Mode 1 only."
+		(exclude_from_sim no)
+		(at 205 278.73 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "19ec909d-9a5d-4764-8b4c-06ce819fba94")
+	)
+	(text "GATE-DRIVE PROBING (TP501-TP504):"
+		(exclude_from_sim no)
+		(at 142.24 102.87 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c5276ba5-6305-4e6c-8244-48f68adc3180")
+	)
+	(text "  TP501/TP503 are referenced to VBAT_BENCH_N and TP502/TP504 to B-, not GND."
+		(exclude_from_sim no)
+		(at 142.24 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e2f5c628-711f-41d4-ba2e-0afc6c23c867")
+	)
+	(text "  Measure gate drive with a floating DMM, a differential probe or an isolated"
+		(exclude_from_sim no)
+		(at 142.24 110.49 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ce7912b1-a33a-4c71-9070-e42c451ec67a")
+	)
+	(text "  scope; or clip the scope ground to board GND (JP607.2) with JP607 closed and"
+		(exclude_from_sim no)
+		(at 142.24 114.3 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7b462299-ad22-4b7c-a8ef-4fa492e582e9")
+	)
+	(text "  read gates relative to TP501/TP502 by subtraction.  Never earth TP501 or J500.3"
+		(exclude_from_sim no)
+		(at 142.24 118.11 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d02dd956-8687-4727-acad-0a515a55c77d")
+	)
+	(text "  while J701 or FC USB is on an earthed host."
+		(exclude_from_sim no)
+		(at 142.24 121.92 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "24bfcd2a-925a-4b7c-898b-de0ae7fed39c")
+	)
 	(wire
 		(pts
 			(xy 350.52 101.6) (xy 350.52 99.06)
@@ -13198,7 +13352,7 @@
 		)
 		(uuid "b346088a-f065-4ecc-84f6-48a7cae80be7")
 	)
-	(text "  Mode 2  USB charger             : JP500 OPEN, JP510 fitted, bench PSU disconnected at J500.  The FC runs from U511 SYS (instant-on, >= 6.2 V), not BAT."
+	(text "  Mode 2  USB charger             : JP500 OPEN, JP510 fitted, bench PSU disconnected at J500.  The FC runs from U511 SYS (instant-on, >= 6.2 V), not BAT.  See MODE 2 note, right."
 		(exclude_from_sim no)
 		(at 15.24 196.91 0)
 		(effects
@@ -13220,7 +13374,7 @@
 		)
 		(uuid "67a5ed78-2ed3-479f-9a52-bbde55de12dc")
 	)
-	(text "BENCH PSU WINDOW:  4.9 V <= V(B+ - B-) <= 8.4 V,  current limit <= 2 A,  FLOATING output."
+	(text "BENCH PSU WINDOW:  4.9 V <= V(B+ - B-) <= 8.4 V,  current limit <= 2 A,  FLOATING output.  PSU OVP <= 9 V: see J500 OVER-VOLTAGE, right."
 		(exclude_from_sim no)
 		(at 15.24 208.34 0)
 		(effects

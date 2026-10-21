@@ -35,3 +35,6 @@ via In1. Item 2 trunk layer changes stay single 0.8/0.4 vias.
 Step 4: DRC item set identical to step 3. Only C215/C218 swapped slots (C215 now rot 180); U200 and EMU_FANOUT did not
 move. QSPI lengths unchanged (25.7-48.5 mm; U200's QSPI pins face out of the block, so the flown 8-13 mm is not
 reachable without moving the emulator block). Review item 5 partly addressed (see `emulator_replace.md`).
+| 5 | review pass 2 fix-this-rev 1-3 + item-6 note installed (J510 0.46 mm proud of edge, J500 OVP note + 8.4V MAX silk, probing note) | 7 (expected) | **0** | **0** / 7 / 37 | **14** | **1** | **11** | **0 / 0**; track_width 95 |
+
+Step 5: DRC item set identical to step 4; ERC 12. Details: `2026-09-14_phase2_layout/review2_fixes.md`.

@@ -1511,6 +1511,17 @@
 			)
 		)
 	)
+	(text "MODE 2 (battery sheet: USB charger via JP510) returns through board GND: the ISS inhibit\n(J15/J19/JP607) and the R5460 replica are NOT in circuit; JP607 is needed in Mode 1 only;\nsafe the bus with JP606/RBF; run ISS-inhibit, deployment-switch and protection-trip tests\nin Mode 1 only."
+		(exclude_from_sim no)
+		(at 107.95 265.43 0)
+		(effects
+			(font
+				(size 1.0 1.0)
+			)
+			(justify left top)
+		)
+		(uuid "c3255ba8-bd2d-47b6-81f7-e21b33ede741")
+	)
 	(wire
 		(pts
 			(xy 25.4 44.45) (xy 48.26 44.45)
@@ -4162,7 +4173,7 @@
 		)
 		(uuid "bf7ae198-9a03-48af-b83f-4a119c8f9eb6")
 	)
-	(text "Jumper population table:\n  SW600 (on-board inhibit)    -- MSK12C02 SPDT-as-SPST: pin 3 = CLOSED = INHIBIT / SAFE\n                                 (default); pin 1 (NC, unused throw) = ARMED.\n  JP600 (Heater_EN leg)       -- SHUNT FITTED by default. Remove to exclude the heater channel\n                                 from the inhibit without a respin (D1).\n                                 CAVEAT: with JP600 removed the SAFE LED and PYRO_INHIBIT_STATE\n                                 cover Deploy1/Deploy2 only; Heater_EN is live -- treat ch3/ch4\n                                 as ARMED (D1 / flight_controller_board#53).\n  JP601 (panel switch header) -- no shunt; wire an external 2-pin panel-mount switch here, in\n                                 parallel with the on-board SW600. Closed = SAFE.\n  JP602-JP607 (bench RBF/inhibit shunts) -- OPEN by default. Bridge with a shunt only when the\n                                 matching crimp connector (J7/J8/J10/J15/J19/J20/J29/J30) is not\n                                 fitted. Never fitted on flight units.\n\nPOWER-UP RECIPE -- to power the FC with no crimp plugs fitted, bridge:\n  JP607 (B- return) + JP606 (RBF -- CLOSING THIS ENERGISES VBUSP)\n  + ONE inhibit path: JP602 + JP603, or JP604 + JP605. Leave the others open.\nJP606 is the opposite of the naive 'remove before flight = safety pin' reading: a shunt ACROSS\nJP606 CLOSES IN_RBF to VBUSP and turns the FC on; pulling it opens the bus. The FC's own USB J12\npowers VBUSP through D15 (DFLS130L) regardless of every jumper on this sheet, so 'all jumpers\nopen' is NOT a guarantee that VBUSP is dead -- unplug USB as well."
+	(text "Jumper population table:\n  SW600 (on-board inhibit)    -- MSK12C02 SPDT-as-SPST: pin 3 = CLOSED = INHIBIT / SAFE\n                                 (default); pin 1 (NC, unused throw) = ARMED.\n  JP600 (Heater_EN leg)       -- SHUNT FITTED by default. Remove to exclude the heater channel\n                                 from the inhibit without a respin (D1).\n                                 CAVEAT: with JP600 removed the SAFE LED and PYRO_INHIBIT_STATE\n                                 cover Deploy1/Deploy2 only; Heater_EN is live -- treat ch3/ch4\n                                 as ARMED (D1 / flight_controller_board#53).\n  JP601 (panel switch header) -- no shunt; wire an external 2-pin panel-mount switch here, in\n                                 parallel with the on-board SW600. Closed = SAFE.\n  JP602-JP607 (bench RBF/inhibit shunts) -- OPEN by default. Bridge with a shunt only when the\n                                 matching crimp connector (J7/J8/J10/J15/J19/J20/J29/J30) is not\n                                 fitted. Never fitted on flight units.\n\nPOWER-UP RECIPE -- to power the FC with no crimp plugs fitted, bridge:\n  JP607 (B- return; Mode 1 only, see right) + JP606 (RBF -- CLOSING THIS ENERGISES VBUSP)\n  + ONE inhibit path: JP602 + JP603, or JP604 + JP605. Leave the others open.\nJP606 is the opposite of the naive 'remove before flight = safety pin' reading: a shunt ACROSS\nJP606 CLOSES IN_RBF to VBUSP and turns the FC on; pulling it opens the bus. The FC's own USB J12\npowers VBUSP through D15 (DFLS130L) regardless of every jumper on this sheet, so 'all jumpers\nopen' is NOT a guarantee that VBUSP is dead -- unplug USB as well."
 		(exclude_from_sim no)
 		(at 25.4 243.84 0)
 		(effects
