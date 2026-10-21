@@ -317,7 +317,11 @@ MID_BENCH                          0.400:14.1, 0.500:10.3, 0.600:5.9, 1.000:2.5,
 3V3_EMU                            0.127:15.2, 0.152:2.1, 0.200:2.3, 0.250:0.9, 0.400:3.1, 0.500:9.8, 0.600:8.5, 0.800:0.7, 1.000:164.7, 1.200:5.8, 1.500:16.8     229.8       0.0 B.Cu,F.Cu,In2.Cu (+17 via)
 ```
 
-Every FCPower and BenchPower net carries 1.0–1.5 mm on its new copper. The sub-1.0 mm entries are
+**Correction (2026-10-21 pre-order review, item 6):** the next sentence is false for VBAT_BENCH_N,
+CHG_BAT, CHG_SYS, VBUS_CHG and the Q500 drain link, which carried 0.25-0.30 mm runs outside the band.
+The review fixes widened them, and the `bench_power_width` DRC rule now counts what is left
+(`track_width` in `gates.sh`, `residual_widths.txt`). Original text: Every FCPower and BenchPower net
+carries 1.0–1.5 mm on its new copper. The sub-1.0 mm entries are
 all L11 stub segments *inside the attachment band*, where the heritage density sets the width — the
 router took the widest that fits and a post-pass (`widen.py`, exact-shape re-test of every segment's
 whole centre line) grew 173 segments afterwards, most of them to 1.5 mm. The two that stayed thin:

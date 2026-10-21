@@ -113,8 +113,9 @@ with no compliant connector-pad path, per owner ruling F12).
   area) and the reshaped/clipped heritage F.Cu/B.Cu/In2.Cu pours (clipped to the Rev2 outline inset 0.2 mm
   so no FC net pours into the extension, per L11/`outline.py`). Stitching vias every ≤10 mm along the new
   perimeter and around the emulator, plus a 5-point GND ring around the J12 relief slot (F8).
-* **Netclasses** (`.kicad_pro` `net_settings`, applied by `netclasses.py`, visible in DRC — no width below
-  class was flagged):
+* **Netclasses** (`.kicad_pro` `net_settings`, applied by `netclasses.py`, visible in DRC; KiCad 10 uses the
+  netclass track width only as a routing default, so DRC never checked it until the 2026-10-21 review added
+  the `bench_power_width` rule to `FlatSat_V1.kicad_dru`, a warning that `gates.sh` counts as `track_width`):
 
   | Class | Track | Clearance | Via | Nets |
   |---|---|---|---|---|
