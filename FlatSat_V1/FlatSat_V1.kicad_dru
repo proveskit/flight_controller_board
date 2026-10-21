@@ -52,3 +52,13 @@
 	(constraint annular_width (min 0.10mm))
 	(constraint via_diameter (min 0.40mm))
 	(constraint hole_size (min 0.20mm)))
+
+# Pre-order review 2026-10-21 item 6: KiCad uses the netclass track width only as a routing default, so the
+# bench/FC power width (brief section 9: >= 1.0 mm) was never checked. This rule makes DRC check it.
+# FC_COPY is a rule area (no keepouts) over the Rev2 outline: heritage FC copper and the 37 owner-ruled L11
+# attachment stubs (heritage pad widths) are exempt. Severity warning keeps the DRC error baseline; gates.sh
+# prints the count as track_width.
+(rule "bench_power_width"
+	(severity warning)
+	(condition "(A.NetClass == 'BenchPower' || A.NetClass == 'BenchPower5V' || A.NetClass == 'FCPower') && !A.intersectsArea('FC_COPY')")
+	(constraint track_width (min 1.0mm)))

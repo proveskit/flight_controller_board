@@ -4,7 +4,7 @@
 # The board must sit in a project directory with its own .kicad_pro/.kicad_dru (KiCad silently falls back to
 # factory rules otherwise). Gates: heritage (stored fills), heritage (--refill --core-inset 12 --ref-board),
 # attachment_check (F15: fill change = warning), DRC with parity + drc_summary vs the pre-layout baseline,
-# via_in_pad (F16). Nothing here writes the board.
+# via_in_pad (F16), and the count of bench_power_width (track_width) DRC items. Nothing here writes the board.
 set -uo pipefail
 BOARD=$(cd "$(dirname "$1")" && pwd)/$(basename "$1")
 OUT=$2
@@ -30,5 +30,6 @@ herf=$(grep -Eo '[0-9]+ violation' "$OUT/heritage_refill.txt" | tail -1 | grep -
 att=$(python3 -c "import json;d=json.load(open('$OUT/attachment.json'));print(len(d['violations']),len(d['warnings']),d['stubs'])")
 drc=$(grep -E '^errors:' "$OUT/drc_summary.txt")
 vip=$(tail -1 "$OUT/via_in_pad.txt")
+tw=$(python3 -c "import json;d=json.load(open('$OUT/drc.json'));print(sum(v['type']=='track_width' for v in d['violations']))")
 for f in heritage heritage_refill attachment drc_summary via_in_pad; do echo "== $f"; tail -4 "$OUT/$f.txt"; done
-echo "GATES heritage=${her:-?} heritage_refill=${herf:-?} attachment(viol,warn,stubs)=${att} | ${drc} | ${vip}"
+echo "GATES heritage=${her:-?} heritage_refill=${herf:-?} attachment(viol,warn,stubs)=${att} | ${drc} | ${vip} | track_width: ${tw:-?}"

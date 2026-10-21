@@ -24,3 +24,9 @@ The round-3 numbers came from KiCad 10.0.1 on another machine. Two differences o
 
 Step 1: DRC item set identical to routed_r3 (0 added, 0 removed, compared by type + items). Per-via table and POFV
 reasons in `2026-09-14_phase2_layout/via_off_pad.md`. QSPI growth: SD0 +2.9 mm, SS +1.9, SD1 +0.9, SD3 +0.3, SCLK/SD2 0.
+| 3 | review fix-this-rev items 1,2,3,4,6,7 installed (refilled) | 7 (expected) | **0** | **0** / 7 F15 / 37 (J16.8 stub replaced by J14.1 In1 stub) | **14** | **1** | **11** | 7 / 0; track_width (new rule) 95 deferred residuals |
+
+Step 3: DRC item set vs step 2: 0 removed, 1 added (footprint_type_mismatch U511, from the 9 EP thermal PTH pads; flown
+U18 carries the same). ERC errors 12, unchanged. Details and before/after numbers: `2026-09-14_phase2_layout/review_fixes.md`.
+Item 4 sub-asks not met (PM accepts (a) this rev): no 0402 across SYS/PGND (SW pins sit between them); CSYS return goes
+via In1. Item 2 trunk layer changes stay single 0.8/0.4 vias.

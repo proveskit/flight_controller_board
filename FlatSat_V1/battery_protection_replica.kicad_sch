@@ -4247,6 +4247,56 @@
 			)
 		)
 	)
+	(label "PROT_DRAIN"
+		(at 91.44 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0e590519-2ce7-4654-b0b1-5d5966ff8a60")
+	)
+	(label "CHG_PMID"
+		(at 339.09 64.77 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "3c1769c3-d430-4ac7-88b8-7a770f714909")
+	)
+	(label "CHG_SW"
+		(at 330.2 69.85 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "548717bb-7932-4760-8a69-b4bd9b87156d")
+	)
+	(wire
+		(pts
+			(xy 350.52 101.6) (xy 350.52 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a9bf8de-27cd-4881-b23c-f1ed691d1190")
+	)
+	(label "CHG_SYS"
+		(at 350.52 99.06 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ea7c02bd-48fe-425c-84c8-317d9572d6ad")
+	)
 	(wire
 		(pts
 			(xy 53.34 58.42) (xy 63.5 58.42)
@@ -11860,7 +11910,7 @@
 	)
 	(wire
 		(pts
-			(xy 342.9 101.6) (xy 350.52 101.6)
+			(xy 342.9 101.6) (xy 347.98 101.6)
 		)
 		(stroke
 			(width 0)
@@ -11883,12 +11933,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1c5c7a63-1e17-43dd-9c89-9db4ff105e74")
-	)
-	(junction
-		(at 347.98 101.6)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4abba5d3-a98f-4e17-9dfc-9d0b67e6fb7d")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -12137,7 +12181,7 @@
 				)
 			)
 		)
-		(property "Description" "Test point, BQ25886 BAT (charger output, before JP510)"
+		(property "Description" "Test point, BQ25886 BAT (CBAT C515 only; JP510 is fed from SYS)"
 			(at 347.98 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -12215,7 +12259,7 @@
 				)
 			)
 		)
-		(property "Description" "2-pin header, shunt REMOVED by default (D3): charger BAT -> Dir_Chrg_In"
+		(property "Description" "2-pin header, shunt REMOVED by default (D3): charger SYS -> Dir_Chrg_In"
 			(at 355.6 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -13044,7 +13088,7 @@
 		)
 		(uuid "88a89b77-dbdf-47b8-ba84-3ac2d449dc7d")
 	)
-	(text "  VBAT_BENCH_N (local) = the pack cell-negative node: R5460 VSS, Q500 source, C500/C501/C502/C503 return, R504 bottom."
+	(text "  VBAT_BENCH_N (local) = the pack cell-negative node: R5460 VSS (layout: Kelvin tap at Q500 source), Q500 source, C500/C501/C502/C503 return, R504 bottom."
 		(exclude_from_sim no)
 		(at 15.24 155 0)
 		(effects
@@ -13132,7 +13176,7 @@
 		)
 		(uuid "edf175d1-6457-4843-8ff8-2c349983130f")
 	)
-	(text "  JP510  BQ25886 BAT -> Dir_Chrg_In    : shunt REMOVED by default (D3), so the charger can never push into a bench PSU."
+	(text "  JP510  BQ25886 SYS -> Dir_Chrg_In    : shunt REMOVED by default (D3), so the charger can never push into a bench PSU. Never fit JP510 with a PSU on J500."
 		(exclude_from_sim no)
 		(at 15.24 189.29 0)
 		(effects
@@ -13154,7 +13198,7 @@
 		)
 		(uuid "b346088a-f065-4ecc-84f6-48a7cae80be7")
 	)
-	(text "  Mode 2  USB charger             : JP500 OPEN, JP510 fitted, bench PSU disconnected at J500."
+	(text "  Mode 2  USB charger             : JP500 OPEN, JP510 fitted, bench PSU disconnected at J500.  The FC runs from U511 SYS (instant-on, >= 6.2 V), not BAT."
 		(exclude_from_sim no)
 		(at 15.24 196.91 0)
 		(effects
@@ -13209,7 +13253,7 @@
 		)
 		(uuid "99562e55-7e95-4175-8c13-e4b636139a0e")
 	)
-	(text "  excess-discharge VDET3 = 0.200 V across Q500+Q501 (about 11 A at 2 x 9 mOhm), excess-charge VDET4 = -0.200 V, tVDET3 12 ms / tVDET4 8 ms."
+	(text "  excess-discharge VDET3 = 0.200 V across Q500+Q501 + 8 mOhm sense-loop copper (about 7.7 A at 2 x 9 mOhm), excess-charge VDET4 = -0.200 V, tVDET3 12 ms / tVDET4 8 ms."
 		(exclude_from_sim no)
 		(at 15.24 219.77 0)
 		(effects
@@ -13649,7 +13693,7 @@
 		)
 		(uuid "15ceddfd-c37b-4646-b2d8-9ededf862794")
 	)
-	(text "  With no battery on Dir_Chrg_In the STAT LED blinks as the BAT capacitance charges and discharges (8.3.7.1) - expected, not a fault."
+	(text "  BAT (C515/TP512) carries no load: with no pack the STAT LED blinks as the BAT capacitance charges and discharges (8.3.7.1) - expected, not a fault."
 		(exclude_from_sim no)
 		(at 200.66 221.2 0)
 		(effects

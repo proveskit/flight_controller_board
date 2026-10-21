@@ -1280,7 +1280,7 @@
 		)
 		(uuid "6b861360-3741-4c3d-9666-d531f0d2873c")
 	)
-	(text "Bench PSU setting: 12 V to 18 V nominal, HARD MAXIMUM 24 V (brief section 6.3; F400/F401 are 33 V Vmax, so 9 V of margin). INA219 U8 (0x41) IN+"
+	(text "Bench PSU setting: 12 V to 18 V nominal, HARD MAXIMUM 18 V (heritage C40, the LT3652 VIN bypass on V_SOLAR_SENSE, is a 10 V X5R). INA219 U8 (0x41) IN+"
 		(exclude_from_sim no)
 		(at 20 160 0)
 		(effects
@@ -1434,7 +1434,7 @@
 		)
 		(uuid "425d46aa-2078-4c55-b666-ee6ee8435ff2")
 	)
-	(text "IC6 R75 = 0.1 ohm sets the LT3652 1.0 A charge current) -- 28 % margin. 33 V Vmax leaves 9 V over the brief's 24 V hard maximum. Itrip (3.70 A)"
+	(text "IC6 R75 = 0.1 ohm sets the LT3652 1.0 A charge current) -- 28 % margin. 33 V Vmax leaves 15 V over the 18 V hard maximum. Itrip (3.70 A)"
 		(exclude_from_sim no)
 		(at 20 208.67 0)
 		(effects
@@ -1554,6 +1554,68 @@
 			(justify left bottom)
 		)
 		(uuid "aac22836-9556-472c-bec1-9b3cc58d56b4")
+	)
+	(text "HARD MAXIMUM 18 V procedure: set PSU OVP <= 18 V and verify the trip with J400/J401 disconnected (raise the output until OVP trips) before each session; do not soak at 18 V."
+		(exclude_from_sim no)
+		(at 20 251.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "125c84b7-93fc-43e0-ac7e-9bf242c5549b")
+	)
+	(text "Secondary limits only: INA219 U8 26 V absolute maximum, F400/F401 33 V Vmax. The 18 V ceiling exists because a shorted 10 V C40 would dump PSU/PTC current into FC-copy copper."
+		(exclude_from_sim no)
+		(at 20 253.34 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "518ec80a-f57e-469a-b734-1391b9136e80")
+	)
+	(label "INJ_A_PTC"
+		(at 130.81 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "949d0aa5-e82f-44bd-80ec-b3886ac86dd3")
+	)
+	(label "INJ_A_OR"
+		(at 168.91 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "44655b7a-41d6-480c-ae70-6a935fa429b9")
+	)
+	(label "INJ_B_PTC"
+		(at 130.81 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4e1798d3-bd07-4871-9187-9618cbbffd25")
+	)
+	(label "INJ_B_OR"
+		(at 168.91 139.7 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "867a5041-863a-4a25-a7b2-db0c186da76f")
 	)
 	(wire
 		(pts
