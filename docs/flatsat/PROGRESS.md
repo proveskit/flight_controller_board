@@ -19,3 +19,8 @@ The round-3 numbers came from KiCad 10.0.1 on another machine. Two differences o
 |---|---|---|---|---|---|---|---|---|
 | 0 | `routed_r3` as committed (stored fills) | 0 | 0 | 0 / 0 / 37 | 14 (2 + 12 U6.29 annular) | 1 (U6.1/U6.29) | 11 | 45 / 19 (62 vias) |
 | 0f | `routed_r3` refilled | 7 (expected: stored fills changed) | 0 (3 band notes, as round 3) | 0 / 7 / 37 (F15 warnings) | 14 | 1 | 11 | 45 / 19 |
+| 1 | via-off-pad (`dogbone.py`, scratch, stored fills) | 0 | 0 | 0 / 0 / 37 | 14 | 1 | 11 | **7 / 0** (55 moved, 7 POFV) |
+| 2 | installed in `FlatSat_V1/` + refilled (board, `.kicad_pro` netclasses, `.kicad_dru`) | 7 (expected after refill) | **0** (same 3 band notes as round 3) | **0** / 7 F15 / 37 | **14** | **1** | **11** | **7 / 0** |
+
+Step 1: DRC item set identical to routed_r3 (0 added, 0 removed, compared by type + items). Per-via table and POFV
+reasons in `2026-09-14_phase2_layout/via_off_pad.md`. QSPI growth: SD0 +2.9 mm, SS +1.9, SD1 +0.9, SD3 +0.3, SCLK/SD2 0.
