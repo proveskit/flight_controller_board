@@ -13,7 +13,8 @@ Checks every track/via whose uuid is not in the snapshot:
     --band mm of the outline boundary, is <= --max-stub mm long, lies on the pad's layer(s), and
     touches no heritage track/via endpoint                           -> allowed
   * more than one stub per net into the flight section              -> warning (one per net is the rule; two are tolerated with a reason)
-  * heritage zone filled areas that changed by > 0.5 %              -> warning (fills inside the flight section must not change)
+  * heritage zone filled areas that changed by > 0.1 %              -> warning (owner F15, 2026-10-21: a refilled board
+    carves the band around the stubs; `heritage.py check --refill --core-inset 12 --ref-board` is the fill gate)
 Exit 0 = compliant (warnings allowed), 1 = violations.
 """
 import argparse
@@ -388,7 +389,7 @@ def main():
     for net, n in per_net.items():
         if n > 1:
             warnings.append(f'net {net} has {n} stubs into the flight section (rule: one)')
-    # heritage zone fills inside the flight section must be unchanged (heritage.py check reports the same)
+    # F15: fill change inside the flight section is a warning; heritage.py --refill --core-inset 12 gates the core
     for u, z in snap['zones'].items():
         if z.get('fill_in_rev2') is None:
             continue
@@ -397,7 +398,7 @@ def main():
             continue
         now = fill_area_inside(zz, poly)
         if z['fill_in_rev2'] and abs(now - z['fill_in_rev2']) / z['fill_in_rev2'] > 0.001:
-            violations.append(f"zone {z['net']} on {z['layer']}: copper inside the flight section changed {z['fill_in_rev2']:.1f} -> {now:.1f} mm²")
+            warnings.append(f"zone {z['net']} on {z['layer']}: copper inside the flight section changed {z['fill_in_rev2']:.1f} -> {now:.1f} mm²")
     for s in stubs:
         print('STUB:', s)
     for w in warnings:
