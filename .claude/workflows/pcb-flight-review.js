@@ -1,7 +1,7 @@
 export const meta = {
   name: 'pcb-flight-review',
   description: 'Review KiCad schematic+layout for correctness, datasheet parity, spaceflight practice; verify; prioritize',
-  whenToUse: 'Multi-stage design review of a KiCad project. args: {project, pcb, sch, scratch, heritage[], context}',
+  whenToUse: 'Multi-stage design review of a KiCad project. args: {project, pcb, sch, scratch, heritage[], context, dimensions?, subsystems?, baselineNote?}',
   phases: [
     { title: 'Review', detail: '6 finders: schematic/layout/spaceflight, Sonnet+Opus' },
     { title: 'Verify', detail: 'Opus skeptics, one per subsystem batch (<=6 findings)', model: 'opus' },
@@ -36,7 +36,7 @@ HOW TO WORK:
 - Every finding needs concrete evidence: sheet+refdes+net or PCB coordinates/layer, plus what the datasheet or standard says. If you cannot point at evidence, do not report it.
 - A "finding" is something that could plausibly cause a functional, reliability, manufacturability, or mission failure, or a clear deviation from a manufacturer recommendation. Cosmetic issues, style, library-metadata ERC noise (lib_symbol_issues, lib_symbol_mismatch, footprint_link_issues, endpoint_off_grid) are NOT findings unless they mask a real electrical problem.
 - The board has flight heritage and environmental validation. Do not invent issues. Zero findings is an acceptable answer. Prefer 3 solid findings over 15 speculative ones.
-- Set confidence honestly (0-1). Note if an item is new since the validated Rev1 baseline (e.g., the restored APS1604M PSRAM and its QSPI routing) vs inherited.
+- Set confidence honestly (0-1). ${A.baselineNote || 'Note if an item is new since the validated Rev1 baseline (e.g., the restored APS1604M PSRAM and its QSPI routing) vs inherited.'}
 `
 
 const FINDINGS = {
@@ -66,7 +66,8 @@ const FINDINGS = {
   required: ['scope_checked', 'findings'],
 }
 
-const DIMENSIONS = [
+// args.dimensions ({key, model, prompt}[]) replaces these for a board that is not the FC (e.g. FlatSat_V1).
+const DIMENSIONS = A.dimensions || [
   { key: 'sch-correctness', model: 'sonnet', prompt: `
 DIMENSION: Schematic electrical correctness.
 Check: net connectivity sanity from netlist.xml (floating inputs, unconnected enables/resets, pull-up/pull-down presence and values, power pins on the right rails, voltage-domain mismatches between 3V3/5V/VBAT/1V1 logic, I2C address conflicts on shared buses incl. behind the TCA9548A mux, SPI/QSPI CS assignments, RP2350 GPIO usage conflicts, USB D+/D- and VBUS handling, RUN/BOOTSEL circuit). Triage the 11 ERC errors (power_pin_not_driven, pin_not_connected) and the multiple_net_names / same_local_global_label warnings: which are real, which are noise? Compare against ${A.heritage[0]} to spot unintended changes in Rev2.` },
@@ -136,7 +137,7 @@ const BATCH_VERDICTS = {
 
 // Group findings into subsystem batches so one verifier loads a datasheet/sheet once and checks all related items.
 findings.forEach((f, i) => { f.id = i + 1 })
-const SUBSYS = [
+const SUBSYS = A.subsystems ? A.subsystems.map(([k, re]) => [k, new RegExp(re, 'i')]) : [
   ['power-charger-buck', /lt3652|lt8610|tps54226|buck|charger|mppt|solar|inductor|vbat|battery|feedback|fb\b|sw node|switcher/i],
   ['power-switches-monitor', /tps2hb50|tps4h160|ap22652|load switch|high-side|ina219|shunt|sense|inhibit|deploy|burn/i],
   ['mcu-memory', /rp2350|qspi|psram|aps1604|w25q|flash|crystal|xin|xout|1v1|bootsel|run\b|usb/i],
