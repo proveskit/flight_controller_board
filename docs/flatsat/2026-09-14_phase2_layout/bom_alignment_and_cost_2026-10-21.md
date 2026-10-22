@@ -6,7 +6,7 @@ Board `FlatSat_V1` at `a544052`. Live JLC data pulled 2026-10-21. Read-only pass
 
 | Question | Answer |
 |---|---|
-| Aligned? | **No.** 2 parts cannot be assembled at JLC today, and `project.db` was never re-synced after the review fixes. |
+| Aligned? | **No.** L3/L200 cannot be assembled from JLC stock today, and `project.db` was never re-synced after the review fixes. IC3 is covered by the owner's pre-order (update 2026-10-21 20:28 PT). |
 | Schematic vs board vs `project.db` value/footprint mismatches | 0 |
 | Placed refs with an orderable LCSC | 436 of 472 |
 | Unique LCSC codes | 117 (81 Extended, 36 Basic, 0 confirmed preferred-extended) |
@@ -17,9 +17,10 @@ Board `FlatSat_V1` at `a544052`. Live JLC data pulled 2026-10-21. Read-only pass
 
 | # | Refs | LCSC | Part | Problem (live 2026-10-21) | Fix options |
 |---|---|---|---|---|---|
-| B1 | IC3 | C3304278 | RV-3028-C7 RTC (heritage) | JLC stock **0** | JLC pre-order / global sourcing (pre-order min 5), or consign. Buy first (CLAUDE.md step 7). |
-| B2 | L3, L200 | C42411119 | AOTA-B201610S3R3-101-T 3.3 µH 2016 | JLC stock **1**; need 2/board + 1 attrition (5 for qty 2, 11 for qty 5) | Pre-order (min 32) or swap L200 and L3 to a stocked 3.3 µH 2016 part. L3 is heritage, so a swap needs a datasheet check. |
+| B2 | L3, L200 | C42411119 | AOTA-B201610S3R3-101-T 3.3 µH 2016, polarity-marked | JLC stock **1** (rechecked 2026-10-21 evening); need 2/board + 1 attrition (5 for qty 2, 11 for qty 5) | **Keep the part.** No stocked 2016 alternative is polarity-marked, and the RP2350 datasheet (§6.3.8.2) requires a marked part ([inductor_substitution_2026-10-21.md](inductor_substitution_2026-10-21.md)). Buy at Newark (30,960 stock) and consign to JLC (recommended), or JLC pre-order (min 32, ≈ $9.11). |
 | B3 | 218 refs | n/a | All Phase-1/2 refs, including every review-fix ref | Missing from `jlcpcb/project.db` (258 rows, last commit `d56c9df` 2026-09-14) | GUI step (CLAUDE.md procedure step 6). Opening JLCPCB Tools adds the rows from the board `LCSC Part` fields, which match the schematic for all 218. Afterwards, confirm the LCSC column. |
+
+IC3 (C3304278 RV-3028-C7, heritage RTC, JLC stock 0) is no longer blocking. The owner has pre-ordered parts, so supply is by consignment/pre-order.
 
 ### Non-blocking findings
 
@@ -52,8 +53,8 @@ Board `FlatSat_V1` at `a544052`. Live JLC data pulled 2026-10-21. Read-only pass
 | SW600 | No LCSC | C431540 MSK12C02, stock 195,614 |
 | Q500, Q501 IRF7458 (C10879) | Stock 57 | **Stock 24** (12 boards' worth). Buy at order time. |
 | U6 TPS4H160AQPWPRQ1 (C485918) | n/a | Stock **16** (16 boards) |
-| IC3 RV-3028 (C3304278) | n/a | **Stock 0** (B1) |
-| L3/L200 (C42411119) | n/a | **Stock 1** (B2) |
+| IC3 RV-3028 (C3304278) | n/a | **Stock 0**. Owner has pre-ordered parts; supply by consignment/pre-order. |
+| L3/L200 (C42411119) | n/a | **Stock 1** (B2). No acceptable stocked substitute; see [inductor_substitution_2026-10-21.md](inductor_substitution_2026-10-21.md). |
 | Review-fix refs C513, L510, C512, C215, C218, J510, U511 | n/a | All on the board with LCSC fields: C52306, C87572, C1622, C23733, C1525, C165948, C2765094 |
 | TP512, FID1, FID2 | n/a | No part (pad, board-only fiducials) |
 
@@ -129,7 +130,7 @@ The next items are IRF7458 ×2 ($25.34), LIS2MDL ($25.21) and W25Q128 ×2 ($23.9
 | Feeder fee is per unique code | The published table says "$1.53 Basic/Extend" for Standard and gives no unit basis. |
 | No preferred-extended waivers | jlcsearch found 37 of 81 Extended codes, and none were flagged preferred. The other 44 are unknown. |
 | 4-wire Kelvin test, solvent cleaning | Assumed $0. Not priced on the pages fetched. |
-| Parts prices | Measured unit price at the tier reached by max(qty × N + attrition, MOQ). Blocked parts B1/B2 are included at list price. |
+| Parts prices | Measured unit price at the tier reached by max(qty × N + attrition, MOQ). IC3 (pre-ordered) and B2 are included at list price. A 32-piece pre-order of C42411119 would add ≈ $8 (qty 2) or ≈ $6 (qty 5); consigned parts would remove their line cost. |
 | JLC hand-solders the 26 THT parts | Measured: `assemblyProcess=THT`, `assemblyMode=manualWeld` on 10 codes |
 
 ## Sources
