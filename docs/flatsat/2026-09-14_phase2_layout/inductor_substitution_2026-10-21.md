@@ -67,3 +67,27 @@ Low-DCR, high-Isat parts are easy to find in 2016. The polarity mark is the one 
 | 4 | Order JLC with L3/L200 unpopulated, hand-place the Abracon part with the dot per the silk | DNP the two refs at order time | n/a | None | Workable for a 2-board bench run. It adds two 2016 hand placements next to a QFN-60, with a polarity check. |
 
 The owner has pre-ordered IC3 (RV-3028), so it is out of scope here.
+
+## Update 2026-10-22 08:57 PT: JLC restocked C42411119; lead-time check
+
+The owner tentatively approved a JLC pre-order of 32, conditional on its lead time. The live check found the part back in stock, so no pre-order is needed.
+
+| Source (fetched 2026-10-22) | Raw fields |
+|---|---|
+| `https://cart.jlcpcb.com/shoppingCart/smtGood/getComponentDetail?componentCode=C42411119` | `componentModelEn: "AOTA-B201610S3R3-101-T"`, `componentLibraryType: "expand"`, `stockCount: 407` (was 1 on 2026-10-21), `minPurchaseNum: 26`, `preMinPurchaseNum: 26`, `canPresaleNumber: 0`, `componentPresaleType: null`; price tiers 1+: $0.3608, 50+: $0.2854, 150+: $0.2532 |
+| `https://wmsc.lcsc.com/ftps/wm/product/detail?productCode=C42411119` | `productModel: "AOTA-B201610S3R3-101-T"`, brand ABRACON, `stockNumber: 405`, `domesticStockVO.shipImmediately: 405`, `ship3Days: 0`, `isPreSale: false`, `productCycle: "normal"` |
+
+| Question | Answer | Confidence |
+|---|---|---|
+| Lead time for C42411119 | **Not needed now: 407 in JLC stock.** Five boards need 11 (10 placed + attrition). | High (two live APIs agree) |
+| Pre-order lead-time field | Neither API exposes one. JLC returns pre-order fields only (`preMinPurchaseNum`, `canPresaleNumber`); LCSC returns `shipImmediately` / `ship3Days`. | High |
+| JLC published pre-order lead time | Not obtained by script. `jlcpcb.com/help/article/{pre-order-parts, how-to-pre-order-parts, global-sourcing-parts}` return HTTP 200 but only a client-rendered shell with no article text. Read the "PCBA Parts Sourcing" help pages in a browser if a figure is still wanted. | n/a |
+
+Order action: none. The owner's JLCPCB Tools / `project.db` pass picks up C42411119 at the current Extended price (about $0.36 each below 50). Stock moves daily, so recheck right before ordering. The pre-order plan is only a fallback if stock falls below 11 again.
+
+Fallback if stock disappears (unmarked, fails RP2350 DS §6.3.8.2 polarity marking, so it needs an owner waiver; nothing changed):
+
+| Part | LCSC | Stock 2026-10-22 | Price | DCR / Isat | Note |
+|---|---|---|---|---|---|
+| Magnetsyc AFE201610S3R3MBT | C22459316 | 3,725 | $0.0375 | 140 mOhm / 2 A | best stock, fits L_pol_2016 pads, Extended |
+| MetalLions MTQH201612S3R3MBT | C17701150 | 1,659 | $0.045 | 135 mOhm / 2.4 A | second choice, Extended |
