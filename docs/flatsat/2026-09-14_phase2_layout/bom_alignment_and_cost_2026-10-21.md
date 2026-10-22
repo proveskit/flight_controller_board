@@ -6,7 +6,7 @@ Board `FlatSat_V1` at `a544052`. Live JLC data pulled 2026-10-21. Read-only pass
 
 | Question | Answer |
 |---|---|
-| Aligned? | **No.** L3/L200 cannot be assembled from JLC stock today, and `project.db` was never re-synced after the review fixes. IC3 is covered by the owner's pre-order (update 2026-10-21 20:28 PT). |
+| Aligned? | **No, one blocker left:** `project.db` was never re-synced after the review fixes (218 refs). L3/L200 C42411119 is back in JLC stock (407 on 2026-10-22, see `inductor_substitution_2026-10-21.md`), so it is no longer blocking. IC3 is covered by the owner's pre-order (update 2026-10-21 20:28 PT). |
 | Schematic vs board vs `project.db` value/footprint mismatches | 0 |
 | Placed refs with an orderable LCSC | 436 of 472 |
 | Unique LCSC codes | 117 (81 Extended, 36 Basic, 0 confirmed preferred-extended) |
