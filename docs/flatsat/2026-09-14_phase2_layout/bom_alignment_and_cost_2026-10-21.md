@@ -268,3 +268,10 @@ Scripts: `bom_cost_scripts/` (`dump_board.py`, `align.py`, `fetch_live.py`, `par
 | C25105 | 0402WGF330JTCE | R200 R94 | 2 | Basic | SMT | 2,309,992 | 20 | 10 | 0.02 | 0.02 |
 | C17168 | 0402WGF0000TCE | R203 R91 | 2 | Basic | SMT | 9,882,471 | 20 | 10 | 0.02 | 0.02 |
 | **Total** | | | **436** | | | | | | **259.73** | **578.63** |
+
+## Correction 2026-10-22
+
+This report read each schematic `LCSC Part` field and missed a board-side defect. 35 Phase-1/2 footprints also carried a
+stale board-only `LCSC` field cloned from heritage parts. The JLCPCB plugin reads that field first, so 8 parts would have been
+ordered wrong (C221/C222/C301/C304 as C1525; D201/D202/D510/LED600 as C12624). Fixed in `a862eba`; see
+`production_files_2026-10-22.md`. Live stock on 2026-10-22: U6 TPS4H160 (C485918) dropped to 1, which is now a blocker.
