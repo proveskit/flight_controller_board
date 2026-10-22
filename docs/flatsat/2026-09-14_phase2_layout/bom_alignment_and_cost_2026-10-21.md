@@ -143,7 +143,7 @@ The next items are IRF7458 ×2 ($25.34), LIS2MDL ($25.21) and W25Q128 ×2 ($23.9
 | https://jlcpcb.com/capabilities/pcb-capabilities | Via size tiers, track/space minimum, finishes |
 | `https://bouni.github.io/kicad-jlcpcb-tools/chunk_num_fts5.txt` | Reachable (12 chunks). Full DB not downloaded because the live API covered every code. |
 
-Exports and scripts (not committed, CSV is ignored): `/private/tmp/claude-501/-Users-ossf-1-GitHut/0ffadabf-7bf0-51b2-8fd8-5873ed53463c/scratchpad/bom/` (`bom_grouped.csv`, `bom_flat.csv`, `pos.csv`, `board.json`, `align_rows.json`, `parts_table.json`, `live/*.json`), scripts in `../tools/` (`dump_board.py`, `align.py`, `fetch_live.py`, `parts_table.py`, `cost.py`, `geom.py`).
+Scripts: `bom_cost_scripts/` (`dump_board.py`, `align.py`, `fetch_live.py`, `parts_table.py`, `cost.py`, `geom.py`; they read and write a scratch dir set at the top of each). Exports (CSV is git-ignored) and the cached live JSON were kept in the session scratch dir only; rerun `fetch_live.py` to refresh.
 
 ## Appendix: per-part order (live 2026-10-21)
 
