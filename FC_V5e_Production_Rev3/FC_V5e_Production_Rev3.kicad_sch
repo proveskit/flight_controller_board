@@ -24036,7 +24036,7 @@
 			)
 		)
 	)
-	(text "Do not select a TCA9548A channel whose face is off\n(bus parks mid-rail). Deselect the channel before\nFACEx_ENABLE=0; select only after the face rail is up\n(>150 us). ~MUX_RESET (GPIO26) recovers a parked bus."
+	(text "Do not select a TCA9548A channel whose face is off\n(bus parks mid-rail). Deselect the channel before\nFACEx_ENABLE=0; select only after the face rail has settled\n(AP22653 soft-start) plus 150 us TCA4311A idle time.\n~MUX_RESET (GPIO26) recovers a parked bus."
 		(exclude_from_sim no)
 		(at 233.68 142.24 0)
 		(effects
