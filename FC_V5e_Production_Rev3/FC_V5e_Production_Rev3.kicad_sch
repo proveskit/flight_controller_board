@@ -24036,6 +24036,28 @@
 			)
 		)
 	)
+	(text "Do not select a TCA9548A channel whose face is off\n(bus parks mid-rail). Deselect the channel before\nFACEx_ENABLE=0; select only after the face rail is up\n(>150 us). ~MUX_RESET (GPIO26) recovers a parked bus."
+		(exclude_from_sim no)
+		(at 233.68 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "bfba937b-bcc6-4d01-afea-2bbdad050558")
+	)
+	(text "Firmware: never select an unpowered\nface channel; see pull-up note."
+		(exclude_from_sim no)
+		(at 325.12 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "fcf89e0f-1b66-42c2-ba11-43b0483a35a9")
+	)
 	(text "Face I2C pull-ups on the switched face rail\nso an unpowered face is not back-powered (Rev3)."
 		(exclude_from_sim no)
 		(at 238.76 83.82 0)
