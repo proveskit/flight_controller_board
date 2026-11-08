@@ -1029,7 +1029,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "easyeda2kicad:TPS4H160AQPWPRQ1"
+		(symbol "easyeda2kicad:TPS4H160BQPWPRQ1"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1045,7 +1045,7 @@
 					)
 				)
 			)
-			(property "Value" "TPS4H160AQPWPRQ1"
+			(property "Value" "TPS4H160BQPWPRQ1"
 				(at -19.812 21.59 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1066,7 +1066,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://lcsc.com/product-detail/New-Arrivals_Texas-Instruments-Texas-Instruments-TPS4H160AQPWPRQ1_C485918.html"
+			(property "Datasheet" "https://lcsc.com/product-detail/New-Arrivals_Texas-Instruments-Texas-Instruments-TPS4H160BQPWPRQ1_C471053.html"
 				(at 0 -26.67 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1088,7 +1088,7 @@
 					)
 				)
 			)
-			(property "LCSC Part" "C485918"
+			(property "LCSC Part" "C471053"
 				(at 0 -29.21 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1099,7 +1099,7 @@
 					)
 				)
 			)
-			(symbol "TPS4H160AQPWPRQ1_0_1"
+			(symbol "TPS4H160BQPWPRQ1_0_1"
 				(rectangle
 					(start -11.43 20.32)
 					(end 11.43 -19.05)
@@ -1197,7 +1197,7 @@
 				(pin unspecified line
 					(at -13.97 1.27 0)
 					(length 2.54)
-					(name "~{ST1}"
+					(name "SEH"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1215,7 +1215,7 @@
 				(pin unspecified line
 					(at -13.97 -1.27 0)
 					(length 2.54)
-					(name "~{ST2}"
+					(name "SEL"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1233,7 +1233,7 @@
 				(pin unspecified line
 					(at -13.97 -3.81 0)
 					(length 2.54)
-					(name "~{ST3}"
+					(name "~{FAULT}"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1251,7 +1251,7 @@
 				(pin unspecified line
 					(at -13.97 -6.35 0)
 					(length 2.54)
-					(name "~{ST4}"
+					(name "CS"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1465,7 +1465,7 @@
 					)
 				)
 			)
-			(symbol "TPS4H160AQPWPRQ1_1_1"
+			(symbol "TPS4H160BQPWPRQ1_1_1"
 				(pin unspecified line
 					(at 0 -21.59 90)
 					(length 2.54)
@@ -11243,7 +11243,7 @@
 		)
 	)
 	(symbol
-		(lib_id "easyeda2kicad:TPS4H160AQPWPRQ1")
+		(lib_id "easyeda2kicad:TPS4H160BQPWPRQ1")
 		(at 247.65 96.52 0)
 		(unit 1)
 		(body_style 1)
@@ -11263,7 +11263,7 @@
 				)
 			)
 		)
-		(property "Value" "TPS4H160AQPWPRQ1"
+		(property "Value" "TPS4H160BQPWPRQ1"
 			(at 233.172 74.422 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11284,7 +11284,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://lcsc.com/product-detail/New-Arrivals_Texas-Instruments-Texas-Instruments-TPS4H160AQPWPRQ1_C485918.html"
+		(property "Datasheet" "https://lcsc.com/product-detail/New-Arrivals_Texas-Instruments-Texas-Instruments-TPS4H160BQPWPRQ1_C471053.html"
 			(at 247.65 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -11306,7 +11306,7 @@
 				)
 			)
 		)
-		(property "LCSC Part" "C485918"
+		(property "LCSC Part" "C471053"
 			(at 247.65 125.73 0)
 			(hide yes)
 			(show_name no)
