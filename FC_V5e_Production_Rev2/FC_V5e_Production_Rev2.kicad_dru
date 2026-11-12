@@ -1,0 +1,14 @@
+(version 1)
+
+# Fine-pitch sensor packages have manufacturer land patterns with pad-to-pad
+# gaps below the 0.2 mm netclass clearance:
+#   U7  LSM6DSO  LGA-14 0.5 mm pitch  (0.15 / 0.175 mm gaps)
+#   U15 LIS2MDL  LGA-12 0.5 mm pitch  (0.15 mm)
+#   U8, U16 INA219 DCN                (0.15 mm)
+# JLCPCB 4-layer minimum copper clearance is 0.127 mm. Relax clearance only
+# between pads of the same listed footprint. Tracks, vias and zones near these
+# pads keep the full netclass clearance. Same geometry flew on V5d and was built
+# and validated on V5e Rev1.
+(rule "fine-pitch-pad-pitch"
+	(condition "A.Type == 'Pad' && B.Type == 'Pad' && ((A.memberOfFootprint('U7') && B.memberOfFootprint('U7')) || (A.memberOfFootprint('U15') && B.memberOfFootprint('U15')) || (A.memberOfFootprint('U8') && B.memberOfFootprint('U8')) || (A.memberOfFootprint('U16') && B.memberOfFootprint('U16')))")
+	(constraint clearance (min 0.127mm)))
