@@ -1,6 +1,6 @@
 # PROVES Kit Flight Controller Board
 
-KiCad 10 hardware repo. One directory per board revision (`FC_V5e_Production_Rev2` is current). Fab and assembly at JLCPCB via the Bouni `kicad-jlcpcb-tools` plugin. Heritage: `FC_V5d_Production` flew; `FC_V5e_Production_Rev1` passed bench and environmental test. Treat heritage as evidence, do not churn validated layout.
+KiCad 10 hardware repo. One directory per board revision (`FC_V5e_Production_Rev3` is in progress, `FC_V5e_Production_Rev2` is the latest ordered). Fab and assembly at JLCPCB via the Bouni `kicad-jlcpcb-tools` plugin. Heritage: `FC_V5d_Production` flew; `FC_V5e_Production_Rev1` passed bench and environmental test. Treat heritage as evidence, do not churn validated layout.
 
 ## Tooling
 
@@ -18,7 +18,7 @@ KiCad 10 hardware repo. One directory per board revision (`FC_V5e_Production_Rev
 4. **Force-add BOM and CPL.** `*.csv` is ignored repo-wide. The as-ordered `jlcpcb/production_files/BOM-*.csv` and `CPL-*.csv` must be committed with the gerber zip.
 5. **Check rotations in the JLC placement viewer on the first order of any footprint**, then record the fix in the plugin `corrections.db`, not by hand in the GUI. Known: `^Hirose_DF11-` +180, `^CONN-SMD_4P-P2.00_DF11CZ` +180, `^L_pol_2016` +180, `^USB_C_Receptacle_HRO_TYPE-C-31-M-12*` 0 (plugin default of +180 is wrong for bottom-side placement).
 6. **Order settings for this board:** stackup JLC04161H-7628 (RF traces tuned to 0.2104 mm prepreg), 4-wire Kelvin test, solvent cleaning, no JLC conformal coat.
-7. **JP6 must be bridged and J4 shunt removed on flight units.** Open JP6 disables the watchdog's power-cycle path to the 3V3 regulator. Needs an assembly note and an ATP line.
+7. **J4 shunt removed on flight units.** An installed J4 shorts `WDT_DISABLE` to ground. Needs an assembly note and an ATP line. On Rev2 and earlier, JP6 must also be bridged: open JP6 disables the watchdog's power-cycle path to the 3V3 regulator. Rev3 removes JP6 and wires U1 pin 13 straight to `~{3v3_RESET}`.
 
 ## Pre-order review procedure
 
